@@ -1,0 +1,16 @@
+#!/bin/bash -l
+
+# Edit these lines as needed
+module load wannier90 python
+BGW_BIN="$HOME/BerkeleyGW/bin"
+SIG2WAN="$BGW_BIN/sig2wan.x"
+WANNIER="wannier90.x"
+export OMP_NUM_THREADS=1
+
+# Plot Wannier interpolated bandstruture.
+# Note: this script will only work if you used the ESPRESSO mean-field starting point.
+cd 11-sig2wan
+$SIG2WAN &> ./sig2wan.out
+$WANNIER silicon
+./plot_sig2wan.py
+cd ../

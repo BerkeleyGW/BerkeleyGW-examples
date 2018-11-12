@@ -1,0 +1,29 @@
+header xct020
+inputfilename xct020.cube
+inputfileformat cube
+outputfilename xct020.pov
+outputfileformat povray
+isovalue 0.9
+sign positive
+power 1
+algorithm cube
+smooth T
+box F
+basis F
+uc F
+uco
+0.0 0.0 0.0
+ucv
+1.0 0.0 0.0
+0.0 1.0 0.0
+0.0 0.0 1.0
+ucu latvec
+sc T
+sco
+-0.5 -0.5 -0.5
+scv
+1.0 0.0 0.0
+0.0 1.0 0.0
+0.0 0.0 1.0
+scu latvec
+sct T

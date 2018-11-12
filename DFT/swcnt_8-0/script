@@ -1,0 +1,45 @@
+#!/bin/bash -l
+#SBATCH -t 00:30:00
+#SBATCH -p debug
+#SBATCH -N 1
+#SBATCH -n 32
+#SBATCH -c 1
+
+# Edit these lines as needed
+BGW_BIN="$HOME/BerkeleyGW/bin"
+EPSILON="$BGW_BIN/epsilon.cplx.x"
+SIGMA="$BGW_BIN/sigma.cplx.x"
+KERNEL="$BGW_BIN/kernel.cplx.x"
+ABSORPTION="$BGW_BIN/absorption.cplx.x"
+PLOTXCT="$BGW_BIN/plotxct.cplx.x"
+VOLUME="$BGW_BIN/volume.py"
+SURFACE="$BGW_BIN/surface.x"
+export OMP_NUM_THREADS=1
+# put argument for number of procs here too if needed, e.g. -n 8
+MPIRUN="srun -n 32 -c 1"
+
+#
+cd ./5-epsilon
+$MPIRUN $EPSILON &> ./epsilon.out
+cd ..
+#
+cd ./6-sigma
+$MPIRUN $SIGMA &> ./sigma.out
+cd ..
+#
+ln -s ../6-sigma/eqp1.dat ./8-absorption/eqp_co.dat
+#
+cd ./7-kernel
+$MPIRUN $KERNEL &> ./kernel.out
+cd ..
+#
+cd ./8-absorption
+$MPIRUN $ABSORPTION &> ./absorption.out
+ln -s WFN_fi WFNq_fi
+$MPIRUN $PLOTXCT &> ./plotxct.out
+$VOLUME ../ESPRESSO/1-scf/in espresso xct.000020_s1.a3Dr a3dr xct000020.cube cube false abs2 true
+# Alternate form:
+#$VOLUME ../PARATEC/1-scf/input paratec xct.000020_s1.a3Dr a3dr xct000020.cube cube false abs2 true
+$SURFACE xct000020.par
+cd ..
+#

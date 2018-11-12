@@ -1,0 +1,70 @@
+#!/bin/bash
+
+#This script creates the symbolic links to pass
+#data across the different directories.
+
+#It will create symbolic links for the pseudpotential files 
+#named as: *PSEUDOS_END
+PSEUDOS_END="fhi"
+GET_KPT_WTK="bash $PWD/get-kpt-wk.awk"
+KGRID="$PWD/00-kgrid/"
+
+for d in 0{2..8}*/; do
+  cp 01-scf/*${PSEUDOS_END} $d/.
+  cp 01-scf/files $d/.
+  cp 01-scf/basic.in $d/.
+  ln -fs ../01-scf/o_DEN $d/i_DEN
+done
+
+#Now create k-point input files:
+cd 02-wfn
+${GET_KPT_WTK} $KGRID/WFN.out
+cd ..
+cd 03-wfnq
+${GET_KPT_WTK} $KGRID/WFNq.out
+cd ..
+cd 04-wfn_co
+${GET_KPT_WTK} $KGRID/WFN_co.out
+ln -fs ../01-scf/o_VXC i_VXC
+cd ..
+cd 05-wfn_fi
+${GET_KPT_WTK} $KGRID/WFN_fi.out
+cd ..
+cd 06-wfnq_fi
+${GET_KPT_WTK} $KGRID/WFNq_fi.out
+cd ..
+#
+dir="../07-epsilon"
+ln -fs ../ABINIT/02-wfn/wfn.cplx ./$dir/WFN
+ln -fs ../ABINIT/03-wfnq/wfn.cplx ./$dir/WFNq
+#
+dir="../08-sigma"
+ln -fs ../ABINIT/04-wfn_co/vxc.cplx ./$dir/VXC
+ln -fs ../ABINIT/04-wfn_co/rho.cplx ./$dir/RHO
+ln -fs ../ABINIT/04-wfn_co/wfn.cplx ./$dir/WFN_inner
+ln -fs ../07-epsilon/eps0mat.h5 ./$dir
+ln -fs ../07-epsilon/eps0mat ./$dir
+ln -fs ../07-epsilon/epsmat.h5 ./$dir
+ln -fs ../07-epsilon/epsmat ./$dir
+#
+ln -fs ../ABINIT/04-wfn_co/wfn.cplx ../09-kernel/WFN_co
+ln -fs ../07-epsilon/eps0mat ../09-kernel
+ln -fs ../07-epsilon/epsmat ../09-kernel
+ln -fs ../07-epsilon/eps0mat.h5 ../09-kernel
+ln -fs ../07-epsilon/epsmat.h5 ../09-kernel
+#
+ln -fs ../ABINIT/04-wfn_co/wfn.cplx ../10-absorption/WFN_co
+ln -fs ../ABINIT/05-wfn_fi/wfn.cplx ../10-absorption/WFN_fi
+ln -fs ../ABINIT/06-wfnq_fi/wfn.cplx ../10-absorption/WFNq_fi
+ln -fs ../07-epsilon/eps0mat ../10-absorption
+ln -fs ../07-epsilon/epsmat ../10-absorption
+ln -fs ../08-sigma/eqp1.dat ../10-absorption/eqp_co.dat
+ln -fs ../09-kernel/bsedmat ../10-absorption
+ln -fs ../09-kernel/bsexmat ../10-absorption
+ln -fs ../07-epsilon/eps0mat.h5 ../10-absorption
+ln -fs ../07-epsilon/epsmat.h5 ../10-absorption
+ln -fs ../09-kernel/bsemat.h5 ../10-absorption
+#
+ln -fs ../ABINIT/04-wfn_co/wfn.cplx ../12-inteqp/WFN_co
+ln -fs ../ABINIT/08-path/wfn.cplx ../12-inteqp/WFN_fi
+#

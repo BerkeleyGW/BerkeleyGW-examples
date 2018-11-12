@@ -1,0 +1,161 @@
+
+     Program PWSCF v.5.0.1 starts on 27Sep2012 at 16: 1: 0 
+
+     This program is part of the open-source Quantum ESPRESSO suite
+     for quantum simulation of materials; please cite
+         "P. Giannozzi et al., J. Phys.:Condens. Matter 21 395502 (2009);
+          URL http://www.quantum-espresso.org", 
+     in publications or presentations arising from this work. More details at
+     http://www.quantum-espresso.org/quote.php
+
+     Parallel version (MPI), running on     1 processors
+
+     Current dimensions of program PWSCF are:
+     Max number of different atomic species (ntypx) = 10
+     Max number of k-points (npk) =  40000
+     Max angular momentum in pseudopotentials (lmaxx) =  3
+     Reading input from ./in
+
+     Atomic positions and unit cell read from directory:
+     ./silicon.save/
+
+
+     Subspace diagonalization in iterative solution of the eigenvalue problem:
+     a serial algorithm will be used
+
+
+     G-vector sticks info
+     --------------------
+     sticks:   dense  smooth     PW     G-vecs:    dense   smooth      PW
+     Sum         361     361    121                 4573     4573     941
+
+
+
+     bravais-lattice index     =            0
+     lattice parameter (alat)  =      10.2612  a.u.
+     unit-cell volume          =     270.1061 (a.u.)^3
+     number of atoms/cell      =            2
+     number of atomic types    =            1
+     number of electrons       =         8.00
+     number of Kohn-Sham states=           12
+     kinetic-energy cutoff     =      25.0000  Ry
+     charge density cutoff     =     100.0000  Ry
+     Exchange-correlation      = PZ ( 1 1 0 0 0)
+     EXX-fraction              =        0.00
+
+     celldm(1)=  10.261200  celldm(2)=   0.000000  celldm(3)=   0.000000
+     celldm(4)=   0.000000  celldm(5)=   0.000000  celldm(6)=   0.000000
+
+     crystal axes: (cart. coord. in units of alat)
+               a(1) = (   0.000000   0.500000   0.500000 )  
+               a(2) = (   0.500000   0.000000   0.500000 )  
+               a(3) = (   0.500000   0.500000   0.000000 )  
+
+     reciprocal axes: (cart. coord. in units 2 pi/alat)
+               b(1) = ( -1.000000  1.000000  1.000000 )  
+               b(2) = (  1.000000 -1.000000  1.000000 )  
+               b(3) = (  1.000000  1.000000 -1.000000 )  
+
+
+     PseudoPot. # 1 for Si read from file:
+     ./Si.UPF
+     MD5 check sum: 8d0500bb3b5099e4a124109e930844dd
+     Pseudo is Norm-conserving, Zval =  4.0
+     Generated using "atomic" code by A. Dal Corso  (Quantum ESPRESSO distribution)
+     Using radial grid of 1141 points,  2 beta functions with: 
+                l(1) =   0
+                l(2) =   1
+
+     atomic species   valence    mass     pseudopotential
+        Si             4.00    28.08600     Si( 1.00)
+
+     48 Sym. Ops., with inversion, found (36 have fractional translation)
+
+
+
+   Cartesian axes
+
+     site n.     atom                  positions (alat units)
+         1           Si  tau(   1) = (  -0.1250000  -0.1250000  -0.1250000  )
+         2           Si  tau(   2) = (   0.1250000   0.1250000   0.1250000  )
+
+     number of k points=   125
+
+     Number of k-points >= 100: set verbosity='high' to print them.
+
+     Dense  grid:     4573 G-vectors     FFT dimensions: (  24,  24,  24)
+
+     Largest allocated arrays     est. size (Mb)     dimensions
+        Kohn-Sham Wavefunctions         0.10 Mb     (    572,   12)
+        NL pseudopotentials             0.07 Mb     (    572,    8)
+        Each V/rho on FFT grid          0.21 Mb     (  13824)
+        Each G-vector array             0.03 Mb     (   4573)
+        G-vector shells                 0.00 Mb     (     90)
+     Largest temporary arrays     est. size (Mb)     dimensions
+        Auxiliary wavefunctions         0.42 Mb     (    572,   48)
+        Each subspace H/S matrix        0.04 Mb     (  48,  48)
+        Each <psi_i|beta_j> matrix      0.00 Mb     (      8,   12)
+     writing wfc files to a dedicated directory
+
+     The potential is recalculated from file :
+     ./silicon.save/charge-density.dat
+
+     Starting wfc are random
+
+     total cpu time spent up to now is        0.3 secs
+
+     per-process dynamical memory:     5.2 Mb
+
+     Band Structure Calculation
+     Davidson diagonalization with overlap
+
+     ethr =  1.25E-12,  avg # of iterations = 32.6
+
+     total cpu time spent up to now is       40.5 secs
+
+     End of band structure calculation
+
+     Number of k-points >= 100: set verbosity='high' to print the bands.
+
+     Writing output data file silicon.save
+
+     init_run     :      0.11s CPU      0.18s WALL (       1 calls)
+     electrons    :     35.05s CPU     40.23s WALL (       1 calls)
+
+     Called by init_run:
+     wfcinit      :      0.00s CPU      0.00s WALL (       1 calls)
+     potinit      :      0.01s CPU      0.05s WALL (       1 calls)
+
+     Called by electrons:
+     c_bands      :     35.05s CPU     40.23s WALL (       1 calls)
+     v_of_rho     :      0.00s CPU      0.00s WALL (       1 calls)
+
+     Called by c_bands:
+     init_us_2    :      0.00s CPU      0.03s WALL (     125 calls)
+     cegterg      :     33.45s CPU     33.62s WALL (     257 calls)
+
+     Called by *egterg:
+     h_psi        :     23.90s CPU     24.25s WALL (    4452 calls)
+     g_psi        :      0.37s CPU      0.43s WALL (    4070 calls)
+     cdiaghg      :      3.97s CPU      3.90s WALL (    4195 calls)
+
+     Called by h_psi:
+     add_vuspsi   :      0.59s CPU      0.50s WALL (    4452 calls)
+
+     General routines
+     calbec       :      0.32s CPU      0.43s WALL (    4452 calls)
+     fft          :      0.00s CPU      0.00s WALL (       3 calls)
+     fftw         :     21.65s CPU     21.80s WALL (   59182 calls)
+     davcio       :      0.00s CPU      0.02s WALL (     250 calls)
+
+     Parallel routines
+     fft_scatter  :      0.82s CPU      0.81s WALL (   59185 calls)
+
+     PWSCF        :    35.86s CPU        52.66s WALL
+
+
+   This run was terminated on:  16: 1:53  27Sep2012            
+
+=------------------------------------------------------------------------------=
+   JOB DONE.
+=------------------------------------------------------------------------------=

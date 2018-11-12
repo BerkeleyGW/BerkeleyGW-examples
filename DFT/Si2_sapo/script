@@ -1,0 +1,42 @@
+#! /bin/bash
+
+# This example shows how to perform iterative Davidson diagonalization
+# in SAPO. It requires pw2bgw with Vsc capability as in espresso-5.0.2
+
+PW="$HOME/espresso-5.0.2/bin/pw.x"
+PW2BGW="$HOME/espresso-5.0.2/bin/pw2bgw.x"
+SAPO="$HOME/BGW/bin/sapo.real.x"
+
+# put argument for number of procs here too if needed, e.g. -n 8
+MPIRUN="mpirun"
+
+# Run QE to generate input files for SAPO:
+# ./wfn.real, ./vsc.real, ./vkb.complex
+#
+$MPIRUN $PW -in ./01_in_scf &> ./01_out_scf
+$MPIRUN $PW -in ./02_in_bands &> ./02_out_bands
+$MPIRUN $PW2BGW -in ./03_in_pw2bgw &> ./03_out_pw2bgw
+
+# Run SAPO to perform iterative diagonalization
+#
+mv ./04_sapo.inp ./sapo.inp
+$MPIRUN $SAPO &> ./04_sapo.out
+mv ./sapo.inp ./04_sapo.inp
+
+# Run QE to perform iterative diagonalization
+#
+$MPIRUN $PW -in ./05_in_bands &> ./05_out_bands
+$MPIRUN $PW2BGW -in ./06_in_pw2bgw &> ./06_out_pw2bgw
+
+# Run SAPO to test two wavefunction files
+#
+mv ./07_sapo.inp ./sapo.inp
+$MPIRUN $SAPO &> ./07_sapo.out
+mv ./sapo.inp ./07_sapo.inp
+mv ./08_sapo.inp ./sapo.inp
+$MPIRUN $SAPO &> ./08_sapo.out
+mv ./sapo.inp ./08_sapo.inp
+
+# Look at 'max | R_nk |' and 'max ( < nk | mk > - delta_nm )'
+# in ./07_sapo.out and ./08_sapo.out, these numbers tell about
+# the convergence of wavefunctions

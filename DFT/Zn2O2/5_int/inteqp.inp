@@ -1,0 +1,12 @@
+number_val_bands_coarse 16
+number_val_bands_fine 16
+number_cond_bands_coarse 14
+number_cond_bands_fine 14
+
+coarse_grid_points 75
+
+use_symmetries_coarse_grid
+no_symmetries_fine_grid
+no_symmetries_shifted_grid
+
+delaunay_interpolation

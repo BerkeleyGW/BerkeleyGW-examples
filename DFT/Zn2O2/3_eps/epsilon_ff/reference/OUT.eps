@@ -1,0 +1,334 @@
+
+ BerkeleyGW  trunk  revision 5439
+
+ Epsilon  Complex version  Run on  28-Jun-2013  at  13:55:04 -0400
+
+--------------------------------------------------------------------------------
+ Please cite the following papers when using results from BerkeleyGW:
+
+ Jack Deslippe, Georgy Samsonidze, David A. Strubbe, Manish Jain, Marvin L.
+ Cohen, and Steven G. Louie, "BerkeleyGW: A Massively Parallel Computer Package
+ for the Calculation of the Quasiparticle and Optical Properties of Materials
+ and Nanostructures," Comput. Phys. Commun. 183, 1269 (2012)
+
+ Mark S. Hybertsen and Steven G. Louie, "Electron correlation in semiconductors
+ and insulators: Band gaps and quasiparticle energies," Phys. Rev. B 34, 5390
+ (1986)
+
+ Michael Rohlfing and Steven G. Louie, "Electron-hole excitations and optical
+ spectra from first principles," Phys. Rev. B 62, 4927 (2000)
+--------------------------------------------------------------------------------
+
+ Running MPI version (parallel)
+
+ Running with  768 MPI task(s)
+
+ Experimental Features
+  - FFTs Optimization Level:  0
+  - Parallel Frequencies:     1
+  - Use HDF5 Parallel IO:     F
+ 
+ Computing the full frequency-dependent inverse dielectric matrix
+
+ We are using element communication scheme
+
+ We are communicating via MPI
+
+ We are using no truncation
+
+ Running with 3 valence pools
+ Number of conduction bands per processor: 6
+ Number of valence bands per processor: 9
+
+ Memory available: 1935.0 MB per PE
+ Memory required for execution: 1022.1 MB per PE
+ Memory required for vcoul:    0.0 MB per PE
+
+ Highest occupied band (unshifted grid) = 26
+ Middle energy (unshifted grid) =      9.373930 eV
+ Fermi  energy (unshifted grid) =      9.373930 eV
+
+ Number of electrons per unit cell =  52.000000
+ Plasma Frequency =   2.853566 Rydberg
+
+ 
+ Started reading wavefunctions (WFN) with 27 k-point(s) at 13:55:06.
+ [ 13:55:06 |   0% ] k-point      1 / 27.
+ [ 13:55:31 |   7% ] k-point      3 / 27, remaining: 313 s.
+ [ 13:56:13 |  19% ] k-point      6 / 27, remaining: 297 s.
+ [ 13:56:50 |  30% ] k-point      9 / 27, remaining: 247 s.
+ [ 13:57:14 |  37% ] k-point     11 / 27, remaining: 218 s.
+ [ 13:57:52 |  48% ] k-point     14 / 27, remaining: 179 s.
+ [ 13:58:35 |  59% ] k-point     17 / 27, remaining: 144 s.
+ [ 13:59:01 |  67% ] k-point     19 / 27, remaining: 118 s.
+ [ 13:59:40 |  78% ] k-point     22 / 27, remaining: 78 s.
+ [ 14:00:19 |  89% ] k-point     25 / 27, remaining: 39 s.
+ Finished reading wavefunctions (WFN) at 14:01:02.
+ Elapsed time: 356 s.
+ 
+
+
+ ECUTS  =  5.000000
+ NBANDS = 1500
+ NQ     =   1
+
+
+ Scissors parameters
+ Valence:    es =   0.0000 eV, e0 =   0.0000 eV, edel =   0.0000
+ Conduction: es =   0.0000 eV, e0 =   0.0000 eV, edel =   0.0000
+ Q0 and |Q0| =  0.000600  0.000600  0.000600  0.001286
+ 
+ You have a slightly shifted q0 vector and a semiconductor.
+ So reading from WFNq.
+ 
+ Reading Shifted Wavefunction WFNq
+ Highest occupied band (shifted grid) = 26
+ 
+ Started reading wavefunctions (WFNq) with 120 k-point(s) at 14:01:02.
+ [ 14:01:02 |   0% ] k-point      1 / 120.
+ [ 14:01:23 |   2% ] k-point      3 / 120, remaining: 882 s.
+ [ 14:01:54 |   9% ] k-point     12 / 120, remaining: 422 s.
+ [ 14:02:30 |  19% ] k-point     24 / 120, remaining: 329 s.
+ [ 14:02:43 |  29% ] k-point     36 / 120, remaining: 219 s.
+ [ 14:02:47 |  39% ] k-point     48 / 120, remaining: 146 s.
+ [ 14:02:51 |  49% ] k-point     60 / 120, remaining: 101 s.
+ [ 14:02:55 |  59% ] k-point     72 / 120, remaining: 69 s.
+ [ 14:02:58 |  69% ] k-point     84 / 120, remaining: 46 s.
+ [ 14:03:02 |  79% ] k-point     96 / 120, remaining: 28 s.
+ [ 14:03:05 |  89% ] k-point    108 / 120, remaining: 13 s.
+ [ 14:03:09 |  99% ] k-point    120 / 120, remaining: 1 s.
+ Finished reading wavefunctions (WFNq) at 14:03:09.
+ Elapsed time: 127 s.
+ 
+
+ Crystal k+q WFs read from WFNq
+ nfk=         225
+
+================================================================================
+ Dealing now with q-point   0.00060000  0.00060000  0.00060000
+================================================================================
+
+ This is the special q->0 point.
+ Rank of the polarizability matrix (nmtx):       55
+ 
+ BLACS processor grid:  24 x  32; BLOCKSIZE =    1
+ 
+ Number of k-points in the irreducible BZ(q) (nrk):      120
+ 
+ Started calculation of matrix elements with 120 transition(s) at 14:03:10.
+ [ 14:03:10 |   0% ] transition      1 / 120.
+ [ 14:03:14 |   2% ] transition      3 / 120, remaining: 262 s.
+ [ 14:03:35 |   9% ] transition     12 / 120, remaining: 247 s.
+ [ 14:04:02 |  19% ] transition     24 / 120, remaining: 220 s.
+ [ 14:04:29 |  29% ] transition     36 / 120, remaining: 192 s.
+ [ 14:04:56 |  39% ] transition     48 / 120, remaining: 165 s.
+ [ 14:05:22 |  49% ] transition     60 / 120, remaining: 137 s.
+ [ 14:05:49 |  59% ] transition     72 / 120, remaining: 110 s.
+ [ 14:06:15 |  69% ] transition     84 / 120, remaining: 83 s.
+ [ 14:06:42 |  79% ] transition     96 / 120, remaining: 56 s.
+ [ 14:07:09 |  89% ] transition    108 / 120, remaining: 29 s.
+ [ 14:07:35 |  99% ] transition    120 / 120, remaining: 2 s.
+ Finished calculation of matrix elements at 14:07:37.
+ Elapsed time: 267 s.
+ 
+### irk=       1      (nrk=     120)
+### irk=       2      (nrk=     120)
+### irk=       3      (nrk=     120)
+### irk=       4      (nrk=     120)
+### irk=       5      (nrk=     120)
+### irk=       6      (nrk=     120)
+### irk=       7      (nrk=     120)
+### irk=       8      (nrk=     120)
+### irk=       9      (nrk=     120)
+### irk=      10      (nrk=     120)
+### irk=      11      (nrk=     120)
+### irk=      12      (nrk=     120)
+### irk=      13      (nrk=     120)
+### irk=      14      (nrk=     120)
+### irk=      15      (nrk=     120)
+### irk=      16      (nrk=     120)
+### irk=      17      (nrk=     120)
+### irk=      18      (nrk=     120)
+### irk=      19      (nrk=     120)
+### irk=      20      (nrk=     120)
+### irk=      21      (nrk=     120)
+### irk=      22      (nrk=     120)
+### irk=      23      (nrk=     120)
+### irk=      24      (nrk=     120)
+### irk=      25      (nrk=     120)
+### irk=      26      (nrk=     120)
+### irk=      27      (nrk=     120)
+### irk=      28      (nrk=     120)
+### irk=      29      (nrk=     120)
+### irk=      30      (nrk=     120)
+### irk=      31      (nrk=     120)
+### irk=      32      (nrk=     120)
+### irk=      33      (nrk=     120)
+### irk=      34      (nrk=     120)
+### irk=      35      (nrk=     120)
+### irk=      36      (nrk=     120)
+### irk=      37      (nrk=     120)
+### irk=      38      (nrk=     120)
+### irk=      39      (nrk=     120)
+### irk=      40      (nrk=     120)
+### irk=      41      (nrk=     120)
+### irk=      42      (nrk=     120)
+### irk=      43      (nrk=     120)
+### irk=      44      (nrk=     120)
+### irk=      45      (nrk=     120)
+### irk=      46      (nrk=     120)
+### irk=      47      (nrk=     120)
+### irk=      48      (nrk=     120)
+### irk=      49      (nrk=     120)
+### irk=      50      (nrk=     120)
+### irk=      51      (nrk=     120)
+### irk=      52      (nrk=     120)
+### irk=      53      (nrk=     120)
+### irk=      54      (nrk=     120)
+### irk=      55      (nrk=     120)
+### irk=      56      (nrk=     120)
+### irk=      57      (nrk=     120)
+### irk=      58      (nrk=     120)
+### irk=      59      (nrk=     120)
+### irk=      60      (nrk=     120)
+### irk=      61      (nrk=     120)
+### irk=      62      (nrk=     120)
+### irk=      63      (nrk=     120)
+### irk=      64      (nrk=     120)
+### irk=      65      (nrk=     120)
+### irk=      66      (nrk=     120)
+### irk=      67      (nrk=     120)
+### irk=      68      (nrk=     120)
+### irk=      69      (nrk=     120)
+### irk=      70      (nrk=     120)
+### irk=      71      (nrk=     120)
+### irk=      72      (nrk=     120)
+### irk=      73      (nrk=     120)
+### irk=      74      (nrk=     120)
+### irk=      75      (nrk=     120)
+### irk=      76      (nrk=     120)
+### irk=      77      (nrk=     120)
+### irk=      78      (nrk=     120)
+### irk=      79      (nrk=     120)
+### irk=      80      (nrk=     120)
+### irk=      81      (nrk=     120)
+### irk=      82      (nrk=     120)
+### irk=      83      (nrk=     120)
+### irk=      84      (nrk=     120)
+### irk=      85      (nrk=     120)
+### irk=      86      (nrk=     120)
+### irk=      87      (nrk=     120)
+### irk=      88      (nrk=     120)
+### irk=      89      (nrk=     120)
+### irk=      90      (nrk=     120)
+### irk=      91      (nrk=     120)
+### irk=      92      (nrk=     120)
+### irk=      93      (nrk=     120)
+### irk=      94      (nrk=     120)
+### irk=      95      (nrk=     120)
+### irk=      96      (nrk=     120)
+### irk=      97      (nrk=     120)
+### irk=      98      (nrk=     120)
+### irk=      99      (nrk=     120)
+### irk=     100      (nrk=     120)
+### irk=     101      (nrk=     120)
+### irk=     102      (nrk=     120)
+### irk=     103      (nrk=     120)
+### irk=     104      (nrk=     120)
+### irk=     105      (nrk=     120)
+### irk=     106      (nrk=     120)
+### irk=     107      (nrk=     120)
+### irk=     108      (nrk=     120)
+### irk=     109      (nrk=     120)
+### irk=     110      (nrk=     120)
+### irk=     111      (nrk=     120)
+### irk=     112      (nrk=     120)
+### irk=     113      (nrk=     120)
+### irk=     114      (nrk=     120)
+### irk=     115      (nrk=     120)
+### irk=     116      (nrk=     120)
+### irk=     117      (nrk=     120)
+### irk=     118      (nrk=     120)
+### irk=     119      (nrk=     120)
+### irk=     120      (nrk=     120)
+
+ Done Polarizability
+  
+  Doing q0:   5.999999999999999E-004  5.999999999999999E-004
+  5.999999999999999E-004  1.286210533128321E-003
+  
+  
+ Retarded Head Before Inversion =  (4.87032116970647,1.380138617570507E-017)
+ Advanced Head Before Inversion =  (4.87032116970647,1.380138617570507E-017)
+ Retarded Eps(2,2) Before Inversion = 
+ (-9.740022762084755E-002,1.867277795505598E-011)
+ Advanced Eps(2,2) Before Inversion = 
+ (-9.740022762084755E-002,1.867277795505598E-011)
+  
+ Retarded Head After Inversion =  (0.213166530784414,-6.113267980257011E-019)
+ Advanced Head After Inversion =  (0.213166530784414,-6.113267980257011E-019)
+ Retarded Eps(2,2) After Inversion = 
+ (4.126088051815401E-002,3.124872988398030E-012)
+ Advanced Eps(2,2) After Inversion = 
+ (4.126088051815401E-002,3.124872988398030E-012)
+  
+ Full Frequency: Sum rules for head:
+ Retarded Int((1/w)*Im(eps^-1(w))) =   112.524949210673       % of exact
+ Advanced Int((1/w)*Im(eps^-1(w))) =   112.524949210673       % of exact
+ Retarded Int((w)*Im(eps^-1(w))) =   46.4675052770276       % of exact
+ Advanced Int((w)*Im(eps^-1(w))) =   46.4675052770276       % of exact
+  
+ 
+                              CPU [s]        WALL [s]           #
+ 
+FULLBZ:                         0.000           0.003           1
+IRRBZ:                          0.000           0.001           1
+SUBGRP:                         0.000           0.000           1
+RQSTAR:                         0.000           0.000         120
+GMAP:                           0.140           0.170         120
+GVEC:                           0.160           0.165           1
+INPUT:                        272.720         358.341           1
+INPUT_Q:                       24.730         127.164           1
+INPUT(Q) I/O                  135.770         342.199       43796
+INPUT(Q) COMM                 157.990         103.461       43796
+GENWF:                         74.760          78.761        1080
+GENWF (VAL):                   36.910          38.652        1080
+GENWF (COND):                  37.820          40.095         120
+GENWF (C-Ekin):                 2.820           5.005         120
+GENWF (C-Sort):                32.940          32.946         120
+JOB SETUP:                      0.000           0.055           1
+Q LOOP SETUP:                   0.020           0.037           1
+INIT CUTOFF:                    0.000           0.000           1
+INIT SCALAPACK:                 0.130           0.138           1
+INIT ARRAYS:                    0.000           0.001           1
+MTXEL:                        187.830         188.556        1080
+MTXEL (DENOM):                  0.090           0.052        1080
+MTXEL (FFT):                  187.740         188.495        1080
+MTXEL EXP(DENOM):               0.000           0.000           0
+MTXEL EXP (FFT):                0.000           0.000           0
+CHI SUM (TOTAL):             3732.190        3999.584           1
+CHI SUM (COMM):              2709.710        2487.773      176880
+CHI SUM (zGEMM):              740.190        1077.777   354113760
+CHI SUM (PREP):                 0.000           0.000           0
+CHI SUM (ARRAY ALLOC):          0.000           0.000           0
+EPSINV (TOTAL):                15.980          16.488           1
+EPSINV (VCOUL):                 0.000           0.001           1
+EPSINV (I/O)                    0.900           1.252           1
+EPSINV (INVERT)                15.060          15.143           1
+EPS (I/O) COMM                  0.000           0.000           0
+EPS (I/O) IO                    0.000           0.000           0
+CONVERGE TESTS:                 0.000           0.000           1
+OPT FFT:                        0.000           0.000           0
+OPT FFT (INIT):                 0.000           0.000           0
+OPT FFT (COMM_FFT):             0.000           0.000           0
+OPT FFT (FFT):                  0.000           0.000           0
+FFT ZERO                        6.010           6.697        7560
+FFT PUT                        18.620          18.698        7560
+FFT PLAN                        5.520           5.601       14040
+FFT EXEC                      145.420         145.777       14040
+FFT MLTPLY                     10.690          10.355        6480
+ 
+TOTAL:                       4308.780        4770.426
+ 
+ 
+Application 2788768 resources: utime ~3644957s, stime ~19188s, Rss ~1105508, inblocks ~60386868, outblocks ~1694263

@@ -1,0 +1,547 @@
+
+ BerkeleyGW trunk revision 6984
+ BSE/Absorption code, Real version, run on 15-Apr-2016 at 16:09:20 -0700
+
+                                                                 ..o.          
+                                                                .oxxo.         
+                                                               .oxxxxo...      
+                                                               oxxxxxxo.       
+                                                              .oxxxxxxx.       
+                                                              .ooooooxxo..     
+                                                              .oooooooxo..     
+                                                              .oooooxxo...     
+                                                       .........oxooo......    
+                                                 ............................  
+                                             ................................. 
+                                          .................................... 
+           .          ..oo. ....  .................................oooxxxxxxxo.
+     .............oxxxx@ox@@@x@x.....................o...........ooooooooooxx. 
+    .o.........oox@x.oo........xxx@@............ooxxxxo..........ooooxxxxxoxo  
+    .x........x@xxo...............o@xxo........oxxx@@@xoooooooooooooooxxxo...  
+    .o......ox@@o..................oox@o.....ooxxx@xoooxxxxxxxoooooooooooo.... 
+    o..ooooo@@xoooo....ooo...........x@o.....ooxxxxo   .oxxxxxxxxxxooooooo.... 
+    . .oooo@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@....ooooox.     .oxx@@@@@xxoo........ 
+      .ooooxxxxxxxooooooxooooooooooooooxo...oooooxx.        ..ox@xxxoo.........
+      .ooooooxxxx@xoooooooooooooxxoooooooooooxxxxx.            .oxxooooooooxxo.
+     .oooooxxxxx@@@xxxxxxxxxxxxxxxxxxxxxxxxoxxxxo.                .oxxxxxxxxo. 
+   ....oooxxxxx@@@xo..oxxx@@@@@@xxxxoxxoooooooxx.                  .oxxxoo..   
+  .....ooxxxx@@xo.       ........    .ooooooooxxo                              
+  ..oooxxxx@@@o                       .oooooooxoo.                             
+  ....oxooxxxxx.                       .ooo..oooo.                             
+  .....o.ooxxxxxo.                     .oooooooxo.                             
+ ......ooooxxxxxxo.                     .ooooooxoo..                           
+........ooxxxxxxxo..                     .o....oxoo...                         
+.......ooooxxxxxxxo.                     ........oooo.                         
+.ooooooo..ooxxxxoooo.                    .........ooo...                       
+..oxo...ooooxxxoooo..                    .ooo......oooo...                     
+  .ooooo....o.                            .oxxxoo....ooo....                   
+    .oooooo...                              ...ooooo...ooo..                   
+       ...                                     .oo.......                      
+                                               ....ooo...                      
+                      __              __                                       
+ ______              [  |            [  |                 ._____  _          _ 
+|_   _ \              | |  _          | |                /  ___ \| |        | |
+  | |_) | .---.  _. _.| | / |  .---.  | | .---.  _    _ / /    \_|\ \  /\  / / 
+  |  __'./ /__\\[ /`\_| '' <  / /__\\ | |/ /__\\| \  | | |   _____ \ \/  \/ /  
+ _| |__| | \__. | |   | |`\ \ | \___. | || \___. \ \/ / \ \.___| |  \  /\  /   
+|_______/ \.__./[_]  [__|  \_] \.__./[___]\.__./  \  /   \.____./    \/  \/    
+                                                  / /                          
+                                                 /_/                           
+--------------------------------------------------------------------------------
+ Please cite the following papers when using results from BerkeleyGW:
+
+ Jack Deslippe, Georgy Samsonidze, David A. Strubbe, Manish Jain, Marvin L.
+ Cohen, and Steven G. Louie, "BerkeleyGW: A Massively Parallel Computer Package
+ for the Calculation of the Quasiparticle and Optical Properties of Materials
+ and Nanostructures," Comput. Phys. Commun. 183, 1269 (2012)
+
+ Mark S. Hybertsen and Steven G. Louie, "Electron correlation in semiconductors
+ and insulators: Band gaps and quasiparticle energies," Phys. Rev. B 34, 5390
+ (1986)
+
+ Michael Rohlfing and Steven G. Louie, "Electron-hole excitations and optical
+ spectra from first principles," Phys. Rev. B 62, 4927 (2000)
+--------------------------------------------------------------------------------
+
+ Running MPI version (parallel)
+ Running with 32 MPI task(s)
+ Using OpenMP. Number of threads per MPI task: 1
+
+ Compilation flags:
+ - Compiler: INTEL
+ - Para. flags: MPI, OMP
+ - Math  flags: USESCALAPACK, UNPACKED, USEFFTW3, HDF5
+ - Debug flags: 
+
+ Kernel was calculated only for (v,c)->(v',c') transitions.
+ This may not be a good idea for metals and narrow-bandgap semiconductors.
+ Consider calculating the extended BSE kernel with the 'extended_kernel' flag.
+ 
+ Bethe-Salpeter Calculation
+ The restricted fi/co WFN transformation dvv',dcc' will be calculated.
+ This is not a good idea for metals and narrow-bandgap semiconductors.
+ Consider using the 'unrestricted_transformation' flag.
+ 
+ Using the Tamm-Dancoff approximation.
+
+ Using the velocity operator
+ 
+ Using the Delaunay interpolation method.
+
+ Running with Semiconductor Screening
+
+ We are communicating via MPI
+
+ We are using no truncation
+
+ Cutoff for Monte-Carlo average of Coulomb potential:    1.000E+12 Ry
+
+ 
+ Number of k-points in the coarse k-grid: 125
+ A 3-D interpolation algorithm will be employed.
+ No symmetries used in the fine grid-sampling
+
+ kgrid:  10  10  10
+ Highest occupied band (fine grid) = 4
+ Valence max    (fine grid) = 5.987592 eV
+ Conduction min (fine grid) = 6.586462 eV
+ Middle energy  (fine grid) = 6.287027 eV
+ Fermi  energy  (fine grid) = 6.287027 eV
+
+ Number of electrons per unit cell (from ifmax) = 8.000000
+ Number of electrons per unit cell (from occupations) = 8.000000
+ Plasma Frequency = 1.220148 Ry
+
+
+ Scissors parameters
+ Valence:    es =   0.0000 eV, e0 =   0.0000 eV, edel =   0.0000
+ Conduction: es =   0.0000 eV, e0 =   0.0000 eV, edel =   0.0000
+ 
+ You are doing a class 1 calculation - npes <= nk
+
+ Memory available:    3933.6 MB per PE
+ Memory required for vcoul:  114.4 MB per PE
+ Memory needed to store the effective Hamiltonian and intkernel
+        arrays:  145.2 MB per PE
+ Additional memory needed for eigenvectors and diagonalization:  694.5 MB per PE
+ 
+ Distribution of kcv blocks among PE ranks:
+   - PEs 0 to 7 : 32 blocks
+   - PEs 8 to 31 : 31 blocks
+ WARNING: kcv-blocks not evenly distributed among PEs.
+   This job will not run with optimum load balance.
+ 
+ Started reading wavefunctions (WFN_fi) with 1000 k-point(s) at 16:09:20.
+ [ 16:09:20 |   0% ] k-point    1 / 1000.
+ [ 16:09:20 |   0% ] k-point    3 / 1000, remaining: 6 s.
+ [ 16:09:20 |  10% ] k-point  100 / 1000, remaining: 0 s.
+ [ 16:09:20 |  20% ] k-point  200 / 1000, remaining: 0 s.
+ [ 16:09:20 |  30% ] k-point  300 / 1000, remaining: 0 s.
+ [ 16:09:20 |  40% ] k-point  400 / 1000, remaining: 0 s.
+ [ 16:09:20 |  50% ] k-point  500 / 1000, remaining: 0 s.
+ [ 16:09:20 |  60% ] k-point  600 / 1000, remaining: 0 s.
+ [ 16:09:21 |  70% ] k-point  700 / 1000, remaining: 0 s.
+ [ 16:09:21 |  80% ] k-point  800 / 1000, remaining: 0 s.
+ [ 16:09:21 |  90% ] k-point  900 / 1000, remaining: 0 s.
+ [ 16:09:21 | 100% ] k-point 1000 / 1000, remaining: 0 s.
+ Finished reading wavefunctions (WFN_fi) at 16:09:21.
+ Elapsed time: 0 s.
+ 
+
+ Conduction wavefunctions read from file WFN_fi
+  - Number k-points in irreducible BZ:     1000
+  - Number k-points in full BZ:     1000
+  - Effective k-point radius:     0.060298 Bohr^-1
+ 
+  Lowest energy transitions (eV):
+   (  0.047 ,  0.037 ,    0.031 )    1   1   1   2.595792
+   ( -0.053 , -0.063 ,    0.031 )  991   1   1   2.633255
+   (  0.047 ,  0.037 ,    0.031 )    1   2   1   2.633612
+   ( -0.053 ,  0.037 ,   -0.069 )  910   1   1   2.637445
+   (  0.047 ,  0.037 ,    0.031 )    1   1   2   2.646563
+  
+ More Job Parameters: 
+ Crystal volume =            270106.14592123206239 a.u.
+ Number of valence bands =            4
+ Number of cond. bands   =            6
+ Number of spins   =            1
+ Broadening:  0.1500 eV
+ Number of eigenvalues to be computed =        24000
+  
+ Highest occupied band (shifted fine grid) = 4
+ Shift vector :   0.00000 -0.00000  0.00100  Length = 0.00106
+
+ No symmetries used in the shifted-grid sampling
+
+ 
+ Started reading wavefunctions (WFNq_fi) with 1000 k-point(s) at 16:09:21.
+ [ 16:09:21 |   0% ] k-point    1 / 1000.
+ [ 16:09:21 |   0% ] k-point    3 / 1000, remaining: 2 s.
+ [ 16:09:21 |  10% ] k-point  100 / 1000, remaining: 0 s.
+ [ 16:09:21 |  20% ] k-point  200 / 1000, remaining: 0 s.
+ [ 16:09:21 |  30% ] k-point  300 / 1000, remaining: 0 s.
+ [ 16:09:21 |  40% ] k-point  400 / 1000, remaining: 0 s.
+ [ 16:09:21 |  50% ] k-point  500 / 1000, remaining: 0 s.
+ [ 16:09:21 |  60% ] k-point  600 / 1000, remaining: 0 s.
+ [ 16:09:21 |  70% ] k-point  700 / 1000, remaining: 0 s.
+ [ 16:09:21 |  80% ] k-point  800 / 1000, remaining: 0 s.
+ [ 16:09:21 |  90% ] k-point  900 / 1000, remaining: 0 s.
+ [ 16:09:21 | 100% ] k-point 1000 / 1000, remaining: 0 s.
+ Finished reading wavefunctions (WFNq_fi) at 16:09:21.
+ Elapsed time: 0 s.
+ 
+
+ Valence wavefunctions read from file WFNq_fi
+  - Number k-points in irreducible BZ:     1000
+  - Number k-points in full BZ:     1000
+
+ Reading quasiparticle energy corrections from eqp_co.dat
+
+      band   k-point      spin      Elda (eV)       Eqp (eV)
+         1         1         1       -5.89576       -6.35418
+         2         1         1        6.00698        5.56607
+         3         1         1        6.00698        5.56607
+         4         1         1        6.00698        5.56607
+         5         1         1        8.56723        8.88839
+         6         1         1        8.56723        8.88839
+         7         1         1        8.56723        8.88839
+         8         1         1        9.29864        9.57441
+         9         1         1       13.71005       13.93196
+        10         1         1       13.79688       14.48552
+        11         1         1       13.79688       14.48552
+        12         1         1       17.16522       17.49847
+        13         1         1       17.16522       17.49847
+        14         1         1       17.16522       17.49847
+         1         2         1       -5.37747       -5.88336
+         2         2         1        3.01738        2.48384
+         3         2         1        5.43107        4.98077
+         4         2         1        5.43107        4.98077
+         5         2         1        8.19225        8.46855
+         6         2         1        9.36137        9.70954
+         7         2         1        9.36137        9.70954
+         8         2         1       11.92567       12.25138
+         9         2         1       13.08222       13.67435
+        10         2         1       13.08222       13.67435
+        11         2         1       14.95251       15.21251
+        12         2         1       16.77992       17.08956
+        13         2         1       19.69125       20.07005
+        14         2         1       19.69125       20.07005
+         1         3         1       -4.00864       -4.58056
+         2         3         1       -0.24165       -0.86194
+         3         3         1        4.88643        4.39038
+         4         3         1        4.88643        4.39038
+         5         3         1        7.59144        7.84426
+         6         3         1        9.41700        9.81386
+         7         3         1        9.41700        9.81386
+         8         3         1       13.68300       13.94356
+         9         3         1       14.99276       15.55616
+        10         3         1       14.99276       15.55616
+        11         3         1       15.86233       16.20620
+        12         3         1       19.15816       19.65128
+        13         3         1       19.15816       19.65128
+        14         3         1       19.68341       19.91688
+         1         4         1       -5.19983       -5.71700
+         2         4         1        3.41628        2.88626
+         3         4         1        4.52433        4.04534
+         4         4         1        4.52433        4.04534
+         5         4         1        7.43637        7.69119
+         6         4         1        9.84793       10.21248
+         7         4         1       10.87416       11.25864
+         8         4         1       10.87416       11.25864
+         9         4         1       12.98981       13.42937
+        10         4         1       14.56494       15.24475
+        11         4         1       16.15810       16.41221
+        12         4         1       18.36001       18.70060
+        13         4         1       18.36001       18.70060
+        14         4         1       18.93797       19.28936
+         1         5         1       -4.05577       -4.62711
+         2         5         1        0.73843        0.12155
+         3         5         1        3.38735        2.88571
+         4         5         1        4.01769        3.49952
+         5         5         1        7.74405        8.01253
+         6         5         1       10.04843       10.41117
+         7         5         1       10.89010       11.25843
+         8         5         1       11.42315       11.86297
+         9         5         1       16.13864       16.75044
+        10         5         1       16.29781       16.70085
+        11         5         1       16.56992       16.91300
+        12         5         1       18.76245       19.26548
+        13         5         1       19.28040       19.56675
+        14         5         1       20.97786       21.33986
+         1         6         1       -3.16293       -3.76569
+         2         6         1       -0.66238       -1.29248
+         3         6         1        2.57714        2.04202
+         4         6         1        4.30045        3.78754
+         5         6         1        8.02872        8.32893
+         6         6         1       10.55079       10.88857
+         7         6         1       10.79617       11.22965
+         8         6         1       13.50468       13.94194
+         9         6         1       14.26501       14.64489
+        10         6         1       14.43641       14.98732
+        11         6         1       17.47619       17.83976
+        12         6         1       20.02401       20.52342
+        13         6         1       20.36067       20.65679
+        14         6         1       20.97425       21.38346
+         1         7         1       -4.54446       -5.09103
+         2         7         1        1.57056        0.97534
+         3         7         1        3.00308        2.49833
+         4         7         1        5.16701        4.69148
+         5         7         1        8.87571        9.21390
+         6         7         1        9.98981       10.37589
+         7         7         1       10.25729       10.56075
+         8         7         1       11.66403       12.02763
+         9         7         1       12.13293       12.67312
+        10         7         1       16.54678       16.84459
+        11         7         1       16.66600       17.15008
+        12         7         1       17.83202       18.26983
+        13         7         1       19.67786       20.10080
+        14         7         1       20.79632       21.02717
+         1         8         1       -3.18113       -3.78970
+         2         8         1       -0.11273       -0.74408
+         3         8         1        3.31991        2.76316
+         4         8         1        3.31991        2.76316
+         5         8         1        6.54293        6.76760
+         6         8         1        7.26987        7.54672
+         7         8         1       14.44410       14.90153
+         8         8         1       14.44410       14.90153
+         9         8         1       16.87086       17.52878
+        10         8         1       16.97574       17.35029
+        11         8         1       18.52716       19.03892
+        12         8         1       18.52716       19.03892
+        13         8         1       19.50579       19.73238
+        14         8         1       20.65880       21.20929
+         1         9         1       -1.96802       -2.60354
+         2         9         1       -1.37336       -2.00622
+         3         9         1        1.93209        1.37961
+         4         9         1        3.43889        2.88601
+         5         9         1        6.99066        7.24656
+         6         9         1        9.11362        9.42171
+         7         9         1       14.05027       14.50241
+         8         9         1       14.58699       15.06670
+         9         9         1       14.60301       14.97663
+        10         9         1       15.07546       15.67281
+        11         9         1       20.02977       20.29736
+        12         9         1       20.39458       20.97275
+        13         9         1       20.70406       21.16981
+        14         9         1       21.56944       21.92172
+         1        10         1       -2.73639       -3.35374
+         2        10         1       -0.49440       -1.13319
+         3        10         1        2.01884        1.46676
+         4        10         1        3.01144        2.49006
+         5        10         1        9.36030        9.67503
+         6        10         1        9.72463       10.04970
+         7        10         1       10.40564       10.79028
+         8        10         1       13.72630       14.17023
+         9        10         1       14.39432       14.86782
+        10        10         1       16.13450       16.65151
+        11        10         1       19.19269       19.65167
+        12        10         1       20.27920       20.59741
+        13        10         1       20.36259       20.64530
+        14        10         1       21.48516       21.93368
+ 
+ Highest occupied band (coarse grid) = 4
+ Valence max    (coarse grid) = 5.566071 eV
+ Conduction min (coarse grid) = 6.767603 eV
+ Middle energy  (coarse grid) = 6.166837 eV
+ Fermi  energy  (coarse grid) = 6.166837 eV
+
+
+ Reading quasiparticle energy corrections from eqp_co.dat
+ Using symmetries to expand the coarse-grid sampling
+
+ 
+ Started reading wavefunctions (WFN_co) with 10 k-point(s) at 16:09:21.
+ [ 16:09:21 |   0% ] k-point  1 / 10.
+ [ 16:09:21 |  10% ] k-point  2 / 10.
+ [ 16:09:21 |  20% ] k-point  3 / 10, remaining: 0 s.
+ [ 16:09:21 |  30% ] k-point  4 / 10, remaining: 0 s.
+ [ 16:09:21 |  40% ] k-point  5 / 10, remaining: 0 s.
+ [ 16:09:21 |  50% ] k-point  6 / 10, remaining: 0 s.
+ [ 16:09:21 |  60% ] k-point  7 / 10, remaining: 0 s.
+ [ 16:09:21 |  70% ] k-point  8 / 10, remaining: 0 s.
+ [ 16:09:21 |  80% ] k-point  9 / 10, remaining: 0 s.
+ [ 16:09:21 |  90% ] k-point 10 / 10, remaining: 0 s.
+ Finished reading wavefunctions (WFN_co) at 16:09:21.
+ Elapsed time: 0 s.
+ 
+
+ Coarse-grid wavefunctions read from file WFN_co
+  - Number k-points in irreducible BZ:       10
+  - Number k-points in full BZ:      125
+  - Effective k-point radius:     0.120597 Bohr^-1
+ 
+ Started wavefunction interpolation with 32 k-point(s) at 16:09:21.
+ [ 16:09:21 |   0% ] k-point  1 / 32.
+ [ 16:09:21 |   6% ] k-point  3 / 32, remaining: 1 s.
+ [ 16:09:21 |   9% ] k-point  4 / 32, remaining: 1 s.
+ [ 16:09:21 |  19% ] k-point  7 / 32, remaining: 1 s.
+ [ 16:09:21 |  28% ] k-point 10 / 32, remaining: 1 s.
+ [ 16:09:21 |  38% ] k-point 13 / 32, remaining: 1 s.
+ [ 16:09:22 |  50% ] k-point 17 / 32, remaining: 0 s.
+ [ 16:09:22 |  59% ] k-point 20 / 32, remaining: 0 s.
+ [ 16:09:22 |  69% ] k-point 23 / 32, remaining: 0 s.
+ [ 16:09:22 |  78% ] k-point 26 / 32, remaining: 0 s.
+ [ 16:09:22 |  88% ] k-point 29 / 32, remaining: 0 s.
+ Finished wavefunction interpolation at 16:09:22.
+ Elapsed time: 1 s.
+ 
+ Max. error in norm of transformation coefficients (1 - \sum_co |d_fi,co|^2):
+  - For valence states: 2.412E-01
+  - For conduction states: 2.297E-01
+
+WARNING: there are fine/coarse transformation coefficients with 2-norm < 95%.
+To improve convergence, you might want to consider:
+- recalculating the kernel using the "extended_kernel" flag
+- using the "unrestricted_transformation" flag in the input file
+- including more bands from the coarse WFN_co file (number_*_bands_coarse)
+- using a coarse WFN_co file with a denser k-mesh
+ 
+ Writing matrix elements into vmtxel
+ 
+ Plasma Frequency :    16.6009652463394       eV
+ 
+ Polarization:   0.000000  -0.000000   0.001000
+ Sum rule (DFT) :   0.854866699795084     
+ Sum rule (GW)  :    1.01090099479598     
+ 
+
+ Epsilon matrix for q->0 read from eps0mat
+ nrq0 = 1  gmax =    10.000000
+
+ Epsilon matrix for q/=0 read from epsmat
+ nrq = 9  gmax =    10.000000
+ nfq = 125  qsz =   0.120597
+ ngmax = 4573
+ Dielectric constant :    12.564037
+ Dielectric matrix tabulated, nq = 1234
+ emax =     1.687236  qlen =     1.272693
+ 
+ Spin Singlet Kernel
+
+ Calculating v(q) with   1000 k-points
+ k+G sampling:   0.173205  0.163299  0.152753 (reciprocal lattice units)
+
+ Performing Kernel Interpolation
+ 
+ Started interpolating BSE kernel with 128 block(s) at 16:09:31.
+ [ 16:09:31 |   0% ] block   1 / 128.
+ [ 16:09:31 |   2% ] block   3 / 128, remaining: 8 s.
+ [ 16:09:32 |   9% ] block  13 / 128, remaining: 7 s.
+ [ 16:09:33 |  20% ] block  26 / 128, remaining: 6 s.
+ [ 16:09:34 |  30% ] block  39 / 128, remaining: 6 s.
+ [ 16:09:35 |  40% ] block  52 / 128, remaining: 5 s.
+ [ 16:09:36 |  50% ] block  65 / 128, remaining: 5 s.
+ [ 16:09:37 |  59% ] block  77 / 128, remaining: 4 s.
+ [ 16:09:37 |  70% ] block  90 / 128, remaining: 3 s.
+ [ 16:09:38 |  80% ] block 103 / 128, remaining: 2 s.
+ [ 16:09:39 |  90% ] block 116 / 128, remaining: 1 s.
+ Finished interpolating BSE kernel at 16:09:40.
+ Elapsed time: 9 s.
+ 
+
+ BLACS processor grid: 5 x 6; BLOCKSIZE = 64
+ Number of idle processors: 2
+
+ 
+ Degree of broken Hermiticity of the BSE Hamiltonian: 0.0000 %
+ 
+ Beginning ScaLAPACK diagonalization. Size: 24000
+ Done ScaLAPACK diagonalization
+ Sharing eigenvectors
+ Diagonalization done
+ 
+ Plasma Frequency :    16.6009652463394       eV
+ 
+ Polarization:   0.000000  -0.000000   0.001000
+ Sum rule (BSE) :   0.945765393956087     
+ 
+ 
+                            CPU (s)        WALL (s)          #
+ 
+ INPUT:          (min.)        0.090           0.244          1
+                 (PE 0)        0.090           0.247
+                 (max.)        0.230           0.247
+ INPUT_Q:        (min.)        0.070           0.166          1
+                 (PE 0)        0.070           0.166
+                 (max.)        0.170           0.169
+ INTWFN:         (min.)        1.200           1.413          1
+                 (PE 0)        1.200           1.438
+                 (max.)        1.260           1.438
+ INTKERNEL:      (min.)       12.300          13.682          1
+                 (PE 0)       12.300          13.682
+                 (max.)       17.140          17.769
+ DIAGONALIZE:    (min.)      373.920         375.895          1
+                 (PE 0)      374.570         375.900
+                 (max.)      375.490         375.901
+ EPSDIAG:        (min.)       -0.000           0.000          1
+                 (PE 0)        0.020           0.155
+                 (max.)        0.020           0.155
+ EPS COMM:       (min.)       -0.000           0.000          1
+                 (PE 0)       -0.000           0.000
+                 (max.)        4.240           4.242
+ ABSORP0:        (min.)       -0.000           0.000          1
+                 (PE 0)        4.080           4.098
+                 (max.)        4.080           4.098
+ VMTXEL:         (min.)        0.030           0.034          1
+                 (PE 0)        0.030           0.034
+                 (max.)        0.060           0.055
+ TRANS MTXEL:    (min.)        0.030           0.038          1
+                 (PE 0)        0.030           0.038
+                 (max.)        0.040           0.038
+ ABSORP:         (min.)       -0.000           0.000          1
+                 (PE 0)        2.550           2.600
+                 (max.)        2.550           2.600
+ WRITE EIG:      (min.)       -0.000           0.000          1
+                 (PE 0)        0.000           0.000
+                 (max.)        0.000           0.000
+ 
+ IW Input_co:    (min.)        0.010           0.032          1
+                 (PE 0)        0.010           0.032
+                 (max.)        0.040           0.032
+ IW Interp:      (min.)        0.210           0.382         33
+                 (PE 0)        0.210           0.383
+                 (max.)        0.240           0.389
+ IW Genwf:       (min.)        0.020           0.023        128
+                 (PE 0)        0.030           0.030
+                 (max.)        0.060           0.030
+ IW Gwnwf_Co:    (min.)        0.690           0.797        128
+                 (PE 0)        0.780           0.798
+                 (max.)        0.830           0.806
+ IW Mtxel_t:     (min.)       -0.000           0.011        128
+                 (PE 0)        0.010           0.012
+                 (max.)        0.080           0.019
+ IW Write:       (min.)       -0.000           0.001          1
+                 (PE 0)        0.020           0.039
+                 (max.)        0.020           0.039
+ IW Reduce:      (min.)       -0.000           0.003          1
+                 (PE 0)       -0.000           0.003
+                 (max.)        0.010           0.003
+ 
+ IK Setup:       (min.)       -0.000           0.000          1
+                 (PE 0)        0.010           0.006
+                 (max.)        0.010           0.007
+ IK C-Check:     (min.)        0.010           0.063          1
+                 (PE 0)        0.010           0.063
+                 (max.)        0.040           0.067
+ IK Input:       (min.)        0.550           1.283        500
+                 (PE 0)        0.550           1.292
+                 (max.)        1.570           1.554
+ IK Inteps:      (min.)       -0.000           0.002          1
+                 (PE 0)        0.000           0.003
+                 (max.)        0.010           0.003
+ IK Vcoul:       (min.)        3.790           4.275          1
+                 (PE 0)        3.990           4.277
+                 (max.)        3.990           4.283
+ IK Cache:       (min.)        0.030           0.051     128000
+                 (PE 0)        0.050           0.080
+                 (max.)        0.120           0.098
+ IK Interp:      (min.)        5.630           6.008     128000
+                 (PE 0)        6.210           6.316
+                 (max.)        6.290           6.330
+ IK Sum:         (min.)        0.870           0.981     128000
+                 (PE 0)        1.110           1.065
+                 (max.)        1.260           1.108
+ 
+ TOTAL:          (min.)      394.970         398.342          1
+                 (PE 0)      394.970         398.342
+                 (max.)      396.850         398.342

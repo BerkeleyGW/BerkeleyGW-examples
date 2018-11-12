@@ -1,0 +1,32 @@
+#NSCF general template for ABINIT:
+#For larger runs, you may want to split the calculation
+# see input file "in_larger"
+
+#Definition of the method
+iscf -3 #NSCF :use -3 to use weights given explicitely (see below)
+tolwfr 1.d-13 #convergence threshold 
+nband 36 #Number of bands
+nbdbuf 4 #high energy bands difficult to converge, better skip them
+
+#I/O options
+getwfk 0            #Start wavefunctions from scratch
+irdden 1        #Get density from first dataset
+ prtwf 1        #Print wavefunctions
+prtden 0        #Do not print density
+
+#In case of running with a larger number of procs. than the number of k-points uncomment this:
+#accesswff   1         #To write/read files using openmp
+#autoparal   1         #To let the code decide how to paralelize the job
+#npband      1         #Try to avoid paralelizing over bands, as sometimes can be problematic, this will force the code to paralelize over spin,kpoits and ffts only.
+
+
+# k-point sampling
+istwfk   *1
+kptopt    0        #Give the k-points explicitly
+include "kpt.in"   #k-points given in an external file
+
+#weights
+include "wtk.in"   #k-weights given in an external file
+
+#Basic information: unit-cell, atoms, cutoffs, etc..
+include "basic.in"

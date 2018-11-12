@@ -1,0 +1,39 @@
+
+ reading epsinvomega.inp file
+
+     eps  file  = ../epsilon_ff/eps0mat
+     rho  file  = ../../1_qe/rho_U/rho_valence_U.complex
+     q  vector  =   0.001  0.001  0.001
+     G  vector  =    0   0   0
+     G' vector  =    0   0   0
+     nFreq      =   1001
+     dDeltaFreq =   0.100
+     dBrdning   =   0.100
+     ebind      =   0.000
+     GPP file   = epsinvGPP_valence.dat
+     FFR file   = epsinvRPA_r.dat
+     FFA file   = epsinvRPA_a.dat
+
+ reading ../epsilon_ff/eps0mat file
+
+     omega num  =   1001
+     omega step =   0.100
+     omega brd  =   0.100
+
+ reading ../../1_qe/rho_U/rho_valence_U.complex file
+
+     cel vol =  0.320994287798E+03
+     rho(0) =    12.000
+
+ constructing GPP model
+
+     plasma frequency =    18.651 eV
+
+ writing epsinvGPP_valence.dat file
+
+ writing epsinvRPA_r.dat and epsinvRPA_a.dat files
+
+ Static Head: (0.213166530784414,-6.113267980257011E-019) Dynamic Head:
+ (0.213166530784414,-6.113267980257011E-019)
+ 
+Application 2794367 resources: utime ~0s, stime ~0s, Rss ~20008, inblocks ~240781, outblocks ~14101

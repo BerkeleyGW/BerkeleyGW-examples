@@ -1,0 +1,10 @@
+&input_sapo
+   wfng_input_file = 'wfn.real.sapo'
+   vscg_input_file = 'vsc.real'
+   vkbg_input_file = 'vkb.complex'
+   sapo_band_number = -1
+   sapo_do_all_bands = .true.
+   sapo_hamiltonian = .true.
+   sapo_ham_ndiag = 0
+   sapo_check_norm = .true.
+/

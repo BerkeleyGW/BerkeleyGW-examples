@@ -1,0 +1,9 @@
+#!/bin/bash -l
+#
+GSPHERE="$HOME/BerkeleyGW/bin/gsphere.py"
+#
+cd ./0-gsphere
+$GSPHERE ./g_rho.in ./g_rho.out
+$GSPHERE ./g_eps.in ./g_eps.out
+cd ..
+#

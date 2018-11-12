@@ -1,0 +1,18 @@
+ Output -> wfn.complex
+ Total number of kpoints found=          15
+ Working on kpoint #           1
+ Working on kpoint #           2
+ Working on kpoint #           3
+ Working on kpoint #           4
+ Working on kpoint #           5
+ Working on kpoint #           6
+ Working on kpoint #           7
+ Working on kpoint #           8
+ Working on kpoint #           9
+ Working on kpoint #          10
+ Working on kpoint #          11
+ Working on kpoint #          12
+ Working on kpoint #          13
+ Working on kpoint #          14
+ Working on kpoint #          15
+Application 2756927 resources: utime ~114s, stime ~56s, Rss ~67372, inblocks ~30664695, outblocks ~30559579

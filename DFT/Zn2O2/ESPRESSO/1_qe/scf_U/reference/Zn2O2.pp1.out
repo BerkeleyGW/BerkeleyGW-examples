@@ -1,0 +1,42 @@
+
+     Program POST-PROC v.5.0.2 (svn rev. 9656) starts on 26Jun2013 at 17: 8:45 
+
+     This program is part of the open-source Quantum ESPRESSO suite
+     for quantum simulation of materials; please cite
+         "P. Giannozzi et al., J. Phys.:Condens. Matter 21 395502 (2009);
+          URL http://www.quantum-espresso.org", 
+     in publications or presentations arising from this work. More details at
+     http://www.quantum-espresso.org/quote.php
+
+     Parallel version (MPI), running on   144 processors
+     K-points division:     npool     =      36
+     R & G space division:  proc/nbgrp/npool/nimage =       4
+
+   Info: using nr1, nr2, nr3 values from input
+
+   Info: using nr1s, nr2s, nr3s values from input
+
+     IMPORTANT: XC functional enforced from input :
+     Exchange-correlation      = SLA+PW ( 1 4 0 0 0)
+     EXX-fraction              =        0.00
+     Any further DFT definition will be discarded
+     Please, verify this is what you really want
+
+ 
+     Parallelization info
+     --------------------
+     sticks:   dense  smooth     PW     G-vecs:    dense   smooth      PW
+     Min        1038    1038    280                86720    86720   12064
+     Max        1039    1039    281                86727    86727   12067
+     Sum        4153    4153   1123               346889   346889   48263
+ 
+
+     Check: negative/imaginary core charge=   -0.000103    0.000000
+
+     Calling punch_plot, plot_num =  11
+     Writing data to file  velec
+     Reading data from file  velec
+
+     Writing data to be plotted to file velec.cube
+     Plot Type: 3D                     Output format: Gaussian cube
+Application 2753311 resources: utime ~6696s, stime ~76s, Rss ~61124, inblocks ~7046750, outblocks ~1740715

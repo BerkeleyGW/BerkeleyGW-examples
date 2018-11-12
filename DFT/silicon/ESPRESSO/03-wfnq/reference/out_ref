@@ -1,0 +1,608 @@
+
+     Program PWSCF v.4.3.2      starts on 24Feb2012 at 15:48:39 
+
+     This program is part of the open-source Quantum ESPRESSO suite
+     for quantum simulation of materials; please cite
+         "P. Giannozzi et al., J. Phys.:Condens. Matter 21 395502 (2009);
+          URL http://www.quantum-espresso.org", 
+     in publications or presentations arising from this work. More details at
+     http://www.quantum-espresso.org/wiki/index.php/Citing_Quantum-ESPRESSO
+
+     Parallel version (MPI & OpenMP), running on    24 processor cores
+     Number of MPI processes:              24
+     Threads/MPI process:                  1
+     R & G space division:  proc/pool =   24
+
+     EXPERIMENTAL VERSION WITH EXACT EXCHANGE
+
+     Current dimensions of program PWSCF are:
+     Max number of different atomic species (ntypx) = 10
+     Max number of k-points (npk) =  40000
+     Max angular momentum in pseudopotentials (lmaxx) =  3
+     Reading input from ./in
+
+     Atomic positions and unit cell read from directory:
+     ./silicon.save/
+     Message from routine read_ions :
+     PP will be read from ./
+ 
+
+     Subspace diagonalization in iterative solution of the eigenvalue problem:
+     parallel, distributed-memory algorithm (size of sub-group:  3*  3 procs)
+
+ 
+     Parallelization info
+     --------------------
+     sticks:   dense  smooth     PW     G-vecs:    dense   smooth      PW
+     Min          15      15      5                  189      189      39
+     Max          16      16      6                  192      192      43
+     Sum         361     361    127                 4573     4573     965
+ 
+
+
+     bravais-lattice index     =            0
+     lattice parameter (alat)  =      10.2612  a.u.
+     unit-cell volume          =     270.1061 (a.u.)^3
+     number of atoms/cell      =            2
+     number of atomic types    =            1
+     number of electrons       =         8.00
+     number of Kohn-Sham states=            4
+     kinetic-energy cutoff     =      25.0000  Ry
+     charge density cutoff     =     100.0000  Ry
+     Exchange-correlation      = PZ ( 1 1 0 0 0)
+     EXX-fraction              =        0.00
+
+     celldm(1)=  10.261200  celldm(2)=   0.000000  celldm(3)=   0.000000
+     celldm(4)=   0.000000  celldm(5)=   0.000000  celldm(6)=   0.000000
+
+     crystal axes: (cart. coord. in units of alat)
+               a(1) = (   0.000000   0.500000   0.500000 )  
+               a(2) = (   0.500000   0.000000   0.500000 )  
+               a(3) = (   0.500000   0.500000   0.000000 )  
+
+     reciprocal axes: (cart. coord. in units 2 pi/alat)
+               b(1) = ( -1.000000  1.000000  1.000000 )  
+               b(2) = (  1.000000 -1.000000  1.000000 )  
+               b(3) = (  1.000000  1.000000 -1.000000 )  
+
+
+     PseudoPot. # 1 for Si read from file:
+     ./Si.UPF
+     MD5 check sum: 8d0500bb3b5099e4a124109e930844dd
+     Pseudo is Norm-conserving, Zval =  4.0
+     Generated using "atomic" code by A. Dal Corso  (Quantum ESPRESSO distribution)
+     Using radial grid of 1141 points,  2 beta functions with: 
+                l(1) =   0
+                l(2) =   1
+
+     atomic species   valence    mass     pseudopotential
+        Si             4.00    28.08600     Si( 1.00)
+
+     48 Sym.Ops. (with inversion)
+
+
+   Cartesian axes
+
+     site n.     atom                  positions (alat units)
+         1           Si  tau(   1) = (  -0.1250000  -0.1250000  -0.1250000  )
+         2           Si  tau(   2) = (   0.1250000   0.1250000   0.1250000  )
+
+     number of k points=   110
+
+     Number of k-points >= 100: set verbosity='high' to print them.
+
+     Dense  grid:     4573 G-vectors     FFT dimensions: (  24,  24,  24)
+
+     Largest allocated arrays     est. size (Mb)     dimensions
+        Kohn-Sham Wavefunctions         0.00 Mb     (     30,    4)
+        NL pseudopotentials             0.00 Mb     (     30,    8)
+        Each V/rho on FFT grid          0.01 Mb     (    576)
+        Each G-vector array             0.00 Mb     (    190)
+        G-vector shells                 0.00 Mb     (     73)
+     Largest temporary arrays     est. size (Mb)     dimensions
+        Auxiliary wavefunctions         0.01 Mb     (     30,   16)
+        Each subspace H/S matrix        0.00 Mb     (   5,   5)
+        Each <psi_i|beta_j> matrix      0.00 Mb     (      8,    4)
+     writing wfc files to a dedicated directory
+
+     The potential is recalculated from file :
+     ./silicon.save/charge-density.dat
+
+     Starting wfc are random
+
+     total cpu time spent up to now is        0.9 secs
+
+     per-process dynamical memory:     2.0 Mb
+
+     Band Structure Calculation
+     Davidson diagonalization with overlap
+
+     ethr =  1.25E-12,  avg # of iterations = 20.5
+
+     total cpu time spent up to now is       13.9 secs
+
+     End of band structure calculation
+
+          k = 0.1010 0.1010-0.1010     band energies (ev):
+
+    -5.7622   4.8532   5.8063   5.8063
+
+          k = 0.3010 0.3010-0.3010     band energies (ev):
+
+    -4.7535   1.2192   5.0949   5.0949
+
+          k = 0.5010 0.5010-0.5010     band energies (ev):
+
+    -3.5501  -0.9453   4.8151   4.8151
+
+          k = 0.7010 0.7010-0.7010     band energies (ev):
+
+    -4.7677   1.2526   5.1005   5.1005
+
+          k = 0.9010 0.9010-0.9010     band energies (ev):
+
+    -5.7675   4.8883   5.8131   5.8131
+
+          k = 0.7010 0.1010-0.1010     band energies (ev):
+
+    -3.7241   0.6293   3.1437   3.5788
+
+          k = 0.7010-0.0990 0.0990     band energies (ev):
+
+    -3.7268   0.6344   3.1543   3.5762
+
+          k = 1.1010 0.1010-0.1010     band energies (ev):
+
+    -2.4571  -0.9428   2.7192   3.2737
+
+          k = 1.3010 0.3010-0.3010     band energies (ev):
+
+    -3.3211  -0.4546   2.8873   4.0673
+
+          k = 1.1010-0.0990 0.0990     band energies (ev):
+
+    -2.4587  -0.9427   2.7343   3.2709
+
+          k = 1.5010 0.1010-0.1010     band energies (ev):
+
+    -4.7360   2.1754   4.0208   4.1815
+
+          k = 1.3010-0.2990 0.2990     band energies (ev):
+
+    -3.3247  -0.4423   2.8815   4.0606
+
+          k = 1.5010-0.0990 0.0990     band energies (ev):
+
+    -4.7392   2.1894   4.0225   4.1794
+
+          k = 0.1010 0.1010 0.0990     band energies (ev):
+
+    -5.7640   4.8649   5.8049   5.8121
+
+          k = 0.3010 0.3010-0.1010     band energies (ev):
+
+    -5.0754   2.3733   4.2364   5.5027
+
+          k = 0.5010 0.5010-0.3010     band energies (ev):
+
+    -3.6611  -0.5534   3.9092   4.7655
+
+          k = 0.7010 0.7010-0.5010     band energies (ev):
+
+    -4.1535   0.2620   4.3314   4.5358
+
+          k = 0.9010 0.9010-0.7010     band energies (ev):
+
+    -5.4222   3.5942   5.0036   5.1748
+
+          k = 0.1010-0.0990 0.2990     band energies (ev):
+
+    -5.4205   3.5833   5.0038   5.1770
+
+          k = 0.5010 0.1010 0.0990     band energies (ev):
+
+    -4.7291   2.1678   4.0108   4.1733
+
+          k = 0.7010 0.3010-0.1010     band energies (ev):
+
+    -3.4637   0.1730   2.5740   3.5929
+
+          k = 0.9010 0.5010-0.3010     band energies (ev):
+
+    -3.0248  -0.4148   2.0168   3.7837
+
+          k = 1.1010 0.7010-0.5010     band energies (ev):
+
+    -4.4267   1.2658   3.3532   4.6694
+
+          k = 0.3010-0.2990 0.4990     band energies (ev):
+
+    -4.1495   0.2523   4.3344   4.5381
+
+          k = 0.9010 0.1010 0.0990     band energies (ev):
+
+    -2.4439  -0.9584   2.7247   3.2707
+
+          k = 1.1010 0.3010-0.1010     band energies (ev):
+
+    -2.3249  -0.9643   2.0733   3.0283
+
+          k = 1.3010 0.5010-0.3010     band energies (ev):
+
+    -3.2071  -0.7908   3.0640   4.1832
+
+          k = 0.5010-0.4990 0.6990     band energies (ev):
+
+    -3.6663  -0.5478   3.9158   4.7686
+
+          k = 1.3010 0.1010 0.0990     band energies (ev):
+
+    -3.7370   0.6478   3.1554   3.5821
+
+          k = 0.7010-0.6990 0.8990     band energies (ev):
+
+    -5.0804   2.3851   4.2457   5.5054
+
+          k = 0.1010 0.5010-0.1010     band energies (ev):
+
+    -4.7274   2.1609   4.0101   4.1743
+
+          k = 0.3010 0.7010-0.3010     band energies (ev):
+
+    -3.3124  -0.4600   2.8732   4.0635
+
+          k = 0.7010 0.9010-0.5010     band energies (ev):
+
+    -4.4281   1.2747   3.3435   4.6703
+
+          k = 0.1010 0.1010 0.2990     band energies (ev):
+
+    -5.4188   3.5725   5.0046   5.1787
+
+          k = 0.3010 0.3010 0.0990     band energies (ev):
+
+    -5.0770   2.3839   4.2257   5.5050
+
+          k = 0.5010 0.5010-0.1010     band energies (ev):
+
+    -3.8158   0.3190   2.5512   4.6930
+
+          k = 0.9010 0.3010 0.0990     band energies (ev):
+
+    -2.3122  -0.9762   2.0767   3.0159
+
+          k = 1.1010 0.5010-0.1010     band energies (ev):
+
+    -2.2283  -0.9990   1.8590   2.7653
+
+          k = 0.5010-0.4990 0.8990     band energies (ev):
+
+    -3.8230   0.3274   2.5582   4.6977
+
+          k = 1.3010 0.3010 0.0990     band energies (ev):
+
+    -3.4754   0.1889   2.5781   3.5978
+
+          k = 0.7010-0.6990 1.0990     band energies (ev):
+
+    -5.0820   2.3958   4.2350   5.5078
+
+          k =-0.0990 0.5010 0.0990     band energies (ev):
+
+    -4.7306   2.1748   4.0119   4.1722
+
+          k = 0.3010 0.3010 0.2990     band energies (ev):
+
+    -4.7582   1.2304   5.0932   5.1002
+
+          k = 0.5010 0.5010 0.0990     band energies (ev):
+
+    -3.8167   0.3272   2.5405   4.6925
+
+          k = 0.7010 0.7010-0.1010     band energies (ev):
+
+    -2.5510  -0.8471   1.7615   3.7993
+
+          k = 0.3010 0.1010 0.4990     band energies (ev):
+
+    -4.4220   1.2559   3.3448   4.6736
+
+          k = 0.7010 0.3010 0.2990     band energies (ev):
+
+    -3.3142  -0.4540   2.8703   4.0601
+
+          k = 0.9010 0.5010 0.0990     band energies (ev):
+
+    -2.2160  -1.0081   1.8594   2.7513
+
+          k = 0.3010-0.2990 0.8990     band energies (ev):
+
+    -2.5547  -0.8445   1.7615   3.8030
+
+          k = 0.5010-0.0990 0.6990     band energies (ev):
+
+    -3.0197  -0.4204   2.0121   3.7862
+
+          k = 0.5010-0.4990 1.0990     band energies (ev):
+
+    -3.8239   0.3356   2.5474   4.6972
+
+          k = 0.7010-0.2990 0.8990     band energies (ev):
+
+    -3.4675   0.1790   2.5799   3.5924
+
+          k = 0.9010-0.2990 0.8990     band energies (ev):
+
+    -3.7255   0.6319   3.1490   3.5775
+
+          k = 0.1010 0.9010-0.1010     band energies (ev):
+
+    -2.4431  -0.9584   2.7171   3.2721
+
+          k = 0.3010 0.9010-0.1010     band energies (ev):
+
+    -2.3132  -0.9759   2.0705   3.0256
+
+          k = 0.5010 1.1010-0.3010     band energies (ev):
+
+    -3.0254  -0.4192   2.0247   3.7856
+
+          k =-0.0990 0.3010 0.4990     band energies (ev):
+
+    -4.4235   1.2648   3.3351   4.6745
+
+          k = 0.3010 0.7010 0.0990     band energies (ev):
+
+    -3.4646   0.1779   2.5715   3.5890
+
+          k = 0.3010 0.3010 0.4990     band energies (ev):
+
+    -4.1456   0.2426   4.3378   4.5401
+
+          k = 0.5010 0.5010 0.2990     band energies (ev):
+
+    -3.6629  -0.5460   3.8952   4.7647
+
+          k = 0.7010 0.7010 0.0990     band energies (ev):
+
+    -2.5457  -0.8495   1.7547   3.7979
+
+          k = 0.7010 0.5010 0.2990     band energies (ev):
+
+    -3.2002  -0.7886   3.0429   4.1711
+
+          k = 0.3010-0.2990 1.0990     band energies (ev):
+
+    -2.5495  -0.8468   1.7547   3.8017
+
+          k = 1.1010 0.5010 0.2990     band energies (ev):
+
+    -3.0168  -0.4258   2.0210   3.7740
+
+          k = 0.5010-0.4990 1.2990     band energies (ev):
+
+    -3.6681  -0.5404   3.9018   4.7678
+
+          k =-0.2990 0.7010 0.2990     band energies (ev):
+
+    -3.3160  -0.4478   2.8675   4.0568
+
+          k =-0.0990 0.9010 0.0990     band energies (ev):
+
+    -2.4447  -0.9583   2.7322   3.2693
+
+          k = 0.5010 0.5010 0.4990     band energies (ev):
+
+    -3.5500  -0.9454   4.8150   4.8151
+
+          k = 0.7010 0.3010 0.6990     band energies (ev):
+
+    -3.3229  -0.4485   2.8844   4.0639
+
+          k = 0.7010 0.1010 0.8990     band energies (ev):
+
+    -2.3265  -0.9638   2.0778   3.0326
+
+          k = 0.7010-0.0990 1.0990     band energies (ev):
+
+    -2.3138  -0.9759   2.0812   3.0202
+
+          k = 0.9010 0.1010 0.8990     band energies (ev):
+
+    -2.4579  -0.9427   2.7268   3.2722
+
+          k = 0.1010 1.3010-0.1010     band energies (ev):
+
+    -3.7356   0.6452   3.1502   3.5834
+
+          k = 0.3010 1.3010-0.1010     band energies (ev):
+
+    -3.4744   0.1840   2.5807   3.6016
+
+          k =-0.2990 0.5010 0.6990     band energies (ev):
+
+    -3.2037  -0.7897   3.0534   4.1772
+
+          k = 0.3010 1.1010 0.0990     band energies (ev):
+
+    -2.3240  -0.9645   2.0795   3.0187
+
+          k = 0.1010 0.5010 0.6990     band energies (ev):
+
+    -3.0203  -0.4248   2.0200   3.7881
+
+          k = 0.5010 0.9010 0.2990     band energies (ev):
+
+    -3.0162  -0.4215   2.0133   3.7720
+
+          k = 0.3010 0.3010 0.8990     band energies (ev):
+
+    -2.5585  -0.8419   1.7615   3.8069
+
+          k = 0.5010 0.5010 0.6990     band energies (ev):
+
+    -3.6715  -0.5421   3.9225   4.7718
+
+          k = 0.7010 0.7010 0.4990     band energies (ev):
+
+    -4.1461   0.2535   4.3178   4.5303
+
+          k = 0.9010 0.7010 0.4990     band energies (ev):
+
+    -4.4200   1.2638   3.3351   4.6588
+
+          k = 0.3010-0.2990 1.4990     band energies (ev):
+
+    -4.1421   0.2438   4.3208   4.5327
+
+          k =-0.0990 1.3010 0.0990     band energies (ev):
+
+    -3.7383   0.6503   3.1608   3.5808
+
+          k =-0.0990 0.5010 0.8990     band energies (ev):
+
+    -2.2221  -1.0035   1.8591   2.7584
+
+          k = 0.3010 0.3010 1.0990     band energies (ev):
+
+    -2.5533  -0.8441   1.7547   3.8055
+
+          k = 0.5010 0.5010 0.8990     band energies (ev):
+
+    -3.8302   0.3359   2.5651   4.7025
+
+          k = 0.7010 0.7010 0.6990     band energies (ev):
+
+    -4.7629   1.2415   5.0952   5.1020
+
+          k = 0.3010-0.0990 1.4990     band energies (ev):
+
+    -4.4153   1.2540   3.3267   4.6630
+
+          k = 0.5010 0.1010 1.2990     band energies (ev):
+
+    -3.0118  -0.4314   2.0164   3.7765
+
+          k = 0.7010 0.3010 1.0990     band energies (ev):
+
+    -3.4791   0.1949   2.5842   3.5972
+
+          k = 0.9010 0.5010 0.8990     band energies (ev):
+
+    -4.7376   2.1824   4.0215   4.1806
+
+          k =-0.0990 0.7010 0.8990     band energies (ev):
+
+    -2.3147  -0.9756   2.0750   3.0299
+
+          k = 0.1010 0.5010 1.0990     band energies (ev):
+
+    -2.2222  -1.0034   1.8592   2.7583
+
+          k = 0.3010 0.7010 0.8990     band energies (ev):
+
+    -3.4782   0.1900   2.5867   3.6010
+
+          k = 0.7010 1.1010 0.4990     band energies (ev):
+
+    -4.4185   1.2550   3.3447   4.6580
+
+          k = 0.5010 0.5010 1.0990     band energies (ev):
+
+    -3.8311   0.3441   2.5543   4.7021
+
+          k = 0.7010 0.7010 0.8990     band energies (ev):
+
+    -5.0854   2.3970   4.2550   5.5083
+
+          k = 0.9010 0.9010 0.6990     band energies (ev):
+
+    -5.4170   3.5806   4.9947   5.1635
+
+          k = 0.1010-0.0990 1.6990     band energies (ev):
+
+    -5.4153   3.5698   4.9949   5.1657
+
+          k =-0.2990 0.7010 1.0990     band energies (ev):
+
+    -3.4684   0.1839   2.5775   3.5885
+
+          k =-0.0990 0.5010 1.2990     band energies (ev):
+
+    -3.0111  -0.4271   2.0086   3.7745
+
+          k = 0.1010 0.7010 1.0990     band energies (ev):
+
+    -2.3256  -0.9641   2.0840   3.0230
+
+          k = 0.1010 0.3010 1.4990     band energies (ev):
+
+    -4.4139   1.2451   3.3364   4.6622
+
+          k = 0.3010 0.5010 1.2990     band energies (ev):
+
+    -3.2037  -0.7896   3.0534   4.1771
+
+          k = 0.1010 0.1010 1.6990     band energies (ev):
+
+    -5.4136   3.5590   4.9958   5.1674
+
+          k = 0.3010 0.3010 1.4990     band energies (ev):
+
+    -4.1381   0.2341   4.3242   4.5347
+
+          k = 0.5010 0.5010 1.2990     band energies (ev):
+
+    -3.6734  -0.5347   3.9085   4.7710
+
+          k = 0.7010 0.7010 1.0990     band energies (ev):
+
+    -5.0870   2.4076   4.2444   5.5107
+
+          k = 0.9010 0.9010 0.8990     band energies (ev):
+
+    -5.7657   4.8766   5.8072   5.8143
+
+     Writing output data file silicon.save
+ 
+     init_run     :      0.02s CPU      0.09s WALL (       1 calls)
+     electrons    :     11.67s CPU     12.94s WALL (       1 calls)
+
+     Called by init_run:
+     wfcinit      :      0.00s CPU      0.00s WALL (       1 calls)
+     potinit      :      0.00s CPU      0.01s WALL (       1 calls)
+
+     Called by electrons:
+     c_bands      :     11.66s CPU     12.93s WALL (       1 calls)
+     v_of_rho     :      0.00s CPU      0.00s WALL (       1 calls)
+
+     Called by c_bands:
+     init_us_2    :      0.00s CPU      0.00s WALL (     110 calls)
+     cegterg      :     10.46s CPU     10.59s WALL (     158 calls)
+
+     Called by *egterg:
+     h_psi        :      4.62s CPU      5.21s WALL (    2521 calls)
+     g_psi        :      0.00s CPU      0.01s WALL (    2253 calls)
+     cdiaghg      :      4.14s CPU      3.84s WALL (    2363 calls)
+
+     Called by h_psi:
+     add_vuspsi   :      0.01s CPU      0.01s WALL (    2521 calls)
+
+     General routines
+     calbec       :      0.18s CPU      0.21s WALL (    2521 calls)
+     fft          :      0.01s CPU      0.01s WALL (       3 calls)
+     fftw         :      4.40s CPU      4.92s WALL (   17058 calls)
+     davcio       :      0.00s CPU      0.00s WALL (     220 calls)
+ 
+     Parallel routines
+     fft_scatter  :      4.30s CPU      4.56s WALL (   17061 calls)
+     EXX routines
+ 
+     PWSCF        :    13.87s CPU        17.34s WALL
+
+ 
+   This run was terminated on:  15:48:57  24Feb2012            
+
+=------------------------------------------------------------------------------=
+   JOB DONE.
+=------------------------------------------------------------------------------=

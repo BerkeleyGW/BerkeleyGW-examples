@@ -1,0 +1,64 @@
+
+SystemName      benzene
+SystemLabel     benzene
+NumberOfSpecies 2
+NumberOfAtoms   12
+
+LatticeConstant 1.000000000 bohr
+
+AtomicCoordinatesFormat bohr
+
+%block LatticeVectors
+  25.917768986   0.000000000   0.000000000
+   0.000000000  14.496126116   0.000000000
+   0.000000000   0.000000000  28.284379996
+%endblock LatticeVectors
+
+%block ChemicalSpeciesLabel
+1 6 C
+2 1 H
+%endblock ChemicalSpeciesLabel
+
+%block AtomicCoordinatesAndAtomicSpecies
+   0.000000000   0.000000000   2.606191638  1
+  -2.256951812   0.000000000   1.303295954  1
+  -2.256951812   0.000000000  -1.303295954  1
+   0.000000000   0.000000000  -2.606191638  1
+   2.256951812   0.000000000  -1.303295954  1
+   2.256951812   0.000000000   1.303295954  1
+   0.000000000   0.000000000   4.661568689  2
+  -4.036550461   0.000000000   2.331073825  2
+  -4.036550461   0.000000000  -2.331073825  2
+   0.000000000   0.000000000  -4.661568689  2
+   4.036550461   0.000000000  -2.331073825  2
+   4.036550461   0.000000000   2.331073825  2
+%endblock AtomicCoordinatesAndAtomicSpecies
+
+PAO.BasisSize DZP
+
+SolutionMethod diagon
+
+MD.TypeOfRun CG
+MD.VariableCell F
+MD.NumCGsteps 0
+
+%block kgrid_Monkhorst_Pack
+1 0 0 +0.0
+0 1 0 +0.0
+0 0 1 +0.0
+%endblock kgrid_Monkhorst_Pack
+
+WaveFuncKPointsScale ReciprocalLatticeVectors
+
+%block WaveFuncKPoints
+0.000  0.000  0.000
+%endblock WaveFuncKPoints
+
+WriteDenchar T
+
+SaveRho T
+SaveElectrostaticPotential T
+SaveTotalPotential T
+
+MeshCutoff 240.0 Ry
+

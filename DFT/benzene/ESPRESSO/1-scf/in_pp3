@@ -1,0 +1,12 @@
+&inputpp
+   prefix = 'benzene'
+   outdir = './'
+   filplot = 'velec'
+   plot_num = 11
+   spin_component = 0
+/
+&plot
+   iflag = 3
+   output_format = 6
+   fileout = 'velec.cube'
+/

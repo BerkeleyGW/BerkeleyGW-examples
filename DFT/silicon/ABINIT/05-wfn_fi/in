@@ -1,0 +1,30 @@
+#NSCF general template for ABINIT:
+
+#Definition of the method
+iscf -3 #NSCF :use -3 to use weights given explicitely (see below)
+tolwfr 1.d-13 #tolerance threshold 
+nband 15 #Number of bands
+nbdbuf 4 #high energy bands difficult to converge, better skip them
+nline 6 #Usually this is better for NSCF calculations
+
+#Uncomment these two if using MPI-IO:
+#autoparal   1   #To let ABINIT decide over parallelization options 
+#accesswff   1   #read/write files using mpi-io
+#npband      1         #Try to avoid paralelizing over bands, as sometimes can be problematic, this will force the code to paralelize over spin,kpoits and ffts only.
+
+#I/O options
+irdden 1        #Read density
+ prtwf 1        #Print wavefunctions
+prtden 0        #Do not print density
+getwfk 0            #Start wavefunctions from scratch
+
+# k-point sampling
+istwfk   *1
+kptopt    0        #Give the k-points explicitly
+include "kpt.in"   #k-points given in an external file
+
+#weights
+include "wtk.in"   #k-weights given in an external file
+
+#Basic information: unit-cell, atoms, cutoffs, etc..
+include "basic.in"

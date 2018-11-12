@@ -1,0 +1,54 @@
+#NSCF general template for ABINIT:
+# This example shows how to calculate a large number of bands in a more effective way
+# The general strategy is to split the calculation in two datasets: 
+# 1st: We converge up to 36 bands with a regular/moderate convergence threshold. As a rule of thumb, for any given system only the lower conduction bands (let's say a number equal to the number of valence bands) are required to be well-converged.
+# 2nd: We read the bands already calculated and augment the number of bands.
+# Here we deliberately reduce the convergence criteria, 
+# since high-energy bands behave as free-electron
+# plane-waves and there is no need to converge them excesively. 
+# This is probably a good idea when a huge number of bands (hundreds or thousands) is required 
+# Remember to change abi2bgw.in with the appropriate abinit output files:
+# o_DS2_WFK are the wavefunctions
+# o_DS1_DEN is the density
+
+#Two datasets
+ndtset 2
+jdtset 1 2
+
+#Dataset1 NSCF
+tolwfr1 1.d-13 
+ nband1 36 #Number of bands
+getwfk1 0  #Start wavefunctions from scratch
+nbdbuf1 4  #Few bands in the buffer, this is augmented next.
+
+#Dataset2 NSCF
+tolwfr2 1.d-5
+ nband2 100
+nbdbuf2 20        #Here we can skip convergence on the highest-bands.
+getwfk2 2          #Read wavefunctions from previous dataset
+
+
+#Definition of the method
+iscf -3 #NSCF :use -3 to use weights given explicitely (see below)
+nline 6 #Usually this is better for NSCF calculations
+
+
+#I/O options in case we compile
+getden 1        #Get density from first dataset
+ prtwf 1        #Print wavefunctions
+prtden 0        #Do not print density
+
+
+#Uncomment these two if using MPI-IO:
+#autoparal   1   #To let ABINIT decide over parallelization options 
+#accesswff   1   #read/write files using mpi-io
+#npband      1         #Try to avoid paralelizing over bands, as sometimes can be problematic, this will force the code to paralelize over spin,kpoits and ffts only.
+
+kptopt    0        #Give the k-points explicitely
+include "kpt.in"   #k-points given in an external file
+
+#weights
+include "wtk.in"   #k-weights given in an external file
+
+#Basic information: unit-cell, atoms, cutoffs, etc..
+include "basic.in"

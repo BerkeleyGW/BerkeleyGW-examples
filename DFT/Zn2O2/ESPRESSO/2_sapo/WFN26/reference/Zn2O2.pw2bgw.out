@@ -1,0 +1,59 @@
+
+     Program PW2BGW v.5.0.2 (svn rev. 9656) starts on 26Jun2013 at 22:58:46 
+
+     This program is part of the open-source Quantum ESPRESSO suite
+     for quantum simulation of materials; please cite
+         "P. Giannozzi et al., J. Phys.:Condens. Matter 21 395502 (2009);
+          URL http://www.quantum-espresso.org", 
+     in publications or presentations arising from this work. More details at
+     http://www.quantum-espresso.org/quote.php
+
+     Parallel version (MPI), running on    64 processors
+     R & G space division:  proc/nbgrp/npool/nimage =      64
+
+   Info: using nr1, nr2, nr3 values from input
+
+   Info: using nr1s, nr2s, nr3s values from input
+
+     IMPORTANT: XC functional enforced from input :
+     Exchange-correlation      = SLA+PW ( 1 4 0 0 0)
+     EXX-fraction              =        0.00
+     Any further DFT definition will be discarded
+     Please, verify this is what you really want
+
+ 
+     Parallelization info
+     --------------------
+     sticks:   dense  smooth     PW     G-vecs:    dense   smooth      PW
+     Min          64      64     18                 5414     5414     792
+     Max          65      65     19                 5423     5423     795
+     Sum        4153    4153   1159               346889   346889   50747
+ 
+
+     Check: negative/imaginary core charge=   -0.000103    0.000000
+
+     NLCC is present
+
+     call write_wfng
+     done write_wfng
+
+     call write_vscg
+     done write_vscg
+
+     call write_vkbg
+     done write_vkbg
+
+ 
+     write_wfng   :      0.48s CPU      0.86s WALL (       1 calls)
+     write_vscg   :      0.08s CPU      0.15s WALL (       1 calls)
+     write_vkbg   :      0.11s CPU      0.28s WALL (       1 calls)
+ 
+     PW2BGW       :     2.86s CPU         4.72s WALL
+
+ 
+   This run was terminated on:  22:58:50  26Jun2013            
+
+=------------------------------------------------------------------------------=
+   JOB DONE.
+=------------------------------------------------------------------------------=
+Application 2755923 resources: utime ~289s, stime ~16s, Rss ~31216, inblocks ~285283, outblocks ~273987

@@ -1,0 +1,15 @@
+#!/bin/bash -l
+
+#
+BGW_BIN="$HOME/BerkeleyGW/bin"
+INT_EXEC="$BGW_BIN/inteqp.cplx.x"
+EQP_EXEC="$BGW_BIN/eqp.py"
+
+#
+MPI_CMD="aprun -n 16"
+
+ln -s ../ESPRESSO/2_sapo/WFN_co/wfn.complex ./WFN_co
+ln -s ../ESPRESSO/2_sapo/WFN_fi/wfn.complex ./WFN_fi
+ln -s ../ESPRESSO/2_sapo/WFN_fi/wfn.complex ./WFNq_fi
+$EQP_EXEC eqp1 ../4_sig/sigma_hp.log ./eqp_co.dat
+$MPI_CMD $INT_EXEC > ./inteqp.out

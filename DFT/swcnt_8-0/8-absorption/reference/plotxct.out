@@ -1,0 +1,191 @@
+
+ BerkeleyGW trunk revision 7012
+ PlotXct code, Complex version, run on 26-Apr-2016 at 16:43:37 -0700
+
+                                                                 ..o.          
+                                                                .oxxo.         
+                                                               .oxxxxo...      
+                                                               oxxxxxxo.       
+                                                              .oxxxxxxx.       
+                                                              .ooooooxxo..     
+                                                              .oooooooxo..     
+                                                              .oooooxxo...     
+                                                       .........oxooo......    
+                                                 ............................  
+                                             ................................. 
+                                          .................................... 
+           .          ..oo. ....  .................................oooxxxxxxxo.
+     .............oxxxx@ox@@@x@x.....................o...........ooooooooooxx. 
+    .o.........oox@x.oo........xxx@@............ooxxxxo..........ooooxxxxxoxo  
+    .x........x@xxo...............o@xxo........oxxx@@@xoooooooooooooooxxxo...  
+    .o......ox@@o..................oox@o.....ooxxx@xoooxxxxxxxoooooooooooo.... 
+    o..ooooo@@xoooo....ooo...........x@o.....ooxxxxo   .oxxxxxxxxxxooooooo.... 
+    . .oooo@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@....ooooox.     .oxx@@@@@xxoo........ 
+      .ooooxxxxxxxooooooxooooooooooooooxo...oooooxx.        ..ox@xxxoo.........
+      .ooooooxxxx@xoooooooooooooxxoooooooooooxxxxx.            .oxxooooooooxxo.
+     .oooooxxxxx@@@xxxxxxxxxxxxxxxxxxxxxxxxoxxxxo.                .oxxxxxxxxo. 
+   ....oooxxxxx@@@xo..oxxx@@@@@@xxxxoxxoooooooxx.                  .oxxxoo..   
+  .....ooxxxx@@xo.       ........    .ooooooooxxo                              
+  ..oooxxxx@@@o                       .oooooooxoo.                             
+  ....oxooxxxxx.                       .ooo..oooo.                             
+  .....o.ooxxxxxo.                     .oooooooxo.                             
+ ......ooooxxxxxxo.                     .ooooooxoo..                           
+........ooxxxxxxxo..                     .o....oxoo...                         
+.......ooooxxxxxxxo.                     ........oooo.                         
+.ooooooo..ooxxxxoooo.                    .........ooo...                       
+..oxo...ooooxxxoooo..                    .ooo......oooo...                     
+  .ooooo....o.                            .oxxxoo....ooo....                   
+    .oooooo...                              ...ooooo...ooo..                   
+       ...                                     .oo.......                      
+                                               ....ooo...                      
+                      __              __                                       
+ ______              [  |            [  |                 ._____  _          _ 
+|_   _ \              | |  _          | |                /  ___ \| |        | |
+  | |_) | .---.  _. _.| | / |  .---.  | | .---.  _    _ / /    \_|\ \  /\  / / 
+  |  __'./ /__\\[ /`\_| '' <  / /__\\ | |/ /__\\| \  | | |   _____ \ \/  \/ /  
+ _| |__| | \__. | |   | |`\ \ | \___. | || \___. \ \/ / \ \.___| |  \  /\  /   
+|_______/ \.__./[_]  [__|  \_] \.__./[___]\.__./  \  /   \.____./    \/  \/    
+                                                  / /                          
+                                                 /_/                           
+--------------------------------------------------------------------------------
+ Please cite the following papers when using results from BerkeleyGW:
+
+ Jack Deslippe, Georgy Samsonidze, David A. Strubbe, Manish Jain, Marvin L.
+ Cohen, and Steven G. Louie, "BerkeleyGW: A Massively Parallel Computer Package
+ for the Calculation of the Quasiparticle and Optical Properties of Materials
+ and Nanostructures," Comput. Phys. Commun. 183, 1269 (2012)
+
+ Mark S. Hybertsen and Steven G. Louie, "Electron correlation in semiconductors
+ and insulators: Band gaps and quasiparticle energies," Phys. Rev. B 34, 5390
+ (1986)
+
+ Michael Rohlfing and Steven G. Louie, "Electron-hole excitations and optical
+ spectra from first principles," Phys. Rev. B 62, 4927 (2000)
+--------------------------------------------------------------------------------
+
+ Running MPI version (parallel)
+ Running with 32 MPI task(s)
+ Using OpenMP. Number of threads per MPI task: 1
+
+ Compilation flags:
+ - Compiler: INTEL
+ - Para. flags: MPI, OMP
+ - Math  flags: USESCALAPACK, UNPACKED, USEFFTW3, HDF5
+ - Debug flags: 
+
+ Unfolding fine BZ
+ Unfolding shifted BZ
+ Real-space grid will be downsampled by: 2  2  2
+ 
+ Reading state # 20
+ Excitation energy: 2.107 eV
+ Reducing k-points to 32
+ Wfn norm (restricted sum): 4607182418800017405
+ Wfn norm (full): 4607182418800017404
+
+ Number of kpoints treated by each PE:
+      1   1   1   1   1   1   1   1
+      1   1   1   1   1   1   1   1
+      1   1   1   1   1   1   1   1
+      1   1   1   1   1   1   1   1
+
+ Crystal wavefunctions read from WFN_fi
+ - nrk = 32
+                0.0000    0.0000    0.0156
+                0.0000    0.0000    0.0469
+                0.0000    0.0000    0.0781
+                0.0000    0.0000    0.1094
+                0.0000    0.0000    0.1406
+                0.0000    0.0000    0.1719
+                0.0000    0.0000    0.2031
+                0.0000    0.0000    0.2344
+                0.0000    0.0000    0.2656
+                0.0000    0.0000    0.2969
+                0.0000    0.0000    0.3281
+                0.0000    0.0000    0.3594
+                0.0000    0.0000    0.3906
+                0.0000    0.0000    0.4219
+                0.0000    0.0000    0.4531
+                0.0000    0.0000    0.4844
+                0.0000    0.0000    0.5156
+                0.0000    0.0000    0.5469
+                0.0000    0.0000    0.5781
+                0.0000    0.0000    0.6094
+                0.0000    0.0000    0.6406
+                0.0000    0.0000    0.6719
+                0.0000    0.0000    0.7031
+                0.0000    0.0000    0.7344
+                0.0000    0.0000    0.7656
+                0.0000    0.0000    0.7969
+                0.0000    0.0000    0.8281
+                0.0000    0.0000    0.8594
+                0.0000    0.0000    0.8906
+                0.0000    0.0000    0.9219
+                0.0000    0.0000    0.9531
+                0.0000    0.0000    0.9844
+ - nfk = 32
+
+ Plotting parameters:
+ - Number of valence bands: 3
+ - Number of cond. bands: 4
+ - Coordinates of hole (supercell units): .000000 .000000 .000000
+ - Plotting spin component: 1
+ - Unit cell repetitions / supercell size: 1 1 32
+
+ Shift vector:  0.000000  0.000000  0.000000 ; Length = .000000
+
+ Crystal wavefunctions read from WFNq_fi
+ - nrk = 32
+                0.0000    0.0000    0.0156
+                0.0000    0.0000    0.0469
+                0.0000    0.0000    0.0781
+                0.0000    0.0000    0.1094
+                0.0000    0.0000    0.1406
+                0.0000    0.0000    0.1719
+                0.0000    0.0000    0.2031
+                0.0000    0.0000    0.2344
+                0.0000    0.0000    0.2656
+                0.0000    0.0000    0.2969
+                0.0000    0.0000    0.3281
+                0.0000    0.0000    0.3594
+                0.0000    0.0000    0.3906
+                0.0000    0.0000    0.4219
+                0.0000    0.0000    0.4531
+                0.0000    0.0000    0.4844
+                0.0000    0.0000    0.5156
+                0.0000    0.0000    0.5469
+                0.0000    0.0000    0.5781
+                0.0000    0.0000    0.6094
+                0.0000    0.0000    0.6406
+                0.0000    0.0000    0.6719
+                0.0000    0.0000    0.7031
+                0.0000    0.0000    0.7344
+                0.0000    0.0000    0.7656
+                0.0000    0.0000    0.7969
+                0.0000    0.0000    0.8281
+                0.0000    0.0000    0.8594
+                0.0000    0.0000    0.8906
+                0.0000    0.0000    0.9219
+                0.0000    0.0000    0.9531
+                0.0000    0.0000    0.9844
+ - nfk = 32
+
+ Grids information:
+ - FFT box size: 144 144 27
+ - Supercell grid: 144 144 864
+ - Effective supercell grid: 72 72 432
+
+ PE #0 working at k-point # 1 out of 1
+
+ Gathering data: breaking array in 432 arrays containing 5184 elements each.
+ Writing data set to "xct.000020_s1.a3Dr" with nw = 72 72 432
+ 
+                            CPU (s)        WALL (s)          #
+ 
+ INPUT:                        0.130          14.418          1
+ INPUT_Q:                      0.070           1.135          1
+ FULLBZ:                       0.000           0.000          0
+ GENWF:                        0.030           0.048          1
+ GENWF_Q:                      0.040           0.039          1
+ TOTAL:                        3.220          21.385
+ 

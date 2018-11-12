@@ -1,0 +1,52 @@
+
+     Program PW2BGW v.4.3.2     starts on 24Feb2012 at 15:48:32 
+
+     This program is part of the open-source Quantum ESPRESSO suite
+     for quantum simulation of materials; please cite
+         "P. Giannozzi et al., J. Phys.:Condens. Matter 21 395502 (2009);
+          URL http://www.quantum-espresso.org", 
+     in publications or presentations arising from this work. More details at
+     http://www.quantum-espresso.org/wiki/index.php/Citing_Quantum-ESPRESSO
+
+     Parallel version (MPI & OpenMP), running on    24 processor cores
+     Number of MPI processes:              24
+     Threads/MPI process:                  1
+     R & G space division:  proc/pool =   24
+
+   Info: using nr1, nr2, nr3 values from input
+
+   Info: using nr1s, nr2s, nr3s values from input
+ 
+     Parallelization info
+     --------------------
+     sticks:   dense  smooth     PW     G-vecs:    dense   smooth      PW
+     Min          15      15      5                  189      189      38
+     Max          16      16      6                  192      192      42
+     Sum         361     361    121                 4573     4573     941
+ 
+
+     IMPORTANT: XC functional enforced from input :
+     Exchange-correlation      = PZ ( 1 1 0 0 0)
+     EXX-fraction              =        0.00
+     Any further DFT definition will be discarded
+     Please, verify this is what you really want
+
+     EXX fraction changed:   0.00
+     EXX Screening parameter changed:    0.0000000
+     call write_wfng
+     done write_wfng
+
+ 
+     write_wfng   :      0.19s CPU      0.54s WALL (       1 calls)
+
+     Called by write_wfng:
+     real_wfng    :      0.04s CPU      0.04s WALL (      19 calls)
+ 
+     PW2BGW       :     3.60s CPU         4.30s WALL
+
+ 
+   This run was terminated on:  15:48:37  24Feb2012            
+
+=------------------------------------------------------------------------------=
+   JOB DONE.
+=------------------------------------------------------------------------------=

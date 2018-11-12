@@ -1,0 +1,18 @@
+wfng_file_abi  o_WFK
+wfng_flag  .true.
+wfng_file  wfn.cplx
+wfng_nk1  1
+wfng_nk2  1
+wfng_nk3  1
+wfng_dk1  0.000000000000
+wfng_dk2  0.000000000000
+wfng_dk3  0.000000000000
+rhog_file_abi o_DS1_DEN
+rhog_flag  .false.
+rhog_file  'rho.cplx'
+cell_symmetry 0 !< 0 = cubic, 1 = hexagonal
+symrel_file_flag .false.
+vxcg_file_abi o_DS1_DEN
+vxcg_flag  .false.
+vxcg_file  'vxc.cplx'
+vxc_flavor 1

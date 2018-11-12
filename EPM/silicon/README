@@ -1,0 +1,38 @@
+Bulk silicon from Empirical Pseudopotential Method (EPM) mean-field code
+========================================================================
+
+This example shows how to run a calculation on bulk Si using EPM, which is
+provided with BerkeleyGW. No external mean-field code is required. This
+example can be run all in serial.
+
+Remember to modify each script before launching it!
+
+1. Generate k-points (directory 0)
+Customize and run:
+./script_0.sh
+
+2. Create symbolic links
+Customize and run:
+./script_1.sh
+
+3. Generate wavefunction files (directories 1 to 5)
+You must manually add the k-points to EPM input files (directories 1 to 5).
+In this example, however, we did that for you already.
+Customize and run:
+./script_2.sh
+
+4. Run GW and BSE calculations (directories 6 to 9)
+We will:
+- Generate dielectric matrix (directory 6)
+- Calculate self-energy corrections (directory 7)
+- Generate electron-hole interaction kernel (directory 8)
+- Solve BSE and calculate optical absorption (directory 9)
+
+Customize and submit/run:
+./script_3.sh
+
+This script can be run in serial, and takes about 5 mins.
+
+5. You can view the absorption spectrum with and without electron-hole
+interactions by plotting the files 9-absorption/absorption_eh.dat and
+9-absorption/absorption_noeh.dat, respectively.

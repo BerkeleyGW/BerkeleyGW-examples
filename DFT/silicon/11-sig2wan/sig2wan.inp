@@ -1,0 +1,6 @@
+sigma_hp.log   ! Sigma output file to read k-points, eigenvalues and symmetries from
+1              ! spin component to read from sigma_hp.log file
+1              ! set to 0 or 1 to read eqp0 or eqp1 from sigma_hp.log file
+silicon.nnkp   ! Wannier90 input file to read k-points from
+silicon.eig    ! file where the output of sig2wan is written
+12             ! number of bands to write out

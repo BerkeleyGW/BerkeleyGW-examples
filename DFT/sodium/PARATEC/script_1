@@ -1,0 +1,28 @@
+#!/bin/bash -l
+
+#
+ln -s ../../../pseudo/ape/Na.cpi ./01-scf/Na_POT.DAT
+#
+ln -s ../01-scf/Na_POT.DAT ./02-wfn
+ln -s ../01-scf/CD ./02-wfn
+#
+ln -s ../01-scf/Na_POT.DAT ./03-wfn_fi
+ln -s ../01-scf/CD ./03-wfn_fi
+#
+ln -s ../01-scf/Na_POT.DAT ./04-wfn_co
+ln -s ../01-scf/CD ./04-wfn_co
+#
+ln -s ../PARATEC/02-wfn/WFN ../07-epsilon/WFN
+ln -s ../PARATEC/02-wfn/WFN ../07-epsilon/WFNq
+#
+ln -s ../PARATEC/03-wfn_fi/WFN ../07-epsilon_fine/WFN
+ln -s ../PARATEC/03-wfn_fi/WFN ../07-epsilon_fine/WFNq
+#
+ln -s ../PARATEC/04-wfn_co/vxc.dat ../08-sigma
+ln -s ../PARATEC/04-wfn_co/RHO ../08-sigma
+ln -s ../PARATEC/04-wfn_co/WFN ../08-sigma/WFN_inner
+ln -s ../07-epsilon_fine/eps0mat ../08-sigma
+ln -s ../07-epsilon/epsmat ../08-sigma
+ln -s ../07-epsilon_fine/eps0mat.h5 ../08-sigma
+ln -s ../07-epsilon/epsmat.h5 ../08-sigma
+#

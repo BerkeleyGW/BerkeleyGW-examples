@@ -1,0 +1,28 @@
+CO molecule
+===========
+
+This example shows how to run a calculation on a CO molecule.
+A similar calculation may be found in:
+Sohrab Ismail-Beigi and Steven G. Louie,
+"Excited-State Forces within a First-Principles Green's Function Formalism,"
+Phys. Rev. Lett. 90, 076401 (2003)
+
+
+Remember to modify each script before launching it!
+
+
+1. Enter your mean-field directory of choice (ESPRESSO or PARATEC).
+Read, customize and run/submit all scripts in that folder in the alphabetic order
+they appear.
+
+
+2. Go back to the directory containing this file, and modify/submit `script`.
+Suggested 1 node (tested with ncpu = 24, walltime = 00:05:00).
+We will:
+- Generate dielectric matrix (directory 3)
+- Calculate self-energy corrections (directory 4)
+- Generate electron-hole interaction kernel (directory 5)
+- Solve BSE and calculate optical absorption (directory 6)
+
+3. You can plot the optical absorption spectrum following the same
+strategy presented in the silicon example.

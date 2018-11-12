@@ -1,0 +1,5 @@
+plot_state 20
+
+supercell_size 1 1 32
+
+hole_position   0.00000  0.00000  0.00000

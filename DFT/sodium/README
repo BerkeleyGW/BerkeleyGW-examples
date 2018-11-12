@@ -1,0 +1,51 @@
+Bulk sodium
+===========
+
+This example shows how to run a calculation on bulk sodium using either Quantum
+ESPRESSO or PARACTED as starting mean-field codes.
+
+In this example, we compute the RPA dielectric function and quasiparticle
+energies for sodium.  We strongly recommand that you first run the silicon
+example before running this example.  A couple of notes about the differences
+between this and a semicondutor calculation:
+
+1. Note that instead of using a k-grid shifted by a small q-vector  we use a
+uniform, unshifted fine grid to represent the small q behavior in 03-wfn_fi.
+This changes way that we calculate epsilon.  Note that in 07-epsilon we
+calculate epsilon on a uniform grid but exclude the first small q point that is
+given in a calculation  on a semiconductor (see silicon example).  The first
+point in the qpoint list in 07-epsilon/epsilon.inp does NOT have the '1' flag
+at the end.  In 07-epsilon_fine we calculate a single q point of size 1/gridsize
+where  the gridsize is the linear dimension of the grid size specified in the
+03-wfn_fi calculation.
+
+2. For the calculation of Sigma, we link the epsmat file from 07-epsilon to
+epsmat in the 08-sigma directory.  But now we link the epsmat file from
+07-epsilon_fine to eps0mat in the 08-sigma directory.
+
+3. The fine grid should be dense enough to adequately represent the intraband
+transitions as well as the density of states.  If you plot the head of inverse
+epsilon as a function of the small q-vector, you should see a parabolic
+behavior which agrees very well with a Thomas-Fermi model of the system
+calculated from the density  of states at the Fermi level.
+
+4. Note that we cannot run the BSE codes on sodium because unusual case case of
+a system in which some k-points have no occupied bands is not implemented.  We
+could overcome this limitation by using a semicore pseudopotential for sodium
+at the price of a higher computational cost.
+
+
+To run this example, follow the steps below.  Remember to modify each script
+before launching it!
+
+
+1. Enter your mean-field directory of choice (ESPRESSO or PARATEC).
+Read, customize and run/submit all scripts in that folder in the alphabetic order
+they appear.
+
+
+2. Go back to the directory containing this file, and modify/submit `script`.
+Suggested 1 node (tested with ncpu = 32, walltime = 00:10:00).
+We will:
+- Generate dielectric matrix (directories 7)
+- Calculate self-energy corrections (directory 8)

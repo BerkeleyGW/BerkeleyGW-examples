@@ -1,0 +1,215 @@
+
+     Program LD1 v.5.1 starts on  1Sep2014 at 15:44:50 
+
+     This program is part of the open-source Quantum ESPRESSO suite
+     for quantum simulation of materials; please cite
+         "P. Giannozzi et al., J. Phys.:Condens. Matter 21 395502 (2009);
+          URL http://www.quantum-espresso.org", 
+     in publications or presentations arising from this work. More details at
+     http://www.quantum-espresso.org/quote
+
+     Serial version
+     Waiting for input...
+     Reading input from standard input
+     --------------------------- All-electron run ----------------------------
+
+     O                                                                          
+     scalar relativistic calculation
+
+     atomic number is  8.00
+     dft =SLA+PW   lsd =0 sic =0 latt =0  beta=0.20 tr2=1.0E-14
+     Exchange-correlation      = SLA+PW ( 1  4  0  0 0)
+     mesh =1095 r(mesh) =  99.04343 a.u. xmin = -7.00 dx = 0.01250
+     1 Ry =  13.60569193 eV, c = 137.03599966
+
+     n l     nl                  e(Ry)          e(Ha)          e(eV)
+     1 0     1S 1( 2.00)       -37.5480       -18.7740      -510.8670
+     2 0     2S 1( 2.00)        -1.7458        -0.8729       -23.7535
+     2 1     2P 1( 4.00)        -0.6760        -0.3380        -9.1976
+
+     final scf error:  1.3E-15 reached in  28 iterations
+
+     Etot =    -149.052510 Ry,     -74.526255 Ha,   -2027.962535 eV
+
+     Ekin =     148.546932 Ry,      74.273466 Ha,    2021.083796 eV
+     Encl =    -354.760019 Ry,    -177.380009 Ha,   -4826.755524 eV
+     Eh   =      72.705171 Ry,      36.352585 Ha,     989.204152 eV
+     Exc  =     -15.544594 Ry,      -7.772297 Ha,    -211.494959 eV
+
+
+     normalization and overlap integrals
+
+     s(1S/1S) =  1.000000  <r> =   0.2007  <r2> =    0.0544  r(max) =   0.1298
+     s(1S/2S) = -0.000217
+     s(2S/2S) =  1.000000  <r> =   1.1472  <r2> =    1.6041  r(max) =   0.8786
+     s(2P/2P) =  1.000000  <r> =   1.2642  <r2> =    2.1308  r(max) =   0.8151
+
+     ------------------------ End of All-electron run ------------------------
+
+
+     ---------------------- Testing the pseudopotential ----------------------
+
+     O                                                                          
+     scalar relativistic calculation
+
+     atomic number is  8.00   valence charge is  6.00
+     dft =SLA+PW   lsd =0 sic =0 latt =0  beta=0.20 tr2=1.0E-14
+     mesh =1095 r(mesh) =  99.04343 xmin = -7.00 dx = 0.01250
+
+     n l     nl             e AE (Ry)        e PS (Ry)    De AE-PS (Ry) 
+     1 0     2S   1( 2.00)       -1.74585       -1.74586        0.00001
+     2 1     2P   1( 4.00)       -0.67601       -0.67602        0.00001
+
+     eps = 7.6E-15  iter = 11
+
+     Etot =    -149.052510 Ry,     -74.526255 Ha,   -2027.962535 eV
+     Etotps =   -35.685531 Ry,     -17.842765 Ha,    -485.526338 eV
+
+     Ekin =      22.793826 Ry,      11.396913 Ha,     310.125771 eV
+     Encl =     -77.588571 Ry,     -38.794285 Ha,   -1055.646192 eV
+     Ehrt =      27.191523 Ry,      13.595762 Ha,     369.959491 eV
+     Ecxc =     -10.858252 Ry,      -5.429126 Ha,    -147.734030 eV
+     (Ecc =      -4.127128 Ry,      -2.063564 Ha,     -56.152426 eV)
+     Epseu=       2.775943 Ry,       1.387971 Ha,      37.768622 eV
+
+     ---------------------- End of pseudopotential test ----------------------
+
+
+     -------------- Test with a basis set of Bessel functions ----------
+
+     Box size (a.u.) :   10.0
+
+     Cutoff (Ry) :   50.0
+                           N = 1       N = 2       N = 3
+     E(L=0) =        -1.6524 Ry    0.0333 Ry    0.4071 Ry
+     E(L=1) =        -0.6087 Ry    0.1461 Ry    0.5471 Ry
+
+     Cutoff (Ry) :  100.0
+                           N = 1       N = 2       N = 3
+     E(L=0) =        -1.7429 Ry    0.0290 Ry    0.3998 Ry
+     E(L=1) =        -0.6765 Ry    0.1420 Ry    0.5377 Ry
+
+     Cutoff (Ry) :  150.0
+                           N = 1       N = 2       N = 3
+     E(L=0) =        -1.7461 Ry    0.0288 Ry    0.3996 Ry
+     E(L=1) =        -0.6769 Ry    0.1420 Ry    0.5377 Ry
+
+     Cutoff (Ry) :  200.0
+                           N = 1       N = 2       N = 3
+     E(L=0) =        -1.7461 Ry    0.0288 Ry    0.3996 Ry
+     E(L=1) =        -0.6771 Ry    0.1419 Ry    0.5376 Ry
+
+     Cutoff (Ry) :  250.0
+                           N = 1       N = 2       N = 3
+     E(L=0) =        -1.7461 Ry    0.0288 Ry    0.3996 Ry
+     E(L=1) =        -0.6772 Ry    0.1419 Ry    0.5376 Ry
+
+     Cutoff (Ry) :  300.0
+                           N = 1       N = 2       N = 3
+     E(L=0) =        -1.7461 Ry    0.0288 Ry    0.3996 Ry
+     E(L=1) =        -0.6772 Ry    0.1419 Ry    0.5376 Ry
+
+     -------------- End of Bessel function test ------------------------
+
+     --------------------------- All-electron run ----------------------------
+
+     O                                                                          
+     scalar relativistic calculation
+
+     atomic number is  8.00
+     dft =SLA+PW   lsd =0 sic =0 latt =0  beta=0.20 tr2=1.0E-14
+     Exchange-correlation      = SLA+PW ( 1  4  0  0 0)
+     mesh =1095 r(mesh) =  99.04343 a.u. xmin = -7.00 dx = 0.01250
+     1 Ry =  13.60569193 eV, c = 137.03599966
+
+     n l     nl                  e(Ry)          e(Ha)          e(eV)
+     1 0     1S 1( 2.00)       -37.0226       -18.5113      -503.7187
+     2 0     2S 1( 2.00)        -1.2771        -0.6386       -17.3758
+     2 1     2P 1( 4.50)        -0.2242        -0.1121        -3.0501
+
+     final scf error:  8.5E-15 reached in  24 iterations
+
+     Etot =    -149.273815 Ry,     -74.636907 Ha,   -2030.973536 eV
+
+     Ekin =     148.741648 Ry,      74.370824 Ha,    2023.733035 eV
+     Encl =    -358.844595 Ry,    -179.422297 Ha,   -4882.329009 eV
+     Eh   =      76.714946 Ry,      38.357473 Ha,    1043.759923 eV
+     Exc  =     -15.885814 Ry,      -7.942907 Ha,    -216.137485 eV
+
+
+     normalization and overlap integrals
+
+     s(1S/1S) =  1.000000  <r> =   0.2007  <r2> =    0.0544  r(max) =   0.1298
+     s(1S/2S) = -0.000213
+     s(2S/2S) =  1.000000  <r> =   1.1708  <r2> =    1.6836  r(max) =   0.8786
+     s(2P/2P) =  1.000000  <r> =   1.3818  <r2> =    2.6585  r(max) =   0.8254
+
+     ------------------------ End of All-electron run ------------------------
+
+
+     ---------------------- Testing the pseudopotential ----------------------
+
+     O                                                                          
+     scalar relativistic calculation
+
+     atomic number is  8.00   valence charge is  6.00
+     dft =SLA+PW   lsd =0 sic =0 latt =0  beta=0.20 tr2=1.0E-14
+     mesh =1095 r(mesh) =  99.04343 xmin = -7.00 dx = 0.01250
+
+     n l     nl             e AE (Ry)        e PS (Ry)    De AE-PS (Ry) 
+     1 0     2S   1( 2.00)       -1.27710       -1.27693       -0.00017
+     2 1     2P   1( 4.50)       -0.22418       -0.22402       -0.00015
+
+     eps = 1.5E-15  iter = 14
+
+     Etot =    -149.273815 Ry,     -74.636907 Ha,   -2030.973536 eV
+     Etotps =   -35.906807 Ry,     -17.953404 Ha,    -488.536958 eV
+     dEtot_ae =      -0.221304 Ry
+     dEtot_ps =      -0.221276 Ry,   Delta E=      -0.000028 Ry
+
+     Ekin =      23.255783 Ry,      11.627892 Ha,     316.411023 eV
+     Encl =     -80.792346 Ry,     -40.396173 Ha,   -1099.235764 eV
+     Ehrt =      30.151533 Ry,      15.075766 Ha,     410.232464 eV
+     Ecxc =     -11.206134 Ry,      -5.603067 Ha,    -152.467211 eV
+     (Ecc =      -4.127128 Ry,      -2.063564 Ha,     -56.152426 eV)
+     Epseu=       2.684357 Ry,       1.342178 Ha,      36.522530 eV
+
+     ---------------------- End of pseudopotential test ----------------------
+
+
+     -------------- Test with a basis set of Bessel functions ----------
+
+     Box size (a.u.) :   10.0
+
+     Cutoff (Ry) :   50.0
+                           N = 1       N = 2       N = 3
+     E(L=0) =        -1.1866 Ry    0.2090 Ry    0.5907 Ry
+     E(L=1) =        -0.1637 Ry    0.3063 Ry    0.7363 Ry
+
+     Cutoff (Ry) :  100.0
+                           N = 1       N = 2       N = 3
+     E(L=0) =        -1.2741 Ry    0.2062 Ry    0.5838 Ry
+     E(L=1) =        -0.2244 Ry    0.3021 Ry    0.7266 Ry
+
+     Cutoff (Ry) :  150.0
+                           N = 1       N = 2       N = 3
+     E(L=0) =        -1.2772 Ry    0.2061 Ry    0.5835 Ry
+     E(L=1) =        -0.2248 Ry    0.3021 Ry    0.7265 Ry
+
+     Cutoff (Ry) :  200.0
+                           N = 1       N = 2       N = 3
+     E(L=0) =        -1.2772 Ry    0.2061 Ry    0.5835 Ry
+     E(L=1) =        -0.2250 Ry    0.3021 Ry    0.7265 Ry
+
+     Cutoff (Ry) :  250.0
+                           N = 1       N = 2       N = 3
+     E(L=0) =        -1.2772 Ry    0.2061 Ry    0.5835 Ry
+     E(L=1) =        -0.2250 Ry    0.3021 Ry    0.7265 Ry
+
+     Cutoff (Ry) :  300.0
+                           N = 1       N = 2       N = 3
+     E(L=0) =        -1.2772 Ry    0.2061 Ry    0.5835 Ry
+     E(L=1) =        -0.2250 Ry    0.3021 Ry    0.7265 Ry
+
+     -------------- End of Bessel function test ------------------------
+

@@ -1,0 +1,50 @@
+#!/bin/bash -l
+
+#
+ln -s ../../../pseudo/ld1/Si.UPF ./01-scf
+
+for d in 0{2..8}*/; do
+  mkdir -p $d/silicon.save
+  ln -sf ../01-scf/Si.UPF $d/
+  ln -sf ../../01-scf/silicon.save/data-file.xml $d/silicon.save
+  ln -sf ../../01-scf/silicon.save/charge-density.dat $d/silicon.save
+done
+
+#
+ln -s ../ESPRESSO/02-wfn/wfn.real ../07-epsilon/WFN
+ln -s ../ESPRESSO/03-wfnq/wfn.real ../07-epsilon/WFNq
+#
+ln -s ../ESPRESSO/04-wfn_co/vxc.dat ../08-sigma/vxc.dat
+ln -s ../ESPRESSO/04-wfn_co/rho.real ../08-sigma/RHO
+ln -s ../ESPRESSO/04-wfn_co/wfn.real ../08-sigma/WFN_inner
+ln -s ../07-epsilon/eps0mat ../08-sigma
+ln -s ../07-epsilon/epsmat ../08-sigma
+ln -s ../07-epsilon/eps0mat.h5 ../08-sigma
+ln -s ../07-epsilon/epsmat.h5 ../08-sigma
+#
+ln -s ../ESPRESSO/04-wfn_co/wfn.real ../09-kernel/WFN_co
+ln -s ../07-epsilon/eps0mat ../09-kernel
+ln -s ../07-epsilon/epsmat ../09-kernel
+ln -s ../07-epsilon/eps0mat.h5 ../09-kernel
+ln -s ../07-epsilon/epsmat.h5 ../09-kernel
+#
+ln -s ../ESPRESSO/04-wfn_co/wfn.real ../10-absorption/WFN_co
+ln -s ../ESPRESSO/05-wfn_fi/wfn.real ../10-absorption/WFN_fi
+ln -s ../ESPRESSO/06-wfnq_fi/wfn.real ../10-absorption/WFNq_fi
+ln -s ../07-epsilon/eps0mat ../10-absorption
+ln -s ../07-epsilon/epsmat ../10-absorption
+ln -s ../09-kernel/bsedmat ../10-absorption
+ln -s ../09-kernel/bsexmat ../10-absorption
+ln -s ../07-epsilon/eps0mat.h5 ../10-absorption
+ln -s ../07-epsilon/epsmat.h5 ../10-absorption
+ln -s ../09-kernel/bsemat.h5 ../10-absorption
+#
+ln -s ../08-sigma/sigma_hp.log ../11-sig2wan
+ln -s ../ESPRESSO/07-wannier/silicon_band.dat ../11-sig2wan/silicon_band_mf.dat
+ln -s ../ESPRESSO/07-wannier/silicon.nnkp ../11-sig2wan
+ln -s ../ESPRESSO/07-wannier/silicon.amn ../11-sig2wan
+ln -s ../ESPRESSO/07-wannier/silicon.mmn ../11-sig2wan
+#
+ln -s ../ESPRESSO/04-wfn_co/wfn.real ../12-inteqp/WFN_co
+ln -s ../ESPRESSO/08-path/wfn.real ../12-inteqp/WFN_fi
+#

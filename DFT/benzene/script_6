@@ -1,0 +1,23 @@
+#!/bin/bash -l
+#
+EPSILON="$HOME/BerkeleyGW/bin/epsilon.real.x"
+SIGMA="$HOME/BerkeleyGW/bin/sigma.real.x"
+EQP="$HOME/BerkeleyGW/bin/eqp.py"
+
+# put argument for number of procs here too if needed, e.g. -n 8
+MPIRUN="mpirun"
+#
+cd ./5-gw
+$MPIRUN $EPSILON &> ./epsilon.out
+$MPIRUN $SIGMA &> ./sigma.out
+$EQP eqp1 ./sigma_hp.log ./eqp_outer.dat
+$MPIRUN $SIGMA &> ./sigma.out
+cd ..
+#
+cd ./6-gw-sapo
+$MPIRUN $EPSILON &> ./epsilon.out
+$MPIRUN $SIGMA &> ./sigma.out
+$EQP eqp1 ./sigma_hp.log ./eqp_outer.dat
+$MPIRUN $SIGMA &> ./sigma.out
+cd ..
+#

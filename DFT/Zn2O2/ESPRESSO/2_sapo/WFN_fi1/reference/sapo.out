@@ -1,0 +1,1613 @@
+
+ BerkeleyGW  trunk  revision 5439
+
+ SAPO  Complex version  Run on  26-Jun-2013  at  22:59:44 -0400
+
+--------------------------------------------------------------------------------
+ Please cite the following papers when using results from BerkeleyGW:
+
+ Jack Deslippe, Georgy Samsonidze, David A. Strubbe, Manish Jain, Marvin L.
+ Cohen, and Steven G. Louie, "BerkeleyGW: A Massively Parallel Computer Package
+ for the Calculation of the Quasiparticle and Optical Properties of Materials
+ and Nanostructures," Comput. Phys. Commun. 183, 1269 (2012)
+
+ Mark S. Hybertsen and Steven G. Louie, "Electron correlation in semiconductors
+ and insulators: Band gaps and quasiparticle energies," Phys. Rev. B 34, 5390
+ (1986)
+
+ Michael Rohlfing and Steven G. Louie, "Electron-hole excitations and optical
+ spectra from first principles," Phys. Rev. B 62, 4927 (2000)
+--------------------------------------------------------------------------------
+
+ Running MPI version (parallel)
+
+ Running with   64 MPI task(s)
+
+ Reading parameters from file sapo.inp
+
+ nsym = 12  nk = 72  ns = 1  nb = 26  ng = 346889  ngkmax = 43436
+ ng_l = 5421  ng_g = 346944  ngk_l = 679  ngk_g = 43456
+ FFTgrid = ( 80 80 128 )  nFFTgridpts = 819200
+ nbinp = 0  nbpw = 53  b2g = 0  nbaux = 0  nbtot = 53
+
+ Reading wavefunctions from file wfn.complex.pw
+
+ Generating plane waves
+
+ Generating completely random wavefunctions
+
+ Reading potential from file vsc.complex
+
+ Reading potential from file vkb.complex
+
+ Constructing and diagonalizing Hamiltonian
+
+ 
+ BLACS processor grid:   8 x   8; BLOCKSIZE =   32
+ 
+ Memory available: 1883.3 MB per MPI task, 16 MPI tasks per node
+ Memory required for execution: 83.4 MB per MPI task
+
+   ik =    1   is =  1   idiag =    1   dE(Ry) = 241.253757857851497   residual = 262.569662551503370
+   ik =    1   is =  1   idiag =    2   dE(Ry) =  54.261638498072557   residual =  71.051970900722168
+   ik =    1   is =  1   idiag =    3   dE(Ry) =  71.738967689654089   residual =  83.596936672424590
+   ik =    1   is =  1   idiag =    4   dE(Ry) =  47.985041150516793   residual =  55.710366577549870
+   ik =    1   is =  1   idiag =    5   dE(Ry) =  31.192744707139482   residual =  36.022953834565435
+   ik =    1   is =  1   idiag =    6   dE(Ry) =  18.617614929625642   residual =  21.568121855501492
+   ik =    1   is =  1   idiag =    7   dE(Ry) =  10.608896709972518   residual =  12.373187660078411
+   ik =    1   is =  1   idiag =    8   dE(Ry) =   5.943136382389358   residual =   8.811675473686780
+   ik =    1   is =  1   idiag =    9   dE(Ry) =   6.666951232629996   residual =   9.151701579173507
+   ik =    1   is =  1   idiag =   10   dE(Ry) =   3.504611259935445   residual =   5.589458542379168
+   ik =    1   is =  1   idiag =   11   dE(Ry) =   1.599482338415667   residual =   2.794637546042054
+   ik =    1   is =  1   idiag =   12   dE(Ry) =   0.799287574550387   residual =   3.309047697784942
+   ik =    1   is =  1   idiag =   13   dE(Ry) =   0.317909402487273   residual =   1.011460788597970
+   ik =    1   is =  1   idiag =   14   dE(Ry) =   0.016198396927381   residual =   0.156743330913468
+   ik =    1   is =  1   idiag =   15   dE(Ry) =   0.000347424785409   residual =   0.021643782941826
+   ik =    1   is =  1   idiag =   16   dE(Ry) =   0.000006077429061   residual =   0.002470058509749
+   ik =    1   is =  1   idiag =   17   dE(Ry) =   0.000000068922956   residual =   0.000227187649321
+   ik =    1   is =  1   idiag =   18   dE(Ry) =   0.000000000513200   residual =   0.000016278541052
+   ik =    1   is =  1   idiag =   19   dE(Ry) =   0.000000000002674   residual =   0.000001108397375
+   ik =    1   is =  1   idiag =   20   dE(Ry) =   0.000000000000063   residual =   0.000000084274859
+   ik =    2   is =  1   idiag =    1   dE(Ry) = 241.697316524662938   residual = 262.924332445777907
+   ik =    2   is =  1   idiag =    2   dE(Ry) =  54.129557437031565   residual =  70.889479114153914
+   ik =    2   is =  1   idiag =    3   dE(Ry) =  71.749727324963629   residual =  83.611496639664523
+   ik =    2   is =  1   idiag =    4   dE(Ry) =  48.219916230238113   residual =  55.901789664304701
+   ik =    2   is =  1   idiag =    5   dE(Ry) =  30.830159588739775   residual =  35.569258541734442
+   ik =    2   is =  1   idiag =    6   dE(Ry) =  18.646704289982626   residual =  21.519330219290666
+   ik =    2   is =  1   idiag =    7   dE(Ry) =  10.754251799779373   residual =  12.479477074892653
+   ik =    2   is =  1   idiag =    8   dE(Ry) =   5.775264647226733   residual =   8.448468060195269
+   ik =    2   is =  1   idiag =    9   dE(Ry) =   6.514542404546060   residual =   9.021778758351410
+   ik =    2   is =  1   idiag =   10   dE(Ry) =   3.612445642702680   residual =   5.526891904965216
+   ik =    2   is =  1   idiag =   11   dE(Ry) =   2.022445930016930   residual =   2.880241328386749
+   ik =    2   is =  1   idiag =   12   dE(Ry) =   0.804134911544041   residual =   3.370167095008183
+   ik =    2   is =  1   idiag =   13   dE(Ry) =   0.306124013544935   residual =   1.039902513834165
+   ik =    2   is =  1   idiag =   14   dE(Ry) =   0.015576405582820   residual =   0.151041362603072
+   ik =    2   is =  1   idiag =   15   dE(Ry) =   0.000318493739182   residual =   0.017557432190628
+   ik =    2   is =  1   idiag =   16   dE(Ry) =   0.000004173945442   residual =   0.002028280224726
+   ik =    2   is =  1   idiag =   17   dE(Ry) =   0.000000045680546   residual =   0.000199057293725
+   ik =    2   is =  1   idiag =   18   dE(Ry) =   0.000000000407549   residual =   0.000014458711985
+   ik =    2   is =  1   idiag =   19   dE(Ry) =   0.000000000002172   residual =   0.000001032859047
+   ik =    2   is =  1   idiag =   20   dE(Ry) =   0.000000000000087   residual =   0.000000074020276
+   ik =    3   is =  1   idiag =    1   dE(Ry) = 241.182383082390487   residual = 262.502727249104566
+   ik =    3   is =  1   idiag =    2   dE(Ry) =  54.101628547905477   residual =  71.073085912139817
+   ik =    3   is =  1   idiag =    3   dE(Ry) =  72.102440469744266   residual =  84.154164192014690
+   ik =    3   is =  1   idiag =    4   dE(Ry) =  48.045268658629610   residual =  55.603861858587429
+   ik =    3   is =  1   idiag =    5   dE(Ry) =  30.633552634760164   residual =  35.425198009365850
+   ik =    3   is =  1   idiag =    6   dE(Ry) =  18.875957075087115   residual =  21.733409103168061
+   ik =    3   is =  1   idiag =    7   dE(Ry) =  10.744838371763125   residual =  12.596308738241506
+   ik =    3   is =  1   idiag =    8   dE(Ry) =   5.868349166383383   residual =   8.753033902123013
+   ik =    3   is =  1   idiag =    9   dE(Ry) =   6.709879450310852   residual =   9.273002629849206
+   ik =    3   is =  1   idiag =   10   dE(Ry) =   3.503381432946383   residual =   5.516252463055613
+   ik =    3   is =  1   idiag =   11   dE(Ry) =   1.991407807594745   residual =   2.754425721991456
+   ik =    3   is =  1   idiag =   12   dE(Ry) =   0.790258262153983   residual =   3.396084492026783
+   ik =    3   is =  1   idiag =   13   dE(Ry) =   0.311792009048231   residual =   0.940547749911126
+   ik =    3   is =  1   idiag =   14   dE(Ry) =   0.012765340928568   residual =   0.143795503760376
+   ik =    3   is =  1   idiag =   15   dE(Ry) =   0.000282923778161   residual =   0.018046275815231
+   ik =    3   is =  1   idiag =   16   dE(Ry) =   0.000004528475010   residual =   0.002108814297559
+   ik =    3   is =  1   idiag =   17   dE(Ry) =   0.000000054441114   residual =   0.000227309939479
+   ik =    3   is =  1   idiag =   18   dE(Ry) =   0.000000000559444   residual =   0.000017626191267
+   ik =    3   is =  1   idiag =   19   dE(Ry) =   0.000000000003065   residual =   0.000001190262385
+   ik =    3   is =  1   idiag =   20   dE(Ry) =   0.000000000000051   residual =   0.000000096294788
+   ik =    4   is =  1   idiag =    1   dE(Ry) = 241.166264725006442   residual = 262.363468565995845
+   ik =    4   is =  1   idiag =    2   dE(Ry) =  54.601741429791986   residual =  71.455297107324242
+   ik =    4   is =  1   idiag =    3   dE(Ry) =  71.493000794123361   residual =  83.348516995785019
+   ik =    4   is =  1   idiag =    4   dE(Ry) =  48.256898852274801   residual =  55.980946793969821
+   ik =    4   is =  1   idiag =    5   dE(Ry) =  30.803746674834244   residual =  35.695017501982562
+   ik =    4   is =  1   idiag =    6   dE(Ry) =  18.697232536383460   residual =  21.705070248027912
+   ik =    4   is =  1   idiag =    7   dE(Ry) =  10.613527494479408   residual =  12.361432541700237
+   ik =    4   is =  1   idiag =    8   dE(Ry) =   6.260213247818461   residual =   8.989076720625331
+   ik =    4   is =  1   idiag =    9   dE(Ry) =   6.832350943129652   residual =   9.408429385784041
+   ik =    4   is =  1   idiag =   10   dE(Ry) =   3.503045971441170   residual =   5.654041211212017
+   ik =    4   is =  1   idiag =   11   dE(Ry) =   1.368390459441917   residual =   2.626539578051062
+   ik =    4   is =  1   idiag =   12   dE(Ry) =   0.769971880303146   residual =   3.594950375688677
+   ik =    4   is =  1   idiag =   13   dE(Ry) =   0.346386519777975   residual =   1.136445201851681
+   ik =    4   is =  1   idiag =   14   dE(Ry) =   0.019419883705243   residual =   0.154303028842698
+   ik =    4   is =  1   idiag =   15   dE(Ry) =   0.000332679387206   residual =   0.018406279073027
+   ik =    4   is =  1   idiag =   16   dE(Ry) =   0.000004610923896   residual =   0.002181240157723
+   ik =    4   is =  1   idiag =   17   dE(Ry) =   0.000000055906379   residual =   0.000230306011178
+   ik =    4   is =  1   idiag =   18   dE(Ry) =   0.000000000552753   residual =   0.000017536496352
+   ik =    4   is =  1   idiag =   19   dE(Ry) =   0.000000000003236   residual =   0.000001191965295
+   ik =    4   is =  1   idiag =   20   dE(Ry) =   0.000000000000071   residual =   0.000000085714501
+   ik =    5   is =  1   idiag =    1   dE(Ry) = 241.655422619383984   residual = 262.995144871675507
+   ik =    5   is =  1   idiag =    2   dE(Ry) =  54.314894830849141   residual =  70.946660890387065
+   ik =    5   is =  1   idiag =    3   dE(Ry) =  71.918668760706311   residual =  83.689658141920830
+   ik =    5   is =  1   idiag =    4   dE(Ry) =  47.886876502163844   residual =  55.611032980597038
+   ik =    5   is =  1   idiag =    5   dE(Ry) =  30.853535486117352   residual =  35.539729085313731
+   ik =    5   is =  1   idiag =    6   dE(Ry) =  18.582413449206772   residual =  21.468306562201747
+   ik =    5   is =  1   idiag =    7   dE(Ry) =  10.894928257303137   residual =  12.559095987110533
+   ik =    5   is =  1   idiag =    8   dE(Ry) =   5.860120232576449   residual =   8.192367153533628
+   ik =    5   is =  1   idiag =    9   dE(Ry) =   6.966450263859142   residual =   9.505496439445736
+   ik =    5   is =  1   idiag =   10   dE(Ry) =   3.445578281346011   residual =   5.536096041633565
+   ik =    5   is =  1   idiag =   11   dE(Ry) =   1.510316596978208   residual =   2.760425226125987
+   ik =    5   is =  1   idiag =   12   dE(Ry) =   0.793006234460826   residual =   3.403294232297487
+   ik =    5   is =  1   idiag =   13   dE(Ry) =   0.329510331129530   residual =   1.007551575594788
+   ik =    5   is =  1   idiag =   14   dE(Ry) =   0.015255398352640   residual =   0.135041748234145
+   ik =    5   is =  1   idiag =   15   dE(Ry) =   0.000252033469227   residual =   0.016031915783053
+   ik =    5   is =  1   idiag =   16   dE(Ry) =   0.000003382435281   residual =   0.001770706311350
+   ik =    5   is =  1   idiag =   17   dE(Ry) =   0.000000035832889   residual =   0.000173274256871
+   ik =    5   is =  1   idiag =   18   dE(Ry) =   0.000000000332990   residual =   0.000014058450114
+   ik =    5   is =  1   idiag =   19   dE(Ry) =   0.000000000002087   residual =   0.000000996343378
+   ik =    5   is =  1   idiag =   20   dE(Ry) =   0.000000000000079   residual =   0.000000076959956
+   ik =    6   is =  1   idiag =    1   dE(Ry) = 241.186306050491140   residual = 262.340940135932271
+   ik =    6   is =  1   idiag =    2   dE(Ry) =  54.100631664989919   residual =  70.983114691779193
+   ik =    6   is =  1   idiag =    3   dE(Ry) =  72.232349053208651   residual =  84.069886798762241
+   ik =    6   is =  1   idiag =    4   dE(Ry) =  47.917991479090219   residual =  55.574830998016118
+   ik =    6   is =  1   idiag =    5   dE(Ry) =  30.991832603873135   residual =  35.756947813032838
+   ik =    6   is =  1   idiag =    6   dE(Ry) =  18.514014745054382   residual =  21.498236461077802
+   ik =    6   is =  1   idiag =    7   dE(Ry) =  10.794995425273589   residual =  12.450036759709395
+   ik =    6   is =  1   idiag =    8   dE(Ry) =   6.349825406130383   residual =   9.243098549045685
+   ik =    6   is =  1   idiag =    9   dE(Ry) =   6.674243334892513   residual =   9.147617364395169
+   ik =    6   is =  1   idiag =   10   dE(Ry) =   3.613620792804121   residual =   5.488765548160231
+   ik =    6   is =  1   idiag =   11   dE(Ry) =   1.658663123983311   residual =   2.755336056320872
+   ik =    6   is =  1   idiag =   12   dE(Ry) =   0.786211141201145   residual =   3.390006711449247
+   ik =    6   is =  1   idiag =   13   dE(Ry) =   0.352604972648683   residual =   1.027782145714781
+   ik =    6   is =  1   idiag =   14   dE(Ry) =   0.016367428791592   residual =   0.161372494562743
+   ik =    6   is =  1   idiag =   15   dE(Ry) =   0.000368064995227   residual =   0.022270744976276
+   ik =    6   is =  1   idiag =   16   dE(Ry) =   0.000006943437411   residual =   0.002627143526792
+   ik =    6   is =  1   idiag =   17   dE(Ry) =   0.000000082212444   residual =   0.000269330796190
+   ik =    6   is =  1   idiag =   18   dE(Ry) =   0.000000000792372   residual =   0.000021256889123
+   ik =    6   is =  1   idiag =   19   dE(Ry) =   0.000000000004642   residual =   0.000001512277685
+   ik =    6   is =  1   idiag =   20   dE(Ry) =   0.000000000000068   residual =   0.000000109385615
+   ik =    6   is =  1   idiag =   21   dE(Ry) =   0.000000000000047   residual =   0.000000076903496
+   ik =    7   is =  1   idiag =    1   dE(Ry) = 241.324813717631457   residual = 262.530471424203711
+   ik =    7   is =  1   idiag =    2   dE(Ry) =  54.231035696343952   residual =  70.834112096218888
+   ik =    7   is =  1   idiag =    3   dE(Ry) =  71.669787966062756   residual =  83.598365685781246
+   ik =    7   is =  1   idiag =    4   dE(Ry) =  48.393970621173807   residual =  56.094060541939456
+   ik =    7   is =  1   idiag =    5   dE(Ry) =  30.963504004622777   residual =  35.617860027047833
+   ik =    7   is =  1   idiag =    6   dE(Ry) =  18.421249908221505   residual =  21.510823361929923
+   ik =    7   is =  1   idiag =    7   dE(Ry) =  10.770380596856825   residual =  12.519595518574663
+   ik =    7   is =  1   idiag =    8   dE(Ry) =   5.866444459643240   residual =   8.923902969973099
+   ik =    7   is =  1   idiag =    9   dE(Ry) =   6.786441193128008   residual =   9.392504784780549
+   ik =    7   is =  1   idiag =   10   dE(Ry) =   3.498374765170359   residual =   5.546758590046127
+   ik =    7   is =  1   idiag =   11   dE(Ry) =   1.936576041597037   residual =   2.675599164892371
+   ik =    7   is =  1   idiag =   12   dE(Ry) =   0.791192755311266   residual =   3.462902602909369
+   ik =    7   is =  1   idiag =   13   dE(Ry) =   0.322099329894166   residual =   1.033412100282380
+   ik =    7   is =  1   idiag =   14   dE(Ry) =   0.014902502224196   residual =   0.146043505067423
+   ik =    7   is =  1   idiag =   15   dE(Ry) =   0.000308635109841   residual =   0.018869738611721
+   ik =    7   is =  1   idiag =   16   dE(Ry) =   0.000004533724925   residual =   0.002116391490775
+   ik =    7   is =  1   idiag =   17   dE(Ry) =   0.000000051171187   residual =   0.000240535136934
+   ik =    7   is =  1   idiag =   18   dE(Ry) =   0.000000000610038   residual =   0.000019582716732
+   ik =    7   is =  1   idiag =   19   dE(Ry) =   0.000000000004209   residual =   0.000001469231567
+   ik =    7   is =  1   idiag =   20   dE(Ry) =   0.000000000000059   residual =   0.000000105507362
+   ik =    7   is =  1   idiag =   21   dE(Ry) =   0.000000000000057   residual =   0.000000080266985
+   ik =    8   is =  1   idiag =    1   dE(Ry) = 241.257354983234080   residual = 262.591238920341084
+   ik =    8   is =  1   idiag =    2   dE(Ry) =  54.169515250591417   residual =  70.997551146639339
+   ik =    8   is =  1   idiag =    3   dE(Ry) =  71.717150696787826   residual =  83.531798823260416
+   ik =    8   is =  1   idiag =    4   dE(Ry) =  47.687723805259182   residual =  55.510667478160705
+   ik =    8   is =  1   idiag =    5   dE(Ry) =  30.773683069663342   residual =  35.447220134531179
+   ik =    8   is =  1   idiag =    6   dE(Ry) =  18.670912395297485   residual =  21.773102466175693
+   ik =    8   is =  1   idiag =    7   dE(Ry) =  10.951531108519033   residual =  12.796473057578647
+   ik =    8   is =  1   idiag =    8   dE(Ry) =   6.177593228269550   residual =   8.987306823135391
+   ik =    8   is =  1   idiag =    9   dE(Ry) =   6.937164871971276   residual =   9.359228474246546
+   ik =    8   is =  1   idiag =   10   dE(Ry) =   3.447382480606805   residual =   5.615576244005899
+   ik =    8   is =  1   idiag =   11   dE(Ry) =   2.046471099293028   residual =   2.748482425168054
+   ik =    8   is =  1   idiag =   12   dE(Ry) =   0.780502633705169   residual =   3.284361184591884
+   ik =    8   is =  1   idiag =   13   dE(Ry) =   0.333576497707279   residual =   0.987285201801339
+   ik =    8   is =  1   idiag =   14   dE(Ry) =   0.013952729664734   residual =   0.139565221544981
+   ik =    8   is =  1   idiag =   15   dE(Ry) =   0.000273893307142   residual =   0.017740402853772
+   ik =    8   is =  1   idiag =   16   dE(Ry) =   0.000003846433416   residual =   0.001877461943170
+   ik =    8   is =  1   idiag =   17   dE(Ry) =   0.000000039059197   residual =   0.000208887674354
+   ik =    8   is =  1   idiag =   18   dE(Ry) =   0.000000000466630   residual =   0.000017475607413
+   ik =    8   is =  1   idiag =   19   dE(Ry) =   0.000000000002948   residual =   0.000001055009714
+   ik =    8   is =  1   idiag =   20   dE(Ry) =   0.000000000000056   residual =   0.000000082864781
+   ik =    9   is =  1   idiag =    1   dE(Ry) = 241.505434414028116   residual = 262.778114730431867
+   ik =    9   is =  1   idiag =    2   dE(Ry) =  54.092210239528697   residual =  70.703114081412565
+   ik =    9   is =  1   idiag =    3   dE(Ry) =  72.162219064485015   residual =  84.125793977331000
+   ik =    9   is =  1   idiag =    4   dE(Ry) =  48.208595210558627   residual =  55.773950457255332
+   ik =    9   is =  1   idiag =    5   dE(Ry) =  30.806130175644626   residual =  35.513738283401146
+   ik =    9   is =  1   idiag =    6   dE(Ry) =  18.608660357278033   residual =  21.646329152151452
+   ik =    9   is =  1   idiag =    7   dE(Ry) =  10.629497693280484   residual =  12.451500141762896
+   ik =    9   is =  1   idiag =    8   dE(Ry) =   6.120333045633600   residual =   9.242218170444451
+   ik =    9   is =  1   idiag =    9   dE(Ry) =   6.702825174074325   residual =   9.178896798137135
+   ik =    9   is =  1   idiag =   10   dE(Ry) =   3.437870641675244   residual =   5.516556098993901
+   ik =    9   is =  1   idiag =   11   dE(Ry) =   1.481550129437326   residual =   2.683661872349938
+   ik =    9   is =  1   idiag =   12   dE(Ry) =   0.767875483373487   residual =   3.430445032087604
+   ik =    9   is =  1   idiag =   13   dE(Ry) =   0.331905741224846   residual =   1.031111065022098
+   ik =    9   is =  1   idiag =   14   dE(Ry) =   0.014715049504563   residual =   0.158136569104749
+   ik =    9   is =  1   idiag =   15   dE(Ry) =   0.000345556316486   residual =   0.019402946163836
+   ik =    9   is =  1   idiag =   16   dE(Ry) =   0.000004678520845   residual =   0.002029006581401
+   ik =    9   is =  1   idiag =   17   dE(Ry) =   0.000000046558855   residual =   0.000215200865253
+   ik =    9   is =  1   idiag =   18   dE(Ry) =   0.000000000471560   residual =   0.000016212862858
+   ik =    9   is =  1   idiag =   19   dE(Ry) =   0.000000000002624   residual =   0.000001046415989
+   ik =    9   is =  1   idiag =   20   dE(Ry) =   0.000000000000053   residual =   0.000000073254693
+   ik =   10   is =  1   idiag =    1   dE(Ry) = 241.219114719381196   residual = 262.575560667706384
+   ik =   10   is =  1   idiag =    2   dE(Ry) =  53.996314652312662   residual =  70.826601588566547
+   ik =   10   is =  1   idiag =    3   dE(Ry) =  71.694574648456637   residual =  83.664949855620804
+   ik =   10   is =  1   idiag =    4   dE(Ry) =  48.308995061716601   residual =  56.076082324785887
+   ik =   10   is =  1   idiag =    5   dE(Ry) =  30.870368183375788   residual =  35.629944490195619
+   ik =   10   is =  1   idiag =    6   dE(Ry) =  18.761093031695616   residual =  21.529390887508587
+   ik =   10   is =  1   idiag =    7   dE(Ry) =  10.603911444608089   residual =  12.399444282782060
+   ik =   10   is =  1   idiag =    8   dE(Ry) =   5.978310111240390   residual =   8.610476989540702
+   ik =   10   is =  1   idiag =    9   dE(Ry) =   6.405101768086574   residual =   9.068704035947796
+   ik =   10   is =  1   idiag =   10   dE(Ry) =   3.530121407320977   residual =   5.585668980598838
+   ik =   10   is =  1   idiag =   11   dE(Ry) =   1.691994295773059   residual =   2.800760385897333
+   ik =   10   is =  1   idiag =   12   dE(Ry) =   0.780986492163838   residual =   3.363189724492140
+   ik =   10   is =  1   idiag =   13   dE(Ry) =   0.349934475157019   residual =   1.126724168855460
+   ik =   10   is =  1   idiag =   14   dE(Ry) =   0.016899511711420   residual =   0.147588294674039
+   ik =   10   is =  1   idiag =   15   dE(Ry) =   0.000321385527882   residual =   0.019295269484543
+   ik =   10   is =  1   idiag =   16   dE(Ry) =   0.000004923415463   residual =   0.002134261826654
+   ik =   10   is =  1   idiag =   17   dE(Ry) =   0.000000050317309   residual =   0.000203838081943
+   ik =   10   is =  1   idiag =   18   dE(Ry) =   0.000000000448471   residual =   0.000016861942005
+   ik =   10   is =  1   idiag =   19   dE(Ry) =   0.000000000002793   residual =   0.000001231949774
+   ik =   10   is =  1   idiag =   20   dE(Ry) =   0.000000000000047   residual =   0.000000094827915
+   ik =   11   is =  1   idiag =    1   dE(Ry) = 241.045371854418391   residual = 262.414899401281900
+   ik =   11   is =  1   idiag =    2   dE(Ry) =  54.165870028887639   residual =  71.022429199658461
+   ik =   11   is =  1   idiag =    3   dE(Ry) =  71.877813757182935   residual =  83.867374980073535
+   ik =   11   is =  1   idiag =    4   dE(Ry) =  47.829414360201540   residual =  55.456326493185095
+   ik =   11   is =  1   idiag =    5   dE(Ry) =  30.839823773724348   residual =  35.531033294061814
+   ik =   11   is =  1   idiag =    6   dE(Ry) =  18.566279300652361   residual =  21.600615648587294
+   ik =   11   is =  1   idiag =    7   dE(Ry) =  10.898098583902160   residual =  12.595243681894987
+   ik =   11   is =  1   idiag =    8   dE(Ry) =   6.069113502169699   residual =   8.577669279924420
+   ik =   11   is =  1   idiag =    9   dE(Ry) =   6.643991566681708   residual =   9.091707603062211
+   ik =   11   is =  1   idiag =   10   dE(Ry) =   3.561637733286390   residual =   5.594806468663664
+   ik =   11   is =  1   idiag =   11   dE(Ry) =   2.056087615280867   residual =   2.756869565521646
+   ik =   11   is =  1   idiag =   12   dE(Ry) =   0.767104640543315   residual =   3.274939372372161
+   ik =   11   is =  1   idiag =   13   dE(Ry) =   0.342543632606656   residual =   0.973640631542984
+   ik =   11   is =  1   idiag =   14   dE(Ry) =   0.012356763913765   residual =   0.136432068063239
+   ik =   11   is =  1   idiag =   15   dE(Ry) =   0.000264108229666   residual =   0.017898829514023
+   ik =   11   is =  1   idiag =   16   dE(Ry) =   0.000004208645944   residual =   0.001955982008543
+   ik =   11   is =  1   idiag =   17   dE(Ry) =   0.000000042997866   residual =   0.000195945155662
+   ik =   11   is =  1   idiag =   18   dE(Ry) =   0.000000000394271   residual =   0.000014754284326
+   ik =   11   is =  1   idiag =   19   dE(Ry) =   0.000000000002315   residual =   0.000001057116570
+   ik =   11   is =  1   idiag =   20   dE(Ry) =   0.000000000000063   residual =   0.000000075880793
+   ik =   12   is =  1   idiag =    1   dE(Ry) = 240.883348398423976   residual = 262.239300130459924
+   ik =   12   is =  1   idiag =    2   dE(Ry) =  54.084781955061658   residual =  70.774655051346826
+   ik =   12   is =  1   idiag =    3   dE(Ry) =  71.667901473437951   residual =  83.649000496599058
+   ik =   12   is =  1   idiag =    4   dE(Ry) =  47.986845319930580   residual =  55.612702328493867
+   ik =   12   is =  1   idiag =    5   dE(Ry) =  30.670789648529251   residual =  35.278792691473448
+   ik =   12   is =  1   idiag =    6   dE(Ry) =  18.941597870228875   residual =  21.726576697108076
+   ik =   12   is =  1   idiag =    7   dE(Ry) =  10.885081748465305   residual =  12.795635356647953
+   ik =   12   is =  1   idiag =    8   dE(Ry) =   5.737391733866053   residual =   8.172363529071168
+   ik =   12   is =  1   idiag =    9   dE(Ry) =   6.514045805764669   residual =   9.169673414449603
+   ik =   12   is =  1   idiag =   10   dE(Ry) =   3.450490443028229   residual =   5.513583960178605
+   ik =   12   is =  1   idiag =   11   dE(Ry) =   1.743622099315997   residual =   2.625639651270530
+   ik =   12   is =  1   idiag =   12   dE(Ry) =   0.766722161529869   residual =   3.248517611462896
+   ik =   12   is =  1   idiag =   13   dE(Ry) =   0.352957443432323   residual =   1.048062671537750
+   ik =   12   is =  1   idiag =   14   dE(Ry) =   0.015915553953305   residual =   0.149249614256087
+   ik =   12   is =  1   idiag =   15   dE(Ry) =   0.000310045416608   residual =   0.019045844287556
+   ik =   12   is =  1   idiag =   16   dE(Ry) =   0.000004803553527   residual =   0.002238294226724
+   ik =   12   is =  1   idiag =   17   dE(Ry) =   0.000000058696499   residual =   0.000220249390094
+   ik =   12   is =  1   idiag =   18   dE(Ry) =   0.000000000523949   residual =   0.000016263301802
+   ik =   12   is =  1   idiag =   19   dE(Ry) =   0.000000000002853   residual =   0.000001172477375
+   ik =   12   is =  1   idiag =   20   dE(Ry) =   0.000000000000060   residual =   0.000000085892588
+   ik =   13   is =  1   idiag =    1   dE(Ry) = 240.871278034707501   residual = 262.248524905740851
+   ik =   13   is =  1   idiag =    2   dE(Ry) =  54.184703563102062   residual =  70.940087457648772
+   ik =   13   is =  1   idiag =    3   dE(Ry) =  71.520453103579342   residual =  83.262387454228175
+   ik =   13   is =  1   idiag =    4   dE(Ry) =  47.956116987998541   residual =  55.627373201265520
+   ik =   13   is =  1   idiag =    5   dE(Ry) =  30.671021260167237   residual =  35.405777554298531
+   ik =   13   is =  1   idiag =    6   dE(Ry) =  18.435500607463119   residual =  21.254646722397336
+   ik =   13   is =  1   idiag =    7   dE(Ry) =  10.851933589038749   residual =  12.668405434204056
+   ik =   13   is =  1   idiag =    8   dE(Ry) =   6.255243052926856   residual =   8.977409304450020
+   ik =   13   is =  1   idiag =    9   dE(Ry) =   6.339243320594246   residual =   9.056720662198082
+   ik =   13   is =  1   idiag =   10   dE(Ry) =   3.427368174102450   residual =   5.563232465647290
+   ik =   13   is =  1   idiag =   11   dE(Ry) =   1.615182318759085   residual =   2.630344022295616
+   ik =   13   is =  1   idiag =   12   dE(Ry) =   0.759383914367870   residual =   3.346232279161394
+   ik =   13   is =  1   idiag =   13   dE(Ry) =   0.330707947388386   residual =   0.982781614132236
+   ik =   13   is =  1   idiag =   14   dE(Ry) =   0.014891313042199   residual =   0.154390752497553
+   ik =   13   is =  1   idiag =   15   dE(Ry) =   0.000321669002081   residual =   0.019185955152992
+   ik =   13   is =  1   idiag =   16   dE(Ry) =   0.000004673735171   residual =   0.002072974638900
+   ik =   13   is =  1   idiag =   17   dE(Ry) =   0.000000047863205   residual =   0.000196625805416
+   ik =   13   is =  1   idiag =   18   dE(Ry) =   0.000000000419740   residual =   0.000015365934373
+   ik =   13   is =  1   idiag =   19   dE(Ry) =   0.000000000002384   residual =   0.000001072436339
+   ik =   13   is =  1   idiag =   20   dE(Ry) =   0.000000000000059   residual =   0.000000080836344
+   ik =   14   is =  1   idiag =    1   dE(Ry) = 240.923253122102949   residual = 262.206793513893331
+   ik =   14   is =  1   idiag =    2   dE(Ry) =  54.037415923097171   residual =  70.709716799638741
+   ik =   14   is =  1   idiag =    3   dE(Ry) =  71.449495759509261   residual =  83.359590623673611
+   ik =   14   is =  1   idiag =    4   dE(Ry) =  48.185270314835492   residual =  55.790236829473287
+   ik =   14   is =  1   idiag =    5   dE(Ry) =  30.759219035644449   residual =  35.584876772559227
+   ik =   14   is =  1   idiag =    6   dE(Ry) =  18.631895332893556   residual =  21.445077825962780
+   ik =   14   is =  1   idiag =    7   dE(Ry) =  10.846386118147864   residual =  12.587253018739451
+   ik =   14   is =  1   idiag =    8   dE(Ry) =   6.369269085187270   residual =   8.949381400044393
+   ik =   14   is =  1   idiag =    9   dE(Ry) =   6.781043803165627   residual =   9.370582152667307
+   ik =   14   is =  1   idiag =   10   dE(Ry) =   3.458517854773830   residual =   5.491502383115717
+   ik =   14   is =  1   idiag =   11   dE(Ry) =   1.908900113539279   residual =   2.937882941723283
+   ik =   14   is =  1   idiag =   12   dE(Ry) =   0.778804608725168   residual =   3.348152673620867
+   ik =   14   is =  1   idiag =   13   dE(Ry) =   0.333880925876439   residual =   1.001532766442723
+   ik =   14   is =  1   idiag =   14   dE(Ry) =   0.014075902704558   residual =   0.139457664897950
+   ik =   14   is =  1   idiag =   15   dE(Ry) =   0.000272874754713   residual =   0.019016703147220
+   ik =   14   is =  1   idiag =   16   dE(Ry) =   0.000004777346759   residual =   0.002140033790220
+   ik =   14   is =  1   idiag =   17   dE(Ry) =   0.000000050492698   residual =   0.000217239980211
+   ik =   14   is =  1   idiag =   18   dE(Ry) =   0.000000000490682   residual =   0.000017373037387
+   ik =   14   is =  1   idiag =   19   dE(Ry) =   0.000000000002983   residual =   0.000001143364033
+   ik =   14   is =  1   idiag =   20   dE(Ry) =   0.000000000000067   residual =   0.000000083444076
+   ik =   15   is =  1   idiag =    1   dE(Ry) = 240.781737980430108   residual = 262.060543069235507
+   ik =   15   is =  1   idiag =    2   dE(Ry) =  53.955125996627970   residual =  70.746239203239583
+   ik =   15   is =  1   idiag =    3   dE(Ry) =  71.620247413026846   residual =  83.574960247434333
+   ik =   15   is =  1   idiag =    4   dE(Ry) =  48.315052405168458   residual =  55.825866272079864
+   ik =   15   is =  1   idiag =    5   dE(Ry) =  30.580953436907677   residual =  35.355898569834302
+   ik =   15   is =  1   idiag =    6   dE(Ry) =  18.874551277762578   residual =  21.690551730846899
+   ik =   15   is =  1   idiag =    7   dE(Ry) =  10.638458041492100   residual =  12.336967549472662
+   ik =   15   is =  1   idiag =    8   dE(Ry) =   6.153775927430415   residual =   8.440233934499323
+   ik =   15   is =  1   idiag =    9   dE(Ry) =   6.762438095875713   residual =   9.336819138781088
+   ik =   15   is =  1   idiag =   10   dE(Ry) =   3.458152143000564   residual =   5.478574414359737
+   ik =   15   is =  1   idiag =   11   dE(Ry) =   2.046851881763272   residual =   2.613162420398718
+   ik =   15   is =  1   idiag =   12   dE(Ry) =   0.780890517061652   residual =   3.455083467598716
+   ik =   15   is =  1   idiag =   13   dE(Ry) =   0.295194197739006   residual =   0.881469998656276
+   ik =   15   is =  1   idiag =   14   dE(Ry) =   0.011339785886628   residual =   0.130202139109142
+   ik =   15   is =  1   idiag =   15   dE(Ry) =   0.000231214338034   residual =   0.017310985572719
+   ik =   15   is =  1   idiag =   16   dE(Ry) =   0.000003772561403   residual =   0.001912685293910
+   ik =   15   is =  1   idiag =   17   dE(Ry) =   0.000000041915496   residual =   0.000203493021301
+   ik =   15   is =  1   idiag =   18   dE(Ry) =   0.000000000450459   residual =   0.000016152987652
+   ik =   15   is =  1   idiag =   19   dE(Ry) =   0.000000000002747   residual =   0.000001139375110
+   ik =   15   is =  1   idiag =   20   dE(Ry) =   0.000000000000068   residual =   0.000000079410285
+   ik =   16   is =  1   idiag =    1   dE(Ry) = 241.162221269736392   residual = 262.464281420901955
+   ik =   16   is =  1   idiag =    2   dE(Ry) =  54.366052139839610   residual =  71.105030367316957
+   ik =   16   is =  1   idiag =    3   dE(Ry) =  71.555846671140301   residual =  83.577652961344867
+   ik =   16   is =  1   idiag =    4   dE(Ry) =  48.005119286706972   residual =  55.638524308698180
+   ik =   16   is =  1   idiag =    5   dE(Ry) =  30.714040814805799   residual =  35.551120781109901
+   ik =   16   is =  1   idiag =    6   dE(Ry) =  18.747341748630813   residual =  21.612639341901424
+   ik =   16   is =  1   idiag =    7   dE(Ry) =  10.912014905600333   residual =  12.721922181911665
+   ik =   16   is =  1   idiag =    8   dE(Ry) =   5.867363108085568   residual =   8.904153850333428
+   ik =   16   is =  1   idiag =    9   dE(Ry) =   6.625252627339581   residual =   9.059535088250817
+   ik =   16   is =  1   idiag =   10   dE(Ry) =   3.471768275269316   residual =   5.561040575050439
+   ik =   16   is =  1   idiag =   11   dE(Ry) =   1.655342348978150   residual =   2.589263136691045
+   ik =   16   is =  1   idiag =   12   dE(Ry) =   0.725905482756596   residual =   3.300175264360844
+   ik =   16   is =  1   idiag =   13   dE(Ry) =   0.323848677493331   residual =   0.990460608728670
+   ik =   16   is =  1   idiag =   14   dE(Ry) =   0.013686666943474   residual =   0.138696941742249
+   ik =   16   is =  1   idiag =   15   dE(Ry) =   0.000292718400167   residual =   0.018202343448851
+   ik =   16   is =  1   idiag =   16   dE(Ry) =   0.000004250035933   residual =   0.002096496519803
+   ik =   16   is =  1   idiag =   17   dE(Ry) =   0.000000049895297   residual =   0.000207027229711
+   ik =   16   is =  1   idiag =   18   dE(Ry) =   0.000000000486224   residual =   0.000017156968677
+   ik =   16   is =  1   idiag =   19   dE(Ry) =   0.000000000003042   residual =   0.000001241544705
+   ik =   16   is =  1   idiag =   20   dE(Ry) =   0.000000000000048   residual =   0.000000095418671
+   ik =   17   is =  1   idiag =    1   dE(Ry) = 240.794301714303799   residual = 262.182575821504145
+   ik =   17   is =  1   idiag =    2   dE(Ry) =  54.175351142840782   residual =  70.882674601873646
+   ik =   17   is =  1   idiag =    3   dE(Ry) =  71.446938068129100   residual =  83.479009573544118
+   ik =   17   is =  1   idiag =    4   dE(Ry) =  47.914095865653636   residual =  55.728251459564781
+   ik =   17   is =  1   idiag =    5   dE(Ry) =  30.894850538506986   residual =  35.632352032894374
+   ik =   17   is =  1   idiag =    6   dE(Ry) =  18.510690569085277   residual =  21.584190550735890
+   ik =   17   is =  1   idiag =    7   dE(Ry) =  10.751934077633088   residual =  12.547594043399192
+   ik =   17   is =  1   idiag =    8   dE(Ry) =   6.198872862380834   residual =   8.888866395673723
+   ik =   17   is =  1   idiag =    9   dE(Ry) =   6.365536675328618   residual =   9.095262466553629
+   ik =   17   is =  1   idiag =   10   dE(Ry) =   3.542632700188072   residual =   5.566726110366941
+   ik =   17   is =  1   idiag =   11   dE(Ry) =   1.820122379976586   residual =   2.561535179328867
+   ik =   17   is =  1   idiag =   12   dE(Ry) =   0.735001819505647   residual =   3.513314620196514
+   ik =   17   is =  1   idiag =   13   dE(Ry) =   0.310416310637085   residual =   0.924191181855681
+   ik =   17   is =  1   idiag =   14   dE(Ry) =   0.012645625401476   residual =   0.143120666087007
+   ik =   17   is =  1   idiag =   15   dE(Ry) =   0.000294056620436   residual =   0.019282020156562
+   ik =   17   is =  1   idiag =   16   dE(Ry) =   0.000005009030941   residual =   0.002280129575263
+   ik =   17   is =  1   idiag =   17   dE(Ry) =   0.000000059801597   residual =   0.000217210273055
+   ik =   17   is =  1   idiag =   18   dE(Ry) =   0.000000000495739   residual =   0.000016032499144
+   ik =   17   is =  1   idiag =   19   dE(Ry) =   0.000000000002590   residual =   0.000001052883678
+   ik =   17   is =  1   idiag =   20   dE(Ry) =   0.000000000000056   residual =   0.000000077746757
+   ik =   18   is =  1   idiag =    1   dE(Ry) = 241.172906372434397   residual = 262.475362594462126
+   ik =   18   is =  1   idiag =    2   dE(Ry) =  54.227249216995688   residual =  70.974104041969582
+   ik =   18   is =  1   idiag =    3   dE(Ry) =  71.940493215843418   residual =  83.849094100719640
+   ik =   18   is =  1   idiag =    4   dE(Ry) =  48.045054335434301   residual =  55.769250573399923
+   ik =   18   is =  1   idiag =    5   dE(Ry) =  30.696903621094108   residual =  35.416445875549897
+   ik =   18   is =  1   idiag =    6   dE(Ry) =  18.625533164135639   residual =  21.459122862906831
+   ik =   18   is =  1   idiag =    7   dE(Ry) =  10.793167896671850   residual =  12.547219772865960
+   ik =   18   is =  1   idiag =    8   dE(Ry) =   5.914786408428331   residual =   7.985108085562225
+   ik =   18   is =  1   idiag =    9   dE(Ry) =   6.693311824881106   residual =   9.262243611440656
+   ik =   18   is =  1   idiag =   10   dE(Ry) =   3.551697808885469   residual =   5.543413593962276
+   ik =   18   is =  1   idiag =   11   dE(Ry) =   1.833505085337483   residual =   2.512223794043290
+   ik =   18   is =  1   idiag =   12   dE(Ry) =   0.756463321273981   residual =   3.218258525568235
+   ik =   18   is =  1   idiag =   13   dE(Ry) =   0.303876334575793   residual =   0.946982494890171
+   ik =   18   is =  1   idiag =   14   dE(Ry) =   0.015286008463571   residual =   0.174473205647067
+   ik =   18   is =  1   idiag =   15   dE(Ry) =   0.000405868451617   residual =   0.021923552209236
+   ik =   18   is =  1   idiag =   16   dE(Ry) =   0.000005878766864   residual =   0.002276964194544
+   ik =   18   is =  1   idiag =   17   dE(Ry) =   0.000000057740766   residual =   0.000213681702339
+   ik =   18   is =  1   idiag =   18   dE(Ry) =   0.000000000495121   residual =   0.000016696321353
+   ik =   18   is =  1   idiag =   19   dE(Ry) =   0.000000000002932   residual =   0.000001097101455
+   ik =   18   is =  1   idiag =   20   dE(Ry) =   0.000000000000042   residual =   0.000000083490811
+   ik =   19   is =  1   idiag =    1   dE(Ry) = 240.874732691854945   residual = 262.260379402479543
+   ik =   19   is =  1   idiag =    2   dE(Ry) =  54.005263531110415   residual =  70.739254923929224
+   ik =   19   is =  1   idiag =    3   dE(Ry) =  71.667496567007902   residual =  83.440062324817433
+   ik =   19   is =  1   idiag =    4   dE(Ry) =  48.016135481448941   residual =  55.764650318128965
+   ik =   19   is =  1   idiag =    5   dE(Ry) =  31.009674566674292   residual =  35.781669624835047
+   ik =   19   is =  1   idiag =    6   dE(Ry) =  18.480745621438821   residual =  21.394749275190524
+   ik =   19   is =  1   idiag =    7   dE(Ry) =  10.704336476810560   residual =  12.451079141763534
+   ik =   19   is =  1   idiag =    8   dE(Ry) =   5.877785722379517   residual =   9.116723712352096
+   ik =   19   is =  1   idiag =    9   dE(Ry) =   6.279200661982198   residual =   8.967489620106353
+   ik =   19   is =  1   idiag =   10   dE(Ry) =   3.484732041480787   residual =   5.484287108869735
+   ik =   19   is =  1   idiag =   11   dE(Ry) =   1.650522891266450   residual =   2.463579724008444
+   ik =   19   is =  1   idiag =   12   dE(Ry) =   0.753095386588759   residual =   3.404763137037605
+   ik =   19   is =  1   idiag =   13   dE(Ry) =   0.335540924531027   residual =   1.045868241667180
+   ik =   19   is =  1   idiag =   14   dE(Ry) =   0.017344905669507   residual =   0.159095809385914
+   ik =   19   is =  1   idiag =   15   dE(Ry) =   0.000361283344676   residual =   0.021303045308788
+   ik =   19   is =  1   idiag =   16   dE(Ry) =   0.000005807911209   residual =   0.002279643063888
+   ik =   19   is =  1   idiag =   17   dE(Ry) =   0.000000058301982   residual =   0.000224198781428
+   ik =   19   is =  1   idiag =   18   dE(Ry) =   0.000000000539324   residual =   0.000017439664854
+   ik =   19   is =  1   idiag =   19   dE(Ry) =   0.000000000003227   residual =   0.000001209443938
+   ik =   19   is =  1   idiag =   20   dE(Ry) =   0.000000000000083   residual =   0.000000093775653
+   ik =   20   is =  1   idiag =    1   dE(Ry) = 241.080687986103925   residual = 262.340470167289595
+   ik =   20   is =  1   idiag =    2   dE(Ry) =  54.022916139887599   residual =  70.757222228297593
+   ik =   20   is =  1   idiag =    3   dE(Ry) =  71.705558614255068   residual =  83.559334605295192
+   ik =   20   is =  1   idiag =    4   dE(Ry) =  48.257828464311274   residual =  55.833496019767303
+   ik =   20   is =  1   idiag =    5   dE(Ry) =  30.632718485678112   residual =  35.415293808783012
+   ik =   20   is =  1   idiag =    6   dE(Ry) =  18.403941394202569   residual =  21.318616607157789
+   ik =   20   is =  1   idiag =    7   dE(Ry) =  10.838585172126173   residual =  12.554909703869155
+   ik =   20   is =  1   idiag =    8   dE(Ry) =   5.791247868826651   residual =   8.778271232034967
+   ik =   20   is =  1   idiag =    9   dE(Ry) =   6.601145150201075   residual =   9.046907740339169
+   ik =   20   is =  1   idiag =   10   dE(Ry) =   3.427617766327560   residual =   5.688842629662928
+   ik =   20   is =  1   idiag =   11   dE(Ry) =   1.702591698815103   residual =   2.754097649817720
+   ik =   20   is =  1   idiag =   12   dE(Ry) =   0.779556498315069   residual =   3.453926187671625
+   ik =   20   is =  1   idiag =   13   dE(Ry) =   0.301171419824418   residual =   0.900929523014774
+   ik =   20   is =  1   idiag =   14   dE(Ry) =   0.011913095927612   residual =   0.135610710309944
+   ik =   20   is =  1   idiag =   15   dE(Ry) =   0.000244438445455   residual =   0.016429824746969
+   ik =   20   is =  1   idiag =   16   dE(Ry) =   0.000003505510211   residual =   0.001902936572292
+   ik =   20   is =  1   idiag =   17   dE(Ry) =   0.000000041865917   residual =   0.000190239554977
+   ik =   20   is =  1   idiag =   18   dE(Ry) =   0.000000000393624   residual =   0.000014945692332
+   ik =   20   is =  1   idiag =   19   dE(Ry) =   0.000000000002373   residual =   0.000001049032336
+   ik =   20   is =  1   idiag =   20   dE(Ry) =   0.000000000000047   residual =   0.000000078719968
+   ik =   21   is =  1   idiag =    1   dE(Ry) = 241.210480108455556   residual = 262.581472045602595
+   ik =   21   is =  1   idiag =    2   dE(Ry) =  54.027776300255880   residual =  70.750704694169400
+   ik =   21   is =  1   idiag =    3   dE(Ry) =  71.862997424452317   residual =  83.794678868701070
+   ik =   21   is =  1   idiag =    4   dE(Ry) =  48.234155046809661   residual =  55.852721489740844
+   ik =   21   is =  1   idiag =    5   dE(Ry) =  30.797420398942236   residual =  35.597376459176346
+   ik =   21   is =  1   idiag =    6   dE(Ry) =  18.526471114057323   residual =  21.350425096965214
+   ik =   21   is =  1   idiag =    7   dE(Ry) =  10.841237772116576   residual =  12.474911421454394
+   ik =   21   is =  1   idiag =    8   dE(Ry) =   6.156705817773167   residual =   8.656755545661420
+   ik =   21   is =  1   idiag =    9   dE(Ry) =   6.711845926871464   residual =   9.221357085061724
+   ik =   21   is =  1   idiag =   10   dE(Ry) =   3.414506477462358   residual =   5.640633789252994
+   ik =   21   is =  1   idiag =   11   dE(Ry) =   1.653211142361865   residual =   2.675328248717727
+   ik =   21   is =  1   idiag =   12   dE(Ry) =   0.770145152202159   residual =   3.451687149917054
+   ik =   21   is =  1   idiag =   13   dE(Ry) =   0.325927379733478   residual =   0.997778837477433
+   ik =   21   is =  1   idiag =   14   dE(Ry) =   0.015667214413270   residual =   0.151769324163828
+   ik =   21   is =  1   idiag =   15   dE(Ry) =   0.000318439485345   residual =   0.019804842574126
+   ik =   21   is =  1   idiag =   16   dE(Ry) =   0.000005293826636   residual =   0.002373584924062
+   ik =   21   is =  1   idiag =   17   dE(Ry) =   0.000000065613192   residual =   0.000237555363282
+   ik =   21   is =  1   idiag =   18   dE(Ry) =   0.000000000607089   residual =   0.000017238844903
+   ik =   21   is =  1   idiag =   19   dE(Ry) =   0.000000000003139   residual =   0.000001184045943
+   ik =   21   is =  1   idiag =   20   dE(Ry) =   0.000000000000064   residual =   0.000000090936359
+   ik =   22   is =  1   idiag =    1   dE(Ry) = 241.600403351375036   residual = 262.751043389629729
+   ik =   22   is =  1   idiag =    2   dE(Ry) =  54.035189199286208   residual =  70.822018573768560
+   ik =   22   is =  1   idiag =    3   dE(Ry) =  71.615048465429169   residual =  83.620532526345826
+   ik =   22   is =  1   idiag =    4   dE(Ry) =  48.906797475430608   residual =  56.693677277470037
+   ik =   22   is =  1   idiag =    5   dE(Ry) =  30.850822058307514   residual =  35.515254357385338
+   ik =   22   is =  1   idiag =    6   dE(Ry) =  18.938350630802105   residual =  21.825124506949148
+   ik =   22   is =  1   idiag =    7   dE(Ry) =  10.672784989717524   residual =  12.462487461245512
+   ik =   22   is =  1   idiag =    8   dE(Ry) =   6.013277615050085   residual =   8.425703310658651
+   ik =   22   is =  1   idiag =    9   dE(Ry) =   6.423655235316989   residual =   9.081724230502369
+   ik =   22   is =  1   idiag =   10   dE(Ry) =   3.445789520519514   residual =   5.459058870688128
+   ik =   22   is =  1   idiag =   11   dE(Ry) =   1.907455785137407   residual =   2.768898302566691
+   ik =   22   is =  1   idiag =   12   dE(Ry) =   0.735433025218787   residual =   3.207262883079311
+   ik =   22   is =  1   idiag =   13   dE(Ry) =   0.271751813129875   residual =   0.926336504602306
+   ik =   22   is =  1   idiag =   14   dE(Ry) =   0.011901244065522   residual =   0.132423856714850
+   ik =   22   is =  1   idiag =   15   dE(Ry) =   0.000250163297152   residual =   0.017067084604485
+   ik =   22   is =  1   idiag =   16   dE(Ry) =   0.000003816696482   residual =   0.001924166351695
+   ik =   22   is =  1   idiag =   17   dE(Ry) =   0.000000041755136   residual =   0.000189766424901
+   ik =   22   is =  1   idiag =   18   dE(Ry) =   0.000000000377261   residual =   0.000014047193469
+   ik =   22   is =  1   idiag =   19   dE(Ry) =   0.000000000002080   residual =   0.000000901519790
+   ik =   22   is =  1   idiag =   20   dE(Ry) =   0.000000000000064   residual =   0.000000063346080
+   ik =   23   is =  1   idiag =    1   dE(Ry) = 241.213921959844924   residual = 262.716917930343925
+   ik =   23   is =  1   idiag =    2   dE(Ry) =  54.036295221488103   residual =  70.860858102908352
+   ik =   23   is =  1   idiag =    3   dE(Ry) =  71.720941082047517   residual =  83.539705709899096
+   ik =   23   is =  1   idiag =    4   dE(Ry) =  48.014931432623342   residual =  55.588522984329998
+   ik =   23   is =  1   idiag =    5   dE(Ry) =  31.002716898065756   residual =  35.821614136121347
+   ik =   23   is =  1   idiag =    6   dE(Ry) =  18.588314851192990   residual =  21.605980086345436
+   ik =   23   is =  1   idiag =    7   dE(Ry) =  10.776963512290529   residual =  12.621747615912353
+   ik =   23   is =  1   idiag =    8   dE(Ry) =   6.193314838845878   residual =   8.896346804309500
+   ik =   23   is =  1   idiag =    9   dE(Ry) =   6.701637715763235   residual =   9.232875167822678
+   ik =   23   is =  1   idiag =   10   dE(Ry) =   3.483406700257109   residual =   5.504185726619824
+   ik =   23   is =  1   idiag =   11   dE(Ry) =   1.572528647755060   residual =   2.641050743909845
+   ik =   23   is =  1   idiag =   12   dE(Ry) =   0.764808332505946   residual =   3.330094448940892
+   ik =   23   is =  1   idiag =   13   dE(Ry) =   0.311163490884131   residual =   1.025510673407972
+   ik =   23   is =  1   idiag =   14   dE(Ry) =   0.015793917535700   residual =   0.159332994139027
+   ik =   23   is =  1   idiag =   15   dE(Ry) =   0.000339189451353   residual =   0.020199996260462
+   ik =   23   is =  1   idiag =   16   dE(Ry) =   0.000005312061331   residual =   0.002284824026359
+   ik =   23   is =  1   idiag =   17   dE(Ry) =   0.000000059120333   residual =   0.000223487172180
+   ik =   23   is =  1   idiag =   18   dE(Ry) =   0.000000000525259   residual =   0.000017286772944
+   ik =   23   is =  1   idiag =   19   dE(Ry) =   0.000000000002838   residual =   0.000001219811701
+   ik =   23   is =  1   idiag =   20   dE(Ry) =   0.000000000000060   residual =   0.000000091033128
+   ik =   24   is =  1   idiag =    1   dE(Ry) = 241.417065516987151   residual = 262.745057640457105
+   ik =   24   is =  1   idiag =    2   dE(Ry) =  54.052865361215595   residual =  70.911555451938767
+   ik =   24   is =  1   idiag =    3   dE(Ry) =  71.887425447693033   residual =  83.824608391530703
+   ik =   24   is =  1   idiag =    4   dE(Ry) =  48.118762300738311   residual =  55.660952850017196
+   ik =   24   is =  1   idiag =    5   dE(Ry) =  30.591313033497244   residual =  35.313056375554012
+   ik =   24   is =  1   idiag =    6   dE(Ry) =  18.539334078165730   residual =  21.580751629048912
+   ik =   24   is =  1   idiag =    7   dE(Ry) =  10.843400758949183   residual =  12.705526801068263
+   ik =   24   is =  1   idiag =    8   dE(Ry) =   6.162926789112760   residual =   8.770438375096443
+   ik =   24   is =  1   idiag =    9   dE(Ry) =   6.621147296886113   residual =   9.236874638680796
+   ik =   24   is =  1   idiag =   10   dE(Ry) =   3.487785254130367   residual =   5.489108195027519
+   ik =   24   is =  1   idiag =   11   dE(Ry) =   1.493349198420445   residual =   2.667386328653016
+   ik =   24   is =  1   idiag =   12   dE(Ry) =   0.763614733824052   residual =   3.409809762144418
+   ik =   24   is =  1   idiag =   13   dE(Ry) =   0.281813196591570   residual =   0.962625592338214
+   ik =   24   is =  1   idiag =   14   dE(Ry) =   0.013885388562525   residual =   0.143896056939659
+   ik =   24   is =  1   idiag =   15   dE(Ry) =   0.000304919089335   residual =   0.020798321408998
+   ik =   24   is =  1   idiag =   16   dE(Ry) =   0.000005821853598   residual =   0.002323582941516
+   ik =   24   is =  1   idiag =   17   dE(Ry) =   0.000000063235540   residual =   0.000218663566473
+   ik =   24   is =  1   idiag =   18   dE(Ry) =   0.000000000535167   residual =   0.000016182399177
+   ik =   24   is =  1   idiag =   19   dE(Ry) =   0.000000000002807   residual =   0.000001139350785
+   ik =   24   is =  1   idiag =   20   dE(Ry) =   0.000000000000058   residual =   0.000000083747740
+   ik =   25   is =  1   idiag =    1   dE(Ry) = 241.249901942630430   residual = 262.569929047954929
+   ik =   25   is =  1   idiag =    2   dE(Ry) =  53.956588776228273   residual =  70.727514633477753
+   ik =   25   is =  1   idiag =    3   dE(Ry) =  71.854168184435167   residual =  83.835266716664066
+   ik =   25   is =  1   idiag =    4   dE(Ry) =  48.149855062400519   residual =  55.664389993802345
+   ik =   25   is =  1   idiag =    5   dE(Ry) =  30.853641132011134   residual =  35.505358990590921
+   ik =   25   is =  1   idiag =    6   dE(Ry) =  18.538888245223575   residual =  21.463516863761157
+   ik =   25   is =  1   idiag =    7   dE(Ry) =  10.806713117735693   residual =  12.539041592892355
+   ik =   25   is =  1   idiag =    8   dE(Ry) =   5.716471458145023   residual =   8.697759353268445
+   ik =   25   is =  1   idiag =    9   dE(Ry) =   6.691466798317727   residual =   9.187840721991611
+   ik =   25   is =  1   idiag =   10   dE(Ry) =   3.532728568482690   residual =   5.549174494590947
+   ik =   25   is =  1   idiag =   11   dE(Ry) =   1.756871835659357   residual =   2.576091362471083
+   ik =   25   is =  1   idiag =   12   dE(Ry) =   0.753425813688176   residual =   3.187374428060820
+   ik =   25   is =  1   idiag =   13   dE(Ry) =   0.292859109483295   residual =   0.969940159053587
+   ik =   25   is =  1   idiag =   14   dE(Ry) =   0.014132140016781   residual =   0.149385864926292
+   ik =   25   is =  1   idiag =   15   dE(Ry) =   0.000315286643401   residual =   0.019035252198558
+   ik =   25   is =  1   idiag =   16   dE(Ry) =   0.000004694170450   residual =   0.002084207091947
+   ik =   25   is =  1   idiag =   17   dE(Ry) =   0.000000048588071   residual =   0.000200225339803
+   ik =   25   is =  1   idiag =   18   dE(Ry) =   0.000000000427018   residual =   0.000015484166510
+   ik =   25   is =  1   idiag =   19   dE(Ry) =   0.000000000002394   residual =   0.000001057654669
+   ik =   25   is =  1   idiag =   20   dE(Ry) =   0.000000000000069   residual =   0.000000075812435
+   ik =   26   is =  1   idiag =    1   dE(Ry) = 240.982642329225456   residual = 262.325834772431733
+   ik =   26   is =  1   idiag =    2   dE(Ry) =  54.343267008228224   residual =  71.036956060281923
+   ik =   26   is =  1   idiag =    3   dE(Ry) =  71.579896071200210   residual =  83.434372384087396
+   ik =   26   is =  1   idiag =    4   dE(Ry) =  48.217262237840501   residual =  55.925233996216718
+   ik =   26   is =  1   idiag =    5   dE(Ry) =  30.876473615929385   residual =  35.635208911283364
+   ik =   26   is =  1   idiag =    6   dE(Ry) =  18.702798405417688   residual =  21.496444699214372
+   ik =   26   is =  1   idiag =    7   dE(Ry) =  10.835218136646411   residual =  12.473361810270479
+   ik =   26   is =  1   idiag =    8   dE(Ry) =   6.132892985574491   residual =   9.074537327169308
+   ik =   26   is =  1   idiag =    9   dE(Ry) =   6.339183401955058   residual =   8.962204843483605
+   ik =   26   is =  1   idiag =   10   dE(Ry) =   3.485505138681678   residual =   5.535173480839879
+   ik =   26   is =  1   idiag =   11   dE(Ry) =   1.684884129139549   residual =   2.628508888465059
+   ik =   26   is =  1   idiag =   12   dE(Ry) =   0.760957256361284   residual =   3.093815735701455
+   ik =   26   is =  1   idiag =   13   dE(Ry) =   0.269124087237381   residual =   0.848534561451281
+   ik =   26   is =  1   idiag =   14   dE(Ry) =   0.010274161765049   residual =   0.126469183131390
+   ik =   26   is =  1   idiag =   15   dE(Ry) =   0.000225729720782   residual =   0.015912853891430
+   ik =   26   is =  1   idiag =   16   dE(Ry) =   0.000003267068446   residual =   0.001741683173634
+   ik =   26   is =  1   idiag =   17   dE(Ry) =   0.000000034730467   residual =   0.000175932821739
+   ik =   26   is =  1   idiag =   18   dE(Ry) =   0.000000000322001   residual =   0.000013155200602
+   ik =   26   is =  1   idiag =   19   dE(Ry) =   0.000000000001793   residual =   0.000000879207407
+   ik =   26   is =  1   idiag =   20   dE(Ry) =   0.000000000000061   residual =   0.000000068590868
+   ik =   27   is =  1   idiag =    1   dE(Ry) = 241.165934017969931   residual = 262.537015717017368
+   ik =   27   is =  1   idiag =    2   dE(Ry) =  53.872516954240155   residual =  70.730900867252757
+   ik =   27   is =  1   idiag =    3   dE(Ry) =  71.678611237521693   residual =  83.718769168223304
+   ik =   27   is =  1   idiag =    4   dE(Ry) =  48.164242878631285   residual =  55.888067133574616
+   ik =   27   is =  1   idiag =    5   dE(Ry) =  30.849906156135233   residual =  35.514950761747833
+   ik =   27   is =  1   idiag =    6   dE(Ry) =  18.413531958373643   residual =  21.384597353362850
+   ik =   27   is =  1   idiag =    7   dE(Ry) =  10.807216211530225   residual =  12.583775572242223
+   ik =   27   is =  1   idiag =    8   dE(Ry) =   5.771348168497568   residual =   8.248570057783871
+   ik =   27   is =  1   idiag =    9   dE(Ry) =   6.900056192910421   residual =   9.355843260850648
+   ik =   27   is =  1   idiag =   10   dE(Ry) =   3.408216698290974   residual =   5.696034709346502
+   ik =   27   is =  1   idiag =   11   dE(Ry) =   1.888620269966342   residual =   2.697161029429790
+   ik =   27   is =  1   idiag =   12   dE(Ry) =   0.782357114161019   residual =   3.469739302621376
+   ik =   27   is =  1   idiag =   13   dE(Ry) =   0.289688827033161   residual =   0.920478856695195
+   ik =   27   is =  1   idiag =   14   dE(Ry) =   0.013376026142304   residual =   0.148075192264484
+   ik =   27   is =  1   idiag =   15   dE(Ry) =   0.000303677621467   residual =   0.017589772036781
+   ik =   27   is =  1   idiag =   16   dE(Ry) =   0.000004051723872   residual =   0.001827528297327
+   ik =   27   is =  1   idiag =   17   dE(Ry) =   0.000000039186983   residual =   0.000183765953231
+   ik =   27   is =  1   idiag =   18   dE(Ry) =   0.000000000369498   residual =   0.000015024721176
+   ik =   27   is =  1   idiag =   19   dE(Ry) =   0.000000000002329   residual =   0.000001060039940
+   ik =   27   is =  1   idiag =   20   dE(Ry) =   0.000000000000076   residual =   0.000000074544145
+   ik =   28   is =  1   idiag =    1   dE(Ry) = 241.303009810180527   residual = 262.543332078594062
+   ik =   28   is =  1   idiag =    2   dE(Ry) =  54.050418278214977   residual =  70.958210292034323
+   ik =   28   is =  1   idiag =    3   dE(Ry) =  71.566486790967502   residual =  83.578338574020947
+   ik =   28   is =  1   idiag =    4   dE(Ry) =  48.124664268589939   residual =  55.875025949930624
+   ik =   28   is =  1   idiag =    5   dE(Ry) =  30.770967554747656   residual =  35.495956612473009
+   ik =   28   is =  1   idiag =    6   dE(Ry) =  18.604874904203093   residual =  21.516476623699436
+   ik =   28   is =  1   idiag =    7   dE(Ry) =  10.667941634913968   residual =  12.508718534715312
+   ik =   28   is =  1   idiag =    8   dE(Ry) =   5.936383651068853   residual =   8.705781759287143
+   ik =   28   is =  1   idiag =    9   dE(Ry) =   6.425966692614749   residual =   8.965774047943968
+   ik =   28   is =  1   idiag =   10   dE(Ry) =   3.412068780503899   residual =   5.604394161876361
+   ik =   28   is =  1   idiag =   11   dE(Ry) =   1.603843241530311   residual =   2.625199430372747
+   ik =   28   is =  1   idiag =   12   dE(Ry) =   0.752892138601096   residual =   3.352196896815332
+   ik =   28   is =  1   idiag =   13   dE(Ry) =   0.300734882231250   residual =   1.014225522560187
+   ik =   28   is =  1   idiag =   14   dE(Ry) =   0.016042980831697   residual =   0.161276625056384
+   ik =   28   is =  1   idiag =   15   dE(Ry) =   0.000382977816262   residual =   0.022114125811843
+   ik =   28   is =  1   idiag =   16   dE(Ry) =   0.000006125052548   residual =   0.002266507040965
+   ik =   28   is =  1   idiag =   17   dE(Ry) =   0.000000058558466   residual =   0.000219431303120
+   ik =   28   is =  1   idiag =   18   dE(Ry) =   0.000000000508071   residual =   0.000016582624821
+   ik =   28   is =  1   idiag =   19   dE(Ry) =   0.000000000002912   residual =   0.000001162057666
+   ik =   28   is =  1   idiag =   20   dE(Ry) =   0.000000000000060   residual =   0.000000085353324
+   ik =   29   is =  1   idiag =    1   dE(Ry) = 241.130957996179916   residual = 262.481382416909980
+   ik =   29   is =  1   idiag =    2   dE(Ry) =  54.041915601996379   residual =  70.727499488760216
+   ik =   29   is =  1   idiag =    3   dE(Ry) =  71.308703394360634   residual =  83.104879909451185
+   ik =   29   is =  1   idiag =    4   dE(Ry) =  47.946854058557378   residual =  55.676497560541868
+   ik =   29   is =  1   idiag =    5   dE(Ry) =  30.794124831289878   residual =  35.577030215285845
+   ik =   29   is =  1   idiag =    6   dE(Ry) =  18.665308785480537   residual =  21.619867022669965
+   ik =   29   is =  1   idiag =    7   dE(Ry) =  10.834137440939758   residual =  12.569354404856456
+   ik =   29   is =  1   idiag =    8   dE(Ry) =   6.012593305437222   residual =   9.148302319951197
+   ik =   29   is =  1   idiag =    9   dE(Ry) =   6.938343017307156   residual =   9.387410929918236
+   ik =   29   is =  1   idiag =   10   dE(Ry) =   3.504626155992638   residual =   5.491681880866741
+   ik =   29   is =  1   idiag =   11   dE(Ry) =   1.752972317692175   residual =   2.635078316679676
+   ik =   29   is =  1   idiag =   12   dE(Ry) =   0.718831192422736   residual =   3.238999325038153
+   ik =   29   is =  1   idiag =   13   dE(Ry) =   0.304068745136823   residual =   0.867421133044806
+   ik =   29   is =  1   idiag =   14   dE(Ry) =   0.011257740702616   residual =   0.129947023958162
+   ik =   29   is =  1   idiag =   15   dE(Ry) =   0.000289400606550   residual =   0.032562693360535
+   ik =   29   is =  1   idiag =   16   dE(Ry) =   0.000025047562140   residual =   0.004438515688584
+   ik =   29   is =  1   idiag =   17   dE(Ry) =   0.000000335940504   residual =   0.000567879093749
+   ik =   29   is =  1   idiag =   18   dE(Ry) =   0.000000004228626   residual =   0.000054295049258
+   ik =   29   is =  1   idiag =   19   dE(Ry) =   0.000000000032256   residual =   0.000004580918956
+   ik =   29   is =  1   idiag =   20   dE(Ry) =   0.000000000000141   residual =   0.000000365504445
+   ik =   29   is =  1   idiag =   21   dE(Ry) =   0.000000000000050   residual =   0.000000074013797
+   ik =   30   is =  1   idiag =    1   dE(Ry) = 240.953584643169847   residual = 262.426070636864665
+   ik =   30   is =  1   idiag =    2   dE(Ry) =  54.086535952532387   residual =  70.936662699127496
+   ik =   30   is =  1   idiag =    3   dE(Ry) =  71.449792310860346   residual =  83.341668073733672
+   ik =   30   is =  1   idiag =    4   dE(Ry) =  48.050577464655376   residual =  55.701156156387960
+   ik =   30   is =  1   idiag =    5   dE(Ry) =  30.766742958192040   residual =  35.397435110672404
+   ik =   30   is =  1   idiag =    6   dE(Ry) =  18.528496749973755   residual =  21.452749088998328
+   ik =   30   is =  1   idiag =    7   dE(Ry) =  10.737213968257466   residual =  12.464923693010295
+   ik =   30   is =  1   idiag =    8   dE(Ry) =   6.185662843436295   residual =   9.047400230124515
+   ik =   30   is =  1   idiag =    9   dE(Ry) =   6.431050526529011   residual =   9.220876763505061
+   ik =   30   is =  1   idiag =   10   dE(Ry) =   3.428156827089323   residual =   5.581575875143384
+   ik =   30   is =  1   idiag =   11   dE(Ry) =   1.779473426780429   residual =   2.767744655730594
+   ik =   30   is =  1   idiag =   12   dE(Ry) =   0.772578485120297   residual =   3.101954103818857
+   ik =   30   is =  1   idiag =   13   dE(Ry) =   0.300139063649032   residual =   0.832534298817605
+   ik =   30   is =  1   idiag =   14   dE(Ry) =   0.009946194589413   residual =   0.127457252089734
+   ik =   30   is =  1   idiag =   15   dE(Ry) =   0.000222744983127   residual =   0.016543675406748
+   ik =   30   is =  1   idiag =   16   dE(Ry) =   0.000003608091426   residual =   0.001932480702079
+   ik =   30   is =  1   idiag =   17   dE(Ry) =   0.000000041645788   residual =   0.000175075637532
+   ik =   30   is =  1   idiag =   18   dE(Ry) =   0.000000000323724   residual =   0.000014468454392
+   ik =   30   is =  1   idiag =   19   dE(Ry) =   0.000000000002459   residual =   0.000001188488812
+   ik =   30   is =  1   idiag =   20   dE(Ry) =   0.000000000000056   residual =   0.000000089664690
+   ik =   31   is =  1   idiag =    1   dE(Ry) = 241.223782795814714   residual = 262.611204124284995
+   ik =   31   is =  1   idiag =    2   dE(Ry) =  54.053307783544028   residual =  70.817265773030698
+   ik =   31   is =  1   idiag =    3   dE(Ry) =  71.768108237248697   residual =  83.628417711352341
+   ik =   31   is =  1   idiag =    4   dE(Ry) =  48.025684537259835   residual =  55.495386918135203
+   ik =   31   is =  1   idiag =    5   dE(Ry) =  30.762571457162579   residual =  35.600573037073154
+   ik =   31   is =  1   idiag =    6   dE(Ry) =  18.575484101191709   residual =  21.582273861351744
+   ik =   31   is =  1   idiag =    7   dE(Ry) =  10.798627873630043   residual =  12.487532763574956
+   ik =   31   is =  1   idiag =    8   dE(Ry) =   6.219285861298482   residual =   9.123645857687691
+   ik =   31   is =  1   idiag =    9   dE(Ry) =   6.380629667099788   residual =   8.936736187247554
+   ik =   31   is =  1   idiag =   10   dE(Ry) =   3.538364377123272   residual =   5.575888366002879
+   ik =   31   is =  1   idiag =   11   dE(Ry) =   1.971085602402948   residual =   2.625100273107817
+   ik =   31   is =  1   idiag =   12   dE(Ry) =   0.738653245239245   residual =   3.249875691083572
+   ik =   31   is =  1   idiag =   13   dE(Ry) =   0.297993267556218   residual =   0.925530224779801
+   ik =   31   is =  1   idiag =   14   dE(Ry) =   0.011739747165928   residual =   0.136719121960674
+   ik =   31   is =  1   idiag =   15   dE(Ry) =   0.000235870142862   residual =   0.016575976329893
+   ik =   31   is =  1   idiag =   16   dE(Ry) =   0.000003629891701   residual =   0.001912305029492
+   ik =   31   is =  1   idiag =   17   dE(Ry) =   0.000000045651769   residual =   0.000203747067074
+   ik =   31   is =  1   idiag =   18   dE(Ry) =   0.000000000459189   residual =   0.000015171102338
+   ik =   31   is =  1   idiag =   19   dE(Ry) =   0.000000000002374   residual =   0.000001103100018
+   ik =   31   is =  1   idiag =   20   dE(Ry) =   0.000000000000077   residual =   0.000000082825618
+   ik =   32   is =  1   idiag =    1   dE(Ry) = 241.285473732021018   residual = 262.503261655129961
+   ik =   32   is =  1   idiag =    2   dE(Ry) =  54.274732698169316   residual =  70.881748673668696
+   ik =   32   is =  1   idiag =    3   dE(Ry) =  71.596093170056264   residual =  83.467293649732341
+   ik =   32   is =  1   idiag =    4   dE(Ry) =  48.544256108596443   residual =  56.215452824135376
+   ik =   32   is =  1   idiag =    5   dE(Ry) =  30.773495324630275   residual =  35.460952310827466
+   ik =   32   is =  1   idiag =    6   dE(Ry) =  18.580175387051447   residual =  21.555433510975785
+   ik =   32   is =  1   idiag =    7   dE(Ry) =  11.158686365933940   residual =  12.816422294747737
+   ik =   32   is =  1   idiag =    8   dE(Ry) =   5.895853254275642   residual =   8.822508393951244
+   ik =   32   is =  1   idiag =    9   dE(Ry) =   6.570595628622871   residual =   9.279557111360059
+   ik =   32   is =  1   idiag =   10   dE(Ry) =   3.400267526799130   residual =   5.607131443455873
+   ik =   32   is =  1   idiag =   11   dE(Ry) =   1.681573322128136   residual =   2.644698050513464
+   ik =   32   is =  1   idiag =   12   dE(Ry) =   0.776078854627487   residual =   3.241429823620250
+   ik =   32   is =  1   idiag =   13   dE(Ry) =   0.269945526614602   residual =   0.930924327852101
+   ik =   32   is =  1   idiag =   14   dE(Ry) =   0.012482645458237   residual =   0.133006211801877
+   ik =   32   is =  1   idiag =   15   dE(Ry) =   0.000229802329158   residual =   0.015697112994332
+   ik =   32   is =  1   idiag =   16   dE(Ry) =   0.000003184747104   residual =   0.001768047026441
+   ik =   32   is =  1   idiag =   17   dE(Ry) =   0.000000035906251   residual =   0.000180549352580
+   ik =   32   is =  1   idiag =   18   dE(Ry) =   0.000000000340380   residual =   0.000013599192662
+   ik =   32   is =  1   idiag =   19   dE(Ry) =   0.000000000001951   residual =   0.000000944915975
+   ik =   32   is =  1   idiag =   20   dE(Ry) =   0.000000000000066   residual =   0.000000072720448
+   ik =   33   is =  1   idiag =    1   dE(Ry) = 242.048830866780975   residual = 263.254319532130182
+   ik =   33   is =  1   idiag =    2   dE(Ry) =  54.227234877082765   residual =  71.020397389499749
+   ik =   33   is =  1   idiag =    3   dE(Ry) =  71.551440411423016   residual =  83.580042473878862
+   ik =   33   is =  1   idiag =    4   dE(Ry) =  48.479013669652971   residual =  56.255437425279624
+   ik =   33   is =  1   idiag =    5   dE(Ry) =  30.740734286291733   residual =  35.457746199662132
+   ik =   33   is =  1   idiag =    6   dE(Ry) =  18.682606899732683   residual =  21.572737937274656
+   ik =   33   is =  1   idiag =    7   dE(Ry) =  10.746794133133141   residual =  12.500146425821130
+   ik =   33   is =  1   idiag =    8   dE(Ry) =   6.100132920504524   residual =   8.755376719970515
+   ik =   33   is =  1   idiag =    9   dE(Ry) =   6.657867136340737   residual =   9.195981414099684
+   ik =   33   is =  1   idiag =   10   dE(Ry) =   3.522912993694075   residual =   5.625835833175069
+   ik =   33   is =  1   idiag =   11   dE(Ry) =   1.689541264634928   residual =   2.728699421950260
+   ik =   33   is =  1   idiag =   12   dE(Ry) =   0.765121144517154   residual =   3.293995676919527
+   ik =   33   is =  1   idiag =   13   dE(Ry) =   0.255322902323922   residual =   0.900080585695974
+   ik =   33   is =  1   idiag =   14   dE(Ry) =   0.012241619014557   residual =   0.143203315577819
+   ik =   33   is =  1   idiag =   15   dE(Ry) =   0.000271296528542   residual =   0.016325014140947
+   ik =   33   is =  1   idiag =   16   dE(Ry) =   0.000003262096784   residual =   0.001781236369442
+   ik =   33   is =  1   idiag =   17   dE(Ry) =   0.000000036717590   residual =   0.000168882183376
+   ik =   33   is =  1   idiag =   18   dE(Ry) =   0.000000000304940   residual =   0.000012845610566
+   ik =   33   is =  1   idiag =   19   dE(Ry) =   0.000000000001768   residual =   0.000000917799747
+   ik =   33   is =  1   idiag =   20   dE(Ry) =   0.000000000000041   residual =   0.000000069470054
+   ik =   34   is =  1   idiag =    1   dE(Ry) = 241.519407795448274   residual = 262.791118795481793
+   ik =   34   is =  1   idiag =    2   dE(Ry) =  53.965064284696126   residual =  70.793015905961994
+   ik =   34   is =  1   idiag =    3   dE(Ry) =  71.757471566324369   residual =  83.643670565943751
+   ik =   34   is =  1   idiag =    4   dE(Ry) =  47.972909671333582   residual =  55.609644860166895
+   ik =   34   is =  1   idiag =    5   dE(Ry) =  30.726778712210262   residual =  35.405013041198877
+   ik =   34   is =  1   idiag =    6   dE(Ry) =  18.661927066353183   residual =  21.581228849669699
+   ik =   34   is =  1   idiag =    7   dE(Ry) =  10.570851830658068   residual =  12.453912779323721
+   ik =   34   is =  1   idiag =    8   dE(Ry) =   6.002979065360803   residual =   8.709172026797077
+   ik =   34   is =  1   idiag =    9   dE(Ry) =   6.394972085841087   residual =   9.024434903834237
+   ik =   34   is =  1   idiag =   10   dE(Ry) =   3.418740315295355   residual =   5.662864096756918
+   ik =   34   is =  1   idiag =   11   dE(Ry) =   1.861640295251190   residual =   2.677252021406119
+   ik =   34   is =  1   idiag =   12   dE(Ry) =   0.779063293466891   residual =   3.456781386200353
+   ik =   34   is =  1   idiag =   13   dE(Ry) =   0.325749071751572   residual =   0.938790432877963
+   ik =   34   is =  1   idiag =   14   dE(Ry) =   0.013280412087851   residual =   0.140189664430157
+   ik =   34   is =  1   idiag =   15   dE(Ry) =   0.000251754212765   residual =   0.016296375085037
+   ik =   34   is =  1   idiag =   16   dE(Ry) =   0.000003297065611   residual =   0.001724954110305
+   ik =   34   is =  1   idiag =   17   dE(Ry) =   0.000000032063726   residual =   0.000167252856254
+   ik =   34   is =  1   idiag =   18   dE(Ry) =   0.000000000293889   residual =   0.000012892672731
+   ik =   34   is =  1   idiag =   19   dE(Ry) =   0.000000000001641   residual =   0.000000898850128
+   ik =   34   is =  1   idiag =   20   dE(Ry) =   0.000000000000053   residual =   0.000000066744063
+   ik =   35   is =  1   idiag =    1   dE(Ry) = 241.686653120093638   residual = 262.890863707728272
+   ik =   35   is =  1   idiag =    2   dE(Ry) =  54.197358579207219   residual =  71.017645484924017
+   ik =   35   is =  1   idiag =    3   dE(Ry) =  71.574349069391644   residual =  83.405026632553174
+   ik =   35   is =  1   idiag =    4   dE(Ry) =  48.041035705047975   residual =  55.877066047486252
+   ik =   35   is =  1   idiag =    5   dE(Ry) =  31.006663182208825   residual =  35.744061075978031
+   ik =   35   is =  1   idiag =    6   dE(Ry) =  18.593750353414421   residual =  21.561001431147250
+   ik =   35   is =  1   idiag =    7   dE(Ry) =  10.772542809674324   residual =  12.587777905970579
+   ik =   35   is =  1   idiag =    8   dE(Ry) =   6.445111019585345   residual =   9.324529322411141
+   ik =   35   is =  1   idiag =    9   dE(Ry) =   6.537243934638640   residual =   9.152609554641554
+   ik =   35   is =  1   idiag =   10   dE(Ry) =   3.427361384375474   residual =   5.513495872932998
+   ik =   35   is =  1   idiag =   11   dE(Ry) =   1.729646576477691   residual =   2.732298432477887
+   ik =   35   is =  1   idiag =   12   dE(Ry) =   0.845076467098927   residual =   3.163367026589984
+   ik =   35   is =  1   idiag =   13   dE(Ry) =   0.260458937446723   residual =   0.880461774397304
+   ik =   35   is =  1   idiag =   14   dE(Ry) =   0.011122026590223   residual =   0.122095826514348
+   ik =   35   is =  1   idiag =   15   dE(Ry) =   0.000204627095103   residual =   0.014921298166824
+   ik =   35   is =  1   idiag =   16   dE(Ry) =   0.000003026620293   residual =   0.001638387922997
+   ik =   35   is =  1   idiag =   17   dE(Ry) =   0.000000031584247   residual =   0.000161299464754
+   ik =   35   is =  1   idiag =   18   dE(Ry) =   0.000000000287487   residual =   0.000012531749711
+   ik =   35   is =  1   idiag =   19   dE(Ry) =   0.000000000001699   residual =   0.000000869930303
+   ik =   35   is =  1   idiag =   20   dE(Ry) =   0.000000000000086   residual =   0.000000066545639
+   ik =   36   is =  1   idiag =    1   dE(Ry) = 241.371916090248163   residual = 262.715811031558360
+   ik =   36   is =  1   idiag =    2   dE(Ry) =  53.816050153333265   residual =  70.707511113503784
+   ik =   36   is =  1   idiag =    3   dE(Ry) =  71.662204644675455   residual =  83.652561579241436
+   ik =   36   is =  1   idiag =    4   dE(Ry) =  48.170721126959961   residual =  55.857386178045275
+   ik =   36   is =  1   idiag =    5   dE(Ry) =  30.606584161058890   residual =  35.351191764075992
+   ik =   36   is =  1   idiag =    6   dE(Ry) =  18.467543953285297   residual =  21.400746264972401
+   ik =   36   is =  1   idiag =    7   dE(Ry) =  10.727692992029297   residual =  12.597939041087194
+   ik =   36   is =  1   idiag =    8   dE(Ry) =   6.520163701277315   residual =   9.380732600243954
+   ik =   36   is =  1   idiag =    9   dE(Ry) =   6.609358727741763   residual =   9.044828399293381
+   ik =   36   is =  1   idiag =   10   dE(Ry) =   3.471174174796503   residual =   5.492225131012036
+   ik =   36   is =  1   idiag =   11   dE(Ry) =   2.010146693606694   residual =   2.694613544532236
+   ik =   36   is =  1   idiag =   12   dE(Ry) =   0.799767126564397   residual =   3.339699599392660
+   ik =   36   is =  1   idiag =   13   dE(Ry) =   0.315226112461398   residual =   0.922493894829577
+   ik =   36   is =  1   idiag =   14   dE(Ry) =   0.012975074821358   residual =   0.142216011075619
+   ik =   36   is =  1   idiag =   15   dE(Ry) =   0.000268664751497   residual =   0.017232008702854
+   ik =   36   is =  1   idiag =   16   dE(Ry) =   0.000003777227527   residual =   0.001788900307803
+   ik =   36   is =  1   idiag =   17   dE(Ry) =   0.000000036327493   residual =   0.000180664618593
+   ik =   36   is =  1   idiag =   18   dE(Ry) =   0.000000000351777   residual =   0.000014916076202
+   ik =   36   is =  1   idiag =   19   dE(Ry) =   0.000000000002245   residual =   0.000001011880076
+   ik =   36   is =  1   idiag =   20   dE(Ry) =   0.000000000000068   residual =   0.000000072706036
+   ik =   37   is =  1   idiag =    1   dE(Ry) = 241.943892410612534   residual = 263.074279179905204
+   ik =   37   is =  1   idiag =    2   dE(Ry) =  54.259536975604817   residual =  70.963616002237814
+   ik =   37   is =  1   idiag =    3   dE(Ry) =  72.068791587973635   residual =  83.833501688669557
+   ik =   37   is =  1   idiag =    4   dE(Ry) =  48.115779100776379   residual =  55.894023758940918
+   ik =   37   is =  1   idiag =    5   dE(Ry) =  31.337757170728878   residual =  35.974445273353432
+   ik =   37   is =  1   idiag =    6   dE(Ry) =  18.577961310193885   residual =  21.521775931112789
+   ik =   37   is =  1   idiag =    7   dE(Ry) =  10.730248341899943   residual =  12.429475583315401
+   ik =   37   is =  1   idiag =    8   dE(Ry) =   5.745975156363293   residual =   8.503108947826295
+   ik =   37   is =  1   idiag =    9   dE(Ry) =   6.741619954840908   residual =   9.237669120337305
+   ik =   37   is =  1   idiag =   10   dE(Ry) =   3.550746295091959   residual =   5.566813336472960
+   ik =   37   is =  1   idiag =   11   dE(Ry) =   1.765189804995606   residual =   2.709692410859708
+   ik =   37   is =  1   idiag =   12   dE(Ry) =   0.801051808112813   residual =   3.307107951463496
+   ik =   37   is =  1   idiag =   13   dE(Ry) =   0.268218395063703   residual =   0.881145198792830
+   ik =   37   is =  1   idiag =   14   dE(Ry) =   0.011779447868308   residual =   0.126712732979646
+   ik =   37   is =  1   idiag =   15   dE(Ry) =   0.000219584841683   residual =   0.014544561073323
+   ik =   37   is =  1   idiag =   16   dE(Ry) =   0.000002832379056   residual =   0.001760221484864
+   ik =   37   is =  1   idiag =   17   dE(Ry) =   0.000000033697692   residual =   0.000163751469655
+   ik =   37   is =  1   idiag =   18   dE(Ry) =   0.000000000279767   residual =   0.000012475218842
+   ik =   37   is =  1   idiag =   19   dE(Ry) =   0.000000000001554   residual =   0.000000865402603
+   ik =   37   is =  1   idiag =   20   dE(Ry) =   0.000000000000047   residual =   0.000000066040392
+   ik =   38   is =  1   idiag =    1   dE(Ry) = 241.264227383559870   residual = 262.603758862715665
+   ik =   38   is =  1   idiag =    2   dE(Ry) =  53.770646029367043   residual =  70.558533212180791
+   ik =   38   is =  1   idiag =    3   dE(Ry) =  71.556045357935119   residual =  83.443749253385434
+   ik =   38   is =  1   idiag =    4   dE(Ry) =  48.026688402896582   residual =  55.690549618135080
+   ik =   38   is =  1   idiag =    5   dE(Ry) =  30.788812048130538   residual =  35.647158743128919
+   ik =   38   is =  1   idiag =    6   dE(Ry) =  18.714495760106846   residual =  21.636261923310553
+   ik =   38   is =  1   idiag =    7   dE(Ry) =  10.929548247031176   residual =  12.527073102331711
+   ik =   38   is =  1   idiag =    8   dE(Ry) =   6.164171138848647   residual =   8.844410363219918
+   ik =   38   is =  1   idiag =    9   dE(Ry) =   6.553179025391503   residual =   9.082967570714663
+   ik =   38   is =  1   idiag =   10   dE(Ry) =   3.455471342384767   residual =   5.471915903127874
+   ik =   38   is =  1   idiag =   11   dE(Ry) =   1.677744970987253   residual =   2.664000054375824
+   ik =   38   is =  1   idiag =   12   dE(Ry) =   0.805552493584575   residual =   3.416177974453790
+   ik =   38   is =  1   idiag =   13   dE(Ry) =   0.290331356041114   residual =   0.913583683801263
+   ik =   38   is =  1   idiag =   14   dE(Ry) =   0.013257585837344   residual =   0.140025706742845
+   ik =   38   is =  1   idiag =   15   dE(Ry) =   0.000261106190608   residual =   0.016269277030722
+   ik =   38   is =  1   idiag =   16   dE(Ry) =   0.000003269470998   residual =   0.001676101377285
+   ik =   38   is =  1   idiag =   17   dE(Ry) =   0.000000033727749   residual =   0.000173981519526
+   ik =   38   is =  1   idiag =   18   dE(Ry) =   0.000000000318913   residual =   0.000013961648428
+   ik =   38   is =  1   idiag =   19   dE(Ry) =   0.000000000001922   residual =   0.000000967124443
+   ik =   38   is =  1   idiag =   20   dE(Ry) =   0.000000000000051   residual =   0.000000070392837
+   ik =   39   is =  1   idiag =    1   dE(Ry) = 241.037273725021549   residual = 262.343530691511944
+   ik =   39   is =  1   idiag =    2   dE(Ry) =  53.762858863714030   residual =  70.575709414158737
+   ik =   39   is =  1   idiag =    3   dE(Ry) =  71.629138886178083   residual =  83.430517708783128
+   ik =   39   is =  1   idiag =    4   dE(Ry) =  47.827444935639861   residual =  55.567059448670513
+   ik =   39   is =  1   idiag =    5   dE(Ry) =  30.861636370148446   residual =  35.644477797584670
+   ik =   39   is =  1   idiag =    6   dE(Ry) =  18.500347487171382   residual =  21.494742692850753
+   ik =   39   is =  1   idiag =    7   dE(Ry) =  10.658294271709103   residual =  12.545039420320212
+   ik =   39   is =  1   idiag =    8   dE(Ry) =   5.989591027372327   residual =   8.032405060305425
+   ik =   39   is =  1   idiag =    9   dE(Ry) =   6.434328338968497   residual =   9.123455321350450
+   ik =   39   is =  1   idiag =   10   dE(Ry) =   3.417531425361821   residual =   5.613188703370588
+   ik =   39   is =  1   idiag =   11   dE(Ry) =   1.733662622234946   residual =   2.724057761891855
+   ik =   39   is =  1   idiag =   12   dE(Ry) =   0.768279679198371   residual =   3.476485354505618
+   ik =   39   is =  1   idiag =   13   dE(Ry) =   0.304337917941232   residual =   0.869326647058476
+   ik =   39   is =  1   idiag =   14   dE(Ry) =   0.012440299124182   residual =   0.138209563215825
+   ik =   39   is =  1   idiag =   15   dE(Ry) =   0.000269680616333   residual =   0.017669982347131
+   ik =   39   is =  1   idiag =   16   dE(Ry) =   0.000003976099512   residual =   0.001980317770116
+   ik =   39   is =  1   idiag =   17   dE(Ry) =   0.000000041929077   residual =   0.000198936880621
+   ik =   39   is =  1   idiag =   18   dE(Ry) =   0.000000000389956   residual =   0.000014208788260
+   ik =   39   is =  1   idiag =   19   dE(Ry) =   0.000000000002124   residual =   0.000000967794966
+   ik =   39   is =  1   idiag =   20   dE(Ry) =   0.000000000000060   residual =   0.000000068438414
+   ik =   40   is =  1   idiag =    1   dE(Ry) = 241.360271301252880   residual = 262.602369265578204
+   ik =   40   is =  1   idiag =    2   dE(Ry) =  53.875904637200620   residual =  70.753741339831095
+   ik =   40   is =  1   idiag =    3   dE(Ry) =  71.928537238900333   residual =  83.840091479442577
+   ik =   40   is =  1   idiag =    4   dE(Ry) =  48.110195278671881   residual =  55.804967388595877
+   ik =   40   is =  1   idiag =    5   dE(Ry) =  30.680831295017981   residual =  35.354409017869287
+   ik =   40   is =  1   idiag =    6   dE(Ry) =  18.522449439599040   residual =  21.432174912991272
+   ik =   40   is =  1   idiag =    7   dE(Ry) =  10.541095922045065   residual =  12.326007826349167
+   ik =   40   is =  1   idiag =    8   dE(Ry) =   6.261530796610232   residual =   8.990619582537313
+   ik =   40   is =  1   idiag =    9   dE(Ry) =   7.049499733608725   residual =   9.453396952142695
+   ik =   40   is =  1   idiag =   10   dE(Ry) =   3.503705913086477   residual =   5.577922071546107
+   ik =   40   is =  1   idiag =   11   dE(Ry) =   1.660098018689219   residual =   2.971763363807128
+   ik =   40   is =  1   idiag =   12   dE(Ry) =   0.808749707297558   residual =   3.363474868703223
+   ik =   40   is =  1   idiag =   13   dE(Ry) =   0.327825438005413   residual =   0.879982206305097
+   ik =   40   is =  1   idiag =   14   dE(Ry) =   0.011263700629820   residual =   0.128248323261626
+   ik =   40   is =  1   idiag =   15   dE(Ry) =   0.000212927580555   residual =   0.016628697162189
+   ik =   40   is =  1   idiag =   16   dE(Ry) =   0.000003552005982   residual =   0.001976591527737
+   ik =   40   is =  1   idiag =   17   dE(Ry) =   0.000000043630544   residual =   0.000201492785554
+   ik =   40   is =  1   idiag =   18   dE(Ry) =   0.000000000421968   residual =   0.000016172593798
+   ik =   40   is =  1   idiag =   19   dE(Ry) =   0.000000000002676   residual =   0.000001091210040
+   ik =   40   is =  1   idiag =   20   dE(Ry) =   0.000000000000064   residual =   0.000000080200991
+   ik =   41   is =  1   idiag =    1   dE(Ry) = 241.523071326983171   residual = 262.921869474374091
+   ik =   41   is =  1   idiag =    2   dE(Ry) =  53.582544156350082   residual =  70.647059261397374
+   ik =   41   is =  1   idiag =    3   dE(Ry) =  71.648792756810138   residual =  83.623675392823841
+   ik =   41   is =  1   idiag =    4   dE(Ry) =  48.090778052449068   residual =  55.792819462068415
+   ik =   41   is =  1   idiag =    5   dE(Ry) =  30.685563079096283   residual =  35.396681709260825
+   ik =   41   is =  1   idiag =    6   dE(Ry) =  18.822643078337290   residual =  21.682858772202209
+   ik =   41   is =  1   idiag =    7   dE(Ry) =  10.716667294556052   residual =  12.515129997046085
+   ik =   41   is =  1   idiag =    8   dE(Ry) =   6.108339415793666   residual =   9.106661253845227
+   ik =   41   is =  1   idiag =    9   dE(Ry) =   6.388857550720116   residual =   9.217210481931181
+   ik =   41   is =  1   idiag =   10   dE(Ry) =   3.455411925752091   residual =   5.496457064414432
+   ik =   41   is =  1   idiag =   11   dE(Ry) =   1.880938052953832   residual =   2.774532999207246
+   ik =   41   is =  1   idiag =   12   dE(Ry) =   0.781338798066659   residual =   3.615309251719441
+   ik =   41   is =  1   idiag =   13   dE(Ry) =   0.284328225273484   residual =   0.912610685357772
+   ik =   41   is =  1   idiag =   14   dE(Ry) =   0.011887404599002   residual =   0.129535335904989
+   ik =   41   is =  1   idiag =   15   dE(Ry) =   0.000231962328691   residual =   0.014696817910635
+   ik =   41   is =  1   idiag =   16   dE(Ry) =   0.000002968588886   residual =   0.001588164007096
+   ik =   41   is =  1   idiag =   17   dE(Ry) =   0.000000031524221   residual =   0.000175339590261
+   ik =   41   is =  1   idiag =   18   dE(Ry) =   0.000000000318295   residual =   0.000013459382813
+   ik =   41   is =  1   idiag =   19   dE(Ry) =   0.000000000001885   residual =   0.000000948348137
+   ik =   41   is =  1   idiag =   20   dE(Ry) =   0.000000000000052   residual =   0.000000072415782
+   ik =   42   is =  1   idiag =    1   dE(Ry) = 241.444182067789910   residual = 262.545459688061612
+   ik =   42   is =  1   idiag =    2   dE(Ry) =  53.762933779914533   residual =  70.731214675885710
+   ik =   42   is =  1   idiag =    3   dE(Ry) =  71.360858955748853   residual =  83.343043875530242
+   ik =   42   is =  1   idiag =    4   dE(Ry) =  48.330320520729344   residual =  55.901859083551571
+   ik =   42   is =  1   idiag =    5   dE(Ry) =  30.761524552642626   residual =  35.442503054471352
+   ik =   42   is =  1   idiag =    6   dE(Ry) =  18.683670191192352   residual =  21.552744275320716
+   ik =   42   is =  1   idiag =    7   dE(Ry) =  10.702852267078825   residual =  12.381918955322757
+   ik =   42   is =  1   idiag =    8   dE(Ry) =   6.112595023313988   residual =   9.295007352016459
+   ik =   42   is =  1   idiag =    9   dE(Ry) =   6.716151341153990   residual =   9.148229295021736
+   ik =   42   is =  1   idiag =   10   dE(Ry) =   3.447449764295055   residual =   5.509698169111226
+   ik =   42   is =  1   idiag =   11   dE(Ry) =   1.974993945335916   residual =   2.999466887452822
+   ik =   42   is =  1   idiag =   12   dE(Ry) =   0.784619816128107   residual =   3.374355655312039
+   ik =   42   is =  1   idiag =   13   dE(Ry) =   0.258444552955067   residual =   0.873019677809664
+   ik =   42   is =  1   idiag =   14   dE(Ry) =   0.011254743117621   residual =   0.132043625835088
+   ik =   42   is =  1   idiag =   15   dE(Ry) =   0.000249277356341   residual =   0.018363141826322
+   ik =   42   is =  1   idiag =   16   dE(Ry) =   0.000004383232403   residual =   0.002072312295343
+   ik =   42   is =  1   idiag =   17   dE(Ry) =   0.000000048779504   residual =   0.000194605860204
+   ik =   42   is =  1   idiag =   18   dE(Ry) =   0.000000000395515   residual =   0.000016013810162
+   ik =   42   is =  1   idiag =   19   dE(Ry) =   0.000000000002719   residual =   0.000001089847792
+   ik =   42   is =  1   idiag =   20   dE(Ry) =   0.000000000000060   residual =   0.000000076266350
+   ik =   43   is =  1   idiag =    1   dE(Ry) = 241.419050549511013   residual = 262.552396915339045
+   ik =   43   is =  1   idiag =    2   dE(Ry) =  53.791930133257551   residual =  70.607614209699321
+   ik =   43   is =  1   idiag =    3   dE(Ry) =  71.556848542324047   residual =  83.405502342039725
+   ik =   43   is =  1   idiag =    4   dE(Ry) =  48.041844370860545   residual =  55.527194606272523
+   ik =   43   is =  1   idiag =    5   dE(Ry) =  30.762399596593824   residual =  35.572731288019774
+   ik =   43   is =  1   idiag =    6   dE(Ry) =  18.809622007536184   residual =  21.775451249320032
+   ik =   43   is =  1   idiag =    7   dE(Ry) =  10.506917212773525   residual =  12.342382811599066
+   ik =   43   is =  1   idiag =    8   dE(Ry) =   6.062837966364564   residual =   8.969551208034797
+   ik =   43   is =  1   idiag =    9   dE(Ry) =   6.709367840089564   residual =   9.300039979867771
+   ik =   43   is =  1   idiag =   10   dE(Ry) =   3.598706186047037   residual =   5.613102291246329
+   ik =   43   is =  1   idiag =   11   dE(Ry) =   1.680030766436763   residual =   2.660707091294094
+   ik =   43   is =  1   idiag =   12   dE(Ry) =   0.847105143726402   residual =   3.332381652297467
+   ik =   43   is =  1   idiag =   13   dE(Ry) =   0.274016020661201   residual =   0.919834265560633
+   ik =   43   is =  1   idiag =   14   dE(Ry) =   0.012109414433502   residual =   0.137437982280479
+   ik =   43   is =  1   idiag =   15   dE(Ry) =   0.000242888131264   residual =   0.016737008170241
+   ik =   43   is =  1   idiag =   16   dE(Ry) =   0.000003499165968   residual =   0.001752573148780
+   ik =   43   is =  1   idiag =   17   dE(Ry) =   0.000000034900047   residual =   0.000167386331754
+   ik =   43   is =  1   idiag =   18   dE(Ry) =   0.000000000293976   residual =   0.000013064922361
+   ik =   43   is =  1   idiag =   19   dE(Ry) =   0.000000000001761   residual =   0.000000863665304
+   ik =   43   is =  1   idiag =   20   dE(Ry) =   0.000000000000063   residual =   0.000000064193767
+   ik =   44   is =  1   idiag =    1   dE(Ry) = 241.553826467128971   residual = 262.798950891467200
+   ik =   44   is =  1   idiag =    2   dE(Ry) =  53.844828856988897   residual =  70.647765703459598
+   ik =   44   is =  1   idiag =    3   dE(Ry) =  71.926843474311937   residual =  83.664097935706678
+   ik =   44   is =  1   idiag =    4   dE(Ry) =  47.919078072950185   residual =  55.647122813832333
+   ik =   44   is =  1   idiag =    5   dE(Ry) =  30.658133542623759   residual =  35.419811731924220
+   ik =   44   is =  1   idiag =    6   dE(Ry) =  18.617070097733489   residual =  21.494057259245455
+   ik =   44   is =  1   idiag =    7   dE(Ry) =  10.656684058354342   residual =  12.468950632234137
+   ik =   44   is =  1   idiag =    8   dE(Ry) =   5.920426883011936   residual =   8.715687736766045
+   ik =   44   is =  1   idiag =    9   dE(Ry) =   6.692197970469325   residual =   9.182430153919158
+   ik =   44   is =  1   idiag =   10   dE(Ry) =   3.644868450588471   residual =   5.427879049907215
+   ik =   44   is =  1   idiag =   11   dE(Ry) =   1.789751902051706   residual =   2.719005334122991
+   ik =   44   is =  1   idiag =   12   dE(Ry) =   0.845381475919215   residual =   3.369025283661643
+   ik =   44   is =  1   idiag =   13   dE(Ry) =   0.276589939583939   residual =   0.900083995268357
+   ik =   44   is =  1   idiag =   14   dE(Ry) =   0.011859025515482   residual =   0.126185946735972
+   ik =   44   is =  1   idiag =   15   dE(Ry) =   0.000213723105507   residual =   0.016009152208938
+   ik =   44   is =  1   idiag =   16   dE(Ry) =   0.000003235067113   residual =   0.001761130642148
+   ik =   44   is =  1   idiag =   17   dE(Ry) =   0.000000036857138   residual =   0.000174968900767
+   ik =   44   is =  1   idiag =   18   dE(Ry) =   0.000000000340279   residual =   0.000012813750666
+   ik =   44   is =  1   idiag =   19   dE(Ry) =   0.000000000001795   residual =   0.000000918667255
+   ik =   44   is =  1   idiag =   20   dE(Ry) =   0.000000000000055   residual =   0.000000068807628
+   ik =   45   is =  1   idiag =    1   dE(Ry) = 241.135823720822657   residual = 262.408926567454046
+   ik =   45   is =  1   idiag =    2   dE(Ry) =  53.902651112153819   residual =  70.799514487744332
+   ik =   45   is =  1   idiag =    3   dE(Ry) =  71.557415274101345   residual =  83.353312775619656
+   ik =   45   is =  1   idiag =    4   dE(Ry) =  47.944507443220857   residual =  55.643348219923851
+   ik =   45   is =  1   idiag =    5   dE(Ry) =  30.758309615300405   residual =  35.559148604558445
+   ik =   45   is =  1   idiag =    6   dE(Ry) =  18.601021899246945   residual =  21.552686273234684
+   ik =   45   is =  1   idiag =    7   dE(Ry) =  10.718673493381258   residual =  12.535660711899721
+   ik =   45   is =  1   idiag =    8   dE(Ry) =   6.291000417267075   residual =   9.244319786791550
+   ik =   45   is =  1   idiag =    9   dE(Ry) =   6.409670601564295   residual =   9.062818800654250
+   ik =   45   is =  1   idiag =   10   dE(Ry) =   3.485522129951747   residual =   5.485468367440108
+   ik =   45   is =  1   idiag =   11   dE(Ry) =   1.795454504825654   residual =   2.742754588552374
+   ik =   45   is =  1   idiag =   12   dE(Ry) =   0.816377950174203   residual =   3.433081875963212
+   ik =   45   is =  1   idiag =   13   dE(Ry) =   0.270936061191663   residual =   0.950273573377721
+   ik =   45   is =  1   idiag =   14   dE(Ry) =   0.013881282727744   residual =   0.141793198048179
+   ik =   45   is =  1   idiag =   15   dE(Ry) =   0.000270259610764   residual =   0.017253748297847
+   ik =   45   is =  1   idiag =   16   dE(Ry) =   0.000003763663575   residual =   0.001838230783781
+   ik =   45   is =  1   idiag =   17   dE(Ry) =   0.000000039040134   residual =   0.000176319342183
+   ik =   45   is =  1   idiag =   18   dE(Ry) =   0.000000000338769   residual =   0.000013685463067
+   ik =   45   is =  1   idiag =   19   dE(Ry) =   0.000000000001916   residual =   0.000000970703390
+   ik =   45   is =  1   idiag =   20   dE(Ry) =   0.000000000000058   residual =   0.000000074795561
+   ik =   46   is =  1   idiag =    1   dE(Ry) = 241.500952530980754   residual = 262.754503456423663
+   ik =   46   is =  1   idiag =    2   dE(Ry) =  53.745368178836117   residual =  70.730293462211790
+   ik =   46   is =  1   idiag =    3   dE(Ry) =  71.488476661718039   residual =  83.440898107675153
+   ik =   46   is =  1   idiag =    4   dE(Ry) =  48.288008154681421   residual =  55.985055262345369
+   ik =   46   is =  1   idiag =    5   dE(Ry) =  30.967722904486962   residual =  35.638899654490785
+   ik =   46   is =  1   idiag =    6   dE(Ry) =  18.325222543294569   residual =  21.137970944783039
+   ik =   46   is =  1   idiag =    7   dE(Ry) =  10.716889768851974   residual =  12.436723792000151
+   ik =   46   is =  1   idiag =    8   dE(Ry) =   5.901293431194655   residual =   8.442378429288953
+   ik =   46   is =  1   idiag =    9   dE(Ry) =   6.579913198620684   residual =   9.197586045543424
+   ik =   46   is =  1   idiag =   10   dE(Ry) =   3.406922570112616   residual =   5.430625413175554
+   ik =   46   is =  1   idiag =   11   dE(Ry) =   1.720026413384545   residual =   2.759834496342775
+   ik =   46   is =  1   idiag =   12   dE(Ry) =   0.786179117324229   residual =   3.323059076021422
+   ik =   46   is =  1   idiag =   13   dE(Ry) =   0.295814290269269   residual =   0.848434456462481
+   ik =   46   is =  1   idiag =   14   dE(Ry) =   0.011237594517326   residual =   0.123293861630633
+   ik =   46   is =  1   idiag =   15   dE(Ry) =   0.000211940325448   residual =   0.015703643527096
+   ik =   46   is =  1   idiag =   16   dE(Ry) =   0.000003049901371   residual =   0.001751349747318
+   ik =   46   is =  1   idiag =   17   dE(Ry) =   0.000000033249860   residual =   0.000171242816969
+   ik =   46   is =  1   idiag =   18   dE(Ry) =   0.000000000314411   residual =   0.000014885455408
+   ik =   46   is =  1   idiag =   19   dE(Ry) =   0.000000000002227   residual =   0.000000957548305
+   ik =   46   is =  1   idiag =   20   dE(Ry) =   0.000000000000066   residual =   0.000000071773795
+   ik =   47   is =  1   idiag =    1   dE(Ry) = 241.019610454462452   residual = 262.353230844713323
+   ik =   47   is =  1   idiag =    2   dE(Ry) =  53.845352305494998   residual =  70.837925495210555
+   ik =   47   is =  1   idiag =    3   dE(Ry) =  71.875451823573798   residual =  83.484221644658476
+   ik =   47   is =  1   idiag =    4   dE(Ry) =  48.055851835084781   residual =  55.647483730005838
+   ik =   47   is =  1   idiag =    5   dE(Ry) =  30.852199685691161   residual =  35.497843781007667
+   ik =   47   is =  1   idiag =    6   dE(Ry) =  18.539492549725281   residual =  21.419175118037330
+   ik =   47   is =  1   idiag =    7   dE(Ry) =  10.716265415338224   residual =  12.467578147053905
+   ik =   47   is =  1   idiag =    8   dE(Ry) =   5.964641344551922   residual =   8.707990081183892
+   ik =   47   is =  1   idiag =    9   dE(Ry) =   6.923350722810959   residual =   9.388092051407169
+   ik =   47   is =  1   idiag =   10   dE(Ry) =   3.335565679998046   residual =   5.645704836389339
+   ik =   47   is =  1   idiag =   11   dE(Ry) =   1.839050808028815   residual =   2.766270435097626
+   ik =   47   is =  1   idiag =   12   dE(Ry) =   0.800091719647986   residual =   3.490672715762257
+   ik =   47   is =  1   idiag =   13   dE(Ry) =   0.269827446822488   residual =   0.876746295894340
+   ik =   47   is =  1   idiag =   14   dE(Ry) =   0.011202766108327   residual =   0.125150447746869
+   ik =   47   is =  1   idiag =   15   dE(Ry) =   0.000225604015378   residual =   0.015485759570195
+   ik =   47   is =  1   idiag =   16   dE(Ry) =   0.000003308728343   residual =   0.001780013575647
+   ik =   47   is =  1   idiag =   17   dE(Ry) =   0.000000036473346   residual =   0.000189774084742
+   ik =   47   is =  1   idiag =   18   dE(Ry) =   0.000000000377802   residual =   0.000015241440068
+   ik =   47   is =  1   idiag =   19   dE(Ry) =   0.000000000002497   residual =   0.000001115604799
+   ik =   47   is =  1   idiag =   20   dE(Ry) =   0.000000000000048   residual =   0.000000084047222
+   ik =   48   is =  1   idiag =    1   dE(Ry) = 241.176829428517067   residual = 262.350157584970475
+   ik =   48   is =  1   idiag =    2   dE(Ry) =  54.052810390053651   residual =  70.839561436657874
+   ik =   48   is =  1   idiag =    3   dE(Ry) =  71.526323613847069   residual =  83.482428657188152
+   ik =   48   is =  1   idiag =    4   dE(Ry) =  48.008262012621429   residual =  55.632270493023157
+   ik =   48   is =  1   idiag =    5   dE(Ry) =  30.690323343128313   residual =  35.557729529841822
+   ik =   48   is =  1   idiag =    6   dE(Ry) =  18.573124865047689   residual =  21.399840189661493
+   ik =   48   is =  1   idiag =    7   dE(Ry) =  10.738059303049589   residual =  12.390586642908811
+   ik =   48   is =  1   idiag =    8   dE(Ry) =   6.181989169629505   residual =   9.054085075121957
+   ik =   48   is =  1   idiag =    9   dE(Ry) =   6.536075072896169   residual =   9.167061214878171
+   ik =   48   is =  1   idiag =   10   dE(Ry) =   3.478089248022580   residual =   5.546039303160348
+   ik =   48   is =  1   idiag =   11   dE(Ry) =   1.755155012833388   residual =   2.666167418590869
+   ik =   48   is =  1   idiag =   12   dE(Ry) =   0.784617549880780   residual =   3.630286562880066
+   ik =   48   is =  1   idiag =   13   dE(Ry) =   0.320073522260338   residual =   1.077508343867872
+   ik =   48   is =  1   idiag =   14   dE(Ry) =   0.014243738297833   residual =   0.167786140260618
+   ik =   48   is =  1   idiag =   15   dE(Ry) =   0.000395118971364   residual =   0.021612628328033
+   ik =   48   is =  1   idiag =   16   dE(Ry) =   0.000006150590792   residual =   0.002378899284627
+   ik =   48   is =  1   idiag =   17   dE(Ry) =   0.000000064628390   residual =   0.000234784450330
+   ik =   48   is =  1   idiag =   18   dE(Ry) =   0.000000000591168   residual =   0.000019124551375
+   ik =   48   is =  1   idiag =   19   dE(Ry) =   0.000000000003837   residual =   0.000001254680240
+   ik =   48   is =  1   idiag =   20   dE(Ry) =   0.000000000000066   residual =   0.000000088259283
+   ik =   49   is =  1   idiag =    1   dE(Ry) = 241.206479191328867   residual = 262.718792272408223
+   ik =   49   is =  1   idiag =    2   dE(Ry) =  53.944631189568639   residual =  70.799942138694263
+   ik =   49   is =  1   idiag =    3   dE(Ry) =  71.532953660922516   residual =  83.317620617243179
+   ik =   49   is =  1   idiag =    4   dE(Ry) =  48.054721783523433   residual =  55.515479647371798
+   ik =   49   is =  1   idiag =    5   dE(Ry) =  30.768905357943353   residual =  35.498890927890336
+   ik =   49   is =  1   idiag =    6   dE(Ry) =  18.597569423988844   residual =  21.579322078226557
+   ik =   49   is =  1   idiag =    7   dE(Ry) =  10.570726512142111   residual =  12.357262531849823
+   ik =   49   is =  1   idiag =    8   dE(Ry) =   6.791835846559719   residual =   9.501334767175837
+   ik =   49   is =  1   idiag =    9   dE(Ry) =   6.805634907036797   residual =   9.256300686830174
+   ik =   49   is =  1   idiag =   10   dE(Ry) =   3.495248209272176   residual =   5.461224201023541
+   ik =   49   is =  1   idiag =   11   dE(Ry) =   1.803058357329651   residual =   2.738811619798842
+   ik =   49   is =  1   idiag =   12   dE(Ry) =   0.772679284349000   residual =   3.478791547077277
+   ik =   49   is =  1   idiag =   13   dE(Ry) =   0.301629039979047   residual =   0.997890082314329
+   ik =   49   is =  1   idiag =   14   dE(Ry) =   0.013411603883701   residual =   0.137663950841322
+   ik =   49   is =  1   idiag =   15   dE(Ry) =   0.000249512468404   residual =   0.017932014583491
+   ik =   49   is =  1   idiag =   16   dE(Ry) =   0.000004196607677   residual =   0.001860636478871
+   ik =   49   is =  1   idiag =   17   dE(Ry) =   0.000000041883929   residual =   0.000186920605689
+   ik =   49   is =  1   idiag =   18   dE(Ry) =   0.000000000388389   residual =   0.000015140383877
+   ik =   49   is =  1   idiag =   19   dE(Ry) =   0.000000000002442   residual =   0.000001094995063
+   ik =   49   is =  1   idiag =   20   dE(Ry) =   0.000000000000047   residual =   0.000000080266357
+   ik =   50   is =  1   idiag =    1   dE(Ry) = 241.302118128962661   residual = 262.326606894372901
+   ik =   50   is =  1   idiag =    2   dE(Ry) =  53.946513464084745   residual =  70.871916092706627
+   ik =   50   is =  1   idiag =    3   dE(Ry) =  71.692903070847564   residual =  83.505359965509257
+   ik =   50   is =  1   idiag =    4   dE(Ry) =  48.226309618741311   residual =  56.119363886611431
+   ik =   50   is =  1   idiag =    5   dE(Ry) =  31.200682396319124   residual =  35.779687230175512
+   ik =   50   is =  1   idiag =    6   dE(Ry) =  18.586280890160420   residual =  21.353389752834506
+   ik =   50   is =  1   idiag =    7   dE(Ry) =  10.822960802353606   residual =  12.483973162014033
+   ik =   50   is =  1   idiag =    8   dE(Ry) =   5.911662725285689   residual =   9.002090099620277
+   ik =   50   is =  1   idiag =    9   dE(Ry) =   6.781919059290591   residual =   9.345867033847215
+   ik =   50   is =  1   idiag =   10   dE(Ry) =   3.580113639373843   residual =   5.520370658468830
+   ik =   50   is =  1   idiag =   11   dE(Ry) =   2.236001675972306   residual =   2.825759301562995
+   ik =   50   is =  1   idiag =   12   dE(Ry) =   0.826524188179200   residual =   3.419285286826506
+   ik =   50   is =  1   idiag =   13   dE(Ry) =   0.265283527189625   residual =   0.937628807157099
+   ik =   50   is =  1   idiag =   14   dE(Ry) =   0.013739040385891   residual =   0.150864177944750
+   ik =   50   is =  1   idiag =   15   dE(Ry) =   0.000319463593798   residual =   0.019327072675298
+   ik =   50   is =  1   idiag =   16   dE(Ry) =   0.000004722404150   residual =   0.002071235534615
+   ik =   50   is =  1   idiag =   17   dE(Ry) =   0.000000046956730   residual =   0.000195168204348
+   ik =   50   is =  1   idiag =   18   dE(Ry) =   0.000000000403523   residual =   0.000013864780897
+   ik =   50   is =  1   idiag =   19   dE(Ry) =   0.000000000001987   residual =   0.000001013054734
+   ik =   50   is =  1   idiag =   20   dE(Ry) =   0.000000000000060   residual =   0.000000075103253
+   ik =   51   is =  1   idiag =    1   dE(Ry) = 241.268009355062560   residual = 262.872765357430524
+   ik =   51   is =  1   idiag =    2   dE(Ry) =  53.787007621963596   residual =  70.858469957687632
+   ik =   51   is =  1   idiag =    3   dE(Ry) =  71.829296226453010   residual =  83.714661676025358
+   ik =   51   is =  1   idiag =    4   dE(Ry) =  47.928270713658293   residual =  55.525191889258288
+   ik =   51   is =  1   idiag =    5   dE(Ry) =  30.651992684573877   residual =  35.426186867960887
+   ik =   51   is =  1   idiag =    6   dE(Ry) =  18.611944479092237   residual =  21.476213090393685
+   ik =   51   is =  1   idiag =    7   dE(Ry) =  10.693291203914452   residual =  12.387970203677094
+   ik =   51   is =  1   idiag =    8   dE(Ry) =   6.052223471405849   residual =   8.775247159976580
+   ik =   51   is =  1   idiag =    9   dE(Ry) =   6.870767233079581   residual =   9.316057777046488
+   ik =   51   is =  1   idiag =   10   dE(Ry) =   3.491235190748093   residual =   5.637063763379341
+   ik =   51   is =  1   idiag =   11   dE(Ry) =   1.511382619700652   residual =   2.680125909261875
+   ik =   51   is =  1   idiag =   12   dE(Ry) =   0.843889535213643   residual =   3.401389306358489
+   ik =   51   is =  1   idiag =   13   dE(Ry) =   0.273408144202737   residual =   0.926259068959980
+   ik =   51   is =  1   idiag =   14   dE(Ry) =   0.011871832024566   residual =   0.139128514964514
+   ik =   51   is =  1   idiag =   15   dE(Ry) =   0.000281427538001   residual =   0.016280099856338
+   ik =   51   is =  1   idiag =   16   dE(Ry) =   0.000003524775313   residual =   0.001710780218769
+   ik =   51   is =  1   idiag =   17   dE(Ry) =   0.000000034188209   residual =   0.000176316013860
+   ik =   51   is =  1   idiag =   18   dE(Ry) =   0.000000000347734   residual =   0.000014795932736
+   ik =   51   is =  1   idiag =   19   dE(Ry) =   0.000000000002233   residual =   0.000001028126595
+   ik =   51   is =  1   idiag =   20   dE(Ry) =   0.000000000000061   residual =   0.000000073451468
+   ik =   52   is =  1   idiag =    1   dE(Ry) = 241.081599161200103   residual = 262.413497968967988
+   ik =   52   is =  1   idiag =    2   dE(Ry) =  54.155810381437561   residual =  71.011975563399588
+   ik =   52   is =  1   idiag =    3   dE(Ry) =  71.911536854356001   residual =  83.762680691062627
+   ik =   52   is =  1   idiag =    4   dE(Ry) =  48.092584284048598   residual =  55.693799957903018
+   ik =   52   is =  1   idiag =    5   dE(Ry) =  30.607187431652008   residual =  35.276953732506406
+   ik =   52   is =  1   idiag =    6   dE(Ry) =  18.612686696540628   residual =  21.425778597009259
+   ik =   52   is =  1   idiag =    7   dE(Ry) =  10.523783271220497   residual =  12.225652118668322
+   ik =   52   is =  1   idiag =    8   dE(Ry) =   6.216053567573612   residual =   9.345599351111215
+   ik =   52   is =  1   idiag =    9   dE(Ry) =   6.699023093997059   residual =   9.236077165080149
+   ik =   52   is =  1   idiag =   10   dE(Ry) =   3.561414308770493   residual =   5.547889554096082
+   ik =   52   is =  1   idiag =   11   dE(Ry) =   1.728675005584159   residual =   2.712123401214726
+   ik =   52   is =  1   idiag =   12   dE(Ry) =   0.811630362102536   residual =   3.367011590782766
+   ik =   52   is =  1   idiag =   13   dE(Ry) =   0.344607916372955   residual =   0.954280300497298
+   ik =   52   is =  1   idiag =   14   dE(Ry) =   0.013930961953370   residual =   0.142729709661254
+   ik =   52   is =  1   idiag =   15   dE(Ry) =   0.000282740938354   residual =   0.019182824749581
+   ik =   52   is =  1   idiag =   16   dE(Ry) =   0.000005109286593   residual =   0.002273107047032
+   ik =   52   is =  1   idiag =   17   dE(Ry) =   0.000000059443169   residual =   0.000236015817440
+   ik =   52   is =  1   idiag =   18   dE(Ry) =   0.000000000557974   residual =   0.000016694905390
+   ik =   52   is =  1   idiag =   19   dE(Ry) =   0.000000000002794   residual =   0.000001121531051
+   ik =   52   is =  1   idiag =   20   dE(Ry) =   0.000000000000066   residual =   0.000000089656431
+   ik =   53   is =  1   idiag =    1   dE(Ry) = 240.836007290541573   residual = 262.334722404900276
+   ik =   53   is =  1   idiag =    2   dE(Ry) =  53.970170302399936   residual =  70.868318778140150
+   ik =   53   is =  1   idiag =    3   dE(Ry) =  71.522149915247724   residual =  83.282495435815946
+   ik =   53   is =  1   idiag =    4   dE(Ry) =  47.870329283550944   residual =  55.456122584693759
+   ik =   53   is =  1   idiag =    5   dE(Ry) =  31.061210082822967   residual =  35.840126621203808
+   ik =   53   is =  1   idiag =    6   dE(Ry) =  18.515931531099852   residual =  21.404940870265424
+   ik =   53   is =  1   idiag =    7   dE(Ry) =  10.646684839012138   residual =  12.386736031279389
+   ik =   53   is =  1   idiag =    8   dE(Ry) =   6.368831593649852   residual =   9.074583513562636
+   ik =   53   is =  1   idiag =    9   dE(Ry) =   6.521811557302824   residual =   9.243646453089791
+   ik =   53   is =  1   idiag =   10   dE(Ry) =   3.401841236542706   residual =   5.548613928117297
+   ik =   53   is =  1   idiag =   11   dE(Ry) =   1.651372271114890   residual =   2.886346051410876
+   ik =   53   is =  1   idiag =   12   dE(Ry) =   0.800166153457299   residual =   3.469904761620974
+   ik =   53   is =  1   idiag =   13   dE(Ry) =   0.302050772723201   residual =   0.918114200494311
+   ik =   53   is =  1   idiag =   14   dE(Ry) =   0.013107812653513   residual =   0.157333033680721
+   ik =   53   is =  1   idiag =   15   dE(Ry) =   0.000327749609121   residual =   0.019284812940729
+   ik =   53   is =  1   idiag =   16   dE(Ry) =   0.000004657956369   residual =   0.002074640372613
+   ik =   53   is =  1   idiag =   17   dE(Ry) =   0.000000050051243   residual =   0.000199507717870
+   ik =   53   is =  1   idiag =   18   dE(Ry) =   0.000000000424151   residual =   0.000014897780202
+   ik =   53   is =  1   idiag =   19   dE(Ry) =   0.000000000002327   residual =   0.000001147106760
+   ik =   53   is =  1   idiag =   20   dE(Ry) =   0.000000000000071   residual =   0.000000075567872
+   ik =   54   is =  1   idiag =    1   dE(Ry) = 241.390228130050474   residual = 262.833180471876574
+   ik =   54   is =  1   idiag =    2   dE(Ry) =  53.827174577342902   residual =  70.816843118548235
+   ik =   54   is =  1   idiag =    3   dE(Ry) =  71.971508984024581   residual =  83.831416982824422
+   ik =   54   is =  1   idiag =    4   dE(Ry) =  48.137875567258845   residual =  55.974319840987107
+   ik =   54   is =  1   idiag =    5   dE(Ry) =  30.896598455115281   residual =  35.644176056717967
+   ik =   54   is =  1   idiag =    6   dE(Ry) =  18.619690290627076   residual =  21.502756690460899
+   ik =   54   is =  1   idiag =    7   dE(Ry) =  11.043490874788564   residual =  12.803227560992221
+   ik =   54   is =  1   idiag =    8   dE(Ry) =   5.873610530302430   residual =   8.885451759020473
+   ik =   54   is =  1   idiag =    9   dE(Ry) =   6.798833796143589   residual =   9.176899283112842
+   ik =   54   is =  1   idiag =   10   dE(Ry) =   3.550135881354134   residual =   5.589024334796711
+   ik =   54   is =  1   idiag =   11   dE(Ry) =   1.838575774205812   residual =   2.835279023436060
+   ik =   54   is =  1   idiag =   12   dE(Ry) =   0.791670739261611   residual =   3.273074519371967
+   ik =   54   is =  1   idiag =   13   dE(Ry) =   0.270063254334623   residual =   0.836930659223478
+   ik =   54   is =  1   idiag =   14   dE(Ry) =   0.009889362553282   residual =   0.125578616758102
+   ik =   54   is =  1   idiag =   15   dE(Ry) =   0.000215720381008   residual =   0.015852289192222
+   ik =   54   is =  1   idiag =   16   dE(Ry) =   0.000003428831146   residual =   0.001958766413945
+   ik =   54   is =  1   idiag =   17   dE(Ry) =   0.000000041669546   residual =   0.000186969556821
+   ik =   54   is =  1   idiag =   18   dE(Ry) =   0.000000000380565   residual =   0.000015140112622
+   ik =   54   is =  1   idiag =   19   dE(Ry) =   0.000000000002343   residual =   0.000001055389572
+   ik =   54   is =  1   idiag =   20   dE(Ry) =   0.000000000000066   residual =   0.000000074504693
+   ik =   55   is =  1   idiag =    1   dE(Ry) = 241.755661477905932   residual = 262.966828297841630
+   ik =   55   is =  1   idiag =    2   dE(Ry) =  53.833708869649797   residual =  70.715652390094803
+   ik =   55   is =  1   idiag =    3   dE(Ry) =  71.729313191443595   residual =  83.643200248677218
+   ik =   55   is =  1   idiag =    4   dE(Ry) =  48.231348288108279   residual =  55.760441191162869
+   ik =   55   is =  1   idiag =    5   dE(Ry) =  30.756315877078507   residual =  35.417397869845821
+   ik =   55   is =  1   idiag =    6   dE(Ry) =  18.530096071162035   residual =  21.503444112036512
+   ik =   55   is =  1   idiag =    7   dE(Ry) =  10.725440850149123   residual =  12.496193397315809
+   ik =   55   is =  1   idiag =    8   dE(Ry) =   6.471941163947292   residual =   9.175381293521692
+   ik =   55   is =  1   idiag =    9   dE(Ry) =   6.876750892596431   residual =   9.311429502874001
+   ik =   55   is =  1   idiag =   10   dE(Ry) =   3.483764939752771   residual =   5.596230299870592
+   ik =   55   is =  1   idiag =   11   dE(Ry) =   1.850098650960478   residual =   2.850773320156922
+   ik =   55   is =  1   idiag =   12   dE(Ry) =   0.744107266386785   residual =   3.486392649164155
+   ik =   55   is =  1   idiag =   13   dE(Ry) =   0.299734864337350   residual =   0.906780637942137
+   ik =   55   is =  1   idiag =   14   dE(Ry) =   0.011407858123818   residual =   0.134247341241574
+   ik =   55   is =  1   idiag =   15   dE(Ry) =   0.000247796475976   residual =   0.017583459604291
+   ik =   55   is =  1   idiag =   16   dE(Ry) =   0.000003877296583   residual =   0.001944944500674
+   ik =   55   is =  1   idiag =   17   dE(Ry) =   0.000000040797065   residual =   0.000196033452048
+   ik =   55   is =  1   idiag =   18   dE(Ry) =   0.000000000404619   residual =   0.000015875749065
+   ik =   55   is =  1   idiag =   19   dE(Ry) =   0.000000000002438   residual =   0.000001116571606
+   ik =   55   is =  1   idiag =   20   dE(Ry) =   0.000000000000048   residual =   0.000000081603520
+   ik =   56   is =  1   idiag =    1   dE(Ry) = 241.303355570922292   residual = 262.530925014324680
+   ik =   56   is =  1   idiag =    2   dE(Ry) =  53.992405709570448   residual =  70.920542415892001
+   ik =   56   is =  1   idiag =    3   dE(Ry) =  71.921541179886333   residual =  83.749759404763324
+   ik =   56   is =  1   idiag =    4   dE(Ry) =  47.945952172006486   residual =  55.660205929005933
+   ik =   56   is =  1   idiag =    5   dE(Ry) =  30.721735378043249   residual =  35.532566899611815
+   ik =   56   is =  1   idiag =    6   dE(Ry) =  18.645224018153826   residual =  21.492088392104090
+   ik =   56   is =  1   idiag =    7   dE(Ry) =  10.567473360738969   residual =  12.429734393020075
+   ik =   56   is =  1   idiag =    8   dE(Ry) =   5.905787756113705   residual =   8.303343505680878
+   ik =   56   is =  1   idiag =    9   dE(Ry) =   6.831107959235601   residual =   9.284913545258140
+   ik =   56   is =  1   idiag =   10   dE(Ry) =   3.533580491824333   residual =   5.688492348348368
+   ik =   56   is =  1   idiag =   11   dE(Ry) =   1.735210788495853   residual =   3.042281611755568
+   ik =   56   is =  1   idiag =   12   dE(Ry) =   0.817597746641542   residual =   3.530982688635385
+   ik =   56   is =  1   idiag =   13   dE(Ry) =   0.332218934933294   residual =   0.914385281631640
+   ik =   56   is =  1   idiag =   14   dE(Ry) =   0.011810152463817   residual =   0.127339415091682
+   ik =   56   is =  1   idiag =   15   dE(Ry) =   0.000218132701193   residual =   0.015068392174322
+   ik =   56   is =  1   idiag =   16   dE(Ry) =   0.000002924418929   residual =   0.001688142467667
+   ik =   56   is =  1   idiag =   17   dE(Ry) =   0.000000032173442   residual =   0.000168729578389
+   ik =   56   is =  1   idiag =   18   dE(Ry) =   0.000000000300037   residual =   0.000012705212734
+   ik =   56   is =  1   idiag =   19   dE(Ry) =   0.000000000001638   residual =   0.000000862140505
+   ik =   56   is =  1   idiag =   20   dE(Ry) =   0.000000000000068   residual =   0.000000064282503
+   ik =   57   is =  1   idiag =    1   dE(Ry) = 241.281851044431306   residual = 262.797898414100416
+   ik =   57   is =  1   idiag =    2   dE(Ry) =  54.053897992363005   residual =  70.791699085168943
+   ik =   57   is =  1   idiag =    3   dE(Ry) =  71.736137396019558   residual =  83.587390613283645
+   ik =   57   is =  1   idiag =    4   dE(Ry) =  48.000639115532394   residual =  55.573267453466549
+   ik =   57   is =  1   idiag =    5   dE(Ry) =  30.864910435507596   residual =  35.447203939219655
+   ik =   57   is =  1   idiag =    6   dE(Ry) =  18.572472801184826   residual =  21.497695854556092
+   ik =   57   is =  1   idiag =    7   dE(Ry) =  10.740282946030348   residual =  12.535261272540403
+   ik =   57   is =  1   idiag =    8   dE(Ry) =   6.484485278390153   residual =   9.701463155688446
+   ik =   57   is =  1   idiag =    9   dE(Ry) =   6.372586310728251   residual =   8.905300194553167
+   ik =   57   is =  1   idiag =   10   dE(Ry) =   3.585461671967018   residual =   5.530587202135273
+   ik =   57   is =  1   idiag =   11   dE(Ry) =   1.655138938705258   residual =   2.764498864582095
+   ik =   57   is =  1   idiag =   12   dE(Ry) =   0.778628851302742   residual =   3.312191900414599
+   ik =   57   is =  1   idiag =   13   dE(Ry) =   0.290456068068314   residual =   0.877587978896786
+   ik =   57   is =  1   idiag =   14   dE(Ry) =   0.011467052367036   residual =   0.138095386225911
+   ik =   57   is =  1   idiag =   15   dE(Ry) =   0.000258824741193   residual =   0.016698386604567
+   ik =   57   is =  1   idiag =   16   dE(Ry) =   0.000003772840848   residual =   0.001992865153591
+   ik =   57   is =  1   idiag =   17   dE(Ry) =   0.000000044566445   residual =   0.000193900479161
+   ik =   57   is =  1   idiag =   18   dE(Ry) =   0.000000000382684   residual =   0.000013796620534
+   ik =   57   is =  1   idiag =   19   dE(Ry) =   0.000000000002152   residual =   0.000001092292110
+   ik =   57   is =  1   idiag =   20   dE(Ry) =   0.000000000000054   residual =   0.000000080858041
+   ik =   58   is =  1   idiag =    1   dE(Ry) = 241.453425871303580   residual = 262.760805960829316
+   ik =   58   is =  1   idiag =    2   dE(Ry) =  53.850798578335628   residual =  70.842837360807579
+   ik =   58   is =  1   idiag =    3   dE(Ry) =  71.749532358761144   residual =  83.614698435612894
+   ik =   58   is =  1   idiag =    4   dE(Ry) =  47.799235456911873   residual =  55.521393646039463
+   ik =   58   is =  1   idiag =    5   dE(Ry) =  30.795845471359470   residual =  35.412472931031779
+   ik =   58   is =  1   idiag =    6   dE(Ry) =  18.580219544720002   residual =  21.492486501632541
+   ik =   58   is =  1   idiag =    7   dE(Ry) =  10.774409667543576   residual =  12.461812443248789
+   ik =   58   is =  1   idiag =    8   dE(Ry) =   6.338741313582620   residual =   9.612650460708824
+   ik =   58   is =  1   idiag =    9   dE(Ry) =   6.643968168144987   residual =   9.245189007937329
+   ik =   58   is =  1   idiag =   10   dE(Ry) =   3.409745727923743   residual =   5.682475873667773
+   ik =   58   is =  1   idiag =   11   dE(Ry) =   1.687801557362398   residual =   2.746533147899246
+   ik =   58   is =  1   idiag =   12   dE(Ry) =   0.809554790266034   residual =   3.331112402474187
+   ik =   58   is =  1   idiag =   13   dE(Ry) =   0.257537201129657   residual =   0.888527814629272
+   ik =   58   is =  1   idiag =   14   dE(Ry) =   0.011087548129564   residual =   0.125910974085351
+   ik =   58   is =  1   idiag =   15   dE(Ry) =   0.000205086060852   residual =   0.015167847175356
+   ik =   58   is =  1   idiag =   16   dE(Ry) =   0.000003060981402   residual =   0.001692403219998
+   ik =   58   is =  1   idiag =   17   dE(Ry) =   0.000000033375594   residual =   0.000159275739327
+   ik =   58   is =  1   idiag =   18   dE(Ry) =   0.000000000277066   residual =   0.000012203325945
+   ik =   58   is =  1   idiag =   19   dE(Ry) =   0.000000000001517   residual =   0.000000858405052
+   ik =   58   is =  1   idiag =   20   dE(Ry) =   0.000000000000059   residual =   0.000000064562510
+   ik =   59   is =  1   idiag =    1   dE(Ry) = 241.429606633870463   residual = 262.849636187778060
+   ik =   59   is =  1   idiag =    2   dE(Ry) =  53.770990442255993   residual =  70.602576350617582
+   ik =   59   is =  1   idiag =    3   dE(Ry) =  71.729238026603952   residual =  83.561043839942968
+   ik =   59   is =  1   idiag =    4   dE(Ry) =  47.752201279411167   residual =  55.472665428932935
+   ik =   59   is =  1   idiag =    5   dE(Ry) =  30.955495508148346   residual =  35.790187465655507
+   ik =   59   is =  1   idiag =    6   dE(Ry) =  18.737867443053922   residual =  21.603487027298399
+   ik =   59   is =  1   idiag =    7   dE(Ry) =  10.403841129525096   residual =  12.240006607853891
+   ik =   59   is =  1   idiag =    8   dE(Ry) =   6.262160875709915   residual =   9.080998023332940
+   ik =   59   is =  1   idiag =    9   dE(Ry) =   6.508095386394587   residual =   9.042516710642943
+   ik =   59   is =  1   idiag =   10   dE(Ry) =   3.458512810335861   residual =   5.708891901715337
+   ik =   59   is =  1   idiag =   11   dE(Ry) =   1.589868317626591   residual =   2.646989231450812
+   ik =   59   is =  1   idiag =   12   dE(Ry) =   0.778939535448744   residual =   3.489642288639725
+   ik =   59   is =  1   idiag =   13   dE(Ry) =   0.339162222053546   residual =   0.964474077683633
+   ik =   59   is =  1   idiag =   14   dE(Ry) =   0.011388648987446   residual =   0.134879854995985
+   ik =   59   is =  1   idiag =   15   dE(Ry) =   0.000245352353470   residual =   0.016589330371002
+   ik =   59   is =  1   idiag =   16   dE(Ry) =   0.000003689758930   residual =   0.001968234070286
+   ik =   59   is =  1   idiag =   17   dE(Ry) =   0.000000044892182   residual =   0.000203723171864
+   ik =   59   is =  1   idiag =   18   dE(Ry) =   0.000000000429067   residual =   0.000014770115356
+   ik =   59   is =  1   idiag =   19   dE(Ry) =   0.000000000002242   residual =   0.000000991272580
+   ik =   59   is =  1   idiag =   20   dE(Ry) =   0.000000000000057   residual =   0.000000076460903
+   ik =   60   is =  1   idiag =    1   dE(Ry) = 241.651821369866411   residual = 262.878617770771200
+   ik =   60   is =  1   idiag =    2   dE(Ry) =  53.942173146584366   residual =  70.843012344149699
+   ik =   60   is =  1   idiag =    3   dE(Ry) =  72.133594498976919   residual =  83.956064897260703
+   ik =   60   is =  1   idiag =    4   dE(Ry) =  47.939077977488139   residual =  55.710686335021499
+   ik =   60   is =  1   idiag =    5   dE(Ry) =  30.890227579926105   residual =  35.484364841294521
+   ik =   60   is =  1   idiag =    6   dE(Ry) =  18.418617133844634   residual =  21.383288253104599
+   ik =   60   is =  1   idiag =    7   dE(Ry) =  10.601740185858286   residual =  12.437036537820649
+   ik =   60   is =  1   idiag =    8   dE(Ry) =   6.479096166780751   residual =   9.505556026661868
+   ik =   60   is =  1   idiag =    9   dE(Ry) =   6.732181520183214   residual =   9.254837792765070
+   ik =   60   is =  1   idiag =   10   dE(Ry) =   3.491487769805675   residual =   5.553537676568959
+   ik =   60   is =  1   idiag =   11   dE(Ry) =   1.737976694355676   residual =   2.839828152411769
+   ik =   60   is =  1   idiag =   12   dE(Ry) =   0.818168616637669   residual =   3.362791226971743
+   ik =   60   is =  1   idiag =   13   dE(Ry) =   0.291971533465155   residual =   0.957219314789948
+   ik =   60   is =  1   idiag =   14   dE(Ry) =   0.014324008877663   residual =   0.149563025089221
+   ik =   60   is =  1   idiag =   15   dE(Ry) =   0.000310012338867   residual =   0.017907474559007
+   ik =   60   is =  1   idiag =   16   dE(Ry) =   0.000004219149514   residual =   0.001999840978173
+   ik =   60   is =  1   idiag =   17   dE(Ry) =   0.000000046385242   residual =   0.000190440604206
+   ik =   60   is =  1   idiag =   18   dE(Ry) =   0.000000000373911   residual =   0.000015118561432
+   ik =   60   is =  1   idiag =   19   dE(Ry) =   0.000000000002332   residual =   0.000001001788838
+   ik =   60   is =  1   idiag =   20   dE(Ry) =   0.000000000000057   residual =   0.000000069174933
+   ik =   61   is =  1   idiag =    1   dE(Ry) = 241.805830003242818   residual = 263.055775586592233
+   ik =   61   is =  1   idiag =    2   dE(Ry) =  53.905553243568875   residual =  70.919149446687854
+   ik =   61   is =  1   idiag =    3   dE(Ry) =  72.087468193276521   residual =  84.056404437088617
+   ik =   61   is =  1   idiag =    4   dE(Ry) =  48.058792999952928   residual =  55.646872587899608
+   ik =   61   is =  1   idiag =    5   dE(Ry) =  31.058903543493258   residual =  35.775807269045167
+   ik =   61   is =  1   idiag =    6   dE(Ry) =  18.526995797411445   residual =  21.419792043654432
+   ik =   61   is =  1   idiag =    7   dE(Ry) =  10.674748339238020   residual =  12.369919846013488
+   ik =   61   is =  1   idiag =    8   dE(Ry) =   6.040588775856626   residual =   8.632166017106695
+   ik =   61   is =  1   idiag =    9   dE(Ry) =   6.546078887860841   residual =   9.236887887503670
+   ik =   61   is =  1   idiag =   10   dE(Ry) =   3.546561906415276   residual =   5.603487743872306
+   ik =   61   is =  1   idiag =   11   dE(Ry) =   1.986087659506289   residual =   2.852608090595085
+   ik =   61   is =  1   idiag =   12   dE(Ry) =   0.788407390753420   residual =   3.489728580530520
+   ik =   61   is =  1   idiag =   13   dE(Ry) =   0.279901780702699   residual =   0.914447638202537
+   ik =   61   is =  1   idiag =   14   dE(Ry) =   0.012406269761485   residual =   0.136251491730437
+   ik =   61   is =  1   idiag =   15   dE(Ry) =   0.000269168977757   residual =   0.016992158561104
+   ik =   61   is =  1   idiag =   16   dE(Ry) =   0.000003778462766   residual =   0.001850094994619
+   ik =   61   is =  1   idiag =   17   dE(Ry) =   0.000000040315312   residual =   0.000192100103705
+   ik =   61   is =  1   idiag =   18   dE(Ry) =   0.000000000388924   residual =   0.000013841254641
+   ik =   61   is =  1   idiag =   19   dE(Ry) =   0.000000000001951   residual =   0.000000931164923
+   ik =   61   is =  1   idiag =   20   dE(Ry) =   0.000000000000066   residual =   0.000000070247662
+   ik =   62   is =  1   idiag =    1   dE(Ry) = 241.676591005816903   residual = 262.860800592727344
+   ik =   62   is =  1   idiag =    2   dE(Ry) =  54.143885064025824   residual =  70.937370846796099
+   ik =   62   is =  1   idiag =    3   dE(Ry) =  72.121373720462628   residual =  83.997276855874986
+   ik =   62   is =  1   idiag =    4   dE(Ry) =  48.269778075183098   residual =  55.831688348358533
+   ik =   62   is =  1   idiag =    5   dE(Ry) =  30.777374298106537   residual =  35.513310007532851
+   ik =   62   is =  1   idiag =    6   dE(Ry) =  18.581030527025284   residual =  21.464045025040967
+   ik =   62   is =  1   idiag =    7   dE(Ry) =  10.853910456396964   residual =  12.590940632553517
+   ik =   62   is =  1   idiag =    8   dE(Ry) =   6.472164236546790   residual =   9.524656009081747
+   ik =   62   is =  1   idiag =    9   dE(Ry) =   6.283191496130272   residual =   8.956678970178308
+   ik =   62   is =  1   idiag =   10   dE(Ry) =   3.454148349306861   residual =   5.563327661524878
+   ik =   62   is =  1   idiag =   11   dE(Ry) =   1.585086865384084   residual =   2.776633380423140
+   ik =   62   is =  1   idiag =   12   dE(Ry) =   0.824479487459698   residual =   3.234953599667504
+   ik =   62   is =  1   idiag =   13   dE(Ry) =   0.261405719879250   residual =   0.860530055857262
+   ik =   62   is =  1   idiag =   14   dE(Ry) =   0.010237865863747   residual =   0.121597012363766
+   ik =   62   is =  1   idiag =   15   dE(Ry) =   0.000201741287121   residual =   0.014888248482661
+   ik =   62   is =  1   idiag =   16   dE(Ry) =   0.000002979146509   residual =   0.001630338759424
+   ik =   62   is =  1   idiag =   17   dE(Ry) =   0.000000030649979   residual =   0.000155749108088
+   ik =   62   is =  1   idiag =   18   dE(Ry) =   0.000000000265278   residual =   0.000012579299955
+   ik =   62   is =  1   idiag =   19   dE(Ry) =   0.000000000001583   residual =   0.000000856684184
+   ik =   62   is =  1   idiag =   20   dE(Ry) =   0.000000000000077   residual =   0.000000060504124
+   ik =   63   is =  1   idiag =    1   dE(Ry) = 240.866105601574020   residual = 262.109287554917387
+   ik =   63   is =  1   idiag =    2   dE(Ry) =  54.053011550590440   residual =  70.789166636944799
+   ik =   63   is =  1   idiag =    3   dE(Ry) =  71.435783012584295   residual =  83.261025461516411
+   ik =   63   is =  1   idiag =    4   dE(Ry) =  48.146045635838860   residual =  55.720939134677678
+   ik =   63   is =  1   idiag =    5   dE(Ry) =  30.668688171631189   residual =  35.465835227571297
+   ik =   63   is =  1   idiag =    6   dE(Ry) =  18.653144817385979   residual =  21.488684710711450
+   ik =   63   is =  1   idiag =    7   dE(Ry) =  10.735706132621015   residual =  12.570428245769799
+   ik =   63   is =  1   idiag =    8   dE(Ry) =   5.918332808715078   residual =   8.017499203807581
+   ik =   63   is =  1   idiag =    9   dE(Ry) =   6.625413967219656   residual =   9.296028702950855
+   ik =   63   is =  1   idiag =   10   dE(Ry) =   3.469761665472369   residual =   5.521127040019723
+   ik =   63   is =  1   idiag =   11   dE(Ry) =   1.848381162444212   residual =   2.823662759283045
+   ik =   63   is =  1   idiag =   12   dE(Ry) =   0.864772249121163   residual =   3.416408048546559
+   ik =   63   is =  1   idiag =   13   dE(Ry) =   0.273265237936528   residual =   0.840259334924651
+   ik =   63   is =  1   idiag =   14   dE(Ry) =   0.010079083911732   residual =   0.117975103346788
+   ik =   63   is =  1   idiag =   15   dE(Ry) =   0.000188775353984   residual =   0.015635579417882
+   ik =   63   is =  1   idiag =   16   dE(Ry) =   0.000003311517645   residual =   0.001815652074576
+   ik =   63   is =  1   idiag =   17   dE(Ry) =   0.000000038672048   residual =   0.000188260934165
+   ik =   63   is =  1   idiag =   18   dE(Ry) =   0.000000000372196   residual =   0.000014308952123
+   ik =   63   is =  1   idiag =   19   dE(Ry) =   0.000000000002075   residual =   0.000001011279846
+   ik =   63   is =  1   idiag =   20   dE(Ry) =   0.000000000000089   residual =   0.000000075580706
+   ik =   64   is =  1   idiag =    1   dE(Ry) = 241.285557634662439   residual = 262.592875481403894
+   ik =   64   is =  1   idiag =    2   dE(Ry) =  53.956600918366178   residual =  70.740495781466549
+   ik =   64   is =  1   idiag =    3   dE(Ry) =  71.607093534394608   residual =  83.558654385627904
+   ik =   64   is =  1   idiag =    4   dE(Ry) =  48.009626781295111   residual =  55.571288177310436
+   ik =   64   is =  1   idiag =    5   dE(Ry) =  30.655127457346211   residual =  35.269429220950308
+   ik =   64   is =  1   idiag =    6   dE(Ry) =  18.388056649016733   residual =  21.262846402892848
+   ik =   64   is =  1   idiag =    7   dE(Ry) =  10.685183016672271   residual =  12.528751705138275
+   ik =   64   is =  1   idiag =    8   dE(Ry) =   6.069067653751672   residual =   8.223937483765294
+   ik =   64   is =  1   idiag =    9   dE(Ry) =   6.734424393588954   residual =   9.296697321018538
+   ik =   64   is =  1   idiag =   10   dE(Ry) =   3.442299396330905   residual =   5.494473917441571
+   ik =   64   is =  1   idiag =   11   dE(Ry) =   1.975782981553492   residual =   2.743529298996922
+   ik =   64   is =  1   idiag =   12   dE(Ry) =   0.829834802233380   residual =   3.552226460391843
+   ik =   64   is =  1   idiag =   13   dE(Ry) =   0.309458093611559   residual =   0.955524404989585
+   ik =   64   is =  1   idiag =   14   dE(Ry) =   0.012599130904710   residual =   0.122089510264437
+   ik =   64   is =  1   idiag =   15   dE(Ry) =   0.000202128015010   residual =   0.015574389193021
+   ik =   64   is =  1   idiag =   16   dE(Ry) =   0.000003360473914   residual =   0.001901442452784
+   ik =   64   is =  1   idiag =   17   dE(Ry) =   0.000000039777778   residual =   0.000189187372966
+   ik =   64   is =  1   idiag =   18   dE(Ry) =   0.000000000368417   residual =   0.000013133493184
+   ik =   64   is =  1   idiag =   19   dE(Ry) =   0.000000000001870   residual =   0.000000939091891
+   ik =   64   is =  1   idiag =   20   dE(Ry) =   0.000000000000064   residual =   0.000000076706109
+   ik =   65   is =  1   idiag =    1   dE(Ry) = 241.348619883615385   residual = 262.571521398963341
+   ik =   65   is =  1   idiag =    2   dE(Ry) =  53.799859345167107   residual =  70.678841788087070
+   ik =   65   is =  1   idiag =    3   dE(Ry) =  72.025275055184210   residual =  83.744989332039907
+   ik =   65   is =  1   idiag =    4   dE(Ry) =  47.904394857328953   residual =  55.682138133666236
+   ik =   65   is =  1   idiag =    5   dE(Ry) =  30.768871886857781   residual =  35.488268503132552
+   ik =   65   is =  1   idiag =    6   dE(Ry) =  18.642041477688924   residual =  21.662882748874061
+   ik =   65   is =  1   idiag =    7   dE(Ry) =  10.525182402960683   residual =  12.305065824230031
+   ik =   65   is =  1   idiag =    8   dE(Ry) =   6.488976137445418   residual =   9.473796787518273
+   ik =   65   is =  1   idiag =    9   dE(Ry) =   6.155171106408800   residual =   8.775570777221711
+   ik =   65   is =  1   idiag =   10   dE(Ry) =   3.554118635902589   residual =   5.433896235586496
+   ik =   65   is =  1   idiag =   11   dE(Ry) =   1.972321327625137   residual =   2.832381382787053
+   ik =   65   is =  1   idiag =   12   dE(Ry) =   0.855157204469562   residual =   3.387220302540201
+   ik =   65   is =  1   idiag =   13   dE(Ry) =   0.280761374888263   residual =   0.872313313029026
+   ik =   65   is =  1   idiag =   14   dE(Ry) =   0.010686282627644   residual =   0.128239669187847
+   ik =   65   is =  1   idiag =   15   dE(Ry) =   0.000225515595037   residual =   0.016270416628476
+   ik =   65   is =  1   idiag =   16   dE(Ry) =   0.000003356594368   residual =   0.001776183149316
+   ik =   65   is =  1   idiag =   17   dE(Ry) =   0.000000034884474   residual =   0.000171238720902
+   ik =   65   is =  1   idiag =   18   dE(Ry) =   0.000000000312613   residual =   0.000012693271579
+   ik =   65   is =  1   idiag =   19   dE(Ry) =   0.000000000001695   residual =   0.000000865315034
+   ik =   65   is =  1   idiag =   20   dE(Ry) =   0.000000000000065   residual =   0.000000062550401
+   ik =   66   is =  1   idiag =    1   dE(Ry) = 241.558262555073924   residual = 262.966621275379055
+   ik =   66   is =  1   idiag =    2   dE(Ry) =  53.967118203775215   residual =  70.851272130577541
+   ik =   66   is =  1   idiag =    3   dE(Ry) =  71.698158133730487   residual =  83.671039418147572
+   ik =   66   is =  1   idiag =    4   dE(Ry) =  48.061106419365998   residual =  55.629616008163701
+   ik =   66   is =  1   idiag =    5   dE(Ry) =  30.689816223890361   residual =  35.420005003041766
+   ik =   66   is =  1   idiag =    6   dE(Ry) =  18.891214801448683   residual =  21.673786591392869
+   ik =   66   is =  1   idiag =    7   dE(Ry) =  10.521904036191939   residual =  12.284573528871597
+   ik =   66   is =  1   idiag =    8   dE(Ry) =   6.361960222956502   residual =   9.252444542337864
+   ik =   66   is =  1   idiag =    9   dE(Ry) =   6.484123173909751   residual =   9.081601884317386
+   ik =   66   is =  1   idiag =   10   dE(Ry) =   3.565685535191873   residual =   5.573367427116195
+   ik =   66   is =  1   idiag =   11   dE(Ry) =   1.496870988975458   residual =   3.179668027617649
+   ik =   66   is =  1   idiag =   12   dE(Ry) =   0.767275237119641   residual =   3.594266487526394
+   ik =   66   is =  1   idiag =   13   dE(Ry) =   0.295576774953602   residual =   0.935241772059355
+   ik =   66   is =  1   idiag =   14   dE(Ry) =   0.012455712251352   residual =   0.128168335472219
+   ik =   66   is =  1   idiag =   15   dE(Ry) =   0.000225650769303   residual =   0.015056595449832
+   ik =   66   is =  1   idiag =   16   dE(Ry) =   0.000003170981560   residual =   0.001819353792086
+   ik =   66   is =  1   idiag =   17   dE(Ry) =   0.000000037590694   residual =   0.000178176372775
+   ik =   66   is =  1   idiag =   18   dE(Ry) =   0.000000000332731   residual =   0.000014561884210
+   ik =   66   is =  1   idiag =   19   dE(Ry) =   0.000000000002196   residual =   0.000001099254340
+   ik =   66   is =  1   idiag =   20   dE(Ry) =   0.000000000000046   residual =   0.000000083546768
+   ik =   67   is =  1   idiag =    1   dE(Ry) = 242.016588267346719   residual = 263.113692296240458
+   ik =   67   is =  1   idiag =    2   dE(Ry) =  54.006332516696659   residual =  70.841584368924813
+   ik =   67   is =  1   idiag =    3   dE(Ry) =  72.206810176981151   residual =  84.092190166971378
+   ik =   67   is =  1   idiag =    4   dE(Ry) =  48.116600728950559   residual =  55.774826363459262
+   ik =   67   is =  1   idiag =    5   dE(Ry) =  30.891714898637488   residual =  35.633305509709238
+   ik =   67   is =  1   idiag =    6   dE(Ry) =  18.468590248770703   residual =  21.285170417312283
+   ik =   67   is =  1   idiag =    7   dE(Ry) =  10.828222598770472   residual =  12.609135217138711
+   ik =   67   is =  1   idiag =    8   dE(Ry) =   5.908008161437350   residual =   8.491171092684493
+   ik =   67   is =  1   idiag =    9   dE(Ry) =   6.705317563304668   residual =   9.310258643729400
+   ik =   67   is =  1   idiag =   10   dE(Ry) =   3.484156546228204   residual =   5.750760934212996
+   ik =   67   is =  1   idiag =   11   dE(Ry) =   1.725427359697192   residual =   2.847573450747789
+   ik =   67   is =  1   idiag =   12   dE(Ry) =   0.835876412852127   residual =   3.451099967145385
+   ik =   67   is =  1   idiag =   13   dE(Ry) =   0.275239249514859   residual =   0.831563919134441
+   ik =   67   is =  1   idiag =   14   dE(Ry) =   0.009526807247380   residual =   0.118666872238368
+   ik =   67   is =  1   idiag =   15   dE(Ry) =   0.000195598853791   residual =   0.015518225809539
+   ik =   67   is =  1   idiag =   16   dE(Ry) =   0.000003394677531   residual =   0.001823249072106
+   ik =   67   is =  1   idiag =   17   dE(Ry) =   0.000000038820442   residual =   0.000163290936328
+   ik =   67   is =  1   idiag =   18   dE(Ry) =   0.000000000280996   residual =   0.000011890184547
+   ik =   67   is =  1   idiag =   19   dE(Ry) =   0.000000000001529   residual =   0.000000846730693
+   ik =   67   is =  1   idiag =   20   dE(Ry) =   0.000000000000075   residual =   0.000000065093534
+   ik =   68   is =  1   idiag =    1   dE(Ry) = 241.776576208884791   residual = 262.939053928613134
+   ik =   68   is =  1   idiag =    2   dE(Ry) =  53.864779933183627   residual =  70.876980326683864
+   ik =   68   is =  1   idiag =    3   dE(Ry) =  71.627980558319564   residual =  83.530048923829128
+   ik =   68   is =  1   idiag =    4   dE(Ry) =  48.402697038772402   residual =  55.997649120139940
+   ik =   68   is =  1   idiag =    5   dE(Ry) =  30.673096506098219   residual =  35.458022028372874
+   ik =   68   is =  1   idiag =    6   dE(Ry) =  18.618524271760361   residual =  21.504835433207738
+   ik =   68   is =  1   idiag =    7   dE(Ry) =  10.739260221716224   residual =  12.561263385527374
+   ik =   68   is =  1   idiag =    8   dE(Ry) =   6.670541994704817   residual =   9.668668196335812
+   ik =   68   is =  1   idiag =    9   dE(Ry) =   6.837631152057415   residual =   9.421050513652132
+   ik =   68   is =  1   idiag =   10   dE(Ry) =   3.496819803195482   residual =   5.589216183905166
+   ik =   68   is =  1   idiag =   11   dE(Ry) =   1.673989309672962   residual =   2.711465971829556
+   ik =   68   is =  1   idiag =   12   dE(Ry) =   0.820224713514469   residual =   3.261558093277365
+   ik =   68   is =  1   idiag =   13   dE(Ry) =   0.281198775613562   residual =   0.831166545160146
+   ik =   68   is =  1   idiag =   14   dE(Ry) =   0.009709522373993   residual =   0.112726100161727
+   ik =   68   is =  1   idiag =   15   dE(Ry) =   0.000173719432628   residual =   0.015070676996939
+   ik =   68   is =  1   idiag =   16   dE(Ry) =   0.000003015952604   residual =   0.001686931189840
+   ik =   68   is =  1   idiag =   17   dE(Ry) =   0.000000032958699   residual =   0.000168080464045
+   ik =   68   is =  1   idiag =   18   dE(Ry) =   0.000000000303252   residual =   0.000013558615553
+   ik =   68   is =  1   idiag =   19   dE(Ry) =   0.000000000001885   residual =   0.000000963827462
+   ik =   68   is =  1   idiag =   20   dE(Ry) =   0.000000000000060   residual =   0.000000073186278
+   ik =   69   is =  1   idiag =    1   dE(Ry) = 241.879619439253304   residual = 263.176802094284142
+   ik =   69   is =  1   idiag =    2   dE(Ry) =  54.113236659616746   residual =  70.854109185297744
+   ik =   69   is =  1   idiag =    3   dE(Ry) =  71.470198518438963   residual =  83.496222020717312
+   ik =   69   is =  1   idiag =    4   dE(Ry) =  47.897242413046797   residual =  55.609984108181365
+   ik =   69   is =  1   idiag =    5   dE(Ry) =  31.113340540844632   residual =  35.707531533766918
+   ik =   69   is =  1   idiag =    6   dE(Ry) =  18.633747545323917   residual =  21.517314361148316
+   ik =   69   is =  1   idiag =    7   dE(Ry) =  10.805023671343676   residual =  12.494159869345419
+   ik =   69   is =  1   idiag =    8   dE(Ry) =   6.123565881980370   residual =   9.178196442481397
+   ik =   69   is =  1   idiag =    9   dE(Ry) =   6.678192391072589   residual =   9.116698858429046
+   ik =   69   is =  1   idiag =   10   dE(Ry) =   3.534648110346834   residual =   5.484247123028058
+   ik =   69   is =  1   idiag =   11   dE(Ry) =   1.493488439530639   residual =   2.936268509765244
+   ik =   69   is =  1   idiag =   12   dE(Ry) =   0.764474243830896   residual =   3.673063471271233
+   ik =   69   is =  1   idiag =   13   dE(Ry) =   0.332493069260801   residual =   0.923014770091018
+   ik =   69   is =  1   idiag =   14   dE(Ry) =   0.011816814969601   residual =   0.130689939459258
+   ik =   69   is =  1   idiag =   15   dE(Ry) =   0.000224816671231   residual =   0.016401871205153
+   ik =   69   is =  1   idiag =   16   dE(Ry) =   0.000003396236581   residual =   0.001727439521552
+   ik =   69   is =  1   idiag =   17   dE(Ry) =   0.000000035278497   residual =   0.000169402639419
+   ik =   69   is =  1   idiag =   18   dE(Ry) =   0.000000000309822   residual =   0.000013823928609
+   ik =   69   is =  1   idiag =   19   dE(Ry) =   0.000000000001924   residual =   0.000000981891401
+   ik =   69   is =  1   idiag =   20   dE(Ry) =   0.000000000000073   residual =   0.000000068808618
+   ik =   70   is =  1   idiag =    1   dE(Ry) = 241.808244295943041   residual = 262.861215846978212
+   ik =   70   is =  1   idiag =    2   dE(Ry) =  53.798466613449619   residual =  70.712140556841447
+   ik =   70   is =  1   idiag =    3   dE(Ry) =  72.146762434205044   residual =  84.011368185355977
+   ik =   70   is =  1   idiag =    4   dE(Ry) =  47.990031873462641   residual =  55.561528334114783
+   ik =   70   is =  1   idiag =    5   dE(Ry) =  30.755455924546197   residual =  35.504454838484456
+   ik =   70   is =  1   idiag =    6   dE(Ry) =  18.743012810704514   residual =  21.703941260680907
+   ik =   70   is =  1   idiag =    7   dE(Ry) =  10.580128877690431   residual =  12.320947588470734
+   ik =   70   is =  1   idiag =    8   dE(Ry) =   5.989788435255944   residual =   8.830957091774199
+   ik =   70   is =  1   idiag =    9   dE(Ry) =   6.732101380150499   residual =   9.329200855144171
+   ik =   70   is =  1   idiag =   10   dE(Ry) =   3.403579769798883   residual =   5.534257009502754
+   ik =   70   is =  1   idiag =   11   dE(Ry) =   1.757086165415290   residual =   2.773385769421161
+   ik =   70   is =  1   idiag =   12   dE(Ry) =   0.817856138690697   residual =   3.568104001097309
+   ik =   70   is =  1   idiag =   13   dE(Ry) =   0.366341501760032   residual =   0.884742769865857
+   ik =   70   is =  1   idiag =   14   dE(Ry) =   0.011815387408131   residual =   0.130908373960777
+   ik =   70   is =  1   idiag =   15   dE(Ry) =   0.000248976189375   residual =   0.017551996462542
+   ik =   70   is =  1   idiag =   16   dE(Ry) =   0.000004185956617   residual =   0.002059060029186
+   ik =   70   is =  1   idiag =   17   dE(Ry) =   0.000000052263068   residual =   0.000213510745289
+   ik =   70   is =  1   idiag =   18   dE(Ry) =   0.000000000501448   residual =   0.000017182195565
+   ik =   70   is =  1   idiag =   19   dE(Ry) =   0.000000000003144   residual =   0.000001246654386
+   ik =   70   is =  1   idiag =   20   dE(Ry) =   0.000000000000056   residual =   0.000000091882333
+   ik =   71   is =  1   idiag =    1   dE(Ry) = 241.874338911644628   residual = 262.991444515343460
+   ik =   71   is =  1   idiag =    2   dE(Ry) =  53.567744410479122   residual =  70.536309530012318
+   ik =   71   is =  1   idiag =    3   dE(Ry) =  71.801472116483751   residual =  83.679175151791085
+   ik =   71   is =  1   idiag =    4   dE(Ry) =  48.103976533699466   residual =  55.827566779766798
+   ik =   71   is =  1   idiag =    5   dE(Ry) =  30.809837453985622   residual =  35.532109543147662
+   ik =   71   is =  1   idiag =    6   dE(Ry) =  18.797581045445607   residual =  21.631696060368636
+   ik =   71   is =  1   idiag =    7   dE(Ry) =  10.437426657834843   residual =  12.305302063567510
+   ik =   71   is =  1   idiag =    8   dE(Ry) =   6.198785173575024   residual =   9.614362821220034
+   ik =   71   is =  1   idiag =    9   dE(Ry) =   6.673471745180166   residual =   9.206411527821611
+   ik =   71   is =  1   idiag =   10   dE(Ry) =   3.489663801205833   residual =   5.481332062320082
+   ik =   71   is =  1   idiag =   11   dE(Ry) =   1.770768850797439   residual =   2.808097657751329
+   ik =   71   is =  1   idiag =   12   dE(Ry) =   0.811240681351874   residual =   3.544691960248234
+   ik =   71   is =  1   idiag =   13   dE(Ry) =   0.338047222849075   residual =   0.856487042524421
+   ik =   71   is =  1   idiag =   14   dE(Ry) =   0.010272580711549   residual =   0.128032230003266
+   ik =   71   is =  1   idiag =   15   dE(Ry) =   0.000226959468950   residual =   0.015938508865800
+   ik =   71   is =  1   idiag =   16   dE(Ry) =   0.000003300890720   residual =   0.001725008818506
+   ik =   71   is =  1   idiag =   17   dE(Ry) =   0.000000033922751   residual =   0.000165356133019
+   ik =   71   is =  1   idiag =   18   dE(Ry) =   0.000000000288816   residual =   0.000012835429552
+   ik =   71   is =  1   idiag =   19   dE(Ry) =   0.000000000001716   residual =   0.000000942587238
+   ik =   71   is =  1   idiag =   20   dE(Ry) =   0.000000000000064   residual =   0.000000069206304
+   ik =   72   is =  1   idiag =    1   dE(Ry) = 241.576168096499799   residual = 262.865728627761712
+   ik =   72   is =  1   idiag =    2   dE(Ry) =  53.717151629669843   residual =  70.646678653081992
+   ik =   72   is =  1   idiag =    3   dE(Ry) =  71.542261813311455   residual =  83.582692508791339
+   ik =   72   is =  1   idiag =    4   dE(Ry) =  47.951388398314307   residual =  55.676338153417042
+   ik =   72   is =  1   idiag =    5   dE(Ry) =  30.712857927569843   residual =  35.364837743906413
+   ik =   72   is =  1   idiag =    6   dE(Ry) =  18.537691564084717   residual =  21.289705624048544
+   ik =   72   is =  1   idiag =    7   dE(Ry) =  10.729069797879490   residual =  12.494910798615090
+   ik =   72   is =  1   idiag =    8   dE(Ry) =   5.758499320989392   residual =   8.276660271807254
+   ik =   72   is =  1   idiag =    9   dE(Ry) =   6.891145692429645   residual =   9.295506932875561
+   ik =   72   is =  1   idiag =   10   dE(Ry) =   3.441028627722894   residual =   5.449776338923583
+   ik =   72   is =  1   idiag =   11   dE(Ry) =   1.698137949525109   residual =   2.750191979379725
+   ik =   72   is =  1   idiag =   12   dE(Ry) =   0.788043667791274   residual =   3.542869346524936
+   ik =   72   is =  1   idiag =   13   dE(Ry) =   0.298813364493552   residual =   0.821560969546864
+   ik =   72   is =  1   idiag =   14   dE(Ry) =   0.009629789197193   residual =   0.117529180896086
+   ik =   72   is =  1   idiag =   15   dE(Ry) =   0.000186547546570   residual =   0.014902348104363
+   ik =   72   is =  1   idiag =   16   dE(Ry) =   0.000002820247065   residual =   0.001638598757034
+   ik =   72   is =  1   idiag =   17   dE(Ry) =   0.000000029426558   residual =   0.000160941631503
+   ik =   72   is =  1   idiag =   18   dE(Ry) =   0.000000000269639   residual =   0.000012842061436
+   ik =   72   is =  1   idiag =   19   dE(Ry) =   0.000000000001776   residual =   0.000000926762117
+   ik =   72   is =  1   idiag =   20   dE(Ry) =   0.000000000000065   residual =   0.000000069706618
+ 
+ Maximum number of iterations:
+        21  of     100
+
+ Maximum change in eigenvalues (Ry):
+    max | delta E_nk | =   0.000000000000089
+
+ Maximum norm of residual vectors (Ry):
+    max | R_nk | =   0.000000096294788
+
+ Writing wavefunctions to file wfn.complex
+
+ Checking orthonormality for ik = 1 is = 1
+ Checking orthonormality for ik = 2 is = 1
+ Checking orthonormality for ik = 3 is = 1
+ Checking orthonormality for ik = 4 is = 1
+ Checking orthonormality for ik = 5 is = 1
+ Checking orthonormality for ik = 6 is = 1
+ Checking orthonormality for ik = 7 is = 1
+ Checking orthonormality for ik = 8 is = 1
+ Checking orthonormality for ik = 9 is = 1
+ Checking orthonormality for ik = 10 is = 1
+ Checking orthonormality for ik = 11 is = 1
+ Checking orthonormality for ik = 12 is = 1
+ Checking orthonormality for ik = 13 is = 1
+ Checking orthonormality for ik = 14 is = 1
+ Checking orthonormality for ik = 15 is = 1
+ Checking orthonormality for ik = 16 is = 1
+ Checking orthonormality for ik = 17 is = 1
+ Checking orthonormality for ik = 18 is = 1
+ Checking orthonormality for ik = 19 is = 1
+ Checking orthonormality for ik = 20 is = 1
+ Checking orthonormality for ik = 21 is = 1
+ Checking orthonormality for ik = 22 is = 1
+ Checking orthonormality for ik = 23 is = 1
+ Checking orthonormality for ik = 24 is = 1
+ Checking orthonormality for ik = 25 is = 1
+ Checking orthonormality for ik = 26 is = 1
+ Checking orthonormality for ik = 27 is = 1
+ Checking orthonormality for ik = 28 is = 1
+ Checking orthonormality for ik = 29 is = 1
+ Checking orthonormality for ik = 30 is = 1
+ Checking orthonormality for ik = 31 is = 1
+ Checking orthonormality for ik = 32 is = 1
+ Checking orthonormality for ik = 33 is = 1
+ Checking orthonormality for ik = 34 is = 1
+ Checking orthonormality for ik = 35 is = 1
+ Checking orthonormality for ik = 36 is = 1
+ Checking orthonormality for ik = 37 is = 1
+ Checking orthonormality for ik = 38 is = 1
+ Checking orthonormality for ik = 39 is = 1
+ Checking orthonormality for ik = 40 is = 1
+ Checking orthonormality for ik = 41 is = 1
+ Checking orthonormality for ik = 42 is = 1
+ Checking orthonormality for ik = 43 is = 1
+ Checking orthonormality for ik = 44 is = 1
+ Checking orthonormality for ik = 45 is = 1
+ Checking orthonormality for ik = 46 is = 1
+ Checking orthonormality for ik = 47 is = 1
+ Checking orthonormality for ik = 48 is = 1
+ Checking orthonormality for ik = 49 is = 1
+ Checking orthonormality for ik = 50 is = 1
+ Checking orthonormality for ik = 51 is = 1
+ Checking orthonormality for ik = 52 is = 1
+ Checking orthonormality for ik = 53 is = 1
+ Checking orthonormality for ik = 54 is = 1
+ Checking orthonormality for ik = 55 is = 1
+ Checking orthonormality for ik = 56 is = 1
+ Checking orthonormality for ik = 57 is = 1
+ Checking orthonormality for ik = 58 is = 1
+ Checking orthonormality for ik = 59 is = 1
+ Checking orthonormality for ik = 60 is = 1
+ Checking orthonormality for ik = 61 is = 1
+ Checking orthonormality for ik = 62 is = 1
+ Checking orthonormality for ik = 63 is = 1
+ Checking orthonormality for ik = 64 is = 1
+ Checking orthonormality for ik = 65 is = 1
+ Checking orthonormality for ik = 66 is = 1
+ Checking orthonormality for ik = 67 is = 1
+ Checking orthonormality for ik = 68 is = 1
+ Checking orthonormality for ik = 69 is = 1
+ Checking orthonormality for ik = 70 is = 1
+ Checking orthonormality for ik = 71 is = 1
+ Checking orthonormality for ik = 72 is = 1
+
+ Maximum deviation from orthonormality:
+    max ( < nk | mk > - delta_nm ) =   0.000000000007932
+
+
+                      CPU [s]        WALL [s]           #
+
+INIT:                   0.180           0.484           6
+INPUT:                  0.230           3.367           1
+INPUT_AUX:              0.000           0.000           1
+GEN_PW:                19.430          19.588           1
+RANDOM:                 0.200           0.195           1
+DROP:                   0.000           0.000           1
+ORTHONORM:              0.000           0.000           1
+SORT:                   0.000           0.000           1
+HAMILTONIAN:         3167.610        3206.668           1
+HAM (INPUT):            3.640           7.996           2
+HAM (COMM):             0.310           0.846       77107
+HAM (PLAN):             0.000           0.000           0
+HAM (FFT):           1852.490        1862.225      151257
+HAM (KIN):              1.230           2.138       75664
+HAM (VSC):              4.240           9.474       75592
+HAM (VKB):              5.970          16.349       75592
+HAM (GATHER):         479.940         482.868        3030
+HAM (DIAG):           274.050         275.582        1443
+HAM (WFN):            545.950         548.670       81582
+RANGE:                  0.000           0.000           1
+OUTPUT:                15.880          23.159           1
+CHECK_NORM:             1.850           1.856           1
+PLOT_ENER:              0.000           0.000           1
+PLOT_PROJ:              0.000           0.000           1
+PLOT_AMPL:              0.000           0.000           1
+ 
+TOTAL:               3205.390        3255.422
+ 
+Application 2755977 resources: utime ~207919s, stime ~434s, Rss ~105024, inblocks ~3734372, outblocks ~5378647

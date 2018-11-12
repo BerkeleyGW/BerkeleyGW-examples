@@ -1,0 +1,26 @@
+#!/bin/bash -l
+
+#
+ln -s ../../../pseudo/fhi/C.cpi ./1-scf/C_POT.DAT
+ln -s ../../../pseudo/fhi/H.cpi ./1-scf/H_POT.DAT
+ln -s ../../pseudo/atom/C.psf ../3-siesta
+ln -s ../../pseudo/atom/H.psf ../3-siesta
+#
+ln -s ../1-scf/C_POT.DAT ./2-nscf
+ln -s ../1-scf/H_POT.DAT ./2-nscf
+ln -s ../1-scf/CD ./2-nscf
+#
+ln -s ../PARATEC/2-nscf/WFN ../5-gw
+ln -s ../PARATEC/2-nscf/WFN ../5-gw/WFNq
+ln -s ../PARATEC/2-nscf/vxc.dat ../5-gw
+ln -s ../PARATEC/2-nscf/RHO ../5-gw
+ln -s ../PARATEC/2-nscf/WFN ../5-gw/WFN_inner
+ln -s ../PARATEC/2-nscf/WFN ../5-gw/WFN_outer
+#
+ln -s ../4-sapo/WFN ../6-gw-sapo
+ln -s ../4-sapo/WFN ../6-gw-sapo/WFNq
+ln -s ../PARATEC/2-nscf/vxc.dat ../6-gw-sapo
+ln -s ../PARATEC/2-nscf/RHO ../6-gw-sapo
+ln -s ../4-sapo/WFN ../6-gw-sapo/WFN_inner
+ln -s ../4-sapo/WFN ../6-gw-sapo/WFN_outer
+#

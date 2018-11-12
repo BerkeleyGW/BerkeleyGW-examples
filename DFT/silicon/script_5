@@ -1,0 +1,23 @@
+#!/bin/bash -l
+#SBATCH -t 00:05:00
+#SBATCH -p debug
+#SBATCH -N 1
+#SBATCH -n 1
+#SBATCH -c 1
+
+# Note: you can actually run this script in serial if you compiled BerkeleyGW in serial.
+
+# Edit these lines as needed
+module load python
+BGW_BIN="$HOME/BerkeleyGW/bin"
+INTEQP="$BGW_BIN/inteqp.real.x"
+export OMP_NUM_THREADS=1
+MPIRUN="srun -n 1 -c 1"
+
+# Plot interpolated bandstruture using the inteqp code.
+# This step works with both ESPRESSO and PARATEC as starting mean-field codes.
+cd 12-inteqp
+ln -s ../08-sigma/eqp1.dat eqp_co.dat
+$MPIRUN $INTEQP &> inteqp.out
+./plot_inteqp.py
+cd ../

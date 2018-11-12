@@ -1,0 +1,29 @@
+Author: T. Rangel
+
+This example provides the basic templates for ABINIT.
+
+Inside the directories you will find:
+
+basic.in:
+This is a file containing the basic informations 
+of the system, such as crystal structure, energy-cutoff, etc.
+This information is repeated on every step of the calculation.
+So, this is simpler to copy this file at each time.
+
+in, files, *fhi:
+These are the input files, and pseudopotential files.
+Please refer to: www.abinit.org for an explanation.
+
+abi2bgw.in:
+Input file for the ABINIT-to-BGW wrapper.
+For the moment it does not have a proper parser. 
+So do not change rows or add more lines to this.
+This follows the spirit of pw2bgw.in.
+
+./get-kpts-wk.sh:
+Script to get k-points and weights (kpt.in and wtk.in) from output files in 00-kgrid
+
+Run it as follows:
+./script_0
+./script_1
+./script_2

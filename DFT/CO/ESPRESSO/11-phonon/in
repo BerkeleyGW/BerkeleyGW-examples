@@ -1,0 +1,11 @@
+vibrations of CO
+&inputph
+  tr2_ph=4.0d-17
+  prefix='co'
+  outdir='.'
+  trans=.true.
+  asr=.true.
+  nogg = .true.
+  fildvscf='dvscf'
+ /
+0.0 0.0 0.0

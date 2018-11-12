@@ -1,0 +1,11 @@
+&INPUTPP
+   prefix = 'Zn2O2'
+   outdir = '.'
+   filplot = 'velec'
+   plot_num = 11
+/
+&PLOT
+   iflag = 3
+   output_format = 6
+   fileout = 'velec.cube'
+/

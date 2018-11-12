@@ -1,0 +1,11 @@
+&input_pw2bgw
+   prefix = 'Zn2O2'
+   vxc_flag = .true.
+   vxc_file = 'vxc_nlcc.dat'
+   vxc_integral = 'g'
+   vxc_diag_nmin = 1
+   vxc_diag_nmax = 52
+   vxc_offdiag_nmin = 0
+   vxc_offdiag_nmax = 0
+   vxc_zero_rho_core = .false.
+/

@@ -1,0 +1,47 @@
+#!/bin/bash -l
+#SBATCH -t 00:30:00
+#SBATCH -p debug
+#SBATCH -N 1
+#SBATCH -n 24
+#SBATCH -c 1
+
+# Edit these lines as needed
+BGW_BIN="$HOME/BerkeleyGW/bin"
+EPSILON="$BGW_BIN/epsilon.cplx.x"
+SIGMA="$BGW_BIN/sigma.cplx.x"
+KERNEL="$BGW_BIN/kernel.cplx.x"
+ABSORPTION="$BGW_BIN/absorption.cplx.x"
+export OMP_NUM_THREADS=1
+# put argument for number of procs here too if needed, e.g. -n 8
+MPIRUN="srun -n 24 -c 1"
+
+#
+cd ./3-epsilon
+$MPIRUN $EPSILON &> epsilon.out
+cd ..
+#
+cd ./4-sigma
+$MPIRUN $SIGMA &> sigma.out
+cd ..
+#
+cp ./4-sigma/eqp1.dat ./6-absorption/eqp.dat
+#
+cd ./5-kernel
+$MPIRUN $KERNEL &> ./kernel.out
+cd ..
+#
+cd ./6-absorption
+$MPIRUN $ABSORPTION &> ./absorption.out
+cd ..
+#
+#BEGIN_INTERNAL_ONLY
+# FHJ: Forces don't work.
+if false; then
+FORCES="$BGW_BIN/forces.cplx.x"
+cd ./7-forces
+# this is a serial code
+$FORCES &> ./forces.out
+cd ..
+#
+fi
+#END_INTERNAL_ONLY

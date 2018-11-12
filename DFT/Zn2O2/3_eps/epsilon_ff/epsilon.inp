@@ -1,0 +1,19 @@
+epsilon_cutoff 5.0
+
+number_bands 1500
+
+begin qpoints
+  0.000600000  0.000600000  0.000600000   1.0  1
+end
+
+full_chi_conv_log -1
+
+frequency_dependence 2
+init_frequency 0.0
+delta_frequency 0.1
+delta_frequency_step 0.0
+frequency_low_cutoff 100.0
+frequency_high_cutoff 100.0
+broadening 0.1
+
+gcomm_elements

@@ -1,0 +1,13 @@
+This README file explains how to run wannier90 with ABINIT/BGW
+
+In ABINIT wannier90 is interfaced as a library, so ABINIT wil call wannier90 in a transparent way for the user.
+ABINIT needs to be compiled with the WANNIER90 pluging.
+The interpolation of GW quasiparticles with ABINIT/WANNIER90 is explained in Section 6.5 of (Gonze, X., et al., CPC 180, 2582 (2009). http://dx.doi.org/10.1016/j.cpc.2009.07.007).
+
+Once you have successfuly run BGW, copy eqp1.dat from ../08-sigma
+Here, eqp1.dat is already provided for simplicity.
+
+Then you need to convert the BGW output to an ABINIT QPS file as follows:
+../../../../../MeanField/ABINIT/eqp_convert.x i_DEN ../04-wfn_co/o_WFK eqp1.dat
+
+Then just run ABINIT and you will get a nice GW bandstructure. 

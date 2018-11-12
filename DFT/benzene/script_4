@@ -1,0 +1,12 @@
+#!/bin/bash -l
+
+#
+SIESTA2BGW="$HOME/BerkeleyGW/bin/siesta2bgw.real.x"
+
+# put argument for number of procs here too if needed, e.g. -n 8
+MPIRUN="mpirun"
+#
+cd ./3-siesta
+$MPIRUN $SIESTA2BGW &> ./siesta2bgw.out
+cd ..
+#

@@ -1,0 +1,20 @@
+&input
+  title = 'Zn'
+  zed = 30.0
+  rel = 1
+  config = '[Ar] 3d10.0 4s0.0 4p0.0'
+  iswitch = 2
+  dft = 'SLA+PW'
+/
+&test
+  nconf = 2
+  file_pseudo = 'Zn.pw-spn-nc.UPF'
+  ecutmin = 50.0
+  ecutmax = 300.0
+  decut = 50.0
+  rm = 10.0
+  lsdts(1) = 0
+  lsdts(2) = 0
+  configts(1) = '3s2.0 3p6.0 3d10.0 4s0.0 4p0.0'
+  configts(2) = '3s2.0 3p6.0 3d10.0 4s2.0 4p0.0'
+/

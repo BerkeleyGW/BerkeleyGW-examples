@@ -1,0 +1,21 @@
+&input
+   atom = 'H'
+   iswitch = 3
+   rel = 0
+   dft = 'PZ'
+/
+ 3
+ 1S  1  0  1.00  1
+ 2P  2  1  0.00  1
+ 3D  3  2  0.00  1
+&inputp
+   pseudotype = 2
+   file_pseudopw = 'H.UPF'
+   lloc = 2
+   nlcc = .false.
+   tm = .true.
+/
+ 3
+ 1S  1  0  1.00  0.000  1.31  1.31  0.00
+ 2P  2  1  0.00 -0.467  1.31  1.31  0.00
+ 3D  3  2  0.00 -0.467  1.31  1.31  0.00

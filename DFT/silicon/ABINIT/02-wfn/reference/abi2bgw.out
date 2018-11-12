@@ -1,0 +1,35 @@
+ Opening abi2bgw.in
+ Summary of input variables
+ wfng_file_abi o_WFK
+ wfng_flag      T
+ wfng_file     wfn.cplx
+ wfng_nk1                 5
+ wfng_nk2                 5
+ wfng_nk3                 5
+ wfng_dk1        0.500000000000000     
+ wfng_dk2        0.500000000000000     
+ wfng_dk3        0.500000000000000     
+ cell_symmetry              0
+ symrel_file_flag F
+ #Generated list of g-vectors for density\/potential writen in file: 
+ gsphere_bgw.out
+ spin            1 kpt            1 /          19
+ spin            1 kpt            2 /          19
+ spin            1 kpt            3 /          19
+ spin            1 kpt            4 /          19
+ spin            1 kpt            5 /          19
+ spin            1 kpt            6 /          19
+ spin            1 kpt            7 /          19
+ spin            1 kpt            8 /          19
+ spin            1 kpt            9 /          19
+ spin            1 kpt           10 /          19
+ spin            1 kpt           11 /          19
+ spin            1 kpt           12 /          19
+ spin            1 kpt           13 /          19
+ spin            1 kpt           14 /          19
+ spin            1 kpt           15 /          19
+ spin            1 kpt           16 /          19
+ spin            1 kpt           17 /          19
+ spin            1 kpt           18 /          19
+ spin            1 kpt           19 /          19
+ Calculation completed

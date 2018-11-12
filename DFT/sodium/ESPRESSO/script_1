@@ -1,0 +1,34 @@
+#!/bin/bash -l
+
+#
+ln -s ../../../pseudo/ape/Na.UPF ./01-scf
+#
+mkdir ./02-wfn/sodium.save
+ln -s ../01-scf/Na.UPF ./02-wfn
+ln -s ../../01-scf/sodium.save/data-file.xml ./02-wfn/sodium.save
+ln -s ../../01-scf/sodium.save/charge-density.dat ./02-wfn/sodium.save
+#
+mkdir ./03-wfn_fi/sodium.save
+ln -s ../01-scf/Na.UPF ./03-wfn_fi
+ln -s ../../01-scf/sodium.save/data-file.xml ./03-wfn_fi/sodium.save
+ln -s ../../01-scf/sodium.save/charge-density.dat ./03-wfn_fi/sodium.save
+#
+mkdir ./04-wfn_co/sodium.save
+ln -s ../01-scf/Na.UPF ./04-wfn_co
+ln -s ../../01-scf/sodium.save/data-file.xml ./04-wfn_co/sodium.save
+ln -s ../../01-scf/sodium.save/charge-density.dat ./04-wfn_co/sodium.save
+#
+ln -s ../ESPRESSO/02-wfn/wfn.real ../07-epsilon/WFN
+ln -s ../ESPRESSO/02-wfn/wfn.real ../07-epsilon/WFNq
+#
+ln -s ../ESPRESSO/03-wfn_fi/wfn.real ../07-epsilon_fine/WFN
+ln -s ../ESPRESSO/03-wfn_fi/wfn.real ../07-epsilon_fine/WFNq
+#
+ln -s ../ESPRESSO/04-wfn_co/vxc.dat ../08-sigma/vxc.dat
+ln -s ../ESPRESSO/04-wfn_co/rho.real ../08-sigma/RHO
+ln -s ../ESPRESSO/04-wfn_co/wfn.real ../08-sigma/WFN_inner
+ln -s ../07-epsilon_fine/eps0mat ../08-sigma
+ln -s ../07-epsilon_fine/eps0mat.h5 ../08-sigma
+ln -s ../07-epsilon/epsmat ../08-sigma
+ln -s ../07-epsilon/epsmat.h5 ../08-sigma
+#

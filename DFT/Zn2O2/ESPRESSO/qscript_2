@@ -1,0 +1,93 @@
+#!/bin/bash -l
+
+#
+PWDIR="$HOME/espresso-5.1/bin"
+BGW_BIN="$HOME/BerkeleyGW/bin"
+PW_EXEC="$PWDIR/pw.x"
+PW2BGW_EXEC="$PWDIR/pw2bgw.x"
+SAPO_EXEC="$BGW_BIN/sapo.cplx.x"
+WFNMERGE_EXEC="$BGW_BIN/wfnmerge.x"
+
+#
+NPOOL=1
+MPI_CMD="aprun -n 64"
+MPI_CMD_SERIAL="aprun -n 1"
+
+cd ./WFNq
+cp -rf ../../1_qe/scf/Zn2O2.save .
+$MPI_CMD $PW_EXEC -npool $NPOOL < ./Zn2O2.bnd.in > ./Zn2O2.bnd.out &
+
+for i in {1..27}; do
+  cd ../WFN${i}
+  cp -rf ../../1_qe/scf/Zn2O2.save .
+  $MPI_CMD $PW_EXEC -npool $NPOOL < ./Zn2O2.bnd.in > ./Zn2O2.bnd.out &
+done
+
+for i in {1..15}; do
+  cd ../WFN_co${i}
+  cp -rf ../../1_qe/scf/Zn2O2.save .
+  $MPI_CMD $PW_EXEC -npool $NPOOL < ./Zn2O2.bnd.in > ./Zn2O2.bnd.out &
+done
+
+for i in {1..6}; do
+  cd ../WFN_fi${i}
+  cp -rf ../../1_qe/scf/Zn2O2.save .
+  $MPI_CMD $PW_EXEC -npool $NPOOL < ./Zn2O2.bnd.in > ./Zn2O2.bnd.out &
+done
+
+wait
+
+cd ../WFNq
+$MPI_CMD $PW2BGW_EXEC -npool $NPOOL < ./Zn2O2.pw2bgw.in > ./Zn2O2.pw2bgw.out &
+
+for i in {1..27}; do
+  cd ../WFN${i}
+  $MPI_CMD $PW2BGW_EXEC -npool $NPOOL < ./Zn2O2.pw2bgw.in > ./Zn2O2.pw2bgw.out &
+done
+
+for i in {1..15}; do
+  cd ../WFN_co${i}
+  $MPI_CMD $PW2BGW_EXEC -npool $NPOOL < ./Zn2O2.pw2bgw.in > ./Zn2O2.pw2bgw.out &
+done
+
+for i in {1..6}; do
+  cd ../WFN_fi${i}
+  $MPI_CMD $PW2BGW_EXEC -npool $NPOOL < ./Zn2O2.pw2bgw.in > ./Zn2O2.pw2bgw.out &
+done
+
+wait
+
+cd ../WFNq
+rm ./*.wfc*
+$MPI_CMD $SAPO_EXEC > ./sapo.out &
+
+for i in {1..27}; do
+  cd ../WFN${i}
+  rm ./*.wfc*
+  $MPI_CMD $SAPO_EXEC > ./sapo.out &
+done
+
+for i in {1..15}; do
+  cd ../WFN_co${i}
+  rm ./*.wfc*
+  $MPI_CMD $SAPO_EXEC > ./sapo.out &
+done
+
+for i in {1..6}; do
+  cd ../WFN_fi${i}
+  rm ./*.wfc*
+  $MPI_CMD $SAPO_EXEC > ./sapo.out &
+done
+
+wait
+
+cd ../WFN
+$MPI_CMD_SERIAL $WFNMERGE_EXEC > ./wfnmerge.out &
+
+cd ../WFN_co
+$MPI_CMD_SERIAL $WFNMERGE_EXEC > ./wfnmerge.out &
+
+cd ../WFN_fi
+$MPI_CMD_SERIAL $WFNMERGE_EXEC > ./wfnmerge.out &
+
+wait

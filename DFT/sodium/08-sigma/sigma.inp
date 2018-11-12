@@ -1,0 +1,13 @@
+number_bands 40
+
+band_index_min 1
+band_index_max 6
+
+screening_metal
+
+begin kpoints
+  0.000000000  0.000000000  0.000000000  1.0
+  0.500000000  0.500000000  0.500000000  1.0
+end
+
+degeneracy_check_override

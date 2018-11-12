@@ -1,0 +1,24 @@
+#!/bin/bash -l
+
+#
+SIESTA="$HOME/siesta/Obj/siesta"
+WFSX2WFS="$HOME/siesta/Util/WFS/wfsx2wfs"
+DENCHAR="$HOME/siesta/Util/Denchar/Src/denchar"
+GRID2CUBE="$HOME/siesta/Util/Grid/grid2cube"
+SURFACE="$HOME/BerkeleyGW/bin/surface.x"
+AVERAGE="$HOME/BerkeleyGW/bin/average.py"
+#
+cd ./3-siesta
+$SIESTA < ./in &> ./out
+mv ./benzene.WFSX ./WFSX
+$WFSX2WFS
+mv ./WFS ./benzene.WFS
+$DENCHAR < ./in_denchar &> ./out_denchar
+$GRID2CUBE < ./in_grid2cube_rho &> ./out_grid2cube_rho
+$GRID2CUBE < ./in_grid2cube_vh &> ./out_grid2cube_vh
+$GRID2CUBE < ./in_grid2cube_vt &> ./out_grid2cube_vt
+$SURFACE ./surface.par &> ./surface.out
+$AVERAGE ./benzene.VH.cube cube faces 0.5 0.5 0.5 &> ./velec_avg_face.out
+$AVERAGE ./benzene.VT.cube cube volume &> ./vtot_avg_vol.out
+cd ..
+#

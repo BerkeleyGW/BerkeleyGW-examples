@@ -1,0 +1,33 @@
+(8,0) semiconducting singled-wall carbon nanotube
+=================================================
+
+This example shows how to run a calculation on the (8,0) semiconduncting single-
+wall carbon nanotube starting with either Quantum ESPRESSO or PARATEC for the
+mean-field calculation.  We compute the GW quasiparticle corrections, the
+optical absorption by solving the Bethe-Salpeter equation, and plot the
+exciton wavefunction.
+
+
+To run this example, follow the steps below.  Remember to modify each script
+before launching it!
+
+
+1. Enter your mean-field directory of choice (ESPRESSO, PARATEC, or ABINIT).
+Read, customize and run/submit all scripts in that folder in the alphabetic order
+they appear.  Note that we override the occupations in pp_in.  Quantum ESPRESSO
+gives non-integer occupations for metals that may round to the incorrect
+occupations. Suggested 1 node (tested with ncpu = 32, walltime = 00:10:00).
+
+
+2. Go back to the directory containing this file, and modify/submit script_3.
+Suggested 1 node (tested with ncpu = 32, walltime = 00:30:00).
+We will:
+- Generate dielectric matrix (directory 5)
+- Calculate self-energy corrections (directory 6)
+- Generate electron-hole interaction kernel (directory 7)
+- Solve BSE, calculate optical absorption and plot the exciton WFN (directory 8)
+
+You can plot the optical absorption spectrum in
+`8-absorption/absorption_eh.dat` and `8-absorption/absorption_noeh.dat`,
+and you can plot the exciton wavefunction in `8-absorption/xct000020.cube`
+using software such as Vesta.

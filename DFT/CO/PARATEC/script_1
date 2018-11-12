@@ -1,0 +1,31 @@
+#!/bin/bash -l
+
+#
+ln -s ../../../pseudo/fhi/C.cpi ./1-scf/C_POT.DAT
+ln -s ../../../pseudo/fhi/O.cpi ./1-scf/O_POT.DAT
+#
+ln -s ../1-scf/C_POT.DAT ./2-wfn
+ln -s ../1-scf/O_POT.DAT ./2-wfn
+ln -s ../1-scf/CD ./2-wfn
+#
+ln -s ../PARATEC/2-wfn/WFN ../3-epsilon
+ln -s ../PARATEC/2-wfn/WFN ../3-epsilon/WFNq
+#
+ln -s ../PARATEC/2-wfn/vxc.dat ../4-sigma
+ln -s ../PARATEC/2-wfn/RHO ../4-sigma
+ln -s ../PARATEC/2-wfn/WFN ../4-sigma/WFN_inner
+ln -s ../3-epsilon/eps0mat ../4-sigma
+ln -s ../3-epsilon/eps0mat.h5 ../4-sigma
+#
+ln -s ../PARATEC/2-wfn/WFN ../5-kernel/WFN_co
+ln -s ../3-epsilon/eps0mat ../5-kernel
+ln -s ../3-epsilon/eps0mat.h5 ../5-kernel
+#
+ln -s ../PARATEC/2-wfn/WFN ../6-absorption/WFN_co
+ln -s ../PARATEC/2-wfn/WFN ../6-absorption/WFN_fi
+ln -s ../3-epsilon/eps0mat ../6-absorption
+ln -s ../3-epsilon/eps0mat.h5 ../6-absorption
+ln -s ../5-kernel/bsedmat ../6-absorption
+ln -s ../5-kernel/bsexmat ../6-absorption
+ln -s ../5-kernel/bsemat.h5 ../6-absorption
+#

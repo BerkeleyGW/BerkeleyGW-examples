@@ -1,0 +1,27 @@
+#!/bin/bash -l
+
+abinit="abinit"
+abi2bgw="$HOME/BerkeleyGW/bin/abi2bgw.x"
+#
+# put argument for number of procs here too if needed, e.g. -n 8
+MPIRUN="mpirun -n 8"
+
+#
+cd ./01-scf
+$MPIRUN $abinit <files > log
+cd ..
+#
+DIRS=("02-wfn" "03-wfnq" "04-wfn_co" "05-wfn_fi" "06-wfnq_fi" "08-path")
+
+nn=`echo "${#DIRS[@]}-1" | bc` 
+for ii in `seq 0 $nn`
+do
+  which=${DIRS[$ii]}
+  cd $which
+  printf "Running $which.."
+  $MPIRUN $abinit <files > log
+  $abi2bgw abi2bgw.in >abi2bgw.out
+  rm tmp*  #remove junk files
+  printf "Done.\n"
+  cd ..
+done

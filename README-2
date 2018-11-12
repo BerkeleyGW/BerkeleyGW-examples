@@ -1,0 +1,121 @@
+================================================================================
+BerkeleyGW Examples
+================================================================================
+
+  Version 2.0   (May, 2018)
+  To be announced.
+
+  Version 1.2   (Aug, 2016)
+  F. H. da Jornada, J. Deslippe, D. Vigil-Fowler, J. I. Mustafa, T. Rangel,
+  F. Bruneval, F. Liu, D. Y. Qiu, D. A. Strubbe, G. Samsonidze, J. Lischner.
+
+--------------------------------------------------------------------------------
+
+This folder contains a set of example calculations for BerkeleyGW 1.2.
+The mean-field portion of the examples may be done with the Empirical
+Pseudopotential Method (EPM), or ab intio DFT, using the Quantum ESPRESSO,
+PARATEC, or ABINIT codes. Other mean-field codes, such as Octopus and PARSEC,
+are also supported, but we don't have examples for them at this point.
+
+The examples contained here are organized according to the mean-field starting
+point:
+
+  1. Example under the "DFT" folder, use ab initio DFT as the starting mean-field
+    picture for our GW and Bethe-Salpeter equation (BSE) calculations. You must
+    have either PARATEC, Quantum ESPRESSO, or ABINIT for run these examples.
+    Required pseudopotentials are stored in DFT/pseudos.
+
+  2. Examples under the "EPM" folder use the Empirical Pseudopotential Method
+    (EPM), and you won't need any external mean-field code to run these examples.
+    Calculations in these folders are much shorter to run, but are probably of
+    less 
+
+Each of these directories contain a number of subdirectories, each of them
+containing a different example and a README file with the instructions how to
+run each examples and suggestion on the number of processors to use.
+
+Before you run anything, note that YOU MUST MODIFY ALL SCRIPTS in this folder
+to set the appropriate path to BerkeleyGW (eg: $HOME/GW), your parallel job
+launching command (eg: mpirun), and parallel submission flags (eg: "#SLURM ...").
+
+
+Tutorial
+--------
+
+The idea behind these examples is to provide a working set of input files
+and reference output files for several calculations that span a range of
+relevant materials. However, for a more pedagogical introduction to BerkeleyGW,
+we suggest you first try to run our tutorials that are designed for our yearly
+BerkeleyGW workshops, available at:
+
+https://sites.google.com/site/berkeleygw2015/home
+
+
+Note for ABINIT
+---------------
+Our ABINIT wrapper is still experimental, and not all examples have been ported
+to use ABINIT.
+
+
+Note for Quantum ESPRESSO
+-------------------------
+Quantum ESPRESSO examples are compatible with
+Quantum ESPRESSO 5.0 and later versions. If you want to run them with Quantum
+ESPRESSO 4.3.2 or earlier version, you should modify the input files for pw.x, and
+change "calculation = 'bands'" to "calculation = 'nscf'" and "CELL_PARAMETERS" to
+"CELL_PARAMETERS cubic".
+
+
+Basic examples
+--------------
+
+- silicon: a bulk semiconductor. You should start here!
+  - Includes PREBUILT tarball of DFT inputs from PARATEC.
+  - Includes ref directories containing sample output from ESPRESSO and BerkeleyGW steps.
+  - Available for EPM as well as DFT.
+  - Shows how to use Wannier90 and sig2wan.x to obtain a GW bandstructure by
+    interpolation (optional step).
+  - Shows how to use inteqp to obtain a GW bandstructure by interpolation.
+
+- GaAs: similar to silicon example. Runs slightly faster.
+
+- sodium: a bulk metal
+
+- swcnt_5-5: (5,5) single-walled carbon nanotube, a metallic 1D system
+
+- swcnt_8-0: (8,0) single-walled carbon nanotube, a semiconducting 1D system
+  - Has runs of plotxct with visualization by volume.py and surface.x.
+
+- CO: a small molecule
+
+- benzene: a slightly larger molecule
+  - Includes run of gsphere.py and SIESTA.
+
+
+Advanced examples
+-----------------
+These examples demonstrate how to use advanced features of the code, and they
+are not as tidy as the other examples. You are expected to modify submission
+
+- Si2_sapo: another silicon example
+  - Shows how to perform iterative Davidson diagonalization in SAPO,
+  - requires pw2bgw with write_vscg capability as in espresso-5.0.2.
+
+- Zn2O2: a bulk semiconductor
+  - Includes ref directories containing sample output from ESPRESSO and BerkeleyGW steps.
+  - Shows how to use inteqp to obtain a GW bandstructure by interpolation.
+  - Shows how to perform iterative Davidson diagonalization in SAPO,
+    requires pw2bgw with write_vscg capability as in espresso-5.0.2.
+  - Shows how to use valence only charge density in the Generalized Plasmon Pole model,
+    requires pw2bgw with calc_rhog capability as in espresso-5.0.2.
+
+
+Other examples
+---------------
+
+- Make sure you visit the tutorials presented during the BerkeleyGW workshops:
+  https://sites.google.com/site/berkeleygw2015/home
+
+- The testsuite runs may also be consulted, although they are not realistic calculations.
+
+- There are also examples in the Visual directory for the scripts there.

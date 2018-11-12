@@ -1,0 +1,29 @@
+diagonalization
+
+number_val_bands_coarse 4
+number_val_bands_fine 4
+number_cond_bands_coarse 4
+number_cond_bands_fine 4
+
+no_symmetries_coarse_grid
+no_symmetries_fine_grid
+no_symmetries_shifted_grid
+
+screening_metal
+
+cell_wire_truncation
+
+use_momentum
+polarization 0.0 0.0 1.0
+
+gaussian_broadening
+energy_resolution 0.02
+
+# Shift bands by 15%. Can be determined 
+# by fitting a line to eqp corrections data.
+evs     0.15
+ev0     0.0
+evdel   0.0
+ecs     0.15
+ec0     0.0
+ecdel   0.0

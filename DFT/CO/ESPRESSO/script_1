@@ -1,0 +1,49 @@
+#!/bin/bash -l
+
+#
+ln -s ../../../pseudo/ld1/C.UPF ./1-scf
+ln -s ../../../pseudo/ld1/O.UPF ./1-scf
+#
+#
+mkdir ./2-wfn/co.save
+ln -s ../1-scf/C.UPF ./2-wfn
+ln -s ../1-scf/O.UPF ./2-wfn
+ln -s ../../1-scf/co.save/data-file.xml ./2-wfn/co.save
+ln -s ../../1-scf/co.save/charge-density.dat ./2-wfn/co.save
+#
+ln -s ../ESPRESSO/2-wfn/wfn.complex ../3-epsilon/WFN
+ln -s ../ESPRESSO/2-wfn/wfn.complex ../3-epsilon/WFNq
+#
+ln -s ../ESPRESSO/2-wfn/vxc.dat ../4-sigma/vxc.dat
+ln -s ../ESPRESSO/2-wfn/rho.complex ../4-sigma/RHO
+ln -s ../ESPRESSO/2-wfn/wfn.complex ../4-sigma/WFN_inner
+ln -s ../3-epsilon/eps0mat ../4-sigma
+ln -s ../3-epsilon/eps0mat.h5 ../4-sigma
+#
+ln -s ../ESPRESSO/2-wfn/wfn.complex ../5-kernel/WFN_co
+ln -s ../3-epsilon/eps0mat ../5-kernel
+ln -s ../3-epsilon/eps0mat.h5 ../5-kernel
+#
+ln -s ../ESPRESSO/2-wfn/wfn.complex ../6-absorption/WFN_co
+ln -s ../ESPRESSO/2-wfn/wfn.complex ../6-absorption/WFN_fi
+ln -s ../3-epsilon/eps0mat ../6-absorption
+ln -s ../3-epsilon/eps0mat.h5 ../6-absorption
+ln -s ../5-kernel/bsedmat ../6-absorption
+ln -s ../5-kernel/bsexmat ../6-absorption
+ln -s ../5-kernel/bsemat.h5 ../6-absorption
+#
+#BEGIN_INTERNAL_ONLY
+ln -s ../1-scf/co.save 11-phonon
+ln -s ../11-phonon/_ph0 ./2-wfn
+#
+ln -s ../ESPRESSO/2-wfn/dfpt.dat_mode000001 ../7-forces
+ln -s ../ESPRESSO/2-wfn/dfpt.dat_mode000002 ../7-forces
+ln -s ../ESPRESSO/2-wfn/dfpt.dat_mode000003 ../7-forces
+ln -s ../ESPRESSO/2-wfn/dfpt.dat_mode000004 ../7-forces
+ln -s ../ESPRESSO/2-wfn/dfpt.dat_mode000005 ../7-forces
+ln -s ../ESPRESSO/2-wfn/dfpt.dat_mode000006 ../7-forces
+ln -s ../ESPRESSO/2-wfn/displacements.dat ../7-forces
+ln -s ../6-absorption/WFN_fi ../7-forces
+ln -s ../6-absorption/eigenvectors ../7-forces
+ln -s ../6-absorption/eqp.dat ../7-forces
+#END_INTERNAL_ONLY

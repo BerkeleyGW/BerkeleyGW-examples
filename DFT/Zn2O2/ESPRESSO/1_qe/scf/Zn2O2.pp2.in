@@ -1,0 +1,11 @@
+&INPUTPP
+   prefix = 'Zn2O2'
+   outdir = '.'
+   filplot = 'vtot'
+   plot_num = 1
+/
+&PLOT
+   iflag = 3
+   output_format = 6
+   fileout = 'vtot.cube'
+/

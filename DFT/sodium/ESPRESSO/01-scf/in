@@ -1,0 +1,42 @@
+&CONTROL
+   prefix = 'sodium'
+   calculation = 'scf'
+   restart_mode = 'from_scratch'
+   wf_collect = .false.
+   tstress = .true.
+   tprnfor = .true.
+   outdir = './'
+   wfcdir = './'
+   pseudo_dir = './'
+/
+&SYSTEM
+   ibrav = 0
+   celldm(1) = 7.984096
+   nat = 1
+   ntyp = 1
+   nbnd = 1
+   ecutwfc = 30.0
+   occupations = 'smearing'
+   smearing = 'mv'
+   degauss = 0.03
+/
+&ELECTRONS
+   electron_maxstep = 100
+   conv_thr = 1.0d-10
+   mixing_mode = 'plain'
+   mixing_beta = 0.7
+   mixing_ndim = 8
+   diagonalization = 'david'
+   diago_david_ndim = 4
+   diago_full_acc = .true.
+/
+CELL_PARAMETERS alat
+       0.500000000   0.500000000   0.500000000
+      -0.500000000   0.500000000   0.500000000
+      -0.500000000  -0.500000000   0.500000000
+ATOMIC_SPECIES
+  Na  22.990  Na.UPF
+ATOMIC_POSITIONS crystal
+  Na   0.000000000   0.000000000   0.000000000
+K_POINTS automatic
+12 12 12 1 1 1

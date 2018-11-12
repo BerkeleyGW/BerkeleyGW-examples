@@ -1,0 +1,65 @@
+#!/bin/bash -l
+
+#
+PWDIR="$HOME/espresso-5.1/bin"
+PW_EXEC="$PWDIR/pw.x"
+PP_EXEC="$PWDIR/pp.x"
+PW2BGW_EXEC="$PWDIR/pw2bgw.x"
+
+#
+NPOOL=36
+NPOOL_CO=15
+MPI_CMD="aprun -n 144"
+MPI_CMD_CO="aprun -n 120"
+
+cd ./scf
+$MPI_CMD $PW_EXEC -npool $NPOOL < ./Zn2O2.scf.in > ./Zn2O2.scf.out
+$MPI_CMD $PP_EXEC -npool $NPOOL < ./Zn2O2.pp1.in > ./Zn2O2.pp1.out
+$MPI_CMD $PP_EXEC -npool $NPOOL < ./Zn2O2.pp2.in > ./Zn2O2.pp2.out
+rm ./*.wfc*
+
+cd ../scf_U
+$MPI_CMD $PW_EXEC -npool $NPOOL < ./Zn2O2.scf.in > ./Zn2O2.scf.out
+$MPI_CMD $PP_EXEC -npool $NPOOL < ./Zn2O2.pp1.in > ./Zn2O2.pp1.out
+$MPI_CMD $PP_EXEC -npool $NPOOL < ./Zn2O2.pp2.in > ./Zn2O2.pp2.out
+rm ./*.wfc*
+
+cd ../bnd
+cp -rf ../scf/Zn2O2.save .
+$MPI_CMD $PW_EXEC -npool $NPOOL < ./Zn2O2.bnd.in > ./Zn2O2.bnd.out
+rm ./*.wfc*
+
+cd ../bnd_U
+cp -rf ../scf_U/Zn2O2.save .
+cp -rf ../scf_U/Zn2O2.occup .
+cp -rf ../scf_U/Zn2O2.atwfc* .
+cp -rf ../scf_U/Zn2O2.satwfc* .
+$MPI_CMD $PW_EXEC -npool $NPOOL < ./Zn2O2.bnd.in > ./Zn2O2.bnd.out
+rm ./*.wfc*
+rm ./*.atwfc*
+rm ./*.satwfc*
+
+cd ../rho
+cp -rf ../scf/Zn2O2.save .
+$MPI_CMD $PW2BGW_EXEC -npool $NPOOL < ./Zn2O2.pw2bgw1.in > ./Zn2O2.pw2bgw1.out
+$MPI_CMD $PW2BGW_EXEC -npool $NPOOL < ./Zn2O2.pw2bgw2.in > ./Zn2O2.pw2bgw2.out
+rm ./*.wfc*
+
+cd ../rho_U
+cp -rf ../scf_U/Zn2O2.save .
+cp -rf ../scf_U/Zn2O2.occup .
+cp -rf ../scf_U/Zn2O2.atwfc* .
+cp -rf ../scf_U/Zn2O2.satwfc* .
+$MPI_CMD $PW2BGW_EXEC -npool $NPOOL < ./Zn2O2.pw2bgw1.in > ./Zn2O2.pw2bgw1.out
+rm ./*.wfc*
+rm ./*.atwfc*
+rm ./*.satwfc*
+
+cd ../vxc
+cp -rf ../scf/Zn2O2.save .
+$MPI_CMD $PW2BGW_EXEC -npool $NPOOL < ./Zn2O2.pw2bgw1.in > ./Zn2O2.pw2bgw1.out
+$MPI_CMD $PW2BGW_EXEC -npool $NPOOL < ./Zn2O2.pw2bgw2.in > ./Zn2O2.pw2bgw2.out
+$MPI_CMD_CO $PW_EXEC -npool $NPOOL_CO < ./Zn2O2.bnd.in > ./Zn2O2.bnd.out
+$MPI_CMD_CO $PW2BGW_EXEC -npool $NPOOL_CO < ./Zn2O2.pw2bgw3.in > ./Zn2O2.pw2bgw3.out
+$MPI_CMD_CO $PW2BGW_EXEC -npool $NPOOL_CO < ./Zn2O2.pw2bgw4.in > ./Zn2O2.pw2bgw4.out
+rm ./*.wfc*

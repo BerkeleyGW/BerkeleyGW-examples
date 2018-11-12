@@ -1,0 +1,56 @@
+#!/bin/bash -l
+
+#edit this line as needed
+BGW_BIN="$HOME/BerkeleyGW/bin"
+
+##################################################
+CONVERT="$BGW_BIN/mf_convert_wrapper.sh"
+
+wget www.berkeleygw.org/releases/PREBUILT_v12x.tar.bz2
+tar -xjf PREBUILT_v12x.tar.bz2
+
+#
+$CONVERT RHO.asc RHO
+$CONVERT WFN.asc WFN
+$CONVERT WFNq.asc WFNq
+$CONVERT WFN_co.asc WFN_co
+$CONVERT WFN_fi.asc WFN_fi
+$CONVERT WFNq_fi.asc WFNq_fi
+$CONVERT WFN_path.asc WFN_path
+#
+ln -s ../PREBUILT/WFN ../07-epsilon
+ln -s ../PREBUILT/WFNq ../07-epsilon/WFNq
+#
+ln -s ../PREBUILT/vxc.dat ../08-sigma
+ln -s ../PREBUILT/RHO ../08-sigma
+ln -s ../PREBUILT/WFN_co ../08-sigma/WFN_inner
+ln -s ../07-epsilon/eps0mat ../08-sigma
+ln -s ../07-epsilon/epsmat ../08-sigma
+ln -s ../07-epsilon/eps0mat.h5 ../08-sigma
+ln -s ../07-epsilon/epsmat.h5 ../08-sigma
+#
+ln -s ../PREBUILT/WFN_co ../09-kernel/WFN_co
+ln -s ../07-epsilon/eps0mat ../09-kernel
+ln -s ../07-epsilon/epsmat ../09-kernel
+ln -s ../07-epsilon/eps0mat.h5 ../09-kernel
+ln -s ../07-epsilon/epsmat.h5 ../09-kernel
+#
+ln -s ../PREBUILT/WFN_co ../10-absorption/WFN_co
+ln -s ../PREBUILT/WFN_fi ../10-absorption/WFN_fi
+ln -s ../PREBUILT/WFNq_fi ../10-absorption/WFNq_fi
+ln -s ../07-epsilon/eps0mat ../10-absorption
+ln -s ../07-epsilon/epsmat ../10-absorption
+ln -s ../07-epsilon/eps0mat.h5 ../10-absorption
+ln -s ../07-epsilon/epsmat.h5 ../10-absorption
+ln -s ../09-kernel/bsedmat ../10-absorption
+ln -s ../09-kernel/bsexmat ../10-absorption
+ln -s ../09-kernel/bsemat.h5 ../10-absorption
+#
+ln -s ../08-sigma/sigma_hp.log ../11-sig2wan
+ln -s ../PREBUILT/silicon_band.dat ../11-sig2wan/silicon_band_mf.dat
+ln -s ../PREBUILT/silicon.nnkp ../11-sig2wan
+ln -s ../PREBUILT/silicon.amn ../11-sig2wan
+ln -s ../PREBUILT/silicon.mmn ../11-sig2wan
+#
+ln -s ../PREBUILT/WFN_co ../12-inteqp/WFN_co
+ln -s ../PREBUILT/WFN_path ../12-inteqp/WFN_fi

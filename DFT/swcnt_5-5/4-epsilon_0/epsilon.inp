@@ -1,0 +1,9 @@
+epsilon_cutoff 6.0
+
+number_bands 44
+
+cell_wire_truncation
+
+begin qpoints
+  0.0000000  0.0000000  0.0078125  1.0  2
+end

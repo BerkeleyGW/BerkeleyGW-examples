@@ -1,0 +1,26 @@
+&input_siesta2bgw
+   systemlabel      = 'benzene'
+   wfng_output_file = 'wfn.real'
+   rhog_output_file = 'rho.complex'
+   vxcg_output_file = 'vxc.complex'
+   ecutwfn          = 60.0
+   ecutrho          = 240.0
+   wfng_nk1         = 1
+   wfng_nk2         = 1
+   wfng_nk3         = 1
+   wfng_dk1         = 0.0
+   wfng_dk2         = 0.0
+   wfng_dk3         = 0.0
+   wfng_ref_flag    = .false.
+   wfng_ref_kpoint  = 0
+   wfng_ref_spin    = 0
+   wfng_ref_band    = 0
+   wfng_ref_energy  = 0.0
+   wfng_band_flag   = .false.
+   wfng_band_min    = 0
+   wfng_band_max    = 0
+   wfng_energy_flag = .false.
+   wfng_energy_min  = 0.0
+   wfng_energy_max  = 0.0
+   wfng_gamma_real  = .false.
+/

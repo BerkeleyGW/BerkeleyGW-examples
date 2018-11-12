@@ -1,0 +1,15 @@
+&input_sapo
+   wfng_input_file = 'wfn.complex.pw'
+   vscg_input_file = 'vsc.complex'
+   vkbg_input_file = 'vkb.complex'
+   wfng_output_file = 'wfn.complex'
+   sapo_band_number = 0
+   sapo_planewave_min = 1
+   sapo_planewave_max = 26
+   sapo_random = 2
+   sapo_hamiltonian = .true.
+   sapo_ham_ndiag = 100
+   sapo_ham_ndim = 20
+   sapo_ham_tol = 1.0d-7
+   sapo_check_norm = .true.
+/

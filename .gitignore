@@ -1,0 +1,10 @@
+# Old svn files
+.svn
+
+# Other
+**/tmp*
+svn-commit*.tmp
+tags
+*~
+*.DS_store
+

@@ -1,0 +1,7 @@
+&input_pw2bgw
+   prefix = 'Zn2O2'
+   real_or_complex = 2
+   vxcg_flag = .true.
+   vxcg_file = 'vxc_nlcc0.complex'
+   vxc_zero_rho_core = .true.
+/

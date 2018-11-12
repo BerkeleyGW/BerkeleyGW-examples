@@ -1,0 +1,63 @@
+
+begin pw_jobs
+pw_job scf
+end pw_jobs
+
+begin latticevecs
+coord  25.980765000  15.000000000   0.000000000
+coord   0.000000000  30.000000000   0.000000000
+coord   0.000000000   0.000000000   4.618514866
+end latticevecs
+
+coordinates_absolute
+begin coordinates
+newtype C
+coord   6.412934963   0.010727526  -2.309059641
+coord   5.860088757   2.603973456  -2.309046518
+coord   5.181323387   3.778295303   0.000062614
+coord   3.209932498   5.551509434   0.000102849
+coord   1.970634656   6.102764187  -2.309078202
+coord  -0.666529911   6.378854774  -2.309105123
+coord  -1.993272198   6.096205773   0.000121776
+coord  -4.288707127   4.769476994   0.000115278
+coord  -5.195737267   3.761317926  -2.309098437
+coord  -6.272779263   1.338241688  -2.309082339
+coord  -6.413899369  -0.010887296   0.000107356
+coord  -5.860913865  -2.604050212   0.000055178
+coord  -5.182293573  -3.778450693  -2.309048443
+coord  -3.210932461  -5.551552567  -2.308972407
+coord  -1.971447797  -6.102799013  -0.000004484
+coord   0.665697975  -6.378913183   0.000033691
+coord   1.992051541  -6.096333987  -2.309003121
+coord   4.287751503  -4.769568919  -2.309075737
+coord   5.195055898  -3.761177273   0.000089857
+coord   6.271861595  -1.338286272   0.000074779
+end coordinates
+
+pp_format 3
+begin pseudopotential
+pp_data 3 2.0 2.0 0.0 0.0
+end pseudopotential
+
+exchange_correlation ceperley_alder
+number_of_spins 1
+diagonalization_method Grassmann_metal
+energy_cutoff 60.0
+submatrix_energy_cutoff 5.0
+accuracy_diag 1.0e-10
+diagsafety 2.0
+number_kpoints 0
+k_grid 1 1 32
+k_grid_shift 0.0 0.0 0.5
+number_bands 40
+number_bands_fft 1
+eigspacefrac 1.0
+occupy_levels normal
+smearing_method 6
+smearing_energy 0.4
+
+#mix_method pulay_kerker
+#energy_convergence_criterion 1.0e-10
+#max_iter_scfloop 50
+#screening_type previous
+

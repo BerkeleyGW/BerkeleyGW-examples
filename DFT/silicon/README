@@ -1,0 +1,51 @@
+Bulk silicon
+============
+
+This example shows how to run a calculation on bulk Si using various DFT codes,
+including Quantum ESPRESSO, PARATEC, or Abinit. We also provide prebuilt 
+mean-field calculations in the PREBUILD directory.
+
+In this example, we compute the optical absorption spectrum of bulk Si and
+plot the GW quasiparticle bandstructure. Note that BerkeleyGW allows you to
+interpolate QP corrections with two different ways: either using Wannier functions
+with the sig2wan code, or directly using the inteqp code, in the BSE folder.
+We typically recommend users to use the inteqp code, since it's very stable,
+fast, and easy to use. In this example, we show how to use both codes to produce
+an interpolated quasiparticle bandstructure. Note that the Wannier interpolation
+only works with the Quantum ESPRESSO mean-field code right now.
+
+Note: the reference values were obtained with the Quantum ESPRESSO mean-field
+code. Other mean-field codes will produces energies which should differ by
+at most 10 meV.
+
+Remember to modify each script before launching it!
+
+
+1. Enter your mean-field directory of choice (ESPRESSO, PARATEC, or ABINIT).
+Read, customize and run/submit all scripts in that folder in the alphabetic order
+they appear. Alternatively, you can also go to the PREBUILT folder and follow the
+instructions to use pre-generated mean-field calculation from Quantum ESPRESSO.
+
+
+2. Go back to the directory containing this file, and modify/submit `script_3`.
+Suggested 1 node (tested with ncpu = 32, walltime = 00:30:00).
+We will:
+- Generate dielectric matrix (directory 7)
+- Calculate self-energy corrections (directory 8)
+- Generate electron-hole interaction kernel (directory 9)
+- Solve BSE and calculate optical absorption (directory 10)
+
+
+3. (Optional step) Here, we plot the GW bandstructure using Wannier
+interpolation. This will only work if you used the ESPRESSO mean-field
+starting point and if you have Wannier90 installed.
+You should edit and submit `script_4`, and the resulting bandstructure
+will be saved to `11-sig2wan/bandstructure_sig2wan.pdf`.
+You must have python/matplotlib to run this step.
+
+
+4. Here, we plot the GW bandstructure using the inteqp code.
+This will work with any starting mean-field code.
+You should edit and submit `script_5`, and the resulting bandstructure
+will be saved to `12-inteqp/bandstructure_inteqp.pdf`.
+You must have python/matplotlib to run this step.

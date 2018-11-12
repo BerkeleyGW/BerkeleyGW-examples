@@ -1,0 +1,25 @@
+Fri Apr 15 15:49:56 2016: [unset]:_pmi_alps_get_apid:alps response not OKAY
+Fri Apr 15 15:49:56 2016: [unset]:_pmi_init:_pmi_alps_init returned -1
+
+ reading sig2wan.inp file
+
+      sig file = sigma_hp.log
+          spin = 1
+          eqpn = 1
+     nnkp file = silicon.nnkp
+      eig file = silicon.eig
+
+ reading sigma_hp.log file
+
+           nkr = 10
+            nb = 12
+          nsym = 48
+
+ reading silicon.nnkp file
+
+           nkf = 125
+
+ unfolding irreducible wedge
+
+ writing silicon.eig file
+

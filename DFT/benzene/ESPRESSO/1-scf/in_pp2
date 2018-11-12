@@ -1,0 +1,12 @@
+&inputpp
+   prefix = 'benzene'
+   outdir = './'
+   filplot = 'vtot'
+   plot_num = 1
+   spin_component = 0
+/
+&plot
+   iflag = 3
+   output_format = 6
+   fileout = 'vtot.cube'
+/

@@ -1,0 +1,42 @@
+
+begin pw_jobs
+pw_job nonselfcon
+end pw_jobs
+
+begin latticevecs
+coord  0.000000  0.500000  0.500000
+coord  0.500000  0.000000  0.500000
+coord  0.500000  0.500000  0.000000
+volume 270.106145921232
+end latticevecs
+begin coordinates
+newtype Si
+coord -0.125000 -0.125000 -0.125000
+coord  0.125000  0.125000  0.125000
+end coordinates
+pp_format 3
+begin pseudopotential
+pp_data 3 2.0 2.0 0.0 0.0
+end pseudopotential
+
+exchange_correlation ceperley_alder
+number_of_spins 1
+diagonalization_method Grassmann_metal
+energy_cutoff 25.0
+submatrix_energy_cutoff 8.0
+accuracy_diag 1.0e-10
+diagsafety 2.0
+number_kpoints 0
+k_grid 10 10 10
+k_grid_shift 0.47 0.37 0.32
+number_bands 8
+number_bands_fft 1
+eigspacefrac 0.5
+occupy_levels normal
+smearing_energy 0.001
+
+max_iter_scfloop 50
+screening_type previous
+
+output_flags gwr
+

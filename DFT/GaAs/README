@@ -1,0 +1,81 @@
+
+Gallium arsenide
+
+This example performs a full BSE calculation in less than 1 minute on a laptop.
+It comes in two DFT flavors: Abinit or Quantum Espresso.
+
+Before you run it, please edit the file setup.sh to set the path for the various executables
+(if they are not available from your PATH environment variable) and the command to invoke
+the mpi runner. Then, execute either run.abinit.sh or run.espresso.sh by issuing e.g.:
+    bash run.abinit.sh
+
+These script will first create all symbolic links needed by executing a script called link.sh
+within one of the DFT subdirectory. Please look at this script carefully, as it is crucial
+to understand what files are needed for each step.
+
+The run script will then go into each of the subdirectories and executes other scripts therein.
+You may want to look at those scripts also.
+
+
+The calculation is composed of the following steps.
+
+    01-Density:
+        SCF calculation of the charge density.
+
+    02-Wfn:
+        Calculation of the wavefunctions on a k-shifted k-points grid.
+        Used for epsilon.
+
+    03-Wfnq:
+        Calculation of the wavefunctions on a k-shifted and q-shifted k-points grid.
+        Used for epsilon.
+
+    04-Wfn_co: 
+        Calculation of the wavefunctions on an unshifted k-points grid.
+        Used for sigma, kernel and absorption.
+
+    05-Wfn_fi:
+        Calculation of the wavefunctions on a fine, unshifted k-points grid.
+        Used for absorption.
+
+    06-Wfnq_fi:  
+        Calculation of the wavefunctions on a fine, q-shifted k-points grid.
+        Used for absorption.
+
+    11-epsilon:
+        Calculation of the inverse dielectric matrix.
+        Used for sigma, kernel and absorption.
+
+    12-sigma:
+        Calculation of the GW self-energy and quasiparticle corrections.
+        Used for absorption.
+
+    13-kernel:
+        Calculation of the BSE kernel.
+        Used for absorption.
+
+    14-absorption:
+        Calculation of the BSE excitons and absorption spectrum.
+
+
+For the DFT wavefunction calculations (02-06), the script performs two steps.
+First, the wavefunction are computed. Then, they are converted to a format suitable for BGW. 
+In the 04 directory, the charge density is also converted to be read by BGW, as well as the vxc
+matrix elements. This is necessary to compute the quasiparticle corrections.
+
+For the steps that invoke BGW executables (11-14), the file name follows a strict convention
+enforced by BGW. Pay attention to the symbolic links being created before running the BGW
+executable.
+
+The directory 00-kgrid contains the input files given to the executable kgrid.x in order
+to generate the k-points and their weights using the symmetries of the system.
+It is used the wavefunctions calculations 02, 03 and 04, but not for 05 and 06,
+because the fine k-point grids do not use symmetries and the generation of the k-points
+in these cases is trivial.
+
+Keep in mind that the parameters used in this example are nowhere near those of a realistic
+calculation. Here we used a 2x2x2 k-point grid and a 4x4x4 fine k-point grid. The kinetic energy
+cutoff are also very small: 10 Rydbergs for the wavefunctions, 10 Rydbergs for the dielectric
+matrix, 12 bands for epsilon and sigma. All of these parameters need to be thoroughly converged.
+
+Good luck, have fun!

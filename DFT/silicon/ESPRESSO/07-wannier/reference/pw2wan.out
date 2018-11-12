@@ -1,0 +1,349 @@
+
+     Program PW2WANNIER v.5.0.1 starts on 27Sep2012 at 16: 1:54 
+
+     This program is part of the open-source Quantum ESPRESSO suite
+     for quantum simulation of materials; please cite
+         "P. Giannozzi et al., J. Phys.:Condens. Matter 21 395502 (2009);
+          URL http://www.quantum-espresso.org", 
+     in publications or presentations arising from this work. More details at
+     http://www.quantum-espresso.org/quote.php
+
+     Parallel version (MPI), running on     1 processors
+
+  Reading nscf_save data
+
+   Info: using nr1, nr2, nr3 values from input
+
+   Info: using nr1s, nr2s, nr3s values from input
+
+     IMPORTANT: XC functional enforced from input :
+     Exchange-correlation      = PZ ( 1 1 0 0 0)
+     EXX-fraction              =        0.00
+     Any further DFT definition will be discarded
+     Please, verify this is what you really want
+
+
+     G-vector sticks info
+     --------------------
+     sticks:   dense  smooth     PW     G-vecs:    dense   smooth      PW
+     Sum         361     361    121                 4573     4573     941
+
+
+  Spin CASE ( default = unpolarized )
+
+  Wannier mode is: standalone     
+
+  -----------------
+  *** Reading nnkp 
+  -----------------
+
+  Checking info from wannier.nnkp file
+
+  - Real lattice is ok
+  - Reciprocal lattice is ok
+  - K-points are ok
+  - Number of wannier functions is ok (  8)
+  - All guiding functions are given 
+
+ Projections:
+   -0.125000   -0.125000   -0.125000 -3  1  1    1.000000
+   -0.125000   -0.125000   -0.125000 -3  2  1    1.000000
+   -0.125000   -0.125000   -0.125000 -3  3  1    1.000000
+   -0.125000   -0.125000   -0.125000 -3  4  1    1.000000
+    0.125000    0.125000    0.125000 -3  1  1    1.000000
+    0.125000    0.125000    0.125000 -3  2  1    1.000000
+    0.125000    0.125000    0.125000 -3  3  1    1.000000
+    0.125000    0.125000    0.125000 -3  4  1    1.000000
+
+  Reading data about k-point neighbours 
+
+  All neighbours are found 
+
+  Opening pp-files 
+
+
+  ---------------
+  *** Compute  A 
+  ---------------
+
+ AMN
+ iknum =      125
+       1
+       2
+       3
+       4
+       5
+       6
+       7
+       8
+       9
+      10
+      11
+      12
+      13
+      14
+      15
+      16
+      17
+      18
+      19
+      20
+      21
+      22
+      23
+      24
+      25
+      26
+      27
+      28
+      29
+      30
+      31
+      32
+      33
+      34
+      35
+      36
+      37
+      38
+      39
+      40
+      41
+      42
+      43
+      44
+      45
+      46
+      47
+      48
+      49
+      50
+      51
+      52
+      53
+      54
+      55
+      56
+      57
+      58
+      59
+      60
+      61
+      62
+      63
+      64
+      65
+      66
+      67
+      68
+      69
+      70
+      71
+      72
+      73
+      74
+      75
+      76
+      77
+      78
+      79
+      80
+      81
+      82
+      83
+      84
+      85
+      86
+      87
+      88
+      89
+      90
+      91
+      92
+      93
+      94
+      95
+      96
+      97
+      98
+      99
+     100
+     101
+     102
+     103
+     104
+     105
+     106
+     107
+     108
+     109
+     110
+     111
+     112
+     113
+     114
+     115
+     116
+     117
+     118
+     119
+     120
+     121
+     122
+     123
+     124
+     125
+
+  AMN calculated
+
+  ---------------
+  *** Compute  M 
+  ---------------
+
+ MMN
+ iknum =      125
+       1
+       2
+       3
+       4
+       5
+       6
+       7
+       8
+       9
+      10
+      11
+      12
+      13
+      14
+      15
+      16
+      17
+      18
+      19
+      20
+      21
+      22
+      23
+      24
+      25
+      26
+      27
+      28
+      29
+      30
+      31
+      32
+      33
+      34
+      35
+      36
+      37
+      38
+      39
+      40
+      41
+      42
+      43
+      44
+      45
+      46
+      47
+      48
+      49
+      50
+      51
+      52
+      53
+      54
+      55
+      56
+      57
+      58
+      59
+      60
+      61
+      62
+      63
+      64
+      65
+      66
+      67
+      68
+      69
+      70
+      71
+      72
+      73
+      74
+      75
+      76
+      77
+      78
+      79
+      80
+      81
+      82
+      83
+      84
+      85
+      86
+      87
+      88
+      89
+      90
+      91
+      92
+      93
+      94
+      95
+      96
+      97
+      98
+      99
+     100
+     101
+     102
+     103
+     104
+     105
+     106
+     107
+     108
+     109
+     110
+     111
+     112
+     113
+     114
+     115
+     116
+     117
+     118
+     119
+     120
+     121
+     122
+     123
+     124
+     125
+
+  MMN calculated
+
+  ----------------
+  *** Write bands 
+  ----------------
+
+
+  -----------------------------
+  *** Plot info is not printed 
+  -----------------------------
+
+  -----------------------------
+  *** Parity info is not printed 
+  -----------------------------
+
+  ------------
+  *** Stop pp 
+  ------------
+

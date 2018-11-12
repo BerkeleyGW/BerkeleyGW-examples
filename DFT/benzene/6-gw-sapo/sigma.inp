@@ -1,0 +1,19 @@
+number_bands 2749
+
+band_index_min 14
+band_index_max 17
+
+screening_semiconductor
+
+cell_box_truncation
+
+begin kpoints
+  0.000000000  0.000000000  0.000000000  1.0
+end
+
+avgpot_outer 0.422228
+
+finite_difference_form 0
+finite_difference_spacing 0.1
+
+eqp_outer_corrections

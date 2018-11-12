@@ -1,0 +1,21 @@
+&input
+  title = 'O'
+  zed = 8.0
+  rel = 1
+  config = '[He] 2s2.0 2p4.0'
+  iswitch = 3
+  dft = 'SLA+PW'
+/
+&inputp
+  pseudotype = 2
+  file_pseudopw = 'O.pw-n-nc.UPF'
+  author = 'TM'
+  lloc = 1
+  nlcc = .true.
+  new_core_ps = .true.
+  tm = .false.
+  rho0 = 0.01
+/
+2
+2S  1  0  2.00  0.00  1.10  1.10  0.0
+2P  2  1  4.00  0.00  1.10  1.10  0.0

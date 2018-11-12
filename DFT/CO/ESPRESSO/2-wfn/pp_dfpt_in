@@ -1,0 +1,7 @@
+&input_pw2bgw
+   prefix = 'co'
+   real_or_complex = 2
+   vxc_diag_nmin = 1
+   vxc_diag_nmax = 37
+   dfpt_type = 1
+/

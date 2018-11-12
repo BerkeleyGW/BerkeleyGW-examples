@@ -1,0 +1,48 @@
+&CONTROL
+   prefix = 'Zn2O2'
+   calculation = 'bands'
+   verbosity = 'high'
+   restart_mode = 'from_scratch'
+   wf_collect = .false.
+   tstress = .false.
+   tprnfor = .false.
+   outdir = '.'
+   wfcdir = '.'
+   pseudo_dir = '../../../../pseudo/semicore/ld1'
+/
+&SYSTEM
+   ibrav = 0
+   a = 1.0
+   nat = 4
+   ntyp = 2
+   nbnd = 26
+   ecutwfc = 400.0
+   nr1 = 80
+   nr2 = 80
+   nr3 = 128
+/
+&ELECTRONS
+   electron_maxstep = 100
+   conv_thr = 1.0d-10
+   mixing_mode = 'plain'
+   mixing_beta = 0.7
+   mixing_ndim = 8
+   diagonalization = 'david'
+   diago_david_ndim = 4
+   diago_full_acc = .true.
+/
+CELL_PARAMETERS alat
+   3.250000000   0.000000000   0.000000000
+  -1.625000000   2.814582562   0.000000000
+   0.000000000   0.000000000   5.200000000
+ATOMIC_SPECIES
+  Zn  65.380  Zn.pw-spn-nc.UPF
+   O  15.999  O.pw-n-nc.UPF
+ATOMIC_POSITIONS crystal
+Zn       0.666666667   0.333333333   0.000000000
+Zn       0.333333333   0.666666667   0.500000000
+O        0.666666667   0.333333333   0.618000000
+O        0.333333333   0.666666667   0.118000000
+K_POINTS crystal
+   1
+  0.100000000  0.500000000  0.833333333   4.0

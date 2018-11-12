@@ -1,0 +1,119 @@
+
+ frequency_dependence   1
+
+ band_index     1     6
+ sigma_matrix     0   0
+
+ finite_difference_form   2
+ finite_difference_spacing  1.000000
+
+ symmetries
+ ntran  = 48
+ mtrx01 =  1  0  0  0  1  0  0  0  1
+ mtrx02 =  0  1  1  0 -1  0  1  1  0
+ mtrx03 = -1  0  0  1  0 -1 -1 -1  0
+ mtrx04 =  0 -1 -1 -1  0  1  0  0 -1
+ mtrx05 =  0  0 -1  0 -1  0 -1  0  0
+ mtrx06 = -1 -1  0  0  1  0  0 -1 -1
+ mtrx07 =  1  1  0 -1  0  1  1  0  0
+ mtrx08 =  0  0  1  1  0 -1  0  1  1
+ mtrx09 =  1  0  0 -1 -1  0  1  0 -1
+ mtrx10 = -1  0  0  0  0  1  0  1  0
+ mtrx11 =  0  1  1  0  0 -1 -1  0  1
+ mtrx12 =  0 -1 -1  1  1  0  0 -1  0
+ mtrx13 =  0  1  0  1  0  0  0  0 -1
+ mtrx14 = -1  0  1  0 -1 -1  0  0  1
+ mtrx15 =  0 -1  0  0  1  1 -1 -1  0
+ mtrx16 =  1  0 -1 -1  0  0  1  1  0
+ mtrx17 =  1  0 -1  0  0  1  0 -1 -1
+ mtrx18 = -1  0  1  1  1  0 -1  0  0
+ mtrx19 =  0  1  0 -1 -1  0  0  1  1
+ mtrx20 =  0 -1  0  0  0 -1  1  0  0
+ mtrx21 =  1  1  0  0 -1 -1  0  1  0
+ mtrx22 =  0  0  1 -1  0  0  0 -1  0
+ mtrx23 =  0  0 -1  0  1  1  1  0 -1
+ mtrx24 = -1 -1  0  1  0  0 -1  0  1
+ mtrx25 = -1  0  0  0 -1  0  0  0 -1
+ mtrx26 =  0 -1 -1  0  1  0 -1 -1  0
+ mtrx27 =  1  0  0 -1  0  1  1  1  0
+ mtrx28 =  0  1  1  1  0 -1  0  0  1
+ mtrx29 =  0  0  1  0  1  0  1  0  0
+ mtrx30 =  1  1  0  0 -1  0  0  1  1
+ mtrx31 = -1 -1  0  1  0 -1 -1  0  0
+ mtrx32 =  0  0 -1 -1  0  1  0 -1 -1
+ mtrx33 = -1  0  0  1  1  0 -1  0  1
+ mtrx34 =  1  0  0  0  0 -1  0 -1  0
+ mtrx35 =  0 -1 -1  0  0  1  1  0 -1
+ mtrx36 =  0  1  1 -1 -1  0  0  1  0
+ mtrx37 =  0 -1  0 -1  0  0  0  0  1
+ mtrx38 =  1  0 -1  0  1  1  0  0 -1
+ mtrx39 =  0  1  0  0 -1 -1  1  1  0
+ mtrx40 = -1  0  1  1  0  0 -1 -1  0
+ mtrx41 = -1  0  1  0  0 -1  0  1  1
+ mtrx42 =  1  0 -1 -1 -1  0  1  0  0
+ mtrx43 =  0 -1  0  1  1  0  0 -1 -1
+ mtrx44 =  0  1  0  0  0  1 -1  0  0
+ mtrx45 = -1 -1  0  0  1  1  0 -1  0
+ mtrx46 =  0  0 -1  1  0  0  0  1  0
+ mtrx47 =  0  0  1  0 -1 -1 -1  0  1
+ mtrx48 =  1  1  0 -1  0  0  1  0 -1
+ 
+       k =  0.000000  0.000000  0.000000 ik =   1 spin = 1
+
+   n         Emf          Eo           X        SX-X          CH         Sig         Vxc        Eqp0        Eqp1       Znk
+   1   -3.379408   -3.379408   -8.388935    7.786195   -4.726227   -5.328968   -5.294205   -3.414171   -3.398496    0.549102
+   2   11.450061   11.450061   -0.604220   -0.068705   -5.914211   -6.587136   -5.305585   10.168510   10.546307    0.705203
+   3   11.450061   11.450061   -0.604220   -0.068705   -5.914211   -6.587136   -5.305585   10.168510   10.546307    0.705203
+   4   11.450061   11.450061   -0.604220   -0.068705   -5.914211   -6.587136   -5.305585   10.168510   10.546307    0.705203
+   5   12.536430   12.536430   -0.601886   -0.070074   -4.893860   -5.565821   -5.307620   12.278229   12.373367    0.631534
+   6   12.536430   12.536430   -0.601886   -0.070074   -4.893860   -5.565821   -5.307620   12.278229   12.373367    0.631534
+ 
+       k =  0.500000  0.500000  0.500000 ik =  72 spin = 1
+
+   n         Emf          Eo           X        SX-X          CH         Sig         Vxc        Eqp0        Eqp1       Znk
+   1    4.421010    4.421010   -1.304364    1.506044   -6.532394   -6.330714   -5.333944    3.424240    3.946064    0.476484
+   2    4.421010    4.421010   -1.304364    1.506044   -6.532394   -6.330714   -5.333944    3.424240    3.946064    0.476484
+   3    4.647144    4.647144   -1.258593    1.610944   -6.767326   -6.414975   -5.286306    3.518476    4.128823    0.459233
+   4    4.647144    4.647144   -1.258593    1.610944   -6.767326   -6.414975   -5.286306    3.518476    4.128823    0.459233
+   5    4.647144    4.647144   -1.258593    1.610944   -6.767326   -6.414975   -5.286306    3.518476    4.128823    0.459233
+   6    7.150711    7.150711   -0.957738   -0.368710   -5.269889   -6.596337   -5.066781    5.621155    5.908032    0.812444
+ 
+
+================================================================================
+
+    n = band index.
+  Emf = "inner" mean-field energy eigenvalue used to construct Sigma(E),
+        read from WFN_inner.
+   Eo = "outer" mean-field energy eigenvalue where we center the evaluation
+        frequency grid {E} of Sigma(E). Defaults to Emf, unless
+        you use WFN_outer and eqp_outer.dat / scissors_outer.
+  Vxc = exchange-correlation pot., calculated from VXC or read from vxc.dat.
+    X = bare exchange.
+   SX = screened exchange contrib. to Sigma(E) at energy E=Eo
+   CH = Coulomb hole contrib. to Sigma(E) at energy E=Eo
+  Cor = SX-X + CH = correlation portion of Sigma(E) at energy E=Eo.
+  Sig = X + Cor = self energy, Sigma(E), at energy E=Eo.
+ Eqp0 = Emf - Vxc + Sig(Eo)
+        (Eqp0 is the on-shell QP energy, not recommended for direct usage)
+ Eqp1 = Eqp0 + (dSig/dE) / (1 - dSig/dE) * (Eqp0 - Eo)
+        (Eqp1 is the off-shell QP energy obtained by solving the linearized
+         Dyson`s equation, and is the recommended quantity for QP properties.)
+  Znk = quasiparticle renormalization factor
+
+ Notes on the finite_difference_form from sigma.inp file:
+   none    : -2 => dSig/dE = 0 (skip the expansion)
+   backward: -1 => dSig/dE = (Sig(Eo) - Sig(Eo-dE)) / dE
+   central :  0 => dSig/dE = (Sig(Eo+dE) - Sig(Eo-dE)) / (2*dE)
+   forward :  1 => dSig/dE = (Sig(Eo+dE) - Sig(Eo)) / dE
+   default :  2 => forward for diagonal and none for off-diagonal
+   dE is finite_difference_spacing from Sigma.inp file.
+   We are using the form #2 with dE = 1.000 eV.
+
+ General notes:
+ - All energies are reported here in eV.
+ - Both Emf and Vxc contain the average pot. Vxc0, so Vxc0 doesn`t affect Sigma.
+ - Eqp1 and Eqp0 are Eqs. (36-37) from Hybertsen & Louie PRB 34 5390.
+ - We recommend you use Eqp1 for QP properties of materials.
+
+================================================================================
+

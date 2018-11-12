@@ -1,0 +1,27 @@
+#!/bin/bash -l
+
+#
+PARATEC="$HOME/paratecSGL/bin/paratec.mpi"
+VOLUME="$HOME/BerkeleyGW/bin/volume.py"
+SURFACE="$HOME/BerkeleyGW/bin/surface.x"
+AVERAGE="$HOME/BerkeleyGW/bin/average.py"
+
+# put argument for number of procs here too if needed, e.g. -n 8
+MPIRUN="mpirun"
+#
+cd ./1-scf
+# line below is a workaround for a bug in pre-r492 paratec
+mkdir vis
+$MPIRUN $PARATEC
+$VOLUME ./input paratec ./vis/CHARGE___.a3Dr a3dr ./rho.cube cube true re false
+$VOLUME ./input paratec ./vis/VEFFAVG.a3Dr a3dr ./vtot.cube cube true re false
+$VOLUME ./input paratec ./vis/VELECAVG.a3Dr a3dr ./velec.cube cube true re false
+$SURFACE ./surface.par &> ./surface.out
+$AVERAGE ./velec.cube cube faces 0.5 0.5 0.5 &> ./velec_avg_face.out
+$AVERAGE ./vtot.cube cube volume &> ./vtot_avg_vol.out
+cd ..
+#
+cd ./2-nscf
+$MPIRUN $PARATEC
+cd ..
+#

@@ -1,0 +1,12 @@
+&inputpp
+   prefix = 'benzene'
+   outdir = './'
+   filplot = 'rho'
+   plot_num = 0
+   spin_component = 0
+/
+&plot
+   iflag = 3
+   output_format = 6
+   fileout = 'rho.cube'
+/

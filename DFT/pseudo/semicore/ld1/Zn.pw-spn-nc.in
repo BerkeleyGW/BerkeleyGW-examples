@@ -1,0 +1,22 @@
+&input
+  title = 'Zn'
+  zed = 30.0
+  rel = 1
+  config = '[Ar] 3d10.0 4s0.0 4p0.0'
+  iswitch = 3
+  dft = 'SLA+PW'
+/
+&inputp
+  pseudotype = 2
+  file_pseudopw = 'Zn.pw-spn-nc.UPF'
+  author = 'TM'
+  lloc = 2
+  nlcc = .true.
+  new_core_ps = .true.
+  tm = .false.
+  rho0 = 0.01
+/
+3
+3S  1  0  2.00  0.00  1.00  1.00  0.0
+3P  2  1  6.00  0.00  1.00  1.00  0.0
+3D  3  2 10.00  0.00  0.85  0.85  0.0

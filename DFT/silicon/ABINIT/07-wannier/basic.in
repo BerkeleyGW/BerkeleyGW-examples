@@ -1,0 +1,27 @@
+#Read Symmetries from an external file
+#include "symrel.in"
+
+#symmorphi 0
+
+chksymbreak 0
+
+#Definition of the planewave basis set
+ecut 20.0 #hartrees
+
+#Definition of the lattice parameters:
+acell 3*10.261200
+rprim 
+      0.000000000000       0.500000000000       0.500000000000
+      0.500000000000       0.000000000000       0.500000000000
+      0.500000000000       0.500000000000       0.000000000000
+
+#Definition of the atom types
+ntypat 1     #one type of atoms
+znucl 14     #atomic number
+natom  2     #number of atoms
+typat 2*1    #atom type for each atom
+
+#Atomic coordinates:
+xred
+-1/8 -1/8 -1/8
+1/8 1/8 1/8

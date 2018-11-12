@@ -1,0 +1,31 @@
+#!/bin/bash -l
+
+#
+BGW_BIN="$HOME/BerkeleyGW/bin"
+EPS_EXEC="$BGW_BIN/epsilon.cplx.x"
+EPSINVOMEGA_EXEC="$BGW_BIN/epsinvomega.cplx.x"
+
+#
+MPI_CMD="aprun -n 1536"
+MPI_CMD_FF="aprun -n 768"
+MPI_CMD_SERIAL="aprun -n 1"
+
+cd ./epsilon
+ln -s ../../ESPRESSO/2_sapo/WFN/wfn.complex ./WFN
+ln -s ../../ESPRESSO/2_sapo/WFNq/wfn.complex ./WFNq
+$MPI_CMD $EPS_EXEC > ./epsilon.out &
+
+cd ../epsilon_ff
+ln -s ../../ESPRESSO/2_sapo/WFN/wfn.complex ./WFN
+ln -s ../../ESPRESSO/2_sapo/WFNq/wfn.complex ./WFNq
+$MPI_CMD_FF $EPS_EXEC > ./epsilon.out &
+
+wait
+
+cd ../epsinvomega
+mv ./epsinvomega1.inp ./epsinvomega.inp
+$MPI_CMD_SERIAL $EPSINVOMEGA_EXEC > ./epsinvomega1.out
+mv ./epsinvomega.inp ./epsinvomega1.inp
+mv ./epsinvomega2.inp ./epsinvomega.inp
+$MPI_CMD_SERIAL $EPSINVOMEGA_EXEC > ./epsinvomega2.out
+mv ./epsinvomega.inp ./epsinvomega2.inp

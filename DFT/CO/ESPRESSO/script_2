@@ -1,0 +1,42 @@
+#!/bin/bash -l
+#SBATCH -t 00:30:00
+#SBATCH -p debug
+#SBATCH -N 1
+#SBATCH -n 24
+#SBATCH -c 1
+
+# Edit these lines as needed
+module load espresso
+PW=pw.x
+PW2BGW=pw2bgw.x
+export OMP_NUM_THREADS=1
+# put argument for number of procs here too if needed, e.g. -n 8
+MPIRUN="srun -n 24"
+
+cd ./1-scf
+$MPIRUN $PW -in ./in &> ./out
+rm ./*.wfc*
+cd ..
+#
+#BEGIN_INTERNAL_ONLY
+# FHJ: Forces don't work.
+if false; then
+PH=ph.x
+cd ./11-phonon
+$MPIRUN $PH -in ./in &> ./out
+cd ..
+#
+fi
+#END_INTERNAL_ONLY
+cd ./2-wfn
+$MPIRUN $PW -in ./in &> ./out
+$MPIRUN $PW2BGW -in ./pp_in &> ./pp_out
+#BEGIN_INTERNAL_ONLY
+# FHJ: Forces don't work.
+if false; then
+$MPIRUN $PW2BGW -in ./pp_dfpt_in &> ./pp_dfpt_out
+fi
+#END_INTERNAL_ONLY
+rm ./*.wfc*
+cd ..
+#

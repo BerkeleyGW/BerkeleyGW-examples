@@ -1,0 +1,28 @@
+
+SystemLabel     benzene
+NumberOfSpecies 2
+
+%block ChemicalSpeciesLabel
+1 6 C
+2 1 H
+%endblock ChemicalSpeciesLabel
+
+Denchar.TypeOfRun 3D
+Denchar.PlotCharge F
+Denchar.PlotWaveFunctions T
+Denchar.CoorUnits Bohr
+Denchar.NumberPointsX 128
+Denchar.NumberPointsY 72
+Denchar.NumberPointsZ 144
+Denchar.MinX  0.000000000 Bohr
+Denchar.MaxX 25.715286416 Bohr
+Denchar.MinY  0.000000000 Bohr
+Denchar.MaxY 14.294791031 Bohr
+Denchar.MinZ  0.000000000 Bohr
+Denchar.MaxZ 28.087960690 Bohr
+
+## Note that the MaxX, MaxY and MaxZ values above are 1 grid point smaller
+## than the Lattice vectors defined in the "in" file. This is because
+## Denchar uses a general grid but siesta2bgw requires periodic grid to do 
+## FFT on. See the difference between general to periodic grids: 
+## http://www.xcrysden.org/doc/XSF.html

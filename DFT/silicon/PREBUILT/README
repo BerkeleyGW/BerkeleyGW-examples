@@ -1,0 +1,3 @@
+This directory contains pre-built DFT inputs for the calculations, based on
+Quantum ESPRESSO runs. Use script_1 to download and unpack the archive,
+convert from ASCII to binary, and create symbolic links.

@@ -1,0 +1,11 @@
+#!/bin/bash -l
+#
+SAPO="$HOME/BerkeleyGW/bin/sapo.real.x"
+
+# put argument for number of procs here too if needed, e.g. -n 8
+MPIRUN="mpirun"
+#
+cd ./4-sapo
+$MPIRUN $SAPO &> ./sapo.out
+cd ..
+#

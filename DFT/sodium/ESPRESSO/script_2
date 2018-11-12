@@ -1,0 +1,32 @@
+#!/bin/bash -l
+
+#
+PW="$HOME/espresso-5.0/bin/pw.x"
+PW2BGW="$HOME/espresso-5.0/bin/pw2bgw.x"
+
+# put argument for number of procs here too if needed, e.g. -n 8
+MPIRUN="mpirun"
+#
+cd ./01-scf
+$MPIRUN $PW -in ./in &> ./out
+rm ./*.wfc*
+cd ..
+#
+cd ./02-wfn
+$MPIRUN $PW -in ./in &> ./out
+$MPIRUN $PW2BGW -in ./pp_in &> ./pp_out
+rm ./*.wfc*
+cd ..
+#
+cd ./03-wfn_fi
+$MPIRUN $PW -in ./in &> ./out
+$MPIRUN $PW2BGW -in ./pp_in &> ./pp_out
+rm ./*.wfc*
+cd ..
+#
+cd ./04-wfn_co
+$MPIRUN $PW -in ./in &> ./out
+$MPIRUN $PW2BGW -in ./pp_in &> ./pp_out
+rm ./*.wfc*
+cd ..
+#

@@ -1,0 +1,68 @@
+#
+# BENZENE MOLECULE for PARATEC/ESPRESSO/SIESTA
+#
+# this example teaches to select unit-cell size and number of unoccupied states,
+# to generate SIESTA wavefunctions and simple approximate physical orbitals (SAPO),
+# to iteratively compute self-energy at quasiparticle energy and to get absolute
+# quasiparticle energies relative to the vacuum level
+#
+# ----------------------------------------
+#
+# get size of FFT grid and dielectric matrix (directory 0)
+# ng = 2637 in ./0-gsphere/g_eps.out ==> use approximately that many unoccupied states
+# ESPRESSO: grid3 = 144 in ./0-gsphere/g_rho.out ==> run espresso on 144 processors
+#
+sh ./script_0
+#
+# create symbolic links
+#
+# Enter PARATEC or ESPRESSO directory.
+sh ./script_1
+#
+# generate charge density, do post-processing (directory 1)
+# PARATEC: run nscf calculation, generate WFN/RHO/VXC/vxc.dat (directory 2)
+# ESPRESSO: run nscf calculation, run pw2bgw wrapper (directory 2)
+# multiply dx,dy,dz from ./1-scf/surface.out by a factor of 2 to get unit-cell size
+# electrostatic potential averaged on unit-cell faces in ./1-scf/velec_avg_face.out is used via keyword avgpot_outer in sig.inp
+# the averaging is taken on planes 0.5 0.5 0.5 because benzene is at the origin of the coordinate system
+# total potential averaged in unit-cell volume in ./1-scf/vtot_avg_vol.out is used to align kinetic energies of plane-waves in sapo.inp
+#
+PARATEC: Submit script_2. Suggested ncpu = 128, walltime = 6:00:00
+ESPRESSO: Submit script_2. Suggested ncpu = 144, walltime = 6:00:00
+#
+# Leave PARATEC or ESPRESSO directory.
+# run siesta, denchar, grid2cube (directory 3)
+# this step is performed in serial because denchar doesn't run in parallel
+# grid2cube step is to generate rho and vxc for running Sigma on top of SIESTA (not done in this example)
+# note that Denchar.MaxX = a1 * (nr1 - 1) / nr1 in ./3-siesta/in_denchar, same for MaxY and MaxZ
+# this is needed to generate wavefunctions on periodic grid, not on general grid
+#
+sh ./script_3
+#
+# run siesta2bgw wrapper (directory 3)
+# for siesta-2, set wfng_gamma_real = .true. in ./3-siesta/siesta2bgw.inp
+# for siesta-3, set wfng_gamma_real = .false. in ./3-siesta/siesta2bgw.inp
+# this controls the naming convention of siesta wavefunction files
+#
+Submit script_4. Suggested ncpu = 144, walltime = 0:15:00
+#
+# run SAPO (directory 4)
+# replace ./4-sapo/sapo.inp with ./4-sapo/sapo_ham.inp to diagonalize Hamiltonian
+# sapo_planewave_max = 4087 is obtained by changing 6.0 to 8.0 in ./0-gsphere/g_eps.in
+# sapo_energy_shift = -0.987586 is obtained from ./1-scf/vtot_avg_vol.out
+# aux_energy_shift = -0.06421 is obtained by subtracting SIESTA HOMO from PW HOMO
+# sapo_energy_min = -0.060680486 is set to highest PW state included in SAPO (sapo_band_number = 17) converted to Ry
+# sapo_energy_max = 7.031033188 is obtained by adding ./1-scf/velec_avg_face.out converted to Ry to cutoff energy = 7 Ry
+#
+Submit script_5. Suggested ncpu = 144, walltime = 0:15:00
+#
+# compute inverse dielectric matrix, calculate quasiparticle energies on top of PW and SAPO (directories 5 and 6)
+# run Sigma twice to compute self-energy at quasiparticle energy (this should be done iteratively until convergence)
+# include states up to 6.0 Ry + ./1-scf/velec_avg_face.out = 82.05637958 eV
+# for PW, there are 2699 states
+# for SAPO, the eigenvalues can be found in ./4-sapo/ener_k1_s1.dat
+# for ./4-sapo/sapo.inp, there are 2749 states
+# for ./4-sapo/sapo_ham.inp, there are 2601 states
+#
+Submit script_6. Suggested ncpu = 256, walltime = 0:30:00
+#

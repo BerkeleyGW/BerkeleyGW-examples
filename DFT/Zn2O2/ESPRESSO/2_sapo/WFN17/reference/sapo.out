@@ -1,0 +1,114 @@
+
+ BerkeleyGW  trunk  revision 5439
+
+ SAPO  Complex version  Run on  26-Jun-2013  at  22:59:36 -0400
+
+--------------------------------------------------------------------------------
+ Please cite the following papers when using results from BerkeleyGW:
+
+ Jack Deslippe, Georgy Samsonidze, David A. Strubbe, Manish Jain, Marvin L.
+ Cohen, and Steven G. Louie, "BerkeleyGW: A Massively Parallel Computer Package
+ for the Calculation of the Quasiparticle and Optical Properties of Materials
+ and Nanostructures," Comput. Phys. Commun. 183, 1269 (2012)
+
+ Mark S. Hybertsen and Steven G. Louie, "Electron correlation in semiconductors
+ and insulators: Band gaps and quasiparticle energies," Phys. Rev. B 34, 5390
+ (1986)
+
+ Michael Rohlfing and Steven G. Louie, "Electron-hole excitations and optical
+ spectra from first principles," Phys. Rev. B 62, 4927 (2000)
+--------------------------------------------------------------------------------
+
+ Running MPI version (parallel)
+
+ Running with   64 MPI task(s)
+
+ Reading parameters from file sapo.inp
+
+ nsym = 12  nk = 1  ns = 1  nb = 26  ng = 346889  ngkmax = 43296
+ ng_l = 5421  ng_g = 346944  ngk_l = 677  ngk_g = 43328
+ FFTgrid = ( 80 80 128 )  nFFTgridpts = 819200
+ nbinp = 0  nbpw = 1501  b2g = 0  nbaux = 0  nbtot = 1501
+
+ Reading wavefunctions from file wfn.complex.pw
+
+ Generating plane waves
+
+ Generating completely random wavefunctions
+
+ Reading potential from file vsc.complex
+
+ Reading potential from file vkb.complex
+
+ Constructing and diagonalizing Hamiltonian
+
+ 
+ BLACS processor grid:   8 x   8; BLOCKSIZE =   32
+ 
+ Memory available: 1918.4 MB per MPI task, 16 MPI tasks per node
+ Memory required for execution: 2425.6 MB per MPI task
+
+   ik =    1   is =  1   idiag =    1   dE(Ry) = 233.481158497734526   residual = 252.483462697657245
+   ik =    1   is =  1   idiag =    2   dE(Ry) =  54.304498788569305   residual =  69.518201528928017
+   ik =    1   is =  1   idiag =    3   dE(Ry) =  71.047055654045863   residual =  83.563008506363758
+   ik =    1   is =  1   idiag =    4   dE(Ry) =  73.601619839582327   residual =  82.202084286724698
+   ik =    1   is =  1   idiag =    5   dE(Ry) =  38.765897099018829   residual =  42.495434967186227
+   ik =    1   is =  1   idiag =    6   dE(Ry) =  23.805964072470971   residual =  25.382842983464698
+   ik =    1   is =  1   idiag =    7   dE(Ry) =   6.435643345688462   residual =   6.553263967435653
+   ik =    1   is =  1   idiag =    8   dE(Ry) =   0.026506849264903   residual =   0.057006749959971
+   ik =    1   is =  1   idiag =    9   dE(Ry) =   0.000022289583740   residual =   0.000788573955599
+   ik =    1   is =  1   idiag =   10   dE(Ry) =   0.000000003461807   residual =   0.000014704578398
+   ik =    1   is =  1   idiag =   11   dE(Ry) =   0.000000000214754   residual =   0.000044283274978
+   ik =    1   is =  1   idiag =   12   dE(Ry) =********************   residual =********************
+   ik =    1   is =  1   idiag =   13   dE(Ry) =   0.000000000000000   residual =   0.000044283274978
+   ik =    1   is =  1   idiag =   14   dE(Ry) =   0.000000000010793   residual =   0.000000475900048
+   ik =    1   is =  1   idiag =   15   dE(Ry) =   0.000000000000114   residual =   0.000000016621580
+ 
+ Maximum number of iterations:
+        15  of     100
+
+ Maximum change in eigenvalues (Ry):
+    max | delta E_nk | =   0.000000000000114
+
+ Maximum norm of residual vectors (Ry):
+    max | R_nk | =   0.000000016621580
+
+ Writing wavefunctions to file wfn.complex
+
+ Checking orthonormality for ik = 1 is = 1
+
+ Maximum deviation from orthonormality:
+    max ( < nk | mk > - delta_nm ) =   0.000000000006826
+
+
+                      CPU [s]        WALL [s]           #
+
+INIT:                   0.220           0.317           6
+INPUT:                  0.070           0.132           1
+INPUT_AUX:              0.000           0.000           1
+GEN_PW:                 0.380           0.411           1
+RANDOM:                 0.080           0.077           1
+DROP:                   0.000           0.000           1
+ORTHONORM:              0.000           0.000           1
+SORT:                   0.000           0.000           1
+HAMILTONIAN:         6094.610        6119.972           1
+HAM (INPUT):            0.080           0.301           2
+HAM (COMM):             0.020           0.658       19694
+HAM (PLAN):             0.000           0.000           0
+HAM (FFT):            486.480         496.523       39358
+HAM (KIN):              0.030           0.233       19679
+HAM (VSC):              1.380           2.316       19678
+HAM (VKB):             11.810           7.112       19678
+HAM (GATHER):        2071.340        2077.331          33
+HAM (DIAG):          1297.800        1302.749          15
+HAM (WFN):           2232.320        2239.214       19742
+RANGE:                  0.000           0.000           1
+OUTPUT:                 6.110           8.395           1
+CHECK_NORM:            19.090          19.146           1
+PLOT_ENER:              0.000           0.000           1
+PLOT_PROJ:              0.000           0.000           1
+PLOT_AMPL:              0.000           0.000           1
+ 
+TOTAL:               6120.560        6148.559
+ 
+Application 2755950 resources: utime ~392754s, stime ~670s, Rss ~1816216, inblocks ~153617, outblocks ~2173484

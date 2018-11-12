@@ -1,0 +1,32 @@
+#
+# BULK ZINC OXIDE
+#
+# This example is from J. Phys.: Condens. Matter 26, 475501 (2014) (arXiv:1407.3781)
+#
+# Sample output from each run, generated based on ESPRESSO DFT input, is
+# in each directory of the GW/BSE calculations, for comparison.
+#
+# Enter ESPRESSO directory.
+# cd ./ESPRESSO
+#
+# run scf, generate rho and vxc
+# Submit qscript_1. Suggested ncpu = 144, walltime = 1:00:00
+#
+# generate wavefunctions
+# Submit qscript_2. Suggested ncpu = 3136, walltime = 2:00:00
+#
+# Return to ZnO directory.
+# cd ..
+#
+# generate dielectric matrix
+# Submit qscript_3. Suggested ncpu = 2304, walltime = 3:00:00
+#
+# calculate self-energy corrections
+# Submit qscript_4. Suggested ncpu = 2048, walltime = 12:00:00
+#
+# interpolate quasiparticle band structure
+# Submit qscript_5. Suggested ncpu = 16, walltime = 0:30:00
+#
+# plot the results
+# Run plot_Zn2O2_epsinv.py and plot_Zn2O2_band.py
+#

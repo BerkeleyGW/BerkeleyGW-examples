@@ -1,0 +1,8 @@
+&input_pw2bgw
+   prefix = 'Zn2O2'
+   real_or_complex = 2
+   rhog_flag = .true.
+   rhog_file = 'rho_valence.complex'
+   rhog_nvmin = 21
+   rhog_nvmax = 26
+/

@@ -1,0 +1,15 @@
+#!/bin/bash -l
+
+#edit these lines as needed
+PARATEC="$HOME/paratecSGL/bin/paratec.mpi"
+
+# put argument for number of procs here too if needed, e.g. -n 8
+MPIRUN="mpirun"
+###############################################################################
+cd ./1-scf
+$MPIRUN $PARATEC
+cd ..
+#
+cd ./2-wfn
+$MPIRUN $PARATEC
+cd ..

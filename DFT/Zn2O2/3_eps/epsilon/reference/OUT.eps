@@ -1,0 +1,728 @@
+
+ BerkeleyGW  trunk  revision 5439
+
+ Epsilon  Complex version  Run on  28-Jun-2013  at  13:55:04 -0400
+
+--------------------------------------------------------------------------------
+ Please cite the following papers when using results from BerkeleyGW:
+
+ Jack Deslippe, Georgy Samsonidze, David A. Strubbe, Manish Jain, Marvin L.
+ Cohen, and Steven G. Louie, "BerkeleyGW: A Massively Parallel Computer Package
+ for the Calculation of the Quasiparticle and Optical Properties of Materials
+ and Nanostructures," Comput. Phys. Commun. 183, 1269 (2012)
+
+ Mark S. Hybertsen and Steven G. Louie, "Electron correlation in semiconductors
+ and insulators: Band gaps and quasiparticle energies," Phys. Rev. B 34, 5390
+ (1986)
+
+ Michael Rohlfing and Steven G. Louie, "Electron-hole excitations and optical
+ spectra from first principles," Phys. Rev. B 62, 4927 (2000)
+--------------------------------------------------------------------------------
+
+ Running MPI version (parallel)
+
+ Running with 1536 MPI task(s)
+
+ Experimental Features
+  - FFTs Optimization Level:  0
+  - Parallel Frequencies:     1
+  - Use HDF5 Parallel IO:     F
+ 
+ Computing the static inverse dielectric matrix
+
+ We are using matrix communication scheme
+
+ We are communicating via MPI
+
+ We are using no truncation
+
+ Running with 4 valence pools
+ Number of conduction bands per processor: 4
+ Number of valence bands per processor: 7
+
+ Memory available: 1931.6 MB per PE
+ Memory required for execution: 1164.9 MB per PE
+ Memory required for vcoul:    0.0 MB per PE
+
+ Highest occupied band (unshifted grid) = 26
+ Middle energy (unshifted grid) =      9.373930 eV
+ Fermi  energy (unshifted grid) =      9.373930 eV
+
+ Number of electrons per unit cell =  52.000000
+ Plasma Frequency =   2.853566 Rydberg
+
+ 
+ Started reading wavefunctions (WFN) with 27 k-point(s) at 13:55:11.
+ [ 13:55:11 |   0% ] k-point      1 / 27.
+ [ 13:55:39 |   7% ] k-point      3 / 27, remaining: 353 s.
+ [ 13:56:25 |  19% ] k-point      6 / 27, remaining: 331 s.
+ [ 13:57:07 |  30% ] k-point      9 / 27, remaining: 277 s.
+ [ 13:57:35 |  37% ] k-point     11 / 27, remaining: 246 s.
+ [ 13:58:18 |  48% ] k-point     14 / 27, remaining: 201 s.
+ [ 13:59:05 |  59% ] k-point     17 / 27, remaining: 161 s.
+ [ 13:59:34 |  67% ] k-point     19 / 27, remaining: 132 s.
+ [ 14:00:17 |  78% ] k-point     22 / 27, remaining: 88 s.
+ [ 14:01:05 |  89% ] k-point     25 / 27, remaining: 44 s.
+ Finished reading wavefunctions (WFN) at 14:01:48.
+ Elapsed time: 397 s.
+ 
+
+
+ ECUTS  = 80.000000
+ NBANDS = 1500
+ NQ     =  15
+
+
+ Scissors parameters
+ Valence:    es =   0.0000 eV, e0 =   0.0000 eV, edel =   0.0000
+ Conduction: es =   0.0000 eV, e0 =   0.0000 eV, edel =   0.0000
+ Q0 and |Q0| =  0.000600  0.000600  0.000600  0.001286
+ Q =  0.000000  0.000000  0.333333
+ Q =  0.000000  0.000000  0.666667
+ Q =  0.000000  0.200000  0.000000
+ Q =  0.000000  0.200000  0.333333
+ Q =  0.000000  0.200000  0.666667
+ Q =  0.000000  0.400000  0.000000
+ Q =  0.000000  0.400000  0.333333
+ Q =  0.000000  0.400000  0.666667
+ Q =  0.200000  0.200000  0.000000
+ Q =  0.200000  0.200000  0.333333
+ Q =  0.200000  0.200000  0.666667
+ Q =  0.200000  0.400000  0.000000
+ Q =  0.200000  0.400000  0.333333
+ Q =  0.200000  0.400000  0.666667
+ 
+ You have a slightly shifted q0 vector and a semiconductor.
+ So reading from WFNq.
+ 
+ Reading Shifted Wavefunction WFNq
+ Highest occupied band (shifted grid) = 26
+ 
+ Started reading wavefunctions (WFNq) with 120 k-point(s) at 14:01:48.
+ [ 14:01:48 |   0% ] k-point      1 / 120.
+ [ 14:02:08 |   2% ] k-point      3 / 120, remaining: 799 s.
+ [ 14:02:32 |   9% ] k-point     12 / 120, remaining: 344 s.
+ [ 14:02:43 |  19% ] k-point     24 / 120, remaining: 184 s.
+ [ 14:02:47 |  29% ] k-point     36 / 120, remaining: 115 s.
+ [ 14:02:51 |  39% ] k-point     48 / 120, remaining: 80 s.
+ [ 14:02:55 |  49% ] k-point     60 / 120, remaining: 57 s.
+ [ 14:02:59 |  59% ] k-point     72 / 120, remaining: 41 s.
+ [ 14:03:03 |  69% ] k-point     84 / 120, remaining: 28 s.
+ [ 14:03:07 |  79% ] k-point     96 / 120, remaining: 17 s.
+ [ 14:03:10 |  89% ] k-point    108 / 120, remaining: 9 s.
+ [ 14:03:14 |  99% ] k-point    120 / 120, remaining: 1 s.
+ Finished reading wavefunctions (WFNq) at 14:03:14.
+ Elapsed time: 86 s.
+ 
+
+ Crystal k+q WFs read from WFNq
+ nfk=         225
+
+================================================================================
+ Dealing now with q-point   0.00060000  0.00060000  0.00060000
+================================================================================
+
+ This is the special q->0 point.
+ Rank of the polarizability matrix (nmtx):     3909
+ 
+ BLACS processor grid:  32 x  48; BLOCKSIZE =   32
+ 
+ Number of k-points in the irreducible BZ(q) (nrk):      120
+ 
+ Started calculation of matrix elements with 120 transition(s) at 14:03:15.
+ [ 14:03:15 |   0% ] transition      1 / 120.
+ [ 14:03:21 |   2% ] transition      3 / 120, remaining: 388 s.
+ [ 14:03:51 |   9% ] transition     12 / 120, remaining: 355 s.
+ [ 14:04:30 |  19% ] transition     24 / 120, remaining: 315 s.
+ [ 14:05:08 |  29% ] transition     36 / 120, remaining: 275 s.
+ [ 14:05:48 |  39% ] transition     48 / 120, remaining: 237 s.
+ [ 14:06:27 |  49% ] transition     60 / 120, remaining: 198 s.
+ [ 14:07:06 |  59% ] transition     72 / 120, remaining: 160 s.
+ [ 14:07:45 |  69% ] transition     84 / 120, remaining: 120 s.
+ [ 14:08:24 |  79% ] transition     96 / 120, remaining: 81 s.
+ [ 14:09:04 |  89% ] transition    108 / 120, remaining: 42 s.
+ [ 14:09:40 |  99% ] transition    120 / 120, remaining: 3 s.
+ Finished calculation of matrix elements at 14:09:43.
+ Elapsed time: 388 s.
+ 
+
+ Done Polarizability
+  
+  Doing q0:   5.999999999999999E-004  5.999999999999999E-004
+  5.999999999999999E-004  1.286210533128321E-003
+  
+  
+ Head Before Inversion =  (4.87288136970222,0.000000000000000E+000)
+  
+ Head After Inversion =  (0.219221376575565,2.062387257588505E-019)
+ For q0 points, you should check the symmetry (eps(G,G') = eps*(-G,-G')) by
+ using the eps0sym code. Wavefunction convergence, as well as a finite q shift
+ may cause this property of eps(G,G') to be broken.
+
+================================================================================
+ Dealing now with q-point   0.00000000  0.00000000  0.33333333
+================================================================================
+
+ This is a regular non-zero q-point.
+ Rank of the polarizability matrix (nmtx):     3844
+ 
+ BLACS processor grid:  32 x  48; BLOCKSIZE =   32
+ 
+ Number of k-points in the irreducible BZ(q) (nrk):       27
+ 
+ Started calculation of matrix elements with 27 transition(s) at 14:13:58.
+ [ 14:13:58 |   0% ] transition      1 / 27.
+ [ 14:14:04 |   7% ] transition      3 / 27, remaining: 80 s.
+ [ 14:14:14 |  19% ] transition      6 / 27, remaining: 70 s.
+ [ 14:14:24 |  30% ] transition      9 / 27, remaining: 61 s.
+ [ 14:14:30 |  37% ] transition     11 / 27, remaining: 54 s.
+ [ 14:14:40 |  48% ] transition     14 / 27, remaining: 45 s.
+ [ 14:14:50 |  59% ] transition     17 / 27, remaining: 35 s.
+ [ 14:14:56 |  67% ] transition     19 / 27, remaining: 29 s.
+ [ 14:15:06 |  78% ] transition     22 / 27, remaining: 19 s.
+ [ 14:15:15 |  89% ] transition     25 / 27, remaining: 10 s.
+ Finished calculation of matrix elements at 14:15:24.
+ Elapsed time: 86 s.
+ 
+
+ Done Polarizability
+  
+ Head Before Inversion =  (4.27724956692757,0.000000000000000E+000)
+  
+ Head After Inversion =  (0.256385079269593,7.351761362735750E-019)
+ For q0 points, you should check the symmetry (eps(G,G') = eps*(-G,-G')) by
+ using the eps0sym code. Wavefunction convergence, as well as a finite q shift
+ may cause this property of eps(G,G') to be broken.
+
+================================================================================
+ Dealing now with q-point   0.00000000  0.00000000  0.66666667
+================================================================================
+
+ This is a regular non-zero q-point.
+ Rank of the polarizability matrix (nmtx):     3844
+ 
+ BLACS processor grid:  32 x  48; BLOCKSIZE =   32
+ 
+ Number of k-points in the irreducible BZ(q) (nrk):       27
+ 
+ Started calculation of matrix elements with 27 transition(s) at 14:18:13.
+ [ 14:18:13 |   0% ] transition      1 / 27.
+ [ 14:18:19 |   7% ] transition      3 / 27, remaining: 79 s.
+ [ 14:18:29 |  19% ] transition      6 / 27, remaining: 70 s.
+ [ 14:18:38 |  30% ] transition      9 / 27, remaining: 61 s.
+ [ 14:18:45 |  37% ] transition     11 / 27, remaining: 54 s.
+ [ 14:18:54 |  48% ] transition     14 / 27, remaining: 45 s.
+ [ 14:19:04 |  59% ] transition     17 / 27, remaining: 35 s.
+ [ 14:19:11 |  67% ] transition     19 / 27, remaining: 29 s.
+ [ 14:19:20 |  78% ] transition     22 / 27, remaining: 19 s.
+ [ 14:19:30 |  89% ] transition     25 / 27, remaining: 10 s.
+ Finished calculation of matrix elements at 14:19:39.
+ Elapsed time: 86 s.
+ 
+
+ Done Polarizability
+  
+ Head Before Inversion =  (4.27724957021083,0.000000000000000E+000)
+  
+ Head After Inversion =  (0.256385079117543,-2.789100738221324E-019)
+ For q0 points, you should check the symmetry (eps(G,G') = eps*(-G,-G')) by
+ using the eps0sym code. Wavefunction convergence, as well as a finite q shift
+ may cause this property of eps(G,G') to be broken.
+
+================================================================================
+ Dealing now with q-point   0.00000000  0.20000000  0.00000000
+================================================================================
+
+ This is a regular non-zero q-point.
+ Rank of the polarizability matrix (nmtx):     3873
+ 
+ BLACS processor grid:  32 x  48; BLOCKSIZE =   32
+ 
+ Number of k-points in the irreducible BZ(q) (nrk):      120
+ 
+ Started calculation of matrix elements with 120 transition(s) at 14:22:26.
+ [ 14:22:26 |   0% ] transition      1 / 120.
+ [ 14:22:32 |   2% ] transition      3 / 120, remaining: 364 s.
+ [ 14:23:00 |   9% ] transition     12 / 120, remaining: 333 s.
+ [ 14:23:37 |  19% ] transition     24 / 120, remaining: 298 s.
+ [ 14:24:14 |  29% ] transition     36 / 120, remaining: 261 s.
+ [ 14:24:51 |  39% ] transition     48 / 120, remaining: 225 s.
+ [ 14:25:28 |  49% ] transition     60 / 120, remaining: 188 s.
+ [ 14:26:05 |  59% ] transition     72 / 120, remaining: 151 s.
+ [ 14:26:42 |  69% ] transition     84 / 120, remaining: 114 s.
+ [ 14:27:18 |  79% ] transition     96 / 120, remaining: 77 s.
+ [ 14:27:55 |  89% ] transition    108 / 120, remaining: 40 s.
+ [ 14:28:30 |  99% ] transition    120 / 120, remaining: 3 s.
+ Finished calculation of matrix elements at 14:28:33.
+ Elapsed time: 366 s.
+ 
+
+ Done Polarizability
+  
+ Head Before Inversion =  (4.13631619686449,0.000000000000000E+000)
+  
+ Head After Inversion =  (0.265719904008740,-2.622816407666550E-018)
+ For q0 points, you should check the symmetry (eps(G,G') = eps*(-G,-G')) by
+ using the eps0sym code. Wavefunction convergence, as well as a finite q shift
+ may cause this property of eps(G,G') to be broken.
+
+================================================================================
+ Dealing now with q-point   0.00000000  0.20000000  0.33333333
+================================================================================
+
+ This is a regular non-zero q-point.
+ Rank of the polarizability matrix (nmtx):     3879
+ 
+ BLACS processor grid:  32 x  48; BLOCKSIZE =   32
+ 
+ Number of k-points in the irreducible BZ(q) (nrk):      120
+ 
+ Started calculation of matrix elements with 120 transition(s) at 14:31:40.
+ [ 14:31:40 |   0% ] transition      1 / 120.
+ [ 14:31:46 |   2% ] transition      3 / 120, remaining: 385 s.
+ [ 14:32:15 |   9% ] transition     12 / 120, remaining: 352 s.
+ [ 14:32:54 |  19% ] transition     24 / 120, remaining: 314 s.
+ [ 14:33:33 |  29% ] transition     36 / 120, remaining: 275 s.
+ [ 14:34:12 |  39% ] transition     48 / 120, remaining: 237 s.
+ [ 14:34:51 |  49% ] transition     60 / 120, remaining: 198 s.
+ [ 14:35:30 |  59% ] transition     72 / 120, remaining: 159 s.
+ [ 14:36:09 |  69% ] transition     84 / 120, remaining: 120 s.
+ [ 14:36:48 |  79% ] transition     96 / 120, remaining: 81 s.
+ [ 14:37:27 |  89% ] transition    108 / 120, remaining: 42 s.
+ [ 14:38:03 |  99% ] transition    120 / 120, remaining: 3 s.
+ Finished calculation of matrix elements at 14:38:06.
+ Elapsed time: 386 s.
+ 
+
+ Done Polarizability
+  
+ Head Before Inversion =  (3.74857127279006,0.000000000000000E+000)
+  
+ Head After Inversion =  (0.295028044052844,1.432144256844284E-018)
+ For q0 points, you should check the symmetry (eps(G,G') = eps*(-G,-G')) by
+ using the eps0sym code. Wavefunction convergence, as well as a finite q shift
+ may cause this property of eps(G,G') to be broken.
+
+================================================================================
+ Dealing now with q-point   0.00000000  0.20000000  0.66666667
+================================================================================
+
+ This is a regular non-zero q-point.
+ Rank of the polarizability matrix (nmtx):     3879
+ 
+ BLACS processor grid:  32 x  48; BLOCKSIZE =   32
+ 
+ Number of k-points in the irreducible BZ(q) (nrk):      120
+ 
+ Started calculation of matrix elements with 120 transition(s) at 14:41:12.
+ [ 14:41:12 |   0% ] transition      1 / 120.
+ [ 14:41:18 |   2% ] transition      3 / 120, remaining: 383 s.
+ [ 14:41:47 |   9% ] transition     12 / 120, remaining: 352 s.
+ [ 14:42:26 |  19% ] transition     24 / 120, remaining: 313 s.
+ [ 14:43:05 |  29% ] transition     36 / 120, remaining: 275 s.
+ [ 14:43:44 |  39% ] transition     48 / 120, remaining: 236 s.
+ [ 14:44:23 |  49% ] transition     60 / 120, remaining: 198 s.
+ [ 14:45:02 |  59% ] transition     72 / 120, remaining: 159 s.
+ [ 14:45:40 |  69% ] transition     84 / 120, remaining: 120 s.
+ [ 14:46:19 |  79% ] transition     96 / 120, remaining: 81 s.
+ [ 14:46:58 |  89% ] transition    108 / 120, remaining: 42 s.
+ [ 14:47:34 |  99% ] transition    120 / 120, remaining: 3 s.
+ Finished calculation of matrix elements at 14:47:37.
+ Elapsed time: 385 s.
+ 
+
+ Done Polarizability
+  
+ Head Before Inversion =  (3.74857127173434,0.000000000000000E+000)
+  
+ Head After Inversion =  (0.295028044164383,1.133875020963801E-018)
+ For q0 points, you should check the symmetry (eps(G,G') = eps*(-G,-G')) by
+ using the eps0sym code. Wavefunction convergence, as well as a finite q shift
+ may cause this property of eps(G,G') to be broken.
+
+================================================================================
+ Dealing now with q-point   0.00000000  0.40000000  0.00000000
+================================================================================
+
+ This is a regular non-zero q-point.
+ Rank of the polarizability matrix (nmtx):     3871
+ 
+ BLACS processor grid:  32 x  48; BLOCKSIZE =   32
+ 
+ Number of k-points in the irreducible BZ(q) (nrk):      120
+ 
+ Started calculation of matrix elements with 120 transition(s) at 14:50:41.
+ [ 14:50:41 |   0% ] transition      1 / 120.
+ [ 14:50:47 |   2% ] transition      3 / 120, remaining: 364 s.
+ [ 14:51:15 |   9% ] transition     12 / 120, remaining: 333 s.
+ [ 14:51:52 |  19% ] transition     24 / 120, remaining: 298 s.
+ [ 14:52:28 |  29% ] transition     36 / 120, remaining: 261 s.
+ [ 14:53:05 |  39% ] transition     48 / 120, remaining: 224 s.
+ [ 14:53:42 |  49% ] transition     60 / 120, remaining: 188 s.
+ [ 14:54:19 |  59% ] transition     72 / 120, remaining: 151 s.
+ [ 14:54:56 |  69% ] transition     84 / 120, remaining: 114 s.
+ [ 14:55:33 |  79% ] transition     96 / 120, remaining: 77 s.
+ [ 14:56:10 |  89% ] transition    108 / 120, remaining: 40 s.
+ [ 14:56:45 |  99% ] transition    120 / 120, remaining: 3 s.
+ Finished calculation of matrix elements at 14:56:47.
+ Elapsed time: 366 s.
+ 
+
+ Done Polarizability
+  
+ Head Before Inversion =  (3.05064218060131,0.000000000000000E+000)
+  
+ Head After Inversion =  (0.370150558928248,-2.577636529135475E-018)
+ For q0 points, you should check the symmetry (eps(G,G') = eps*(-G,-G')) by
+ using the eps0sym code. Wavefunction convergence, as well as a finite q shift
+ may cause this property of eps(G,G') to be broken.
+
+================================================================================
+ Dealing now with q-point   0.00000000  0.40000000  0.33333333
+================================================================================
+
+ This is a regular non-zero q-point.
+ Rank of the polarizability matrix (nmtx):     3884
+ 
+ BLACS processor grid:  32 x  48; BLOCKSIZE =   32
+ 
+ Number of k-points in the irreducible BZ(q) (nrk):      120
+ 
+ Started calculation of matrix elements with 120 transition(s) at 14:59:51.
+ [ 14:59:51 |   0% ] transition      1 / 120.
+ [ 14:59:57 |   2% ] transition      3 / 120, remaining: 386 s.
+ [ 15:00:26 |   9% ] transition     12 / 120, remaining: 352 s.
+ [ 15:01:05 |  19% ] transition     24 / 120, remaining: 314 s.
+ [ 15:01:44 |  29% ] transition     36 / 120, remaining: 276 s.
+ [ 15:02:23 |  39% ] transition     48 / 120, remaining: 237 s.
+ [ 15:03:02 |  49% ] transition     60 / 120, remaining: 198 s.
+ [ 15:03:41 |  59% ] transition     72 / 120, remaining: 159 s.
+ [ 15:04:20 |  69% ] transition     84 / 120, remaining: 120 s.
+ [ 15:04:59 |  79% ] transition     96 / 120, remaining: 81 s.
+ [ 15:05:38 |  89% ] transition    108 / 120, remaining: 42 s.
+ [ 15:06:14 |  99% ] transition    120 / 120, remaining: 3 s.
+ Finished calculation of matrix elements at 15:06:17.
+ Elapsed time: 386 s.
+ 
+
+ Done Polarizability
+  
+ Head Before Inversion =  (2.89439737677927,0.000000000000000E+000)
+  
+ Head After Inversion =  (0.389359887066633,-1.484298991886986E-018)
+ For q0 points, you should check the symmetry (eps(G,G') = eps*(-G,-G')) by
+ using the eps0sym code. Wavefunction convergence, as well as a finite q shift
+ may cause this property of eps(G,G') to be broken.
+
+================================================================================
+ Dealing now with q-point   0.00000000  0.40000000  0.66666667
+================================================================================
+
+ This is a regular non-zero q-point.
+ Rank of the polarizability matrix (nmtx):     3884
+ 
+ BLACS processor grid:  32 x  48; BLOCKSIZE =   32
+ 
+ Number of k-points in the irreducible BZ(q) (nrk):      120
+ 
+ Started calculation of matrix elements with 120 transition(s) at 15:09:19.
+ [ 15:09:19 |   0% ] transition      1 / 120.
+ [ 15:09:25 |   2% ] transition      3 / 120, remaining: 385 s.
+ [ 15:09:54 |   9% ] transition     12 / 120, remaining: 352 s.
+ [ 15:10:33 |  19% ] transition     24 / 120, remaining: 314 s.
+ [ 15:11:12 |  29% ] transition     36 / 120, remaining: 276 s.
+ [ 15:11:51 |  39% ] transition     48 / 120, remaining: 237 s.
+ [ 15:12:30 |  49% ] transition     60 / 120, remaining: 198 s.
+ [ 15:13:09 |  59% ] transition     72 / 120, remaining: 159 s.
+ [ 15:13:48 |  69% ] transition     84 / 120, remaining: 120 s.
+ [ 15:14:27 |  79% ] transition     96 / 120, remaining: 81 s.
+ [ 15:15:06 |  89% ] transition    108 / 120, remaining: 42 s.
+ [ 15:15:42 |  99% ] transition    120 / 120, remaining: 3 s.
+ Finished calculation of matrix elements at 15:15:45.
+ Elapsed time: 386 s.
+ 
+
+ Done Polarizability
+  
+ Head Before Inversion =  (2.89439737616503,0.000000000000000E+000)
+  
+ Head After Inversion =  (0.389359887155116,2.022767080855695E-018)
+ For q0 points, you should check the symmetry (eps(G,G') = eps*(-G,-G')) by
+ using the eps0sym code. Wavefunction convergence, as well as a finite q shift
+ may cause this property of eps(G,G') to be broken.
+
+================================================================================
+ Dealing now with q-point   0.20000000  0.20000000  0.00000000
+================================================================================
+
+ This is a regular non-zero q-point.
+ Rank of the polarizability matrix (nmtx):     3857
+ 
+ BLACS processor grid:  32 x  48; BLOCKSIZE =   32
+ 
+ Number of k-points in the irreducible BZ(q) (nrk):      120
+ 
+ Started calculation of matrix elements with 120 transition(s) at 15:18:47.
+ [ 15:18:47 |   0% ] transition      1 / 120.
+ [ 15:18:53 |   2% ] transition      3 / 120, remaining: 365 s.
+ [ 15:19:21 |   9% ] transition     12 / 120, remaining: 334 s.
+ [ 15:19:58 |  19% ] transition     24 / 120, remaining: 298 s.
+ [ 15:20:35 |  29% ] transition     36 / 120, remaining: 262 s.
+ [ 15:21:12 |  39% ] transition     48 / 120, remaining: 225 s.
+ [ 15:21:49 |  49% ] transition     60 / 120, remaining: 188 s.
+ [ 15:22:26 |  59% ] transition     72 / 120, remaining: 151 s.
+ [ 15:23:03 |  69% ] transition     84 / 120, remaining: 114 s.
+ [ 15:23:40 |  79% ] transition     96 / 120, remaining: 77 s.
+ [ 15:24:17 |  89% ] transition    108 / 120, remaining: 40 s.
+ [ 15:24:51 |  99% ] transition    120 / 120, remaining: 3 s.
+ Finished calculation of matrix elements at 15:24:54.
+ Elapsed time: 367 s.
+ 
+
+ Done Polarizability
+  
+ Head Before Inversion =  (3.32594009213996,0.000000000000000E+000)
+  
+ Head After Inversion =  (0.336555792893994,2.750171598453367E-018)
+ For q0 points, you should check the symmetry (eps(G,G') = eps*(-G,-G')) by
+ using the eps0sym code. Wavefunction convergence, as well as a finite q shift
+ may cause this property of eps(G,G') to be broken.
+
+================================================================================
+ Dealing now with q-point   0.20000000  0.20000000  0.33333333
+================================================================================
+
+ This is a regular non-zero q-point.
+ Rank of the polarizability matrix (nmtx):     3884
+ 
+ BLACS processor grid:  32 x  48; BLOCKSIZE =   32
+ 
+ Number of k-points in the irreducible BZ(q) (nrk):      120
+ 
+ Started calculation of matrix elements with 120 transition(s) at 15:27:56.
+ [ 15:27:56 |   0% ] transition      1 / 120.
+ [ 15:28:02 |   2% ] transition      3 / 120, remaining: 383 s.
+ [ 15:28:31 |   9% ] transition     12 / 120, remaining: 352 s.
+ [ 15:29:10 |  19% ] transition     24 / 120, remaining: 314 s.
+ [ 15:29:49 |  29% ] transition     36 / 120, remaining: 275 s.
+ [ 15:30:28 |  39% ] transition     48 / 120, remaining: 237 s.
+ [ 15:31:07 |  49% ] transition     60 / 120, remaining: 198 s.
+ [ 15:31:46 |  59% ] transition     72 / 120, remaining: 159 s.
+ [ 15:32:25 |  69% ] transition     84 / 120, remaining: 120 s.
+ [ 15:33:04 |  79% ] transition     96 / 120, remaining: 81 s.
+ [ 15:33:43 |  89% ] transition    108 / 120, remaining: 42 s.
+ [ 15:34:18 |  99% ] transition    120 / 120, remaining: 3 s.
+ Finished calculation of matrix elements at 15:34:21.
+ Elapsed time: 385 s.
+ 
+
+ Done Polarizability
+  
+ Head Before Inversion =  (3.12314284355283,0.000000000000000E+000)
+  
+ Head After Inversion =  (0.358661672664767,-1.683746599282132E-018)
+ For q0 points, you should check the symmetry (eps(G,G') = eps*(-G,-G')) by
+ using the eps0sym code. Wavefunction convergence, as well as a finite q shift
+ may cause this property of eps(G,G') to be broken.
+
+================================================================================
+ Dealing now with q-point   0.20000000  0.20000000  0.66666667
+================================================================================
+
+ This is a regular non-zero q-point.
+ Rank of the polarizability matrix (nmtx):     3884
+ 
+ BLACS processor grid:  32 x  48; BLOCKSIZE =   32
+ 
+ Number of k-points in the irreducible BZ(q) (nrk):      120
+ 
+ Started calculation of matrix elements with 120 transition(s) at 15:37:24.
+ [ 15:37:24 |   0% ] transition      1 / 120.
+ [ 15:37:30 |   2% ] transition      3 / 120, remaining: 381 s.
+ [ 15:37:59 |   9% ] transition     12 / 120, remaining: 350 s.
+ [ 15:38:38 |  19% ] transition     24 / 120, remaining: 313 s.
+ [ 15:39:17 |  29% ] transition     36 / 120, remaining: 274 s.
+ [ 15:39:56 |  39% ] transition     48 / 120, remaining: 236 s.
+ [ 15:40:34 |  49% ] transition     60 / 120, remaining: 197 s.
+ [ 15:41:13 |  59% ] transition     72 / 120, remaining: 159 s.
+ [ 15:41:52 |  69% ] transition     84 / 120, remaining: 120 s.
+ [ 15:42:31 |  79% ] transition     96 / 120, remaining: 81 s.
+ [ 15:43:10 |  89% ] transition    108 / 120, remaining: 42 s.
+ [ 15:43:46 |  99% ] transition    120 / 120, remaining: 3 s.
+ Finished calculation of matrix elements at 15:43:49.
+ Elapsed time: 385 s.
+ 
+
+ Done Polarizability
+  
+ Head Before Inversion =  (3.12314284248841,0.000000000000000E+000)
+  
+ Head After Inversion =  (0.358661672790542,5.432980834543979E-018)
+ For q0 points, you should check the symmetry (eps(G,G') = eps*(-G,-G')) by
+ using the eps0sym code. Wavefunction convergence, as well as a finite q shift
+ may cause this property of eps(G,G') to be broken.
+
+================================================================================
+ Dealing now with q-point   0.20000000  0.40000000  0.00000000
+================================================================================
+
+ This is a regular non-zero q-point.
+ Rank of the polarizability matrix (nmtx):     3864
+ 
+ BLACS processor grid:  32 x  48; BLOCKSIZE =   32
+ 
+ Number of k-points in the irreducible BZ(q) (nrk):      120
+ 
+ Started calculation of matrix elements with 120 transition(s) at 15:46:51.
+ [ 15:46:51 |   0% ] transition      1 / 120.
+ [ 15:46:57 |   2% ] transition      3 / 120, remaining: 365 s.
+ [ 15:47:25 |   9% ] transition     12 / 120, remaining: 336 s.
+ [ 15:48:02 |  19% ] transition     24 / 120, remaining: 300 s.
+ [ 15:48:39 |  29% ] transition     36 / 120, remaining: 263 s.
+ [ 15:49:17 |  39% ] transition     48 / 120, remaining: 226 s.
+ [ 15:49:54 |  49% ] transition     60 / 120, remaining: 189 s.
+ [ 15:50:31 |  59% ] transition     72 / 120, remaining: 152 s.
+ [ 15:51:08 |  69% ] transition     84 / 120, remaining: 115 s.
+ [ 15:51:45 |  79% ] transition     96 / 120, remaining: 77 s.
+ [ 15:52:22 |  89% ] transition    108 / 120, remaining: 40 s.
+ [ 15:52:57 |  99% ] transition    120 / 120, remaining: 3 s.
+ Finished calculation of matrix elements at 15:52:59.
+ Elapsed time: 368 s.
+ 
+
+ Done Polarizability
+  
+ Head Before Inversion =  (2.61570224378127,0.000000000000000E+000)
+  
+ Head After Inversion =  (0.432550426603640,3.651818765766200E-018)
+ For q0 points, you should check the symmetry (eps(G,G') = eps*(-G,-G')) by
+ using the eps0sym code. Wavefunction convergence, as well as a finite q shift
+ may cause this property of eps(G,G') to be broken.
+
+================================================================================
+ Dealing now with q-point   0.20000000  0.40000000  0.33333333
+================================================================================
+
+ This is a regular non-zero q-point.
+ Rank of the polarizability matrix (nmtx):     3894
+ 
+ BLACS processor grid:  32 x  48; BLOCKSIZE =   32
+ 
+ Number of k-points in the irreducible BZ(q) (nrk):      120
+ 
+ Started calculation of matrix elements with 120 transition(s) at 15:56:01.
+ [ 15:56:01 |   0% ] transition      1 / 120.
+ [ 15:56:08 |   2% ] transition      3 / 120, remaining: 386 s.
+ [ 15:56:37 |   9% ] transition     12 / 120, remaining: 354 s.
+ [ 15:57:16 |  19% ] transition     24 / 120, remaining: 316 s.
+ [ 15:57:55 |  29% ] transition     36 / 120, remaining: 277 s.
+ [ 15:58:34 |  39% ] transition     48 / 120, remaining: 238 s.
+ [ 15:59:13 |  49% ] transition     60 / 120, remaining: 199 s.
+ [ 15:59:52 |  59% ] transition     72 / 120, remaining: 159 s.
+ [ 16:00:31 |  69% ] transition     84 / 120, remaining: 120 s.
+ [ 16:01:10 |  79% ] transition     96 / 120, remaining: 81 s.
+ [ 16:01:49 |  89% ] transition    108 / 120, remaining: 42 s.
+ [ 16:02:25 |  99% ] transition    120 / 120, remaining: 3 s.
+ Finished calculation of matrix elements at 16:02:28.
+ Elapsed time: 387 s.
+ 
+
+ Done Polarizability
+  
+ Head Before Inversion =  (2.51420650498395,0.000000000000000E+000)
+  
+ Head After Inversion =  (0.449193829434137,-5.381153593600267E-018)
+ For q0 points, you should check the symmetry (eps(G,G') = eps*(-G,-G')) by
+ using the eps0sym code. Wavefunction convergence, as well as a finite q shift
+ may cause this property of eps(G,G') to be broken.
+
+================================================================================
+ Dealing now with q-point   0.20000000  0.40000000  0.66666667
+================================================================================
+
+ This is a regular non-zero q-point.
+ Rank of the polarizability matrix (nmtx):     3894
+ 
+ BLACS processor grid:  32 x  48; BLOCKSIZE =   32
+ 
+ Number of k-points in the irreducible BZ(q) (nrk):      120
+ 
+ Started calculation of matrix elements with 120 transition(s) at 16:05:32.
+ [ 16:05:32 |   0% ] transition      1 / 120.
+ [ 16:05:39 |   2% ] transition      3 / 120, remaining: 384 s.
+ [ 16:06:08 |   9% ] transition     12 / 120, remaining: 353 s.
+ [ 16:06:47 |  19% ] transition     24 / 120, remaining: 315 s.
+ [ 16:07:26 |  29% ] transition     36 / 120, remaining: 276 s.
+ [ 16:08:05 |  39% ] transition     48 / 120, remaining: 237 s.
+ [ 16:08:44 |  49% ] transition     60 / 120, remaining: 198 s.
+ [ 16:09:23 |  59% ] transition     72 / 120, remaining: 159 s.
+ [ 16:10:02 |  69% ] transition     84 / 120, remaining: 120 s.
+ [ 16:10:41 |  79% ] transition     96 / 120, remaining: 81 s.
+ [ 16:11:20 |  89% ] transition    108 / 120, remaining: 42 s.
+ [ 16:11:56 |  99% ] transition    120 / 120, remaining: 3 s.
+ Finished calculation of matrix elements at 16:11:58.
+ Elapsed time: 386 s.
+ 
+
+ Done Polarizability
+  
+ Head Before Inversion =  (2.51420650475826,0.000000000000000E+000)
+  
+ Head After Inversion =  (0.449193829466325,-1.602786779100429E-018)
+ For q0 points, you should check the symmetry (eps(G,G') = eps*(-G,-G')) by
+ using the eps0sym code. Wavefunction convergence, as well as a finite q shift
+ may cause this property of eps(G,G') to be broken.
+ 
+                              CPU [s]        WALL [s]           #
+ 
+FULLBZ:                         0.000           0.098           1
+IRRBZ:                          0.030           1.927          15
+SUBGRP:                         0.000           0.000          15
+RQSTAR:                         0.010           0.005        1614
+GMAP:                           2.880           3.200        1614
+GVEC:                           3.400           3.398          15
+INPUT:                        329.070         403.834           1
+INPUT_Q:                       28.090          86.476           1
+INPUT(Q) I/O                  130.660         293.794       43796
+INPUT(Q) COMM                 218.810         159.880       43796
+GENWF:                        968.260         974.362       11298
+GENWF (VAL):                  497.380         500.884       11298
+GENWF (COND):                 470.730         473.303        1614
+GENWF (C-Ekin):                36.790          38.942        1614
+GENWF (C-Sort):               413.480         413.818        1614
+JOB SETUP:                      0.000           0.108           1
+Q LOOP SETUP:                   0.600           0.750          15
+INIT CUTOFF:                    0.020           0.000          15
+INIT SCALAPACK:                 0.710           0.749          15
+INIT ARRAYS:                    0.030           1.930          15
+MTXEL:                       4126.820        4133.923       11298
+MTXEL (DENOM):                  0.580           0.585       11298
+MTXEL (FFT):                 4126.200        4133.283       11298
+MTXEL EXP(DENOM):               0.000           0.000           0
+MTXEL EXP (FFT):                0.000           0.000           0
+CHI SUM (TOTAL):             2708.530        2716.138          15
+CHI SUM (COMM):               353.350         316.248       23040
+CHI SUM (zGEMM):             1662.870        1665.305       23040
+CHI SUM (PREP):               691.890         732.060       23040
+CHI SUM (ARRAY ALLOC):          0.000           0.000           0
+EPSINV (TOTAL):                60.200          70.858          15
+EPSINV (VCOUL):                 0.680           0.680          15
+EPSINV (I/O)                   47.660          58.220          15
+EPSINV (INVERT)                11.590          11.629          15
+EPS (I/O) COMM                  0.000           0.000           0
+EPS (I/O) IO                    0.000           0.000           0
+CONVERGE TESTS:                 0.000           0.000          15
+OPT FFT:                        0.000           0.000           0
+OPT FFT (INIT):                 0.000           0.000           0
+OPT FFT (COMM_FFT):             0.000           0.000           0
+OPT FFT (FFT):                  0.000           0.000           0
+FFT ZERO                      104.650         107.894       56490
+FFT PUT                       128.370         127.672       56490
+FFT PLAN                       44.740          43.572      101682
+FFT EXEC                     3664.270        3669.156      101682
+FFT MLTPLY                    144.550         145.936       45192
+ 
+TOTAL:                       8230.080        8401.397
+ 
+ 
+Application 2788767 resources: utime ~12875119s, stime ~26573s, Rss ~1108060, inblocks ~61940786, outblocks ~10207224

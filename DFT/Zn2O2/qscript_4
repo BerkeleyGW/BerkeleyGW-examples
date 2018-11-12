@@ -1,0 +1,15 @@
+#!/bin/bash -l
+
+#
+BGW_BIN="$HOME/BerkeleyGW/bin"
+SIG_EXEC="$BGW_BIN/sigma.cplx.x"
+
+#
+MPI_CMD="aprun -n 2048"
+
+ln -s ../ESPRESSO/1_qe/rho_U/rho_valence_U.complex ./RHO
+ln -s ../ESPRESSO/1_qe/vxc/vxc_nlcc0.complex ./VXC
+ln -s ../ESPRESSO/2_sapo/WFN_co/wfn.complex ./WFN_inner
+ln -s ../3_eps/epsilon/eps0mat .
+ln -s ../3_eps/epsilon/epsmat .
+$MPI_CMD $SIG_EXEC > ./sigma.out

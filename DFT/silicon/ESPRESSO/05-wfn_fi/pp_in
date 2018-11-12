@@ -1,0 +1,13 @@
+&input_pw2bgw
+   prefix = 'silicon'
+   real_or_complex = 1
+   wfng_flag = .true.
+   wfng_file = 'wfn.real'
+   wfng_kgrid = .true.
+   wfng_nk1 = 10
+   wfng_nk2 = 10
+   wfng_nk3 = 10
+   wfng_dk1 = 0.47
+   wfng_dk2 = 0.37
+   wfng_dk3 = 0.31
+/

@@ -1,0 +1,12 @@
+../epsilon_ff/eps0mat
+../../1_qe/rho_U/rho_valence_U.complex
+0.0006 0.0006 0.0006
+0 0 0
+0 0 0
+1001
+0.1
+0.1
+0.0
+epsinvGPP_valence.dat
+epsinvRPA_r.dat
+epsinvRPA_a.dat

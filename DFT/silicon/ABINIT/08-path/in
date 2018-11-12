@@ -1,0 +1,33 @@
+#NSCF general template for ABINIT:
+#For ABINIT we need to input the k-points in a given path by hand
+#and make sure the weights sum to 1.0 with 12 decimals.
+#In this example, we just compute 6 arbitrary k-points, just to illustrate how to do the calculation.
+
+#Definition of the method
+iscf -3 #NSCF :use -3 to use weights given explicitely (see below)
+tolwfr 1.d-13 #tolerance threshold 
+nband 17 #Number of bands
+nbdbuf 2 #high energy bands difficult to converge, better skip them
+nline 6 #Usually this is better for NSCF calculations
+
+#Uncomment these two if using MPI-IO:
+#autoparal   1   #To let ABINIT decide over parallelization options 
+#accesswff   1   #read/write files using mpi-io
+#npband      1         #Try to avoid paralelizing over bands, as sometimes can be problematic, this will force the code to paralelize over spin,kpoits and ffts only.
+
+#I/O options
+getwfk 0            #Start wavefunctions from scratch
+irdden 1        #Get density from first dataset
+ prtwf 1        #Print wavefunctions
+prtden 0        #Do not print density
+
+# k-point sampling
+istwfk   *1
+kptopt    0        #Give the k-points explicitly
+include "kpt.in"   #k-points given in an external file
+
+#weights
+include "wtk.in"   #k-weights given in an external file
+
+#Basic information: unit-cell, atoms, cutoffs, etc..
+include "basic.in"

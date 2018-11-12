@@ -1,0 +1,20 @@
+&input
+  title = 'O'
+  zed = 8.0
+  rel = 1
+  config = '[He] 2s2.0 2p4.0'
+  iswitch = 2
+  dft = 'SLA+PW'
+/
+&test
+  nconf = 2
+  file_pseudo = 'O.pw-n-nc.UPF'
+  ecutmin = 50.0
+  ecutmax = 300.0
+  decut = 50.0
+  rm = 10.0
+  lsdts(1) = 0
+  lsdts(2) = 0
+  configts(1) = '2s2.0 2p4.0'
+  configts(2) = '2s2.0 2p4.5'
+/

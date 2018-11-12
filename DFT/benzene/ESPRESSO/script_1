@@ -1,0 +1,28 @@
+#!/bin/bash -l
+
+#
+ln -s ../../../pseudo/ld1/C.UPF ./1-scf
+ln -s ../../../pseudo/ld1/H.UPF ./1-scf
+ln -s ../../pseudo/atom/C.psf ../3-siesta
+ln -s ../../pseudo/atom/H.psf ../3-siesta
+#
+mkdir ./2-nscf/benzene.save
+ln -s ../1-scf/C.UPF ./2-nscf
+ln -s ../1-scf/H.UPF ./2-nscf
+ln -s ../../1-scf/benzene.save/data-file.xml ./2-nscf/benzene.save
+ln -s ../../1-scf/benzene.save/charge-density.dat ./2-nscf/benzene.save
+#
+ln -s ../ESPRESSO/2-nscf/wfn.real ../5-gw/WFN
+ln -s ../ESPRESSO/2-nscf/wfn.real ../5-gw/WFNq
+ln -s ../ESPRESSO/2-nscf/vxc.dat ../5-gw/vxc.dat
+ln -s ../ESPRESSO/2-nscf/rho.complex ../5-gw/RHO
+ln -s ../ESPRESSO/2-nscf/wfn.real ../5-gw/WFN_inner
+ln -s ../ESPRESSO/2-nscf/wfn.real ../5-gw/WFN_outer
+#
+ln -s ../4-sapo/wfn.real ../6-gw-sapo/WFN
+ln -s ../4-sapo/wfn.real ../6-gw-sapo/WFNq
+ln -s ../ESPRESSO/2-nscf/vxc.dat ../6-gw-sapo/vxc.dat
+ln -s ../ESPRESSO/2-nscf/rho.complex ../6-gw-sapo/RHO
+ln -s ../4-sapo/wfn.real ../6-gw-sapo/WFN_inner
+ln -s ../4-sapo/wfn.real ../6-gw-sapo/WFN_outer
+#

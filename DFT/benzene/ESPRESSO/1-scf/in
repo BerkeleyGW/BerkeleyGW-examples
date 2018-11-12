@@ -1,0 +1,49 @@
+&CONTROL
+   prefix = 'benzene'
+   calculation = 'scf'
+   restart_mode = 'from_scratch'
+   wf_collect = .false.
+   tstress = .true.
+   tprnfor = .true.
+   outdir = './'
+   wfcdir = './'
+   pseudo_dir = './'
+/
+&SYSTEM
+   ibrav = 0
+   nat = 12
+   ntyp = 2
+   nbnd = 15
+   ecutwfc = 60.0
+/
+&ELECTRONS
+   electron_maxstep = 100
+   conv_thr = 1.0d-10
+   mixing_mode = 'plain'
+   mixing_beta = 0.7
+   mixing_ndim = 8
+   diagonalization = 'david'
+   diago_david_ndim = 4
+   diago_full_acc = .true.
+/
+CELL_PARAMETERS bohr
+      25.917768986   0.000000000   0.000000000
+       0.000000000  14.496126116   0.000000000
+       0.000000000   0.000000000  28.284379996
+ATOMIC_SPECIES
+   C  12.011  C.UPF
+   H   1.008  H.UPF
+ATOMIC_POSITIONS bohr
+   C   0.000000000   0.000000000   2.606191638
+   C  -2.256951812   0.000000000   1.303295954
+   C  -2.256951812   0.000000000  -1.303295954
+   C   0.000000000   0.000000000  -2.606191638
+   C   2.256951812   0.000000000  -1.303295954
+   C   2.256951812   0.000000000   1.303295954
+   H   0.000000000   0.000000000   4.661568689
+   H  -4.036550461   0.000000000   2.331073825
+   H  -4.036550461   0.000000000  -2.331073825
+   H   0.000000000   0.000000000  -4.661568689
+   H   4.036550461   0.000000000  -2.331073825
+   H   4.036550461   0.000000000   2.331073825
+K_POINTS gamma

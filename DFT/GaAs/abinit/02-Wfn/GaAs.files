@@ -1,0 +1,7 @@
+GaAs.in
+GaAs.out
+input_data/idat
+out_data/odat
+tmp_data/tmp
+../../../../pseudo/fhi/31-Ga.pspnc
+../../../../pseudo/fhi/33-As.pspnc

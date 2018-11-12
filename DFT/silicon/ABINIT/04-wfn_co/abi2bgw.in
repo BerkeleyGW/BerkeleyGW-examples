@@ -1,0 +1,22 @@
+wfng_file_abi  o_WFK
+wfng_flag  .true.
+wfng_file  wfn.cplx
+wfng_nk1  5
+wfng_nk2  5
+wfng_nk3  5
+wfng_dk1  0.000000000000
+wfng_dk2  0.000000000000
+wfng_dk3  0.000000000000
+rhog_file_abi i_DEN
+rhog_flag  .true.
+rhog_file  'rho.cplx'
+cell_symmetry 0 !< 0 = cubic, 1 = hexagonal
+symrel_file_flag .false.
+vxcg_file_abi i_VXC
+vxcg_flag  .true.
+vxcg_file  'vxc.cplx'
+vxc_flavor 1
+pert_wfn  .false.
+phonon_q1  0.0
+phonon_q2  0.0
+phonon_q3  0.0

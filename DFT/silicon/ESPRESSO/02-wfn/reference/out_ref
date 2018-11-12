@@ -1,0 +1,321 @@
+
+     Program PWSCF v.4.3.2      starts on 24Feb2012 at 15:48:22 
+
+     This program is part of the open-source Quantum ESPRESSO suite
+     for quantum simulation of materials; please cite
+         "P. Giannozzi et al., J. Phys.:Condens. Matter 21 395502 (2009);
+          URL http://www.quantum-espresso.org", 
+     in publications or presentations arising from this work. More details at
+     http://www.quantum-espresso.org/wiki/index.php/Citing_Quantum-ESPRESSO
+
+     Parallel version (MPI & OpenMP), running on    24 processor cores
+     Number of MPI processes:              24
+     Threads/MPI process:                  1
+     R & G space division:  proc/pool =   24
+
+     EXPERIMENTAL VERSION WITH EXACT EXCHANGE
+
+     Current dimensions of program PWSCF are:
+     Max number of different atomic species (ntypx) = 10
+     Max number of k-points (npk) =  40000
+     Max angular momentum in pseudopotentials (lmaxx) =  3
+     Reading input from ./in
+
+     Atomic positions and unit cell read from directory:
+     ./silicon.save/
+     Message from routine read_ions :
+     PP will be read from ./
+ 
+
+     Subspace diagonalization in iterative solution of the eigenvalue problem:
+     parallel, distributed-memory algorithm (size of sub-group:  3*  3 procs)
+
+ 
+     Parallelization info
+     --------------------
+     sticks:   dense  smooth     PW     G-vecs:    dense   smooth      PW
+     Min          15      15      5                  189      189      38
+     Max          16      16      6                  192      192      42
+     Sum         361     361    121                 4573     4573     941
+ 
+
+
+     bravais-lattice index     =            0
+     lattice parameter (alat)  =      10.2612  a.u.
+     unit-cell volume          =     270.1061 (a.u.)^3
+     number of atoms/cell      =            2
+     number of atomic types    =            1
+     number of electrons       =         8.00
+     number of Kohn-Sham states=           30
+     kinetic-energy cutoff     =      25.0000  Ry
+     charge density cutoff     =     100.0000  Ry
+     Exchange-correlation      = PZ ( 1 1 0 0 0)
+     EXX-fraction              =        0.00
+
+     celldm(1)=  10.261200  celldm(2)=   0.000000  celldm(3)=   0.000000
+     celldm(4)=   0.000000  celldm(5)=   0.000000  celldm(6)=   0.000000
+
+     crystal axes: (cart. coord. in units of alat)
+               a(1) = (   0.000000   0.500000   0.500000 )  
+               a(2) = (   0.500000   0.000000   0.500000 )  
+               a(3) = (   0.500000   0.500000   0.000000 )  
+
+     reciprocal axes: (cart. coord. in units 2 pi/alat)
+               b(1) = ( -1.000000  1.000000  1.000000 )  
+               b(2) = (  1.000000 -1.000000  1.000000 )  
+               b(3) = (  1.000000  1.000000 -1.000000 )  
+
+
+     PseudoPot. # 1 for Si read from file:
+     ./Si.UPF
+     MD5 check sum: 8d0500bb3b5099e4a124109e930844dd
+     Pseudo is Norm-conserving, Zval =  4.0
+     Generated using "atomic" code by A. Dal Corso  (Quantum ESPRESSO distribution)
+     Using radial grid of 1141 points,  2 beta functions with: 
+                l(1) =   0
+                l(2) =   1
+
+     atomic species   valence    mass     pseudopotential
+        Si             4.00    28.08600     Si( 1.00)
+
+     48 Sym.Ops. (with inversion)
+
+
+   Cartesian axes
+
+     site n.     atom                  positions (alat units)
+         1           Si  tau(   1) = (  -0.1250000  -0.1250000  -0.1250000  )
+         2           Si  tau(   2) = (   0.1250000   0.1250000   0.1250000  )
+
+     number of k points=    19
+                       cart. coord. in units 2pi/alat
+        k(    1) = (   0.1000000   0.1000000   0.1000000), wk =   0.0320000
+        k(    2) = (   0.3000000   0.3000000  -0.1000000), wk =   0.0960000
+        k(    3) = (   0.5000000   0.5000000  -0.3000000), wk =   0.0960000
+        k(    4) = (   0.7000000   0.7000000  -0.5000000), wk =   0.0960000
+        k(    5) = (   0.9000000   0.9000000  -0.7000000), wk =   0.0960000
+        k(    6) = (   0.5000000   0.1000000   0.1000000), wk =   0.0960000
+        k(    7) = (   0.7000000   0.3000000  -0.1000000), wk =   0.1920000
+        k(    8) = (   0.9000000   0.5000000  -0.3000000), wk =   0.1920000
+        k(    9) = (   1.1000000   0.7000000  -0.5000000), wk =   0.1920000
+        k(   10) = (   0.9000000   0.1000000   0.1000000), wk =   0.0960000
+        k(   11) = (   1.1000000   0.3000000  -0.1000000), wk =   0.1920000
+        k(   12) = (   1.3000000   0.5000000  -0.3000000), wk =   0.0960000
+        k(   13) = (   1.3000000   0.1000000   0.1000000), wk =   0.0960000
+        k(   14) = (   0.3000000   0.3000000   0.3000000), wk =   0.0320000
+        k(   15) = (   0.5000000   0.5000000   0.1000000), wk =   0.0960000
+        k(   16) = (   0.7000000   0.7000000  -0.1000000), wk =   0.0960000
+        k(   17) = (   0.7000000   0.3000000   0.3000000), wk =   0.0960000
+        k(   18) = (   0.9000000   0.5000000   0.1000000), wk =   0.0960000
+        k(   19) = (   0.5000000   0.5000000   0.5000000), wk =   0.0160000
+
+     Dense  grid:     4573 G-vectors     FFT dimensions: (  24,  24,  24)
+
+     Largest allocated arrays     est. size (Mb)     dimensions
+        Kohn-Sham Wavefunctions         0.01 Mb     (     25,   30)
+        NL pseudopotentials             0.00 Mb     (     25,    8)
+        Each V/rho on FFT grid          0.01 Mb     (    576)
+        Each G-vector array             0.00 Mb     (    190)
+        G-vector shells                 0.00 Mb     (     70)
+     Largest temporary arrays     est. size (Mb)     dimensions
+        Auxiliary wavefunctions         0.05 Mb     (     25,  120)
+        Each subspace H/S matrix        0.02 Mb     (  40,  40)
+        Each <psi_i|beta_j> matrix      0.00 Mb     (      8,   30)
+     writing wfc files to a dedicated directory
+
+     The potential is recalculated from file :
+     ./silicon.save/charge-density.dat
+
+     Starting wfc are random
+
+     total cpu time spent up to now is        0.9 secs
+
+     per-process dynamical memory:     2.0 Mb
+
+     Band Structure Calculation
+     Davidson diagonalization with overlap
+
+     ethr =  1.25E-12,  avg # of iterations = 19.4
+
+     total cpu time spent up to now is        6.1 secs
+
+     End of band structure calculation
+
+          k = 0.1000 0.1000 0.1000     band energies (ev):
+
+    -5.7649   4.8708   5.8097   5.8097   8.5587   8.8569   8.8569  10.2061
+    13.4179  13.4179  14.2550  16.7157  17.9702  17.9702  21.9456  27.5700
+    27.5700  27.5787  29.7385  29.7385  31.6438  31.6438  32.2467  35.5096
+    36.8398  36.8398  38.8545  40.2838  40.2838  42.0453
+
+          k = 0.3000 0.3000-0.1000     band energies (ev):
+
+    -5.0812   2.3904   4.2404   5.5067   8.7005   9.3721   9.6875  11.8846
+    12.3707  14.5783  15.6032  17.4578  19.3694  21.3784  22.3454  24.2850
+    25.3295  26.3100  28.2209  28.9691  32.1182  32.3411  34.1696  35.1506
+    36.5200  37.1378  38.1626  38.8761  39.3119  40.1704
+
+          k = 0.5000 0.5000-0.3000     band energies (ev):
+
+    -3.6672  -0.5441   3.9088   4.7683   8.1835   9.4257   9.6858  13.9245
+    14.6031  15.1980  17.0606  18.0740  19.5536  19.9956  23.2288  25.0654
+    26.6844  27.4446  28.3167  28.5587  30.8211  30.9486  32.8135  33.0738
+    33.6011  35.1989  36.4195  36.5464  38.6661  39.1343
+
+          k = 0.7000 0.7000-0.5000     band energies (ev):
+
+    -4.1458   0.2480   4.3278   4.5352   8.2046   9.3324  10.1052  12.3401
+    14.8293  15.5476  16.0577  18.8943  19.2207  21.1279  22.8879  23.4432
+    24.8709  28.4159  28.6947  29.4911  29.9661  30.9328  33.1393  34.4087
+    34.8164  35.8678  36.3572  37.2058  38.2481  39.0555
+
+          k = 0.9000 0.9000-0.7000     band energies (ev):
+
+    -5.4179   3.5766   4.9997   5.1711   8.2253   9.3902   9.9986  10.9341
+    12.7310  13.9592  15.3579  17.0437  18.4896  19.4879  23.8503  24.7994
+    25.1567  27.6933  28.0889  28.9118  31.8505  32.5519  33.5892  36.5743
+    37.0437  38.1876  38.3730  39.0981  39.3998  40.0276
+
+          k = 0.5000 0.1000 0.1000     band energies (ev):
+
+    -4.7333   2.1751   4.0163   4.1768   7.5317   9.4176  11.1211  11.4634
+    14.4466  15.0207  16.9010  18.4228  19.3448  20.6906  22.3487  22.8549
+    25.4837  26.2111  26.8434  29.7362  31.6146  32.9041  32.9880  35.0364
+    35.3619  35.7048  36.9400  39.4955  39.5506  41.2007
+
+          k = 0.7000 0.3000-0.1000     band energies (ev):
+
+    -3.4714   0.1840   2.5791   3.5950   8.1273   9.7176  10.7926  12.8928
+    15.9293  15.9491  18.4065  18.7682  19.8135  20.8867  23.0215  23.7066
+    25.2989  26.0392  27.0646  28.2037  29.7615  30.3738  32.4434  33.0527
+    34.5065  35.1405  36.5773  37.6296  38.2055  38.6370
+
+          k = 0.9000 0.5000-0.3000     band energies (ev):
+
+    -3.0183  -0.4231   2.0166   3.7801   8.6537  10.0778  11.9023  12.6870
+    13.5527  15.1128  18.6604  19.9393  21.2982  21.4558  22.9643  23.7415
+    25.0971  26.3051  26.9922  28.6042  29.6607  30.4019  31.7712  33.0519
+    33.6476  34.0814  36.0987  36.4864  37.8777  39.2397
+
+          k = 1.1000 0.7000-0.5000     band energies (ev):
+
+    -4.4210   1.2599   3.3399   4.6662   8.6736   9.5935  10.6778  11.0970
+    13.8481  16.2607  16.5976  18.3350  19.7966  21.1934  21.9326  24.0270
+    25.0113  26.6078  27.9065  29.2307  30.9332  31.1287  33.4263  34.1068
+    35.4456  36.4586  37.4179  37.9960  38.2701  39.9957
+
+          k = 0.9000 0.1000 0.1000     band energies (ev):
+
+    -2.4509  -0.9506   2.7257   3.2715   6.7768   7.5369  14.6996  14.7616
+    16.7149  16.8449  18.3277  18.5834  20.2529  20.3675  22.4538  24.6530
+    24.7040  25.2265  26.5807  27.6557  28.0293  29.1000  29.9011  31.5280
+    35.0592  35.8724  37.5698  38.8374  39.6190  40.0521
+
+          k = 1.1000 0.3000-0.1000     band energies (ev):
+
+    -2.3194  -0.9700   2.0772   3.0243   7.8008   9.2430  12.3048  14.0685
+    14.8596  16.9392  18.2685  20.2695  21.0994  21.3310  22.9605  23.9006
+    24.2836  26.1749  26.5648  27.3705  28.9101  29.4406  29.8847  32.0512
+    34.5737  36.0346  36.4628  37.0509  38.2594  38.7431
+
+          k = 1.3000 0.5000-0.3000     band energies (ev):
+
+    -3.2037  -0.7897   3.0534   4.1771   8.7571   9.0705  10.9981  13.7351
+    13.7809  16.0742  17.4588  17.9135  20.5180  20.6160  24.5613  24.6359
+    26.1780  26.7113  26.8359  28.0151  31.0599  31.2060  31.8790  32.3027
+    33.8110  35.1728  35.5454  36.7263  37.3863  39.0047
+
+          k = 1.3000 0.1000 0.1000     band energies (ev):
+
+    -3.7312   0.6398   3.1522   3.5798   7.0156   8.2063  12.8933  13.0364
+    16.5163  16.5515  18.0002  18.7664  20.2413  20.5243  21.9124  23.1804
+    23.2747  25.0109  28.3238  29.0977  30.8714  30.9018  31.8303  33.1490
+    33.7468  34.6324  36.0727  38.8262  39.8412  40.9181
+
+          k = 0.3000 0.3000 0.3000     band energies (ev):
+
+    -4.7606   1.2359   5.0977   5.0977   7.8288   9.5326   9.5326  13.4767
+    13.6113  13.6113  14.7222  18.6910  20.9713  20.9713  22.9847  23.2231
+    23.2231  26.7870  29.9452  29.9452  32.0478  32.2658  32.2658  34.9598
+    36.2444  36.2444  36.3807  38.7594  38.7594  39.9538
+
+          k = 0.5000 0.5000 0.1000     band energies (ev):
+
+    -3.8234   0.3316   2.5528   4.6975   8.4325  10.5258  10.5548  12.6222
+    12.8285  15.4543  17.7980  18.8923  20.1767  22.2127  22.2720  23.3858
+    25.2292  27.2423  27.7712  29.2929  30.6256  30.9005  32.6530  33.1703
+    33.3810  35.1600  35.2301  37.7317  39.3567  39.9218
+
+          k = 0.7000 0.7000-0.1000     band energies (ev):
+
+    -2.5521  -0.8457   1.7581   3.8024   7.4274  11.1350  12.3993  12.5427
+    14.4179  14.5210  19.5802  20.4127  20.5079  22.5955  23.0473  23.7688
+    24.0552  25.7594  27.0039  28.1371  29.4286  29.7856  30.9933  33.4663
+    33.7923  34.2468  35.0306  36.0440  39.4356  40.1158
+
+          k = 0.7000 0.3000 0.3000     band energies (ev):
+
+    -3.3185  -0.4513   2.8773   4.0620   7.8092  10.6510  11.0972  11.6019
+    15.6572  16.4826  17.9394  17.9512  18.5414  22.6250  23.6633  24.4539
+    25.8601  25.9721  26.2494  28.9737  29.2928  32.0408  32.1298  33.0284
+    33.8995  34.9464  35.9645  36.4244  37.3765  39.8188
+
+          k = 0.9000 0.5000 0.1000     band energies (ev):
+
+    -2.2223  -1.0035   1.8592   2.7583   9.6266   9.9563  11.3536  11.7995
+    14.8375  17.1011  18.1284  20.2540  21.0873  23.1003  23.2667  24.1523
+    24.2228  25.7148  26.4608  26.4694  28.5245  30.6567  32.2101  32.3376
+    33.9081  34.6696  35.0731  36.3172  37.4411  38.0674
+
+          k = 0.5000 0.5000 0.5000     band energies (ev):
+
+    -3.5500  -0.9454   4.8151   4.8151   7.5103   9.3416   9.3416  13.5691
+    16.5765  16.5765  17.1059  17.2794  17.2794  18.6777  25.0805  25.7393
+    27.5478  27.5478  27.7020  27.7020  31.4100  32.3987  32.3987  32.9339
+    32.9339  34.0533  37.1996  37.9673  37.9673  38.4926
+
+     highest occupied, lowest unoccupied level (ev):     5.8097    6.7768
+
+     Writing output data file silicon.save
+ 
+     init_run     :      0.04s CPU      0.09s WALL (       1 calls)
+     electrons    :      4.85s CPU      5.12s WALL (       1 calls)
+
+     Called by init_run:
+     wfcinit      :      0.00s CPU      0.00s WALL (       1 calls)
+     potinit      :      0.01s CPU      0.01s WALL (       1 calls)
+
+     Called by electrons:
+     c_bands      :      4.85s CPU      5.12s WALL (       1 calls)
+     v_of_rho     :      0.00s CPU      0.00s WALL (       1 calls)
+
+     Called by c_bands:
+     init_us_2    :      0.00s CPU      0.00s WALL (      19 calls)
+     cegterg      :      4.63s CPU      4.65s WALL (      22 calls)
+
+     Called by *egterg:
+     h_psi        :      0.85s CPU      1.14s WALL (     409 calls)
+     g_psi        :      0.00s CPU      0.00s WALL (     368 calls)
+     cdiaghg      :      3.64s CPU      3.38s WALL (     387 calls)
+
+     Called by h_psi:
+     add_vuspsi   :      0.00s CPU      0.01s WALL (     409 calls)
+
+     General routines
+     calbec       :      0.01s CPU      0.02s WALL (     409 calls)
+     fft          :      0.01s CPU      0.01s WALL (       3 calls)
+     fftw         :      0.80s CPU      1.07s WALL (   16130 calls)
+     davcio       :      0.00s CPU      0.00s WALL (      38 calls)
+ 
+     Parallel routines
+     fft_scatter  :      0.56s CPU      0.74s WALL (   16133 calls)
+     EXX routines
+ 
+     PWSCF        :     5.85s CPU         6.53s WALL
+
+ 
+   This run was terminated on:  15:48:29  24Feb2012            
+
+=------------------------------------------------------------------------------=
+   JOB DONE.
+=------------------------------------------------------------------------------=

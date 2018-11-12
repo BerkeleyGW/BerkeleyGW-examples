@@ -1,0 +1,126 @@
+ Opening abi2bgw.in
+ Summary of input variables
+ wfng_file_abi o_WFK
+ wfng_flag      T
+ wfng_file     wfn.cplx
+ wfng_nk1                 5
+ wfng_nk2                 5
+ wfng_nk3                 5
+ wfng_dk1        0.500000000000000     
+ wfng_dk2        0.500000000000000     
+ wfng_dk3        0.505000000000000     
+ cell_symmetry              0
+ symrel_file_flag F
+ #Generated list of g-vectors for density\/potential writen in file: 
+ gsphere_bgw.out
+ spin            1 kpt            1 /         110
+ spin            1 kpt            2 /         110
+ spin            1 kpt            3 /         110
+ spin            1 kpt            4 /         110
+ spin            1 kpt            5 /         110
+ spin            1 kpt            6 /         110
+ spin            1 kpt            7 /         110
+ spin            1 kpt            8 /         110
+ spin            1 kpt            9 /         110
+ spin            1 kpt           10 /         110
+ spin            1 kpt           11 /         110
+ spin            1 kpt           12 /         110
+ spin            1 kpt           13 /         110
+ spin            1 kpt           14 /         110
+ spin            1 kpt           15 /         110
+ spin            1 kpt           16 /         110
+ spin            1 kpt           17 /         110
+ spin            1 kpt           18 /         110
+ spin            1 kpt           19 /         110
+ spin            1 kpt           20 /         110
+ spin            1 kpt           21 /         110
+ spin            1 kpt           22 /         110
+ spin            1 kpt           23 /         110
+ spin            1 kpt           24 /         110
+ spin            1 kpt           25 /         110
+ spin            1 kpt           26 /         110
+ spin            1 kpt           27 /         110
+ spin            1 kpt           28 /         110
+ spin            1 kpt           29 /         110
+ spin            1 kpt           30 /         110
+ spin            1 kpt           31 /         110
+ spin            1 kpt           32 /         110
+ spin            1 kpt           33 /         110
+ spin            1 kpt           34 /         110
+ spin            1 kpt           35 /         110
+ spin            1 kpt           36 /         110
+ spin            1 kpt           37 /         110
+ spin            1 kpt           38 /         110
+ spin            1 kpt           39 /         110
+ spin            1 kpt           40 /         110
+ spin            1 kpt           41 /         110
+ spin            1 kpt           42 /         110
+ spin            1 kpt           43 /         110
+ spin            1 kpt           44 /         110
+ spin            1 kpt           45 /         110
+ spin            1 kpt           46 /         110
+ spin            1 kpt           47 /         110
+ spin            1 kpt           48 /         110
+ spin            1 kpt           49 /         110
+ spin            1 kpt           50 /         110
+ spin            1 kpt           51 /         110
+ spin            1 kpt           52 /         110
+ spin            1 kpt           53 /         110
+ spin            1 kpt           54 /         110
+ spin            1 kpt           55 /         110
+ spin            1 kpt           56 /         110
+ spin            1 kpt           57 /         110
+ spin            1 kpt           58 /         110
+ spin            1 kpt           59 /         110
+ spin            1 kpt           60 /         110
+ spin            1 kpt           61 /         110
+ spin            1 kpt           62 /         110
+ spin            1 kpt           63 /         110
+ spin            1 kpt           64 /         110
+ spin            1 kpt           65 /         110
+ spin            1 kpt           66 /         110
+ spin            1 kpt           67 /         110
+ spin            1 kpt           68 /         110
+ spin            1 kpt           69 /         110
+ spin            1 kpt           70 /         110
+ spin            1 kpt           71 /         110
+ spin            1 kpt           72 /         110
+ spin            1 kpt           73 /         110
+ spin            1 kpt           74 /         110
+ spin            1 kpt           75 /         110
+ spin            1 kpt           76 /         110
+ spin            1 kpt           77 /         110
+ spin            1 kpt           78 /         110
+ spin            1 kpt           79 /         110
+ spin            1 kpt           80 /         110
+ spin            1 kpt           81 /         110
+ spin            1 kpt           82 /         110
+ spin            1 kpt           83 /         110
+ spin            1 kpt           84 /         110
+ spin            1 kpt           85 /         110
+ spin            1 kpt           86 /         110
+ spin            1 kpt           87 /         110
+ spin            1 kpt           88 /         110
+ spin            1 kpt           89 /         110
+ spin            1 kpt           90 /         110
+ spin            1 kpt           91 /         110
+ spin            1 kpt           92 /         110
+ spin            1 kpt           93 /         110
+ spin            1 kpt           94 /         110
+ spin            1 kpt           95 /         110
+ spin            1 kpt           96 /         110
+ spin            1 kpt           97 /         110
+ spin            1 kpt           98 /         110
+ spin            1 kpt           99 /         110
+ spin            1 kpt          100 /         110
+ spin            1 kpt          101 /         110
+ spin            1 kpt          102 /         110
+ spin            1 kpt          103 /         110
+ spin            1 kpt          104 /         110
+ spin            1 kpt          105 /         110
+ spin            1 kpt          106 /         110
+ spin            1 kpt          107 /         110
+ spin            1 kpt          108 /         110
+ spin            1 kpt          109 /         110
+ spin            1 kpt          110 /         110
+ Calculation completed

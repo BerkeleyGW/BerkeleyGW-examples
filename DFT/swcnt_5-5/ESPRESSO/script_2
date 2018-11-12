@@ -1,0 +1,40 @@
+#!/bin/bash -l
+#SBATCH -t 00:30:00
+#SBATCH -p debug
+#SBATCH -N 1
+#SBATCH -n 32
+#SBATCH -c 1
+
+# These variables work on NERSC/Cori1:
+module load espresso
+PW="pw.x"
+PW2BGW="pw2bgw.x"
+MPIRUN="srun -n 32"
+POOLS="-npools 16" #Make sure npools <= 32
+export OMP_NUM_THREADS=1
+
+# You can manually specify them if you don`t have modules for QE and Wannier90:
+#PWDIR="$HOME/espresso-5.0/bin"
+#PW="$PWDIR/pw.x"
+#PW2BGW="$PWDIR/pw2bgw.x"
+# put argument for number of procs here too if needed, e.g. -n 8
+#MPIRUN="mpirun"
+#POOLS="" #Make sure npools <= 32
+#
+cd ./1-scf
+$MPIRUN $PW $POOLS -in ./in &> ./out
+rm ./*.wfc*
+cd ..
+#
+cd ./2-wfn
+$MPIRUN $PW $POOLS -in ./in &> ./out
+$MPIRUN $PW2BGW -in ./pp_in &> ./pp_out
+rm ./*.wfc*
+cd ..
+#
+cd ./3-wfn_fi
+$MPIRUN $PW $POOLS -in ./in &> ./out
+$MPIRUN $PW2BGW -in ./pp_in &> ./pp_out
+rm ./*.wfc*
+cd ..
+#

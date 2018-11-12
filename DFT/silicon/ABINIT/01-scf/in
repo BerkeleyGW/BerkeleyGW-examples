@@ -1,0 +1,29 @@
+#Template for SCF calculations with abinit
+#Provided by Tonatiuh Rangel
+
+#I/O options:
+prtden 1  #Print out density file
+prtvxc 1
+prtwf  0   #Do not write wavefunctions
+
+#SCF options:
+   diemac   10        #This is a good option for most cases
+     iscf   17        #Mixing of the potential
+   tolvrs  1.0d-10    #Convergence tolerance
+
+nstep 200             #number of steps in SCF
+
+#In case of running with a larger number of procs. than the number of k-points uncomment this:
+#accesswff   1         #To write/read files using openmp
+#autoparal   1         #To let the code decide how to paralelize the job
+#npband      1         #Try to avoid paralelizing over bands, as sometimes can be problematic, this will force the code to paralelize over spin,kpoits and ffts only.
+
+# k-point sampling
+istwfk   *1           
+kptopt    1           #Automatically get k-points in a Monkhorst-Pack scheme 
+ngkpt     5 5 5    #Grid-size of k-points
+nshiftk      1        #Apply one shift
+shiftk 0.5 0.5 0.5    #Shift
+
+
+include "basic.in"

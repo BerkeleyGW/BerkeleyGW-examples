@@ -1,0 +1,53 @@
+#NSCF general template for ABINIT:
+#For larger runs, you may want to split the calculation
+# see input file "in_larger"
+
+#Important for GW, ABINIT needs to know on which k-points and bands are the GW corrections:
+nkptgw 10
+kptgw 
+  0.000000000  0.000000000  0.000000000 
+  0.000000000  0.000000000  0.200000000 
+  0.000000000  0.000000000  0.400000000 
+  0.000000000  0.200000000  0.200000000 
+  0.000000000  0.200000000  0.400000000 
+  0.000000000  0.200000000  0.600000000 
+  0.000000000  0.200000000  0.800000000 
+  0.000000000  0.400000000  0.400000000 
+  0.000000000  0.400000000  0.600000000 
+  0.200000000  0.400000000  0.600000000 
+ 
+bdgw 
+1 14
+1 14
+1 14
+1 14
+1 14
+1 14
+1 14
+1 14
+1 14
+1 14
+
+#Definition of the method
+iscf -2 #NSCF
+tolwfr 1.d-13 #convergence threshold 
+nband 4 #Only valence bands
+prtwant 3 #Call W90 for GW quasiparticles
+w90iniprj 2 #Initial projections as indicated in the file "w90.win"
+
+#I/O options
+irdwfk 0        #Start wavefunctions from scratch
+irdden 1        #Get density from first dataset
+irdqps 1        #Read GW eigenvalues from QPS file
+ prtwf 0        #Print wavefunctions
+prtden 0        #Do not print density
+
+# k-point sampling
+istwfk   *1
+kptopt    3        #Needs to turn out symmetries for w90
+ngkpt   5 5 5
+nshiftk 1
+shiftk 0. 0. 0. 
+
+#Basic information: unit-cell, atoms, cutoffs, etc..
+include "basic.in"

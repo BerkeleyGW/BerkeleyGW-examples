@@ -1,0 +1,265 @@
+
+ BerkeleyGW trunk revision 7007
+ Epsilon code, Real version, run on 25-Apr-2016 at 14:23:07 -0700
+
+                                                                 ..o.          
+                                                                .oxxo.         
+                                                               .oxxxxo...      
+                                                               oxxxxxxo.       
+                                                              .oxxxxxxx.       
+                                                              .ooooooxxo..     
+                                                              .oooooooxo..     
+                                                              .oooooxxo...     
+                                                       .........oxooo......    
+                                                 ............................  
+                                             ................................. 
+                                          .................................... 
+           .          ..oo. ....  .................................oooxxxxxxxo.
+     .............oxxxx@ox@@@x@x.....................o...........ooooooooooxx. 
+    .o.........oox@x.oo........xxx@@............ooxxxxo..........ooooxxxxxoxo  
+    .x........x@xxo...............o@xxo........oxxx@@@xoooooooooooooooxxxo...  
+    .o......ox@@o..................oox@o.....ooxxx@xoooxxxxxxxoooooooooooo.... 
+    o..ooooo@@xoooo....ooo...........x@o.....ooxxxxo   .oxxxxxxxxxxooooooo.... 
+    . .oooo@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@....ooooox.     .oxx@@@@@xxoo........ 
+      .ooooxxxxxxxooooooxooooooooooooooxo...oooooxx.        ..ox@xxxoo.........
+      .ooooooxxxx@xoooooooooooooxxoooooooooooxxxxx.            .oxxooooooooxxo.
+     .oooooxxxxx@@@xxxxxxxxxxxxxxxxxxxxxxxxoxxxxo.                .oxxxxxxxxo. 
+   ....oooxxxxx@@@xo..oxxx@@@@@@xxxxoxxoooooooxx.                  .oxxxoo..   
+  .....ooxxxx@@xo.       ........    .ooooooooxxo                              
+  ..oooxxxx@@@o                       .oooooooxoo.                             
+  ....oxooxxxxx.                       .ooo..oooo.                             
+  .....o.ooxxxxxo.                     .oooooooxo.                             
+ ......ooooxxxxxxo.                     .ooooooxoo..                           
+........ooxxxxxxxo..                     .o....oxoo...                         
+.......ooooxxxxxxxo.                     ........oooo.                         
+.ooooooo..ooxxxxoooo.                    .........ooo...                       
+..oxo...ooooxxxoooo..                    .ooo......oooo...                     
+  .ooooo....o.                            .oxxxoo....ooo....                   
+    .oooooo...                              ...ooooo...ooo..                   
+       ...                                     .oo.......                      
+                                               ....ooo...                      
+                      __              __                                       
+ ______              [  |            [  |                 ._____  _          _ 
+|_   _ \              | |  _          | |                /  ___ \| |        | |
+  | |_) | .---.  _. _.| | / |  .---.  | | .---.  _    _ / /    \_|\ \  /\  / / 
+  |  __'./ /__\\[ /`\_| '' <  / /__\\ | |/ /__\\| \  | | |   _____ \ \/  \/ /  
+ _| |__| | \__. | |   | |`\ \ | \___. | || \___. \ \/ / \ \.___| |  \  /\  /   
+|_______/ \.__./[_]  [__|  \_] \.__./[___]\.__./  \  /   \.____./    \/  \/    
+                                                  / /                          
+                                                 /_/                           
+--------------------------------------------------------------------------------
+ Please cite the following papers when using results from BerkeleyGW:
+
+ Jack Deslippe, Georgy Samsonidze, David A. Strubbe, Manish Jain, Marvin L.
+ Cohen, and Steven G. Louie, "BerkeleyGW: A Massively Parallel Computer Package
+ for the Calculation of the Quasiparticle and Optical Properties of Materials
+ and Nanostructures," Comput. Phys. Commun. 183, 1269 (2012)
+
+ Mark S. Hybertsen and Steven G. Louie, "Electron correlation in semiconductors
+ and insulators: Band gaps and quasiparticle energies," Phys. Rev. B 34, 5390
+ (1986)
+
+ Michael Rohlfing and Steven G. Louie, "Electron-hole excitations and optical
+ spectra from first principles," Phys. Rev. B 62, 4927 (2000)
+--------------------------------------------------------------------------------
+
+ Running MPI version (parallel)
+ Running with 32 MPI task(s)
+ Using OpenMP. Number of threads per MPI task: 1
+
+ Compilation flags:
+ - Compiler: INTEL
+ - Para. flags: MPI, OMP
+ - Math  flags: USESCALAPACK, UNPACKED, USEFFTW3, HDF5
+ - Debug flags: 
+
+ We will start a new calculation from scratch.
+
+ Experimental Features:
+  - FFTs Optimization Level:  0
+  - Frequency groups:     1
+  - Use HDF5 Parallel IO:     F
+
+ 
+ We`ll perform a uniform sampling of the full BZ.
+ 
+ Computing the static inverse dielectric matrix
+
+ We are using matrix communication scheme
+
+ We are communicating via MPI
+
+ We are using no truncation
+
+ Reading header of WFN
+WARNING: occupations outside of range [0,1] in wfn
+ Highest occupied band (unshifted grid) = 1
+ Valence max    (unshifted grid) = -.195220 eV
+ Conduction min (unshifted grid) = -.181174 eV
+ Middle energy  (unshifted grid) = -.188197 eV
+ Fermi  energy  (unshifted grid) = -.188197 eV
+
+ 
+ Cutoff of the dielectric matrix (Ry): 15.00
+ Total number of bands in the calculation: 1
+ Number of fully occupied valence bands: 0
+ Number of partially occ. conduction bands: 1
+ Monkhorst-Pack q-grid for epsilon(q): 32 32 32
+ 
+ Running with 1 valence pools
+ Number of conduction bands per processor: 1
+ Number of valence bands per processor: 1
+
+ Memory available:    3930.4 MB per PE
+ Memory required for execution:   10.5 MB per PE
+ Memory required for vcoul:    0.0 MB per PE
+
+ Number of electrons per unit cell (from ifmax) = .973328
+ Number of electrons per unit cell (from occupations) = 1.001974
+ Plasma Frequency = .438471 Ry
+
+WARNING: Selected number of bands breaks degenerate subspace. Run degeneracy_check.x for allowable numbers.
+ 
+ WARNING: Fractional number of electrons per unit cell (from ifmax).
+ WARNING: Fractional number of electrons per unit cell (from occupations).
+ WARNING: Discrepancy between number of electron per unit cell from ifmax and from occupations.
+ 
+ Started reading wavefunctions (WFN) with 897 state(s) at 14:23:16.
+ [ 14:23:17 |   0% ] state   1 / 897.
+ [ 14:23:17 |   0% ] state   3 / 897, remaining: 2 s.
+ [ 14:23:17 |  10% ] state  90 / 897, remaining: 0 s.
+ [ 14:23:17 |  20% ] state 180 / 897, remaining: 0 s.
+ [ 14:23:17 |  30% ] state 270 / 897, remaining: 0 s.
+ [ 14:23:17 |  40% ] state 359 / 897, remaining: 0 s.
+ [ 14:23:17 |  50% ] state 449 / 897, remaining: 0 s.
+ [ 14:23:17 |  60% ] state 539 / 897, remaining: 0 s.
+ [ 14:23:17 |  70% ] state 628 / 897, remaining: 0 s.
+ [ 14:23:17 |  80% ] state 718 / 897, remaining: 0 s.
+ [ 14:23:17 |  90% ] state 808 / 897, remaining: 0 s.
+ Finished reading wavefunctions (WFN) at 14:23:17.
+ Elapsed time: 0 s.
+ 
+ Initializing eps0mat.h5
+ Screened Coulomb cutoff: 15.000 Ry
+ Total number of bands: 1
+ Number of q-points: 1
+
+ Scissors parameters
+ Valence:    es =   0.0000 eV, e0 =   0.0000 eV, edel =   0.0000
+ Conduction: es =   0.0000 eV, e0 =   0.0000 eV, edel =   0.0000
+ Q0 and |Q0| =  0.000000  0.000000  0.031250  0.034779
+ 
+ Number of k-points in the full BZ of WFN (nfk): 32768
+
+================================================================================
+ 14:23:17   Dealing with q =  0.000000  0.000000  0.031250                 1 / 1
+================================================================================
+
+ This is the special q->0 point.
+ Rank of the polarizability matrix (nmtx): 249
+ 
+ BLACS processor grid:   4 x   8; BLOCKSIZE =   31
+ 
+ Number of k-points in the irreducible BZ(q) (nrk): 8720
+ 
+ Started calculation of matrix elements with 8720 transition(s) at 14:23:19.
+ [ 14:23:19 |   0% ] transition    1 / 8720.
+ [ 14:23:19 |   0% ] transition    3 / 8720, remaining: 17 s.
+ [ 14:23:21 |  10% ] transition  872 / 8720, remaining: 18 s.
+ [ 14:23:23 |  20% ] transition 1744 / 8720, remaining: 17 s.
+ [ 14:23:25 |  30% ] transition 2616 / 8720, remaining: 15 s.
+ [ 14:23:28 |  40% ] transition 3488 / 8720, remaining: 13 s.
+ [ 14:23:30 |  50% ] transition 4360 / 8720, remaining: 11 s.
+ [ 14:23:33 |  60% ] transition 5232 / 8720, remaining: 9 s.
+ [ 14:23:35 |  70% ] transition 6104 / 8720, remaining: 7 s.
+ [ 14:23:38 |  80% ] transition 6976 / 8720, remaining: 5 s.
+ [ 14:23:41 |  90% ] transition 7848 / 8720, remaining: 2 s.
+ [ 14:23:44 | 100% ] transition 8720 / 8720, remaining: 0 s.
+ Finished calculation of matrix elements at 14:23:44.
+ Elapsed time: 25 s.
+ 
+ Allocating Convergence Arrays of Dim           1
+ 
+ Started building polarizability matrix with 32 processor(s) at 14:23:44.
+ [ 14:23:44 |   0% ] processor  1 / 32.
+ [ 14:23:44 |   6% ] processor  3 / 32, remaining: 2 s.
+ [ 14:23:44 |   9% ] processor  4 / 32, remaining: 2 s.
+ [ 14:23:44 |  19% ] processor  7 / 32, remaining: 1 s.
+ [ 14:23:45 |  28% ] processor 10 / 32, remaining: 1 s.
+ [ 14:23:45 |  38% ] processor 13 / 32, remaining: 1 s.
+ [ 14:23:45 |  50% ] processor 17 / 32, remaining: 1 s.
+ [ 14:23:45 |  59% ] processor 20 / 32, remaining: 1 s.
+ [ 14:23:45 |  69% ] processor 23 / 32, remaining: 1 s.
+ [ 14:23:45 |  78% ] processor 26 / 32, remaining: 0 s.
+ [ 14:23:46 |  88% ] processor 29 / 32, remaining: 0 s.
+ Finished building polarizability matrix at 14:23:46.
+ Elapsed time: 2 s.
+ 
+ q-pt      1: Head of Epsilon         =    5.245520163522065E+002
+ q-pt      1: Epsilon(2,2)            =    1.001070952743629E+000
+ q-pt      1: Head of Epsilon Inverse =    1.933130124032406E-003
+ q-pt      1: Epsilon Inverse(2,2)    =    9.999080960282578E-001
+ 
+ For q0 points, you should check the symmetry (eps(G,G') = eps*(-G,-G')) by
+ using the eps0sym code. Wavefunction convergence, as well as a finite q-shift
+ may cause this property of eps(G,G') to be broken.
+
+ Writing dielectric matrix to file
+ Ok
+
+ 
+                              CPU (s)        WALL (s)           #
+ 
+FULLBZ:                         9.290           9.306           1
+IRRBZ:                          2.030           2.026           1
+SUBGRP:                        -0.000           0.000           1
+RQSTAR:                         0.000           0.007        8720
+GMAP:                           0.830           0.777        8720
+GVEC:                          -0.000           0.000           1
+INPUT:                          9.620           9.759           1
+INPUT_Q:                       -0.000           0.000           1
+INPUT(Q) I/O                    0.010           0.041        2692
+INPUT(Q) COMM                   0.270           0.288        2692
+GENWF:                         14.650          14.673        8720
+GENWF (VAL):                    7.260           7.364        8720
+GENWF (COND):                   7.340           7.279        8720
+GENWF (C-Ekin):                 0.230           0.202        8720
+GENWF (C-Sort):                 4.170           3.918        8720
+JOB SETUP:                      0.000           0.009           1
+Q LOOP SETUP:                  -0.000           0.000           1
+INIT CUTOFF:                   -0.000           0.000           1
+INIT SCALAPACK:                -0.000           0.002           1
+INIT ARRAYS:                    2.030           2.026           1
+MTXEL:                          9.550           9.696        8720
+MTXEL (DENOM):                  0.000           0.006        8720
+MTXEL (FFT):                    9.550           9.685        8720
+MTXEL EXP(DENOM):               0.000           0.000           0
+MTXEL EXP (FFT):                0.000           0.000           0
+CHI SUM (TOTAL):                1.600           1.636           1
+CHI SUM (COMM):                -0.000           0.001          32
+CHI SUM (PREP):                 1.390           1.382          32
+CHI SUM (ARRAY ALLOC):          0.000           0.000           0
+CHI SUM (ROW):                  0.000           0.000           0
+CHI SUM (COLUMN):               0.000           0.000           0
+CHI SUM (dGEMM):                0.210           0.249          32
+CHI SUM (HT):                   0.000           0.000           0
+EPSINV (TOTAL):                 0.050           0.118           1
+EPSINV (VCOUL):                 0.010           0.007           1
+EPSINV (I/O)                    0.010           0.028           1
+EPSINV (INVERT)                 0.030           0.082           1
+EPS (I/O) COMM                  0.010           0.017           1
+EPS (I/O) IO                    0.000           0.004           1
+CONVERGE TESTS:                -0.000           0.004           1
+OPT FFT:                        0.000           0.000           0
+OPT FFT (INIT):                 0.000           0.000           0
+OPT FFT (COMM_FFT):             0.000           0.000           0
+OPT FFT (FFT):                  0.000           0.000           0
+FFT ZERO                        0.140           0.261       17440
+FFT PUT                         0.170           0.248       17440
+FFT PLAN                        2.870           2.812       26160
+FFT EXEC                        5.470           5.456       26160
+FFT MLTPLY                      0.220           0.230        8720
+ 
+TOTAL:                         38.350          38.799
+ 
+ 

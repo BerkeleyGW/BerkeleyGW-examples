@@ -1,0 +1,23 @@
+&input_pw2bgw
+   prefix = 'swcnt_8-0'
+   real_or_complex = 2
+   wfng_flag = .true.
+   wfng_file = 'wfn.complex'
+   wfng_kgrid = .true.
+   wfng_nk1 = 1
+   wfng_nk2 = 1
+   wfng_nk3 = 8
+   wfng_dk1 = 0.0
+   wfng_dk2 = 0.0
+   wfng_dk3 = 0.0
+   rhog_flag = .true.
+   rhog_file = 'rho.complex'
+   vxcg_flag = .false.
+   vxcg_file = 'vxc.complex'
+   vxc_flag = .true.
+   vxc_file = 'vxc.dat'
+   vxc_diag_nmin = 45
+   vxc_diag_nmax = 84
+   vxc_offdiag_nmin = 0
+   vxc_offdiag_nmax = 0
+/

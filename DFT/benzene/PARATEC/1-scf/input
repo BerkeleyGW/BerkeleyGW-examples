@@ -1,0 +1,63 @@
+
+begin pw_jobs
+pw_job scf
+end pw_jobs
+
+begin latticevecs
+coord  25.917768986   0.000000000   0.000000000
+coord   0.000000000  14.496126116   0.000000000
+coord   0.000000000   0.000000000  28.284379996
+end latticevecs
+
+coordinates_absolute
+begin coordinates
+newtype C
+coord   0.000000000   0.000000000   2.606191638
+coord  -2.256951812   0.000000000   1.303295954
+coord  -2.256951812   0.000000000  -1.303295954
+coord   0.000000000   0.000000000  -2.606191638
+coord   2.256951812   0.000000000  -1.303295954
+coord   2.256951812   0.000000000   1.303295954
+newtype H
+coord   0.000000000   0.000000000   4.661568689
+coord  -4.036550461   0.000000000   2.331073825
+coord  -4.036550461   0.000000000  -2.331073825
+coord   0.000000000   0.000000000  -4.661568689
+coord   4.036550461   0.000000000  -2.331073825
+coord   4.036550461   0.000000000   2.331073825
+end coordinates
+
+pp_format 3
+begin pseudopotential
+pp_data 3 2.0 2.0 0.0 0.0
+pp_data 3 1.0 0.0 0.0 0.0
+end pseudopotential
+
+exchange_correlation ceperley_alder
+number_of_spins 1
+diagonalization_method Grassmann
+energy_cutoff 60.0
+submatrix_energy_cutoff 10.0
+accuracy_diag 1.0e-10
+diagsafety 2.0
+number_kpoints 0
+k_grid 1 1 1
+k_grid_shift 0.0 0.0 0.0
+number_bands 15
+number_bands_fft 1
+eigspacefrac 1.0
+occupy_levels normal
+smearing_energy 0.001
+
+optimize insulator
+max_iter_diag 100
+max_iter_scfloop 1
+screening_type previous
+
+#mix_method pulay_kerker
+#energy_convergence_criterion 1.0e-10
+#max_iter_scfloop 50
+#screening_type previous
+
+output_flags cdplot_potplot_elecplot
+
