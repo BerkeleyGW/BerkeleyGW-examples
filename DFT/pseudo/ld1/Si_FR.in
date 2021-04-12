@@ -22,7 +22,7 @@ nld=3,
 /
 &INPUTP
 author = 'Meng Wu'
-file_pseudopw='Si_LDA_full_rel.UPF',
+file_pseudopw='Si_FR.UPF',
 !! ======
 !! pseudotype = 1 : NC, semilocal form, 2 : NC, separable form, 3 : USPP
 pseudotype = 2,
