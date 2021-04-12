@@ -1,0 +1,78 @@
+&INPUT
+title = 'Si LDA full rel',
+atom  = 'Si',
+!
+iswitch = 3,
+! 'PZ', 'PW91', 'BP', 'PBE', 'BLYP'
+dft = 'PZ',
+config = '[Ne] 3s2 3p2 3d-2.0 4f-2.0',
+!! =======
+!! rel = 0: non-relativistic, 1: scalar relativistic, 2: full relativistic
+!! =======
+!! If rel=2, states with jj=l-1/2 are filled first.
+!! If a state appears twice, the first one has jj=l-1/2,
+!! the second one jj=l+1/2 (except S states)
+rel = 2,
+
+rlderiv = 3.0,
+eminld = -10,
+emaxld = 10,
+deld = 0.01d0,
+nld=3,
+/
+&INPUTP
+author = 'Meng Wu'
+file_pseudopw='Si_FR.UPF',
+!! ======
+!! pseudotype = 1 : NC, semilocal form, 2 : NC, separable form, 3 : USPP
+pseudotype = 2,
+
+!! ======
+!! nlcc = .true. : nonlinear core correction
+nlcc = .false.,
+!! ======
+!! tm = .true. : TM, .false. : RRKJ
+tm = .true.
+!! ======
+!! Charge at the origin: when the Rabe-Rappe-Kaxiras-Joannopoulos
+!! method with 3 Bessel functions fails, specifying rho0 / 0
+!! may allow to override the problem (using 4 Bessel functions).
+!! Typical values are in the order of 0.01-0.02
+!rho0=0.01,
+
+!! ======
+!! lloc=-1 pseudizes the all-electron potential
+!! lloc/-1 uses the corresponding channel as local PP
+!! ------
+!! if lloc/-1, the corresponding channel must be the last in the
+!! list of wavefunctions appearing after the namelist &inputp
+!! In the relativistic case, if lloc / 0 both the j=lloc-1/2 and
+!! the j=lloc+1/2 wavefunctions must be at the end of the list.
+!! ======
+lloc=2,
+!! Matching radius (a.u.) for local pseudo-potential (no default).
+!! Must be specified only if lloc=-1, otherwise the corresponding value of rcut is used.
+! rcloc=1.9,
+
+!! ======
+!! Matching radius (a.u.) for the smoothing of the core charge.
+!! If not specified, the matching radius is determined
+!! by the condition:  rho_core(rcore) = 2*rho_valence(rcore)
+! rcore = , matching radius for the smoothing of the core charge
+
+!! ======
+!! lpaw = .true. : PAW
+lpaw=.false.,
+/
+5
+3S  1  0  2.00  0.000  1.75  1.75  0.5
+3P  2  1  2.00  0.000  1.93  1.93  0.5
+3P  2  1  0.00  0.000  1.93  1.93  1.5
+3D  3  2 -1.00 -0.306  2.07  2.07  1.5
+3D  3  2 -1.00 -0.306  2.07  2.07  2.5
+
+!! ======
+!! The total angular momentum (0.0 is allowed for complete
+!! shells: the codes fills 2l states with jj=l-1/2,
+!! 2l+2 with jj=l+1/2).
+!! ======
