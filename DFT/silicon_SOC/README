@@ -1,0 +1,25 @@
+Bulk silicon with spin-orbit coupling (By Meng Wu, 04/2021)
+============
+
+This example shows how to run a calculation on bulk Si including
+the spin-orbit coupling with Quantum ESPRESSO.
+
+In this example, we compute the optical absorption spectrum of bulk Si and
+plot the GW quasiparticle bandstructure. We show how to use inteqp
+to produce an interpolated quasiparticle bandstructure.
+
+1. Enter your mean-field directory (ESPRESSO).
+Read, customize and run/submit all scripts in that folder in the alphabetic order
+they appear.
+
+2. Go back to the directory containing this file, and modify/submit `script_3`.
+Suggested 1 node [32s for epsilon, 160s for sigma, 3s for inteqp]
+We will:
+- Generate dielectric matrix (directory 07-epsilon)
+- Calculate self-energy corrections (directory 08-sigma)
+- Interpolate quasiparticle bandstructure (directory 09-inteqp)
+
+3. Modify/submit `script_4`.
+Suggested 20 node [500s for kernel, 900s for absorption]
+- Generate electron-hole interaction kernel (directory 10-kernel)
+- Solve BSE and calculate optical absorption (directory 11-absorption)

@@ -1,0 +1,31 @@
+#!/bin/bash -l
+#SBATCH --partition=debug
+#SBATCH --nodes=1
+#SBATCH --time=00:30:00
+#SBATCH --job-name=my_job
+#SBATCH --license=SCRATCH
+#SBATCH -C haswell
+#SBATCH --ntasks-per-node=32
+
+# Edit these lines as needed
+BGW_BIN_DIR="[BGW PATH/bin]"
+EPSILON="${BGW_BIN_DIR}/epsilon.cplx.x"
+SIGMA="${BGW_BIN_DIR}/sigma.cplx.x"
+INTEQP="${BGW_BIN_DIR}/inteqp.cplx.x"
+KERNEL="${BGW_BIN_DIR}/kernel.cplx.x"
+ABSORPTION="${BGW_BIN_DIR}/absorption.cplx.x"
+export OMP_NUM_THREADS=1
+MPIRUN="srun "
+
+#
+cd ./07-epsilon
+$MPIRUN $EPSILON &> ./epsilon.out
+cd ..
+#
+cd ./08-sigma
+$MPIRUN $SIGMA &> ./sigma.out
+cd ..
+#
+cd ./09-inteqp
+$MPIRUN $INTEQP &> ./inteqp.out
+cd ..

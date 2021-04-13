@@ -1,0 +1,51 @@
+#!/bin/bash -l
+#SBATCH --partition=debug
+#SBATCH --nodes=1
+#SBATCH --time=00:30:00
+#SBATCH --job-name=my_job
+#SBATCH --license=SCRATCH
+#SBATCH -C haswell
+#SBATCH --ntasks-per-node=32
+
+# These variables work on NERSC/Cori2:
+QE_BIN_DIR=[QE PATH/bin]
+PW="${QE_BIN_DIR}/pw.x"
+PW_INPUT="QE.in"
+PW_OUTPUT="QE.out"
+PW2BGW="${QE_BIN_DIR}/pw2bgw.x"
+PW2BGW_INPUT="pw2bgw.inp"
+PW2BGW_OUTPUT="pw2bgw.out"
+
+MPIRUN="srun"
+POOLS="-nk 32" #We only use pools for calculations with many k-points
+export OMP_NUM_THREADS=1
+
+cd ./01-scf
+$MPIRUN $PW < ./${PW_INPUT} &> ./${PW_OUTPUT}
+$MPIRUN $PW2BGW < ./${PW2BGW_INPUT} &> ./${PW2BGW_OUTPUT}
+cd ..
+#
+cd ./02-wfn
+$MPIRUN $PW < ./${PW_INPUT} &> ./${PW_OUTPUT}
+$MPIRUN $PW2BGW < ./${PW2BGW_INPUT} &> ./${PW2BGW_OUTPUT}
+cd ..
+#
+cd ./03-wfnq
+$MPIRUN $PW < ./${PW_INPUT} &> ./${PW_OUTPUT}
+$MPIRUN $PW2BGW < ./${PW2BGW_INPUT} &> ./${PW2BGW_OUTPUT}
+cd ..
+#
+cd ./04-bands
+$MPIRUN $PW < ./${PW_INPUT} &> ./${PW_OUTPUT}
+$MPIRUN $PW2BGW < ./${PW2BGW_INPUT} &> ./${PW2BGW_OUTPUT}
+cd ..
+#
+cd ./05-wfn_fi
+$MPIRUN $PW $POOLS < ./${PW_INPUT} &> ./${PW_OUTPUT}
+$MPIRUN $PW2BGW < ./${PW2BGW_INPUT} &> ./${PW2BGW_OUTPUT}
+cd ..
+#
+cd ./06-wfnq_fi
+$MPIRUN $PW $POOLS < ./${PW_INPUT} &> ./${PW_OUTPUT}
+$MPIRUN $PW2BGW < ./${PW2BGW_INPUT} &> ./${PW2BGW_OUTPUT}
+cd ..
