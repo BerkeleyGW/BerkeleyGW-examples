@@ -1,0 +1,11 @@
+#!/bin/bash -l
+#
+BGW_BIN_DIR=[BGW PATH/bin]
+KGRID="${BGW_BIN_DIR}/kgrid.x"
+#
+cd ./00-kgrid
+$KGRID ./WFN.in ./WFN.out ./WFN.log
+$KGRID ./WFNq.in ./WFNq.out ./WFNq.log
+$KGRID ./WFN_fi.in ./WFN_fi.out ./WFN_fi.log
+$KGRID ./WFNq_fi.in ./WFNq_fi.out ./WFNq_fi.log
+cd ..

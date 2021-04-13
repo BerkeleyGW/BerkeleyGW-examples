@@ -1,0 +1,47 @@
+&CONTROL
+prefix='silicon',
+calculation='bands',
+restart_mode='from_scratch',
+verbosity = "high",
+disk_io = 'low',
+pseudo_dir='../../../pseudo/ld1/',
+outdir = './',
+wf_collect=.TRUE.,    
+ /
+&SYSTEM
+ibrav = 0,
+nat = 2,
+ntyp = 1,
+nbnd = 30,
+ecutwfc = 25.0,
+nspin = 4
+noncolin=.TRUE.
+constrained_magnetization='none'
+lspinorb=.TRUE.
+ /
+&ELECTRONS
+startingwfc='atomic+random',
+diago_full_acc = .true.,
+electron_maxstep=200,
+conv_thr=1.0D-10,
+mixing_mode='plain',
+mixing_beta=0.7D0,
+diagonalization='david',
+ /
+CELL_PARAMETERS angstrom
+     2.715 2.715 0.000
+     0.000 2.715 2.715
+     2.715 0.000 2.715
+ATOMIC_SPECIES
+Si 1 Si_FR.UPF
+ATOMIC_POSITIONS crystal
+Si  -0.125  -0.125  -0.125  1 1 1
+Si   0.125   0.125   0.125  1 1 1
+K_POINTS crystal_b
+6 
+0.5 0.5 0.5 50 ! L
+0.0 0.0 0.0 50 ! G
+0.0 0.5 0.5 50 ! X
+0.25 0.625 0.625 1 ! U
+0.375 0.75 0.375 50 ! K
+0.0 0.0 0.0 50 ! G

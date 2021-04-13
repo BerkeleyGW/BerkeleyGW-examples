@@ -1,0 +1,41 @@
+#!/bin/bash -l
+prefix="silicon"
+for d in 0{2..6}*/; do
+  mkdir -p $d/${prefix}.save
+  ln -sf ../../01-scf/${prefix}.save/data-file-schema.xml $d/${prefix}.save
+  ln -sf ../../01-scf/${prefix}.save/charge-density.dat $d/${prefix}.save
+done
+
+#
+ln -s ../ESPRESSO/02-wfn/WFN ../07-epsilon/WFN
+ln -s ../ESPRESSO/03-wfnq/WFNq ../07-epsilon/WFNq
+#
+ln -s ../ESPRESSO/01-scf/RHO ../08-sigma/RHO
+ln -s ../ESPRESSO/02-wfn/VXC ../08-sigma/VXC
+ln -s ../ESPRESSO/02-wfn/WFN ../08-sigma/WFN_inner
+ln -s ../07-epsilon/eps0mat ../08-sigma
+ln -s ../07-epsilon/epsmat ../08-sigma
+ln -s ../07-epsilon/eps0mat.h5 ../08-sigma
+ln -s ../07-epsilon/epsmat.h5 ../08-sigma
+#
+ln -s ../ESPRESSO/02-wfn/WFN ../09-inteqp/WFN_co
+ln -s ../08-sigma/eqp1.dat ../09-inteqp/eqp_co.dat
+ln -s ../ESPRESSO/04-bands/WFN_bands ../09-inteqp/WFN_fi
+#
+ln -s ../ESPRESSO/02-wfn/WFN ../10-kernel/WFN_co
+ln -s ../07-epsilon/eps0mat ../10-kernel
+ln -s ../07-epsilon/epsmat ../10-kernel
+ln -s ../07-epsilon/eps0mat.h5 ../10-kernel
+ln -s ../07-epsilon/epsmat.h5 ../10-kernel
+#
+ln -s ../ESPRESSO/02-wfn/WFN ../11-absorption/WFN_co
+ln -s ../ESPRESSO/05-wfn_fi/WFN_fi ../11-absorption/WFN_fi
+ln -s ../ESPRESSO/06-wfnq_fi/WFNq_fi ../11-absorption/WFNq_fi
+ln -s ../07-epsilon/eps0mat ../11-absorption
+ln -s ../07-epsilon/epsmat ../11-absorption
+ln -s ../07-epsilon/eps0mat.h5 ../11-absorption
+ln -s ../07-epsilon/epsmat.h5 ../11-absorption
+ln -s ../08-sigma/eqp1.dat ../11-absorption/eqp_co.dat
+ln -s ../10-kernel/bsemat.h5 ../11-absorption
+ln -s ../10-kernel/bsedmat ../11-absorption
+ln -s ../10-kernel/bsexmat ../11-absorption

@@ -1,0 +1,9 @@
+# inteqp.inp
+number_val_bands_fine 8
+number_val_bands_coarse 8
+number_cond_bands_fine 14
+number_cond_bands_coarse 20
+no_symmetries_fine_grid
+use_symmetries_coarse_grid
+use_momentum
+degeneracy_check_override
