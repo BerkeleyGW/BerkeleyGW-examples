@@ -1,0 +1,14 @@
+number_val_bands_coarse 4
+number_val_bands_fine 2
+number_cond_bands_coarse 4
+number_cond_bands_fine 2
+energy_resolution 0.05
+write_eigenvectors 20
+use_symmetries_coarse_grid
+use_symmetries_fine_grid
+use_symmetries_shifted_grid
+screening_semiconductor
+use_momentum
+degeneracy_check_override
+gaussian_broadening
+eqp_co_corrections

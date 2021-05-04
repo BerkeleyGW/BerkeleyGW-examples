@@ -1,0 +1,34 @@
+&control
+calculation = 'scf',
+prefix = 'cspbcl3',
+verbosity = 'high' ,
+pseudo_dir='../pseudopotentials'
+outdir = '.'
+/
+&system
+ibrav = 0 ,
+nat = 5,
+ntyp = 3,
+ecutwfc = 50,
+noncolin= .TRUE.,
+lspinorb= .TRUE.,
+starting_magnetization=0.0
+/
+&electrons
+/
+K_POINTS automatic
+ 8 8 8 1 1 1
+ATOMIC_SPECIES
+Cs 1 Cs.upf
+Pb 1 Pb.upf
+Cl 1 Cl.upf
+CELL_PARAMETERS angstrom
+   5.599   0.000000000   0.000000000
+   0.000000000   5.599   0.000000000
+   0.000000000   0.000000000   5.599
+ATOMIC_POSITIONS crystal
+Cs      0.500000000         0.500000000         0.500000000
+Pb      0.000000000         0.000000000         0.000000000
+Cl      0.500000000         0.000000000         0.000000000
+Cl      0.000000000         0.500000000         0.000000000
+Cl      0.000000000         0.000000000         0.500000000

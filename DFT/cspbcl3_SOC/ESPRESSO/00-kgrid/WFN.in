@@ -1,0 +1,15 @@
+4 4 4
+0.5 0.5 0.5            ! k-grid offset (0.0 unshifted, 0.5 shifted by half a grid step)
+0.0 0.0 0.0          ! a small q-shift (0.0 unshifted, 0.001 shifted by one 1000th of b3)
+
+1.0 0.0 0.0
+0.0 1.0 0.0
+0.0 0.0 1.0
+5                      ! number of atoms in the unit cell
+55 0.500000000         0.500000000         0.500000000
+46 0.000000000         0.000000000         0.000000000
+17 0.500000000         0.000000000         0.000000000
+17 0.000000000         0.500000000         0.000000000
+17 0.000000000         0.000000000         0.500000000
+0 0 0                  ! size of FFT grid
+.false.                ! use time-reversal symmetry. Set to false for BerkeleyGW

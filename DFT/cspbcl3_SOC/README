@@ -1,0 +1,14 @@
+Bulk CsPbCl3 (cubic phase) with spin-orbit coupling (By Yinan Chen and Marina Filip, 04/2021)
+============
+
+This example shows how to run a calculation on bulk CsPbCl3 including
+the spin-orbit coupling with Quantum ESPRESSO.
+Note, all mean-field calculations are performed with QE6.4 and all pseudopotentials are taken
+from Pseudo Dojo.
+
+In this example, we compute the quasiparticle eigenvalues and optical absorption spectrum 
+of bulk CsPbCl3.  Note all parameters are significantly underconverged.
+
+Please follow the same steps as for the silicon_SOC example - note that in this calculation 
+we use the momentum rather than the velocity matrix elements, and therefore we do not use 
+a shifted fine grid. 
