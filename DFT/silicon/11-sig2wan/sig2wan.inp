@@ -4,3 +4,4 @@ sigma_hp.log   ! Sigma output file to read k-points, eigenvalues and symmetries 
 silicon.nnkp   ! Wannier90 input file to read k-points from
 silicon.eig    ! file where the output of sig2wan is written
 12             ! number of bands to write out
+1              ! starting band index in silicon.eig

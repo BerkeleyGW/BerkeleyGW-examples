@@ -1,0 +1,6 @@
+number_val_bands 8
+number_cond_bands 8
+cell_slab_truncation
+use_symmetries_coarse_grid
+low_comm
+screening_semiconductor

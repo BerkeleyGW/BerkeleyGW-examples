@@ -1,0 +1,69 @@
+#!/bin/bash -l
+#SBATCH --partition=debug
+#SBATCH --nodes=30
+#SBATCH --time=00:30:00
+#SBATCH --job-name=my_job
+#SBATCH --license=SCRATCH
+#SBATCH -C haswell
+#SBATCH --ntasks-per-node=32
+
+# Edit these lines as needed
+BGW_BIN_DIR="/global/cscratch1/sd/mwu/BGW_commit/BerkeleyGW/bin"
+EPSILON="${BGW_BIN_DIR}/epsilon.cplx.x"
+SIGMA="${BGW_BIN_DIR}/sigma.cplx.x"
+SIG2WAN="${BGW_BIN_DIR}/sig2wan.x"
+INTEQP="${BGW_BIN_DIR}/inteqp.cplx.x"
+KERNEL="${BGW_BIN_DIR}/kernel.cplx.x"
+ABSORPTION="${BGW_BIN_DIR}/absorption.cplx.x"
+export OMP_NUM_THREADS=1
+MPIRUN="srun "
+
+#
+cd ./10-epsilon_subsampling
+rm -rf eps0mat.h5
+rm -rf epsmat.h5
+rm -rf epsilon.log
+rm -rf epsilon.out
+rm -rf chi_converge.dat
+unlink WFN
+unlink WFNq
+echo "10-epsilon_subsampling DONE."
+cd ..
+#
+cd ./11-epsilon_co
+rm -rf eps0mat.h5
+rm -rf epsmat.h5
+rm -rf epsilon.log
+rm -rf epsilon.out
+rm -rf chi_converge.dat
+unlink WFN
+unlink WFNq
+echo "11-epsilon_co DONE."
+cd ..
+#
+cd ./12-sigma
+rm -rf ch_converge.dat
+rm -rf checkbz.log
+rm -rf eqp0.dat
+rm -rf eqp1.dat
+rm -rf sigma.out
+rm -rf sigma_hp.log
+rm -rf x.dat
+unlink WFN_inner
+unlink RHO
+unlink VXC
+unlink eps0mat.5
+unlink epsmat.h5
+unlink eps0mat
+unlink epsmat
+unlink subweight.dat
+echo "12-sigma DONE."
+cd ..
+#
+cd ./13-sig2wan
+rm -rf MoS2.eig
+rm -rf sig2wan.out
+unlink MoS2.nnkp
+unlink sigma_hp.log
+echo "13-sig2wan DONE."
+cd ..

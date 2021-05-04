@@ -1,0 +1,7 @@
+&inputpp 
+   outdir = './',
+   prefix = 'MoS2',
+   seedname = 'MoS2',
+   write_mmn = .true.,
+   write_amn = .true.,
+/

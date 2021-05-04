@@ -1,0 +1,18 @@
+spinor
+diagonalization
+
+number_val_bands_coarse 8
+number_val_bands_fine 2
+number_cond_bands_coarse 8
+number_cond_bands_fine 2
+
+use_symmetries_coarse_grid
+no_symmetries_fine_grid
+no_symmetries_shifted_grid
+
+screening_semiconductor
+cell_slab_truncation
+use_velocity
+gaussian_broadening
+energy_resolution 0.02
+eqp_co_corrections

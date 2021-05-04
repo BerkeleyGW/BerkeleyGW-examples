@@ -1,0 +1,37 @@
+#!/bin/bash -l
+#
+ln -sf ../ESPRESSO/02-wfn/WFN ../10-epsilon_subsampling/WFN
+ln -sf ../ESPRESSO/03-wfnq/WFNq ../10-epsilon_subsampling/WFNq
+#
+ln -sf ../ESPRESSO/04-wfn_co/WFN ../11-epsilon_co/WFN
+ln -sf ../ESPRESSO/05-wfnq_co/WFNq ../11-epsilon_co/WFNq
+#
+ln -sf ../ESPRESSO/01-scf/RHO ../12-sigma/RHO
+ln -sf ../ESPRESSO/04-wfn_co/VXC ../12-sigma/VXC
+ln -sf ../ESPRESSO/04-wfn_co/WFN ../12-sigma/WFN_inner
+ln -sf ../ESPRESSO/02-wfn/subweights.dat ../12-sigma
+ln -sf ../10-epsilon_subsampling/eps0mat ../12-sigma
+ln -sf ../10-epsilon_subsampling/epsmat ../12-sigma
+ln -sf ../10-epsilon_subsampling/eps0mat.h5 ../12-sigma
+ln -sf ../10-epsilon_subsampling/epsmat.h5 ../12-sigma
+#
+ln -sf ../ESPRESSO/09-wannier/MoS2.nnkp ../13-sig2wan
+ln -sf ../12-sigma/sigma_hp.log ../13-sig2wan
+#
+ln -sf ../ESPRESSO/04-wfn_co/WFN ../16-kernel/WFN_co
+ln -sf ../11-epsilon_co/eps0mat ../16-kernel
+ln -sf ../11-epsilon_co/epsmat ../16-kernel
+ln -sf ../11-epsilon_co/eps0mat.h5 ../16-kernel
+ln -sf ../11-epsilon_co/epsmat.h5 ../16-kernel
+#
+ln -sf ../ESPRESSO/04-wfn_co/WFN ../17-absorption/WFN_co
+ln -sf ../ESPRESSO/06-wfn_fi/WFN_fi ../17-absorption/WFN_fi
+ln -sf ../ESPRESSO/07-wfnq_fi/WFNq_fi ../17-absorption/WFNq_fi
+ln -sf ../11-epsilon_co/eps0mat ../17-absorption
+ln -sf ../11-epsilon_co/epsmat ../17-absorption
+ln -sf ../11-epsilon_co/eps0mat.h5 ../17-absorption
+ln -sf ../11-epsilon_co/epsmat.h5 ../17-absorption
+ln -sf ../12-sigma/eqp1.dat ../17-absorption/eqp_co.dat
+ln -sf ../16-kernel/bsemat.h5 ../17-absorption
+ln -sf ../16-kernel/bsedmat ../17-absorption
+ln -sf ../16-kernel/bsexmat ../17-absorption

@@ -1,0 +1,84 @@
+#!/bin/bash -l
+#SBATCH --partition=debug
+#SBATCH --nodes=1
+#SBATCH --time=00:30:00
+#SBATCH --job-name=my_job
+#SBATCH --license=SCRATCH
+#SBATCH -C haswell
+#SBATCH --ntasks-per-node=32
+
+# These variables work on NERSC/Cori2:
+QE_BIN_DIR="/global/homes/m/mwu/softwares/QE/QE6.4.1/QE6.4.1_trunk/bin"
+PW="${QE_BIN_DIR}/pw.x"
+
+BGW_BIN_DIR="/global/cscratch1/sd/mwu/BGW_commit/BerkeleyGW/bin"
+SUBSAMPLING="${BGW_BIN_DIR}/setup_subsampling_nns.x"
+SUBSAMPLING_OUTPUT="subsampling.out"
+
+PW_INPUT="QE.in"
+PW_OUTPUT="QE.out"
+PW2BGW="${QE_BIN_DIR}/pw2bgw.x -nk 1"
+PW2BGW_INPUT="pw2bgw.inp"
+PW2BGW_OUTPUT="pw2bgw.out"
+
+PW2WAN="${QE_BIN_DIR}/pw2wannier90.x -nk 1"
+PW2WAN_INPUT="MoS2.pw2wan"
+PW2WAN_OUTPUT="pw2wan.out"
+MPIRUN="srun"
+
+WAN_BIN_DIR="/global/homes/m/mwu/softwares/Wannier90/Wannier90_3.1.0_dev"
+WAN90="${WAN_BIN_DIR}/wannier90.x"
+WANOUT="wan.out"
+
+export OMP_NUM_THREADS=1
+
+cd ./01-scf
+$MPIRUN $PW2BGW < ${PW2BGW_INPUT} &> ${PW2BGW_OUTPUT}
+echo "01-scf DONE."
+cd ..
+sleep 2
+#
+cd ./02-wfn
+$MPIRUN $PW2BGW < ${PW2BGW_INPUT} &> ${PW2BGW_OUTPUT}
+sleep 2
+$SUBSAMPLING BIN WFN 3 > ${SUBSAMPLING_OUTPUT}
+echo "02-wfn DONE."
+cd ..
+sleep 2
+#
+cd ./03-wfnq
+$MPIRUN $PW2BGW < ${PW2BGW_INPUT} &> ${PW2BGW_OUTPUT}
+echo "03-wfnq DONE."
+cd ..
+sleep 2
+#
+cd ./04-wfn_co
+$MPIRUN $PW2BGW < ${PW2BGW_INPUT} &> ${PW2BGW_OUTPUT}
+echo "04-wfn_co DONE."
+cd ..
+sleep 2
+#
+cd ./05-wfnq_co
+$MPIRUN $PW2BGW < ${PW2BGW_INPUT} &> ${PW2BGW_OUTPUT}
+echo "05-wfnq_co DONE."
+cd ..
+sleep 2
+#
+cd ./06-wfn_fi
+$MPIRUN $PW2BGW < ${PW2BGW_INPUT} &> ${PW2BGW_OUTPUT}
+echo "06-wfn_fi DONE."
+cd ..
+sleep 2
+#
+cd ./07-wfnq_fi
+$MPIRUN $PW2BGW < ${PW2BGW_INPUT} &> ${PW2BGW_OUTPUT}
+echo "07-wfnq_fi DONE."
+cd ..
+sleep 2
+#
+cd ./09-wannier
+$MPIRUN $WAN90 -pp MoS2
+sleep 2
+$MPIRUN $PW2WAN < ${PW2WAN_INPUT} &> ${PW2WAN_OUTPUT}
+echo "09-wannier DONE."
+cd ..

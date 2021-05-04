@@ -1,0 +1,53 @@
+#!/bin/bash -l
+#SBATCH --partition=debug
+#SBATCH --nodes=20
+#SBATCH --time=00:30:00
+#SBATCH --job-name=my_job
+#SBATCH --license=SCRATCH
+#SBATCH -C haswell
+#SBATCH --ntasks-per-node=32
+
+# Edit these lines as needed
+BGW_BIN_DIR="/global/cscratch1/sd/mwu/BGW_commit/BerkeleyGW/bin"
+KERNEL="${BGW_BIN_DIR}/kernel.cplx.x"
+ABSORPTION="${BGW_BIN_DIR}/absorption.cplx.x"
+export OMP_NUM_THREADS=1
+MPIRUN="srun "
+
+#
+cd ./16-kernel
+rm -rf bsemat.h5
+rm -rf kernel.out
+unlink WFN_co
+unlink eps0mat
+unlink eps0mat.h5
+unlink epsmat
+unlink epsmat.h5
+echo "16-kernel DONE."
+cd ..
+#
+cd ./17-absorption
+rm -rf absorption.out
+rm -rf absorption_*.dat
+rm -rf eigenvalues*.dat
+rm -rf checkbz.log
+rm -rf d*.dat
+rm -rf dtmat
+rm -rf eqp.dat
+rm -rf eqp_q.dat
+rm -rf vmtxel
+rm -rf epsdiag.dat
+rm -rf bandstructure.dat
+unlink WFN_co
+unlink WFN_fi
+unlink WFNq_fi
+unlink bsedmat
+unlink bsemat.h5
+unlink bsexmat
+unlink eps0mat
+unlink eps0mat.h5
+unlink epsmat
+unlink epsmat.h5
+unlink eqp_co.dat
+echo "17-absorption DONE."
+cd ..
