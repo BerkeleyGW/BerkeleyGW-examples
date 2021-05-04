@@ -1,0 +1,16 @@
+#!/bin/bash -l
+prefix="MoS2"
+for d in 0{1..9}*/; do
+    rm -rf $d/${prefix}.save
+    rm -f $d/${prefix}.xml
+    rm -f $d/${prefix}.wfc*
+    rm -f $d/*.out
+    rm -f $d/RHO
+    rm -f $d/WFN*
+    rm -f $d/VXC*    
+    rm -f $d/*.amn    
+    rm -f $d/*.mmn
+    rm -f $d/*.eig
+    rm -f $d/*.wout
+    rm -f $d/*.nnkp
+done

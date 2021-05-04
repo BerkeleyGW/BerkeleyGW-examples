@@ -1,0 +1,27 @@
+Mon May  3 15:03:07 2021: [unset]:_pmi_alps_init:alps_get_placement_info returned with error -1
+Mon May  3 15:03:07 2021: [unset]:_pmi_init:_pmi_alps_init returned -1
+
+ reading sig2wan.inp file
+
+      sig file = sigma_hp.log
+          spin = 1
+          eqpn = 1
+     nnkp file = MoS2.nnkp
+      eig file = MoS2.eig
+
+ reading sigma_hp.log file
+
+ Band range in sigma_hp.log: [   13,    34]
+ Band range in MoS2.eig: [   13,    34]
+           nkr = 31
+            nb = 22
+          nsym = 12
+
+ reading MoS2.nnkp file
+
+           nkf = 144
+
+ unfolding irreducible wedge
+
+ writing MoS2.eig file
+

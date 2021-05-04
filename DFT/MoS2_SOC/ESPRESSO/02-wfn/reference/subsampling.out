@@ -1,0 +1,24 @@
+WFN k-grid: 6 6 1
+Using q-grid: 6 6 1
+Grid degree: dq(i) = dq0 * i^{degree}, degree = 1.000
+Using a relative shift in the direction: 1.000 0.000 0.000
+ 
+Sampling q=0 Voronoi cell stocastically with 10000000 points.
+  Maximum |q| in Voronoi cell = 1.169063E-01 1/bohr
+  dq =   8.018504181952190E-03  0.000000000000000E+00  0.000000000000000E+00  (crystal units)
+     =   8.436984997294708E-03  4.871095559334845E-03  0.000000000000000E+00  1/bohr
+  |dq| =   9.742191118672826E-03   1/bohr
+ 
+Determining q0 weights.
+  |q| = 9.742191E-03  weight = 3.356780E+05
+  |q| = 3.896876E-02  weight = 2.689450E+06
+  |q| = 8.767972E-02  weight = 6.974871E+06
+  Wrote q0 weights to subweights.dat
+  Wrote lines for epsilon.inp in epsilon_q0s.inp
+ 
+Generating k-points for WFNq file(s)
+  Wrote kpoints to kpoints_all.dat
+  Wrote kpoints to kpoints_001.dat
+  Wrote kpoints to kpoints_002.dat
+  Wrote kpoints to kpoints_003.dat
+ 

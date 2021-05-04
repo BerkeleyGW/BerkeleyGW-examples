@@ -1,0 +1,41 @@
+Monolayer MoS2 with spin-orbit coupling (By Meng Wu, wu1meng2@berkeley.edu, 05/2021)
+============
+
+This example shows how to run GW and GW-BSE calculations on monolayer MoS2 including
+the spin-orbit coupling with Quantum ESPRESSO, and band interpolation
+with Wannier90.
+
+1. Enter your mean-field directory (ESPRESSO).
+Read, customize and run/submit all scripts in that folder in the alphabetic order
+they appear.
+
+2. Go back to the directory containing this file, and modify/submit `script_4`.
+Suggested 30 node
+
+We will:
+- Generate dielectric matrix with subsampling q-points (directory 10-epsilon_subsampling)
+- Generate dielectric matrix for the coarse grid used in the BSE calculation (directory 11-epsilon_co)
+- Calculate self-energy corrections on the coarse grid (directory 12-sigma)
+- Generate GW eigenvalue files for Wannier90 (directory 13-sig2wan)
+
+Use 'script_4_clean' to clean up the corresponding folders.
+
+3. Modify/submit `script_5`.
+Suggested 1 node
+
+We will:
+- Use Wannier functions to interpolate DFT and GW bandstructures (directory Wannier/14-DFT and Wannier/15-GW)
+
+Use 'script_5_clean' to clean up the corresponding folders.
+
+3. Modify/submit `script_6`.
+Suggested 30 node
+
+We will:
+- Generate electron-hole interaction kernel (directory 16-kernel)
+- Solve BSE and calculate optical absorption (directory 17-absorption)
+
+Use 'script_6_clean' to clean up the corresponding folders.
+
+Note that the calculated absorption spectrum with a 12x12x1 coarse grid and a 36x36x1 fine grid is unconverged.
+You need to check convergence by enlarging the coarse and fine grids.
