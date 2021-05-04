@@ -1,19 +1,4 @@
 #!/bin/bash -l
-#SBATCH --partition=debug
-#SBATCH --nodes=1
-#SBATCH --time=00:30:00
-#SBATCH --job-name=my_job
-#SBATCH --license=SCRATCH
-#SBATCH -C haswell
-#SBATCH --ntasks-per-node=1
-
-# Edit these lines as needed
-WAN_BIN_DIR="/global/homes/m/mwu/softwares/Wannier90/Wannier90_3.1.0_dev"
-WAN90="${WAN_BIN_DIR}/wannier90.x"
-WANOUT="wan.out"
-export OMP_NUM_THREADS=1
-MPIRUN="srun "
-
 #
 cd Wannier
 cd ./14-DFT

@@ -1,6 +1,6 @@
 #!/bin/bash -l
 #
-BGW_BIN_DIR=/global/cscratch1/sd/mwu/BGW_commit/BerkeleyGW/bin
+BGW_BIN_DIR=
 KGRID="${BGW_BIN_DIR}/kgrid.x"
 #
 cd ./00-kgrid

@@ -8,10 +8,10 @@
 #SBATCH --ntasks-per-node=32
 
 # These variables work on NERSC/Cori2:
-QE_BIN_DIR="/global/homes/m/mwu/softwares/QE/QE6.4.1/QE6.4.1_trunk/bin"
+QE_BIN_DIR=
 PW="${QE_BIN_DIR}/pw.x"
 
-BGW_BIN_DIR="/global/cscratch1/sd/mwu/BGW_commit/BerkeleyGW/bin"
+BGW_BIN_DIR=
 SUBSAMPLING="${BGW_BIN_DIR}/setup_subsampling_nns.x"
 SUBSAMPLING_OUTPUT="subsampling.out"
 
@@ -26,7 +26,7 @@ PW2WAN_INPUT="MoS2.pw2wan"
 PW2WAN_OUTPUT="pw2wan.out"
 MPIRUN="srun"
 
-WAN_BIN_DIR="/global/homes/m/mwu/softwares/Wannier90/Wannier90_3.1.0_dev"
+WAN_BIN_DIR=
 WAN90="${WAN_BIN_DIR}/wannier90.x"
 WANOUT="wan.out"
 

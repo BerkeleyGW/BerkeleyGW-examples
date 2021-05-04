@@ -8,7 +8,7 @@
 #SBATCH --ntasks-per-node=32
 
 # Edit these lines as needed
-BGW_BIN_DIR="/global/cscratch1/sd/mwu/BGW_commit/BerkeleyGW/bin"
+BGW_BIN_DIR=
 EPSILON="${BGW_BIN_DIR}/epsilon.cplx.x"
 SIGMA="${BGW_BIN_DIR}/sigma.cplx.x"
 SIG2WAN="${BGW_BIN_DIR}/sig2wan.x"
