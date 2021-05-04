@@ -8,7 +8,7 @@
 #SBATCH --ntasks-per-node=32
 
 # Edit these lines as needed
-BGW_BIN_DIR="/global/cscratch1/sd/mwu/BGW_commit/BerkeleyGW/bin"
+BGW_BIN_DIR=
 KERNEL="${BGW_BIN_DIR}/kernel.cplx.x"
 ABSORPTION="${BGW_BIN_DIR}/absorption.cplx.x"
 export OMP_NUM_THREADS=1

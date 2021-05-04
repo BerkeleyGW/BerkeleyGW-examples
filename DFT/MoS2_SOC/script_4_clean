@@ -1,23 +1,4 @@
 #!/bin/bash -l
-#SBATCH --partition=debug
-#SBATCH --nodes=30
-#SBATCH --time=00:30:00
-#SBATCH --job-name=my_job
-#SBATCH --license=SCRATCH
-#SBATCH -C haswell
-#SBATCH --ntasks-per-node=32
-
-# Edit these lines as needed
-BGW_BIN_DIR="/global/cscratch1/sd/mwu/BGW_commit/BerkeleyGW/bin"
-EPSILON="${BGW_BIN_DIR}/epsilon.cplx.x"
-SIGMA="${BGW_BIN_DIR}/sigma.cplx.x"
-SIG2WAN="${BGW_BIN_DIR}/sig2wan.x"
-INTEQP="${BGW_BIN_DIR}/inteqp.cplx.x"
-KERNEL="${BGW_BIN_DIR}/kernel.cplx.x"
-ABSORPTION="${BGW_BIN_DIR}/absorption.cplx.x"
-export OMP_NUM_THREADS=1
-MPIRUN="srun "
-
 #
 cd ./10-epsilon_subsampling
 rm -rf eps0mat.h5

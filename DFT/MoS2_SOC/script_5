@@ -8,7 +8,7 @@
 #SBATCH --ntasks-per-node=1
 
 # Edit these lines as needed
-WAN_BIN_DIR="/global/homes/m/mwu/softwares/Wannier90/Wannier90_3.1.0_dev"
+WAN_BIN_DIR=
 WAN90="${WAN_BIN_DIR}/wannier90.x"
 export OMP_NUM_THREADS=1
 MPIRUN="srun "
