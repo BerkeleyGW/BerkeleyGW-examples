@@ -1,0 +1,26 @@
+#!/bin/bash -l
+#SBATCH --job-name=example
+#SBATCH --partition=debug
+#SBATCH --nodes=1
+#SBATCH --time 00:30:00
+#SBATCH -C haswell
+#SBATCH -n 32
+
+# Edit these lines as needed
+# Please specify the BGW-3.0 path below
+BGW_BIN="$HOME/BerkeleyGW/bin"
+EPSILON="$BGW_BIN/epsilon.cplx.x"
+SIGMA="$BGW_BIN/sigma.cplx.x"
+export OMP_NUM_THREADS=1
+# put argument for number of procs here too if needed, e.g. -n 8
+MPIRUN="srun -n 32 -c 1"
+
+#
+cd ./07-epsilon
+$MPIRUN $EPSILON &> ./epsilon.out
+cd ..
+#
+cd ./08-sigma
+$MPIRUN $SIGMA &> ./sigma.out
+cd ..
+#

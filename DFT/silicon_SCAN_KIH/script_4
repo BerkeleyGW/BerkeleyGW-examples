@@ -1,0 +1,23 @@
+#!/bin/bash -l
+#SBATCH --job-name=example
+#SBATCH --partition=debug
+#SBATCH --nodes=1
+#SBATCH --time 00:30:00
+#SBATCH -C haswell
+#SBATCH -n 32
+
+# Edit these lines as needed
+# Please specify the BGW-3.0 path below
+module load python
+BGW_BIN="$HOME/BerkeleyGW/bin"
+INTEQP="$BGW_BIN/inteqp.cplx.x"
+export OMP_NUM_THREADS=1
+MPIRUN="srun -n 1 -c 1"
+
+# Plot interpolated bandstruture using the inteqp code.
+# This step works with both ESPRESSO and PARATEC as starting mean-field codes.
+cd 09-inteqp
+ln -s ../08-sigma/eqp1.dat eqp_co.dat
+$MPIRUN $INTEQP &> inteqp.out
+./plot_inteqp.py
+cd ../

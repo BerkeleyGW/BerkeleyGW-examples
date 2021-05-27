@@ -1,0 +1,252 @@
+
+ BerkeleyGW version 2.1+git v2.1-56-g098790f-dirty by FangzhouZhao <zhaofangzhou@berkeley.edu> at 2020-08-30 23:22:06 -0700
+ BSE/IntEqp code, Complex version, run on 27-May-2021 at 12:07:13 -0700
+
+                                                                 ..o.          
+                                                                .oxxo.         
+                                                               .oxxxxo...      
+                                                               oxxxxxxo.       
+                                                              .oxxxxxxx.       
+                                                              .ooooooxxo..     
+                                                              .oooooooxo..     
+                                                              .oooooxxo...     
+                                                       .........oxooo......    
+                                                 ............................  
+                                             ................................. 
+                                          .................................... 
+           .          ..oo. ....  .................................oooxxxxxxxo.
+     .............oxxxx@ox@@@x@x.....................o...........ooooooooooxx. 
+    .o.........oox@x.oo........xxx@@............ooxxxxo..........ooooxxxxxoxo  
+    .x........x@xxo...............o@xxo........oxxx@@@xoooooooooooooooxxxo...  
+    .o......ox@@o..................oox@o.....ooxxx@xoooxxxxxxxoooooooooooo.... 
+    o..ooooo@@xoooo....ooo...........x@o.....ooxxxxo   .oxxxxxxxxxxooooooo.... 
+    . .oooo@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@....ooooox.     .oxx@@@@@xxoo........ 
+      .ooooxxxxxxxooooooxooooooooooooooxo...oooooxx.        ..ox@xxxoo.........
+      .ooooooxxxx@xoooooooooooooxxoooooooooooxxxxx.            .oxxooooooooxxo.
+     .oooooxxxxx@@@xxxxxxxxxxxxxxxxxxxxxxxxoxxxxo.                .oxxxxxxxxo. 
+   ....oooxxxxx@@@xo..oxxx@@@@@@xxxxoxxoooooooxx.                  .oxxxoo..   
+  .....ooxxxx@@xo.       ........    .ooooooooxxo                              
+  ..oooxxxx@@@o                       .oooooooxoo.                             
+  ....oxooxxxxx.                       .ooo..oooo.                             
+  .....o.ooxxxxxo.                     .oooooooxo.                             
+ ......ooooxxxxxxo.                     .ooooooxoo..                           
+........ooxxxxxxxo..                     .o....oxoo...                         
+.......ooooxxxxxxxo.                     ........oooo.                         
+.ooooooo..ooxxxxoooo.                    .........ooo...                       
+..oxo...ooooxxxoooo..                    .ooo......oooo...                     
+  .ooooo....o.                            .oxxxoo....ooo....                   
+    .oooooo...                              ...ooooo...ooo..                   
+       ...                                     .oo.......                      
+                                               ....ooo...                      
+                      __              __                                       
+ ______              [  |            [  |                 ._____  _          _ 
+|_   _ \              | |  _          | |                /  ___ \| |        | |
+  | |_) | .---.  _. _.| | / |  .---.  | | .---.  _    _ / /    \_|\ \  /\  / / 
+  |  __'./ /__\\[ /`\_| '' <  / /__\\ | |/ /__\\| \  | | |   _____ \ \/  \/ /  
+ _| |__| | \__. | |   | |`\ \ | \___. | || \___. \ \/ / \ \.___| |  \  /\  /   
+|_______/ \.__./[_]  [__|  \_] \.__./[___]\.__./  \  /   \.____./    \/  \/    
+                                                  / /                          
+                                                 /_/                           
+--------------------------------------------------------------------------------
+ Please cite the following papers when using results from BerkeleyGW:
+
+ Jack Deslippe, Georgy Samsonidze, David A. Strubbe, Manish Jain, Marvin L.
+ Cohen, and Steven G. Louie, "BerkeleyGW: A Massively Parallel Computer Package
+ for the Calculation of the Quasiparticle and Optical Properties of Materials
+ and Nanostructures," Comput. Phys. Commun. 183, 1269 (2012)
+
+ Mark S. Hybertsen and Steven G. Louie, "Electron correlation in semiconductors
+ and insulators: Band gaps and quasiparticle energies," Phys. Rev. B 34, 5390
+ (1986)
+
+ Michael Rohlfing and Steven G. Louie, "Electron-hole excitations and optical
+ spectra from first principles," Phys. Rev. B 62, 4927 (2000)
+--------------------------------------------------------------------------------
+
+ Running MPI version (parallel)
+ Running with 1 MPI task(s)
+ Using OpenMP. Number of threads per MPI task: 1
+ Number of threads used for sorting routines: 1
+
+ Compilation flags:
+ - Compiler: INTEL
+ - Para. flags: MPI, OMP
+ - Math  flags: USESCALAPACK, UNPACKED, USEFFTW3, HDF5
+ - Debug flags: 
+
+ Running with verbosity level 1 (default).
+
+ The restricted fi/co WFN transformation dvv',dcc' will be calculated.
+ 
+ Using the Tamm-Dancoff approximation.
+
+ Using the momentum operator
+ 
+ Using the Delaunay interpolation method.
+
+ 
+ Number of k-points in the coarse k-grid: 125
+WARNING: Inversion symmetry about the origin is present. The real version would be faster.
+ A 3-D interpolation algorithm will be employed.
+WARNING: Inversion symmetry about the origin is present. The real version would be faster.
+ No symmetries used in the fine grid-sampling
+ K-grid: 0 0 0
+ Highest occupied band (fine grid) = 4
+ Valence max    (fine grid) = 6.040265 eV
+ Conduction min (fine grid) = 6.966219 eV
+ Middle energy  (fine grid) = 6.503242 eV
+ Fermi  energy  (fine grid) = 6.503242 eV
+
+ Number of electrons per unit cell (from ifmax) = 8.000000
+ Number of electrons per unit cell (from occupations) = 8.000000
+ Plasma Frequency = 1.220148 Ry
+
+
+ Scissors parameters:
+ - Valence:    es =   0.0000 eV, e0 =   0.0000 eV, edel =   0.0000
+ - Conduction: es =   0.0000 eV, e0 =   0.0000 eV, edel =   0.0000
+ 
+ You are doing a class 1 calculation - npes <= nk
+
+ Memory available: 126758.2 MB per PE
+ Memory required for vcoul: 114.4 MB per PE
+ Memory needed to store the effective Ham. and intkernel arrays: 360.7 MB per PE
+ 
+ Distribution of kcv blocks among PE ranks:
+   - PEs 0 to 0 : 200 blocks
+ 
+ Started reading wavefunctions (WFN_fi) with 200 k-point(s) at 12:07:13.
+ [ 12:07:13 |   0% ] k-point   1 / 200.
+ [ 12:07:13 |   1% ] k-point   3 / 200, remaining: 0 s.
+ [ 12:07:13 |  10% ] k-point  20 / 200, remaining: 0 s.
+ [ 12:07:13 |  20% ] k-point  40 / 200, remaining: 0 s.
+ [ 12:07:13 |  30% ] k-point  60 / 200, remaining: 0 s.
+ [ 12:07:13 |  40% ] k-point  80 / 200, remaining: 0 s.
+ [ 12:07:13 |  50% ] k-point 100 / 200, remaining: 0 s.
+ [ 12:07:13 |  60% ] k-point 120 / 200, remaining: 0 s.
+ [ 12:07:13 |  70% ] k-point 140 / 200, remaining: 0 s.
+ [ 12:07:13 |  80% ] k-point 160 / 200, remaining: 0 s.
+ [ 12:07:13 |  90% ] k-point 180 / 200, remaining: 0 s.
+ [ 12:07:13 | 100% ] k-point 200 / 200, remaining: 0 s.
+ Finished reading wavefunctions (WFN_fi) at 12:07:13.
+ Elapsed time: 0 s.
+ 
+
+ Conduction wavefunctions read from file WFN_fi:
+ - Number of k-points in irreducible BZ: 200
+ - Number of k-points in full BZ: 200
+
+ Lowest-energy independent-particle transitions:
+
+                k-point                 ik     ic     iv     energy (eV)
+   -------------------------------- ------ ------ ------ ---------------
+     0.000000   0.000000   0.000000     96      1      1        2.926430
+     0.000000   0.000000   0.000000     96      1      2        2.926430
+     0.000000   0.000000   0.000000     96      2      1        2.926430
+     0.000000   0.000000   0.000000     96      1      3        2.926430
+     0.000000   0.000000   0.000000     96      3      1        2.926430
+  
+ More Job Parameters: 
+ Crystal volume =             54021.22918424641102 a.u.
+ Number of valence bands =            4
+ Number of cond. bands   =            6
+ Number of spins   =            1
+  
+ Highest occupied band (fine grid) = 4
+ Valence max    (fine grid) = 6.040265 eV
+ Conduction min (fine grid) = 6.966219 eV
+ Middle energy  (fine grid) = 6.503242 eV
+ Fermi  energy  (fine grid) = 6.503242 eV
+
+ No symmetries used in the shifted-grid sampling
+ 
+ Started reading wavefunctions (WFN_fi) with 200 k-point(s) at 12:07:13.
+ [ 12:07:13 |   0% ] k-point   1 / 200.
+ [ 12:07:13 |   1% ] k-point   3 / 200, remaining: 0 s.
+ [ 12:07:13 |  10% ] k-point  20 / 200, remaining: 0 s.
+ [ 12:07:13 |  20% ] k-point  40 / 200, remaining: 0 s.
+ [ 12:07:13 |  30% ] k-point  60 / 200, remaining: 0 s.
+ [ 12:07:13 |  40% ] k-point  80 / 200, remaining: 0 s.
+ [ 12:07:13 |  50% ] k-point 100 / 200, remaining: 0 s.
+ [ 12:07:13 |  60% ] k-point 120 / 200, remaining: 0 s.
+ [ 12:07:13 |  70% ] k-point 140 / 200, remaining: 0 s.
+ [ 12:07:13 |  80% ] k-point 160 / 200, remaining: 0 s.
+ [ 12:07:13 |  90% ] k-point 180 / 200, remaining: 0 s.
+ [ 12:07:13 | 100% ] k-point 200 / 200, remaining: 0 s.
+ Finished reading wavefunctions (WFN_fi) at 12:07:13.
+ Elapsed time: 0 s.
+ 
+
+ Valence wavefunctions read from file WFN_fi:
+ - Number of k-points in irreducible BZ: 200
+ - Number of k-points in full BZ: 200
+
+ Reading quasiparticle energy corrections from eqp_co.dat
+ Highest occupied band (coarse grid) = 4
+ Valence max    (coarse grid) = 6.464820 eV
+ Conduction min (coarse grid) = 7.625720 eV
+ Middle energy  (coarse grid) = 7.045270 eV
+ Fermi  energy  (coarse grid) = 7.045270 eV
+
+
+ Reading quasiparticle energy corrections from eqp_co.dat
+ Using symmetries to expand the coarse-grid sampling
+ 
+ Started reading wavefunctions (WFN_co) with 10 k-point(s) at 12:07:13.
+ [ 12:07:13 |   0% ] k-point  1 / 10.
+ [ 12:07:13 |  10% ] k-point  2 / 10.
+ [ 12:07:13 |  20% ] k-point  3 / 10, remaining: 0 s.
+ [ 12:07:13 |  30% ] k-point  4 / 10, remaining: 0 s.
+ [ 12:07:13 |  40% ] k-point  5 / 10, remaining: 0 s.
+ [ 12:07:13 |  50% ] k-point  6 / 10, remaining: 0 s.
+ [ 12:07:13 |  60% ] k-point  7 / 10, remaining: 0 s.
+ [ 12:07:13 |  70% ] k-point  8 / 10, remaining: 0 s.
+ [ 12:07:13 |  80% ] k-point  9 / 10, remaining: 0 s.
+ [ 12:07:13 |  90% ] k-point 10 / 10, remaining: 0 s.
+ Finished reading wavefunctions (WFN_co) at 12:07:13.
+ Elapsed time: 0 s.
+ 
+
+ Coarse-grid wavefunctions read from file WFN_co:
+ - Number of k-points in irreducible BZ: 10
+ - Number of k-points in full BZ: 125
+ 
+ Started wavefunction interpolation with 200 k-point(s) at 12:07:14.
+ [ 12:07:14 |   0% ] k-point   1 / 200.
+ [ 12:07:14 |   1% ] k-point   3 / 200, remaining: 1 s.
+ [ 12:07:14 |  10% ] k-point  20 / 200, remaining: 1 s.
+ [ 12:07:14 |  20% ] k-point  40 / 200, remaining: 1 s.
+ [ 12:07:14 |  30% ] k-point  60 / 200, remaining: 1 s.
+ [ 12:07:14 |  40% ] k-point  80 / 200, remaining: 0 s.
+ [ 12:07:14 |  50% ] k-point 100 / 200, remaining: 0 s.
+ [ 12:07:14 |  60% ] k-point 120 / 200, remaining: 0 s.
+ [ 12:07:14 |  70% ] k-point 140 / 200, remaining: 0 s.
+ [ 12:07:14 |  80% ] k-point 160 / 200, remaining: 0 s.
+ [ 12:07:14 |  90% ] k-point 180 / 200, remaining: 0 s.
+ [ 12:07:14 | 100% ] k-point 200 / 200, remaining: 0 s.
+ Finished wavefunction interpolation at 12:07:14.
+ Elapsed time: 1 s.
+ 
+ Max. error in norm of transformation coefficients (1 - \sum_co |d_fi,co|^2):
+  - For valence states: 2.238E-01
+  - For conduction states: 1.928E-01
+ 
+ Timing information
+ 
+                                CPU time (s)          WALL time (s)       Number
+ Routine                       min        max        min        max     of calls
+ -------------------------  ---------  ---------  ---------  ---------  --------
+ - Input                         0.09       0.09       0.12       0.12         1
+ - Input q                       0.05       0.05       0.05       0.05         1
+ - Intwfn                        0.91       0.91       0.96       0.96         1
+ - Iw Input_co                   0.01       0.01       0.02       0.02         1
+ - Iw Interp                     0.13       0.13       0.15       0.15       201
+ - Iw Genwf                      0.00       0.00       0.00       0.00      1600
+ - Iw Gwnwf_Co                   0.46       0.46       0.44       0.44       800
+ - Iw Mtxel_t                    0.00       0.00       0.00       0.00      1600
+ - Iw Write                      0.01       0.01       0.02       0.02         1
+ - Iw Reduce                     0.00       0.00       0.00       0.00         1
+ - TOTAL                         1.06       1.06       1.26       1.26         1
+ 
+ Job Done
+ 

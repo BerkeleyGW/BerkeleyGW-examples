@@ -1,0 +1,25 @@
+&input_pw2bgw
+   prefix = 'silicon'
+   real_or_complex = 2
+   wfng_flag = .true. 
+   wfng_file = 'wfn.cplx'
+   wfng_kgrid = .true.
+   wfng_nk1 = 5
+   wfng_nk2 = 5
+   wfng_nk3 = 5
+   wfng_dk1 = 0.0
+   wfng_dk2 = 0.0
+   wfng_dk3 = 0.0
+   rhog_flag = .true.
+   rhog_file = 'rho.cplx'
+   vxcg_flag = .false.
+   vxcg_file = 'VXC'
+   vxc_flag = .false.
+   vxc_file = 'vxc.dat'
+   kih_flag = .true.
+   kih_file = 'kih.dat'
+   vxc_diag_nmin = 1
+   vxc_diag_nmax = 14
+   vxc_offdiag_nmin = 0
+   vxc_offdiag_nmax = 0
+/

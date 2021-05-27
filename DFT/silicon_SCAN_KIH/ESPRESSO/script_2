@@ -1,0 +1,49 @@
+#!/bin/bash -l
+#SBATCH --job-name=example
+#SBATCH --partition=debug
+#SBATCH --nodes=1
+#SBATCH --time 00:30:00
+#SBATCH -C haswell
+#SBATCH -n 32
+
+# These variables work on NERSC/Cori1:
+# Please specify a path of a qe 6.4 version compliled with libxc
+PW="$HOME/qe-6.4.1/bin/pw.x"
+PW2BGW="$HOME/qe-6.4.1/bin/pw2bgw.x"
+MPIRUN="srun -n 32"
+POOLS="-npools 32" #We only use pools for calculations with many k-points
+export OMP_NUM_THREADS=1
+
+# put argument for number of procs here too if needed, e.g. -n 8
+#MPIRUN="mpirun"
+#POOLS="" #We only use pools for calculations with many k-points
+
+cd ./01-scf
+$MPIRUN $PW -in ./in &> ./out
+rm ./*.wfc*
+cd ..
+#
+cd ./02-wfn
+$MPIRUN $PW -in ./in &> ./out
+$MPIRUN $PW2BGW -in ./pp_in &> ./pp_out
+rm ./*.wfc*
+cd ..
+#
+cd ./03-wfnq
+$MPIRUN $PW -in ./in &> ./out
+$MPIRUN $PW2BGW -in ./pp_in &> ./pp_out
+rm ./*.wfc*
+cd ..
+#
+cd ./04-wfn_co
+$MPIRUN $PW -in ./in &> ./out
+$MPIRUN $PW2BGW -in ./pp_in &> ./pp_out
+rm ./*.wfc*
+cd ..
+#
+cd ./05-path
+$MPIRUN $PW $POOLS -in ./in &> ./out
+$MPIRUN $PW2BGW -in ./pp_in &> ./pp_out
+rm ./*.wfc*
+cd ../
+#
