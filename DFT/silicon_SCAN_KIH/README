@@ -2,8 +2,10 @@ Bulk silicon
 ============
 
 This example shows how to run a calculation on bulk Si using SCAN functional with
-the usage of KIH energy by Quantum ESPRESSO. The interface code pw2bgw.x to use the
-KIH energy is provided by BGW-3.0. You can find it in the folder 
+the usage of KIH energy by Quantum ESPRESSO. The use of KIH is compatible with any general 
+functionals (LDA, GGA, metaGGA and hybrid functionals) so that one can do the GW-BSE
+calculation starting from DFT calculation with those functionals. The interface code 
+pw2bgw.x to use the KIH energy is provided by BGW-3.0. You can find it in the folder 
 'BerkeleyGW-3.0/MeanField/ESPRESSO/version-6.4'. Please compile your Quantum ESPRESSO
 of the corresponding version with the pw2bgw.f90 provided in these folder. Also remember
 to compile your Quantum ESPRESSO with libxc.
