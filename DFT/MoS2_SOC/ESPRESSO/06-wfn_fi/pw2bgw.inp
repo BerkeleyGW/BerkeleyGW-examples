@@ -4,11 +4,11 @@
   wfng_flag = .true. 
   wfng_file = 'WFN_fi'
   wfng_kgrid = .true.
-  wfng_nk1 = 24
-  wfng_nk2 = 24
+  wfng_nk1 = 36
+  wfng_nk2 = 36
   wfng_nk3 = 1
-  wfng_dk1 = 0.020833333
-  wfng_dk2 = 0.020833333
+  wfng_dk1 = 0.013888889
+  wfng_dk2 = 0.013888889
   wfng_dk3 = 0.0
   wfng_occupation = .false.
   wfng_nvmin = 0
