@@ -1,1 +1,10 @@
-test
+Here we will perform a GW-BSE for the exciton binding energy of Silicon, and compare the values we get from sampling
+the entire Brillouin zone using a 20x20x20 grid, and from sampling a small region around Gamma, drawn from a 100x100x100
+grid, with a cutoff of 0.09 around Gamma in crystal coordinates. 
+
+The mean field, GW and kernel calculations have already been run for you, and you will simply need to use their outputs. 
+
+Proceed into the excitons directory and follow instructions there for the next steps. 
+
+To do: 1. plot exciton wavefunction to give intuition of exciton localization in k-space. 
+2. Add script for exciton binding energy calculations without the need of excitons.h5 

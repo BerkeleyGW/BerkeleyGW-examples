@@ -1,0 +1,19 @@
+In this directory we have set up a GW-BSE calculation for Si to demonstrate the importance of patched sampling. 
+
+First one should run the GW calculation as usual and then run absorption in the 14-absorption_20x20x20 grid (this uses a 20x20x20 fine grid)
+
+1. Go to the '14-absorption_20x20x20' directory and follow the instructions there. What are the characteristics of the exciton wavefunction coming from the BSE calculation? Is it localized in k-space? What is the computed exciton binding energy?
+
+2. We now need to define the patch on which we want to solve the BSE in order to achieve convergence of the exciton binding energy. Go into the directory 'define_patch' and follow the instructions there. 
+
+3. Next we will obtain the DFT wavefunctions of Si on the fine grid defined by the patch we generated. Go into the '05-wfn_fi_60x60x60_patch' directory and follow the instructions there.
+
+4. It is now time to solve the BSE on the patch. Go into the '14-absorption_60x60x60_patch' directory and follow the instructions there. What is the exciton binding energy? Is it better converged and is the exciton wavefunction more accurately resolved in the regions that it is finite in the Brillouin zone?
+
+OPTIONAL:
+
+5. If you have time, you can generate a convergence curve for the excitoni binding energy of Si, with respect to the grid density, i.e. the number of k-points in the uniform grid from which the grid is drawn. Try to go from 20x20x20 all the way to 100x100x100. When does the exciton binding energy converge?
+
+6. If you have time, you can also converge the exciton binding energy with respect to the cutoff of the patch, i.e. the size of the Brillouin zone region which is considered. For a 60x60x60 grid, which values of cutoff does it make sense to use? You can refer to the instructions in the 'define_patch' directory. 
+
+The convergence curves of Si are shown in Phys. Rev. B 108, 235117, 2023. 

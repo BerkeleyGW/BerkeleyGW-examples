@@ -1,0 +1,19 @@
+The absorption calculation in this directory has already been run, for a 20x20x20 grid.
+
+First, let us understand the form of the exciton wavefunction. We will use the summarize_eigenvectors utility of BGW to do so. 
+
+Inspect the summarize_eigenvectors.inp file and the eigenvalues_b1.dat file. We will write out in simple text form the excitonic coefficients
+for the first exciton. Execute the following command:
+
+summarize_eigenvectors.cplx.x
+
+This creates a file 'exciton_01'. Take a look inside. Does the exciton appear to be mostly localized in a specific region of reciprocal space, and does it decay quickly from there? Which region of the Brillouin zone would it make sense to keep and which to discard in order to capture
+the relevant region but also accelerate the calculation?
+
+Now let us compute the exciton binding energy from the output of the BSE calculation. Execute:
+
+python3 exciton_binding.py
+
+What is the exciton binding energy computed for this uniform grid?
+
+Once you are done with this, proceed to the next step as outlined in the README of the previous directory. 

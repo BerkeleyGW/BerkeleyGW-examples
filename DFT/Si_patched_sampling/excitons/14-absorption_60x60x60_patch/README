@@ -1,0 +1,12 @@
+Let us start by inspecting the absorption.inp file. Notice the 'patched_sampling' and 'regular_grid' keywords. 
+
+Now take a look into the link_files.sh file. Which files are we linking here?
+
+Now run the absorption calculation. Once it is finished, you can run:
+
+python3 exciton_binding.py 
+
+What is the exciton binding energy using this grid and how does it compare to a full 20x20x20 grid? Do you think it is better converged?
+
+Similar to what you did when you ran absorption on a 20x20x20 grid, you can use the summarize_eigenvectors utility to obtain a simple
+representation of the exciton wavefunction in reciprocal space. Try plotting this. Is the critical region of the wavefunction better resolved?

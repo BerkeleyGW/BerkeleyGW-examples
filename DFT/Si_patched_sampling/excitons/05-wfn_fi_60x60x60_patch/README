@@ -1,0 +1,7 @@
+Open the wfn.in file and inspect the k-points which are used here. These are the same ones as in the patch we generated in the previous step.
+
+You can run the nscf calculation as per usual. 
+
+Next, inspect the wfn.pp.in file. Which values are used for the k-grid dimensions? Why? Go ahead and run pw2bgw.x as usual with this input.
+
+We are now ready to perform a BSE calculation on a patch.

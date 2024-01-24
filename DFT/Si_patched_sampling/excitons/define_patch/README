@@ -1,0 +1,11 @@
+Open the script extract_patch.py and have a look through the comments at the top. The file kpoints.dat which has been generated
+here for you (kmesh.pl 60 60 60 > kpoints.dat) corresponds to a uniform 60x60x60 grid. In order to generate a patch around Gamma
+with a cutoff of 0.09 (crystal coordinates) in each direction, we define the respective parameters in the script. 
+
+Run:
+
+python3 extract_patch.py
+
+and have a look through the output file patch.dat. These are the k-points on which we now want to compute WFN_fi, to be used
+in the solution of the BSE in absorption. Any k-points in the original 60x60x60 grid, beyond those in patch.dat are discarded. 
+
