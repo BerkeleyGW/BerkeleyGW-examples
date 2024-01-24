@@ -6,5 +6,3 @@ The mean field, GW and kernel calculations have already been run for you, and yo
 
 Proceed into the excitons directory and follow instructions there for the next steps. 
 
-To do: 1. plot exciton wavefunction to give intuition of exciton localization in k-space. 
-2. Add script for exciton binding energy calculations without the need of excitons.h5 
