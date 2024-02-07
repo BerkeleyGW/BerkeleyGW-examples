@@ -1,0 +1,47 @@
+#!/bin/bash -l
+#SBATCH -t 00:30:00
+#SBATCH -p debug
+#SBATCH -N 1
+#SBATCH -n 4
+#SBATCH -c 32
+
+module load espresso
+export OMP_NUM_THREADS=16
+MPIRUN="srun -n 4 -c 32"
+PW="pw.x"
+PW2BGW="pw2bgw.x"
+
+# scf
+cd ./01-scf
+$MPIRUN $PW -in ./SiC_scf.inp &> ./SiC_scf.out
+rm ./*.wfc*
+cd ../
+
+for d in 0{2..7}*/; do 
+  ln -sf ../01-scf/SiC.save/ $d/SiC.save
+done
+
+# wfn
+cd ./02-wfn
+$MPIRUN $PW -in ./SiC_wfn.inp &> ./SiC_wfn.out
+$MPIRUN $PW2BGW	-in ./SiC_pw2bgw_wfn.inp &> ./SiC_pw2bgw_wfn.out
+rm ./*.wfc*
+cd ../
+
+# wfnq
+cd ./03-wfnq
+$MPIRUN $PW -in ./SiC_wfnq.inp &> ./SiC_wfnq.out
+$MPIRUN $PW2BGW -in ./SiC_pw2bgw_wfnq.inp &> ./SiC_pw2bgw_wfnq.out
+rm ./*.wfc*
+cd ../
+
+# wfn_co
+cd ./04-wfn_co
+$MPIRUN $PW -in ./SiC_wfn_co.inp &> ./SiC_wfn_co.out
+$MPIRUN $PW2BGW -in ./SiC_pw2bgw_wfn_co.inp &> ./SiC_pw2bgw_wfn_co.out
+rm ./*.wfc*
+cd ../
+
+
+
+

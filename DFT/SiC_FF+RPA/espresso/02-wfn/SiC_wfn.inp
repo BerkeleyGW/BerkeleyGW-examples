@@ -1,0 +1,50 @@
+&control
+   calculation          =  'bands',
+   outdir               =  './',
+   prefix               =  'SiC',
+   pseudo_dir           =  '../pseudo/',
+   restart_mode         =  'from_scratch',
+   title                =  'SiC',
+   wf_collect           =  .TRUE.,
+/
+&system
+   ibrav = 0
+   celldm(1) = 8.23844942
+   nat  = 2
+   ntyp = 2
+   nbnd    = 85
+   ecutwfc = 80
+/
+&electrons
+   electron_maxstep = 100
+   conv_thr = 1.0d-10
+   mixing_mode = 'plain'
+   mixing_beta = 0.7
+   mixing_ndim = 8
+   diagonalization = 'david'
+   diago_david_ndim = 4
+   diago_full_acc = .true.
+/
+CELL_PARAMETERS alat
+       0.000000000   0.500000000   0.500000000
+       0.500000000   0.000000000   0.500000000
+       0.500000000   0.500000000   0.000000000
+ATOMIC_SPECIES
+  Si  28   Si.pbe-mt_fhi.UPF
+  C   12    C.pbe-mt_fhi.UPF
+ATOMIC_POSITIONS crystal
+  Si   0.000000000   0.000000000   0.000000000
+  C    0.250000000   0.250000000   0.250000000
+ 
+K_POINTS crystal
+   10
+  0.166666667  0.166666667  0.166666667   1.0
+  0.166666667  0.166666667  0.500000000   3.0
+  0.166666667  0.166666667  0.833333333   3.0
+  0.166666667  0.500000000  0.500000000   3.0
+  0.166666667  0.500000000  0.833333333   6.0
+  0.166666667  0.833333333  0.833333333   3.0
+  0.500000000  0.500000000  0.500000000   1.0
+  0.500000000  0.500000000  0.833333333   3.0
+  0.500000000  0.833333333  0.833333333   3.0
+  0.833333333  0.833333333  0.833333333   1.0

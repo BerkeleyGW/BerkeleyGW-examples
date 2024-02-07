@@ -1,0 +1,859 @@
+
+ BerkeleyGW version 3.0+git v3.0-322-g6f28430 by mdelben <mdelben@lbl.gov> at 2024-01-26 16:01:53 -0500
+ Epsilon code, Complex version, run on 07-Feb-2024 at 13:25:24 -0800
+
+                                                                 ..o.          
+                                                                .oxxo.         
+                                                               .oxxxxo...      
+                                                               oxxxxxxo.       
+                                                              .oxxxxxxx.       
+                                                              .ooooooxxo..     
+                                                              .oooooooxo..     
+                                                              .oooooxxo...     
+                                                       .........oxooo......    
+                                                 ............................  
+                                             ................................. 
+                                          .................................... 
+           .          ..oo. ....  .................................oooxxxxxxxo.
+     .............oxxxx@ox@@@x@x.....................o...........ooooooooooxx. 
+    .o.........oox@x.oo........xxx@@............ooxxxxo..........ooooxxxxxoxo  
+    .x........x@xxo...............o@xxo........oxxx@@@xoooooooooooooooxxxo...  
+    .o......ox@@o..................oox@o.....ooxxx@xoooxxxxxxxoooooooooooo.... 
+    o..ooooo@@xoooo....ooo...........x@o.....ooxxxxo   .oxxxxxxxxxxooooooo.... 
+    . .oooo@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@....ooooox.     .oxx@@@@@xxoo........ 
+      .ooooxxxxxxxooooooxooooooooooooooxo...oooooxx.        ..ox@xxxoo.........
+      .ooooooxxxx@xoooooooooooooxxoooooooooooxxxxx.            .oxxooooooooxxo.
+     .oooooxxxxx@@@xxxxxxxxxxxxxxxxxxxxxxxxoxxxxo.                .oxxxxxxxxo. 
+   ....oooxxxxx@@@xo..oxxx@@@@@@xxxxoxxoooooooxx.                  .oxxxoo..   
+  .....ooxxxx@@xo.       ........    .ooooooooxxo                              
+  ..oooxxxx@@@o                       .oooooooxoo.                             
+  ....oxooxxxxx.                       .ooo..oooo.                             
+  .....o.ooxxxxxo.                     .oooooooxo.                             
+ ......ooooxxxxxxo.                     .ooooooxoo..                           
+........ooxxxxxxxo..                     .o....oxoo...                         
+.......ooooxxxxxxxo.                     ........oooo.                         
+.ooooooo..ooxxxxoooo.                    .........ooo...                       
+..oxo...ooooxxxoooo..                    .ooo......oooo...                     
+  .ooooo....o.                            .oxxxoo....ooo....                   
+    .oooooo...                              ...ooooo...ooo..                   
+       ...                                     .oo.......                      
+                                               ....ooo...                      
+                      __              __                                       
+ ______              [  |            [  |                 ._____  _          _ 
+|_   _               | |  _          | |                /  ___ | |        | |
+  | |_) | .---.  _. _.| | / |  .---.  | | .---.  _    _ / /    _|   /  / / 
+  |  __'./ /__\[ /`_| '' <  / /__\ | |/ /__\|   | | |   _____  /  / /  
+ _| |__| | __. | |   | |`  | ___. | || ___.  / /  .___| |    /  /   
+|_______/ .__./[_]  [__|  _] .__./[___].__./    /   .____./    /  /    
+                                                  / /                          
+                                                 /_/                           
+ --------------------------------------------------------------------------------
+ Please cite the main BerkeleyGW paper when using results from this calculation:
+
+ Jack Deslippe, Georgy Samsonidze, David A. Strubbe, Manish Jain, Marvin L.
+ Cohen, and Steven G. Louie, "BerkeleyGW: A Massively Parallel Computer Package
+ for the Calculation of the Quasiparticle and Optical Properties of Materials
+ and Nanostructures," Comput. Phys. Commun. 183, 1269 (2012)
+
+ Aditionally, PLEASE CITE ALL PAPERS REPORTED AT THE END OF THIS CALCULATION.
+ --------------------------------------------------------------------------------
+
+ Running MPI version (parallel)
+ Running with 4 MPI task(s)
+ Using OpenMP. Number of threads per MPI task: 16
+ Number of threads used for sorting routines: 1
+
+ Compilation flags:
+ - Compiler: NVHPC
+ - Para. flags: MPI, OMP
+ - Math  flags: USESCALAPACK, UNPACKED, USEFFTW3, HDF5, USEELPA
+ - Debug flags: 
+
+ Running with verbosity level 1 (default).
+
+ Parameters for the full-frequency calculation:
+ - frequency_dependence_method: 2
+ - init_frequency: 0.000000
+ - broadening: 0.100000
+ - delta_frequency: 0.500000
+ - frequency_low_cutoff: 10.000000
+ - number_imaginary_freqs: 10
+ - using subspace truncation with EPS eigenvalues: 0.1E-01
+
+ We will start a new calculation from scratch.
+
+ Experimental Features:
+  - FFTs Optimization Level: 0
+  - Use HDF5 Parallel IO: F
+
+ 
+ We`ll perform a uniform sampling of the full BZ.
+ 
+ Computing the full frequency-dependent inverse dielectric matrix (Contour-Deformation formulation)
+
+ We are using matrix communication scheme
+
+ We are using non-blocking cyclic communication scheme
+
+ Communication buffers will be statically allocated
+
+ Subspace redistribute eigenvectors with point to point communication
+
+ Using block algorithm over valence bands
+
+ We are communicating via MPI
+
+ We are using no truncation
+ Reading header of WFN
+ Highest occupied band (unshifted grid) = 4
+ Valence max    (unshifted grid) = 9.122769 eV
+ Conduction min (unshifted grid) = 12.215452 eV
+ Middle energy  (unshifted grid) = 10.669110 eV
+ Fermi  energy  (unshifted grid) = 10.669110 eV
+
+ Reading header of WFNq
+ Highest occupied band (shifted grid) = 4
+
+ Calculation parameters:
+ - Cutoff of the dielectric matrix (Ry): 20.00
+ - Total number of bands in the calculation: 80
+ - Number of fully occupied valence bands: 4
+ - Number of partially occ. conduction bands: 0
+ - Monkhorst-Pack q-grid for epsilon(q): 3 3 3
+ 
+ Running with 1 valence pools
+ Number of conduction bands per processor: 19
+ Number of valence bands per processor: 4
+
+ Memory available: 125477.8 MB per PE
+ Memory required for execution: 3869.9 MB per PE
+ Memory required for vcoul: 0.0 MB per PE
+
+ Valence block alogorithm info
+ Max memory allowed per valence block (Gb):    40.00
+ Memory for a single valence band (Gb):         0.01
+ Number of valence bands per block:               4
+
+ Number of electrons per unit cell (from ifmax) = 8.000000
+ Number of electrons per unit cell (from occupations) = 8.000000
+ Plasma Frequency = 1.696062 Ry
+
+ 
+ Started reading wavefunctions (WFN) with 800 state(s) at 13:25:26.
+ [ 13:25:26 |   0% ] state   1 / 800.
+ [ 13:25:26 |   0% ] state   3 / 800, remaining: 1 s.
+ [ 13:25:26 |  10% ] state  80 / 800, remaining: 0 s.
+ [ 13:25:26 |  20% ] state 160 / 800, remaining: 0 s.
+ [ 13:25:26 |  30% ] state 240 / 800, remaining: 0 s.
+ [ 13:25:26 |  40% ] state 320 / 800, remaining: 0 s.
+ [ 13:25:26 |  50% ] state 400 / 800, remaining: 0 s.
+ [ 13:25:26 |  60% ] state 480 / 800, remaining: 0 s.
+ [ 13:25:26 |  70% ] state 560 / 800, remaining: 0 s.
+ [ 13:25:26 |  80% ] state 640 / 800, remaining: 0 s.
+ [ 13:25:26 |  90% ] state 720 / 800, remaining: 0 s.
+ [ 13:25:26 | 100% ] state 800 / 800, remaining: 0 s.
+ Finished reading wavefunctions (WFN) at 13:25:26.
+ Elapsed time: 0 s.
+ 
+ Initializing eps0mat.h5
+ Initializing epsmat.h5
+ - Screened Coulomb cutoff: 20.000 Ry
+ - Total number of bands: 80
+ - Number of q-points: 5
+
+ Scissors parameters:
+ - Valence:    es =   0.0000 eV, e0 =   0.0000 eV, edel =   0.0000
+ - Conduction: es =   0.0000 eV, e0 =   0.0000 eV, edel =   0.0000
+
+ Q0 and |Q0| =  0.000000  0.000000  0.001000  0.001321
+ Q  and |Q|  =  0.000000  0.000000  0.333333  0.440325
+ Q  and |Q|  =  0.000000  0.000000  0.666667  0.880651
+ Q  and |Q|  =  0.000000  0.333333  0.333333  0.508443
+ Q  and |Q|  =  0.000000  0.333333  0.666667  0.843159
+
+ GPU acceleration is : ENABLED
+ 
+ Algorithms used:
+ - mtxel         : OPENACC_ALGO
+ - chi_summation : OPENACC_ALGO
+ 
+ You have a slightly shifted q0 vector and a semiconductor.
+ So, reading from WFNq.
+ Reading header of WFNq
+ Highest occupied band (shifted grid) = 4
+ 
+ Started reading wavefunctions (WFNq) with 112 state(s) at 13:25:27.
+ [ 13:25:27 |   0% ] state   1 / 112.
+ [ 13:25:27 |   2% ] state   3 / 112, remaining: 0 s.
+ [ 13:25:27 |  10% ] state  12 / 112, remaining: 0 s.
+ [ 13:25:27 |  20% ] state  23 / 112, remaining: 0 s.
+ [ 13:25:27 |  29% ] state  34 / 112, remaining: 0 s.
+ [ 13:25:27 |  39% ] state  45 / 112, remaining: 0 s.
+ [ 13:25:27 |  49% ] state  56 / 112, remaining: 0 s.
+ [ 13:25:27 |  60% ] state  68 / 112, remaining: 0 s.
+ [ 13:25:27 |  70% ] state  79 / 112, remaining: 0 s.
+ [ 13:25:27 |  79% ] state  90 / 112, remaining: 0 s.
+ [ 13:25:27 |  89% ] state 101 / 112, remaining: 0 s.
+ [ 13:25:27 |  99% ] state 112 / 112, remaining: 0 s.
+ Finished reading wavefunctions (WFNq) at 13:25:27.
+ Elapsed time: 0 s.
+ 
+ Summary of the WFN files:
+ - Number of k-points in WFN: 10
+ - Number of k-points in WFNq: 28
+ - Number of k-points in the full BZ of WFN: 108
+
+================================================================================
+ 13:25:27   Dealing with q =  0.000000  0.000000  0.001000                 1 / 5
+================================================================================
+
+ This is the special q->0 point.
+ Rank of the polarizability matrix (nmtx): 181
+ 
+ BLACS processor grid:   2 x   2; BLOCKSIZE =   32
+ 
+ Number of k-points in the irreducible BZ(q) (nrk): 28
+ 
+ ========================================================
+ == Start Building Polarizability Using:     1 Blocks. ==
+ ========================================================
+ 
+ Valence Block Number:     1 of     1 || Pass     1 of     1
+ -----------------------------------------------------------
+ 
+ Using GPU support via OpenACC/OMP-Target implementation
+ Using batch implementation, batch size:    20
+ 
+ Started calculation of matrix elements with 112 transition(s) at 13:25:27.
+ [ 13:25:27 |   0% ] transition   1 / 112.
+ [ 13:25:27 |   2% ] transition   3 / 112, remaining: 0 s.
+ [ 13:25:27 |  10% ] transition  12 / 112, remaining: 0 s.
+ [ 13:25:27 |  20% ] transition  23 / 112, remaining: 0 s.
+ [ 13:25:27 |  29% ] transition  34 / 112, remaining: 0 s.
+ [ 13:25:27 |  39% ] transition  45 / 112, remaining: 0 s.
+ [ 13:25:27 |  49% ] transition  56 / 112, remaining: 0 s.
+ [ 13:25:27 |  60% ] transition  68 / 112, remaining: 0 s.
+ [ 13:25:27 |  70% ] transition  79 / 112, remaining: 0 s.
+ [ 13:25:27 |  79% ] transition  90 / 112, remaining: 0 s.
+ [ 13:25:27 |  89% ] transition 101 / 112, remaining: 0 s.
+ [ 13:25:27 |  99% ] transition 112 / 112, remaining: 0 s.
+ Finished calculation of matrix elements at 13:25:27.
+ Elapsed time: 0 s.
+ 
+ 
+ Started building polarizability matrix omega=0 with 4 processor(s) at 13:25:27.
+ [ 13:25:27 |   0% ] processor 1 / 4.
+ [ 13:25:27 |  25% ] processor 2 / 4.
+ [ 13:25:27 |  50% ] processor 3 / 4, remaining: 0 s.
+ [ 13:25:27 |  75% ] processor 4 / 4, remaining: 0 s.
+ Finished building polarizability matrix omega=0 at 13:25:28.
+ Elapsed time: 0 s.
+ 
+ Diagonalization with Scalapack
+ EPS Truncation = 0.10E-01
+ Scaling =            1.00
+ Scaled basis =        181
+ N eigen with relative MAX ABS value >= chi_eigenvalue_cutoff           39
+ 
+ Basis Transformation info:
+ Memory available: 125325.3 MB per PE
+ Memory offset: 4.9 MB
+ Memory for a sigle block: 3.6 kB
+ Max Block Size: 181
+ 
+ Started transforming basis with 1 block(s) at 13:25:28.
+ [ 13:25:28 |   0% ] block 1 / 1.
+ Finished transforming basis at 13:25:28.
+ Elapsed time: 0 s.
+ 
+ 
+ Started building polarizability matrix within the subspace of omega=0 with 4 processor(s) at 13:25:28.
+ [ 13:25:28 |   0% ] processor 1 / 4.
+ [ 13:25:28 |  25% ] processor 2 / 4.
+ [ 13:25:28 |  50% ] processor 3 / 4, remaining: 0 s.
+ [ 13:25:28 |  75% ] processor 4 / 4, remaining: 0 s.
+ Finished building polarizability matrix within the subspace of omega=0 at 13:25:28.
+ Elapsed time: 0 s.
+ 
+ Done With Block Number:     1
+ -----------------------------
+ 
+ q-pt      1: Head of Epsilon         =    7.653953041480650E+000  -4.755533796419143E-017
+ q-pt      1: Epsilon(2,2)            =    1.624969638098919E+000   6.409856784432420E-020
+ 
+ Started inversion of dielectric matrix with 31 frequency(s) at 13:25:28.
+ [ 13:25:28 |   0% ] frequency  1 / 31.
+ [ 13:25:28 |   6% ] frequency  3 / 31, remaining: 0 s.
+ [ 13:25:28 |  10% ] frequency  4 / 31, remaining: 0 s.
+ [ 13:25:28 |  19% ] frequency  7 / 31, remaining: 0 s.
+ [ 13:25:28 |  29% ] frequency 10 / 31, remaining: 0 s.
+ [ 13:25:28 |  39% ] frequency 13 / 31, remaining: 0 s.
+ [ 13:25:28 |  48% ] frequency 16 / 31, remaining: 0 s.
+ [ 13:25:28 |  58% ] frequency 19 / 31, remaining: 0 s.
+ [ 13:25:28 |  68% ] frequency 22 / 31, remaining: 0 s.
+ [ 13:25:28 |  77% ] frequency 25 / 31, remaining: 0 s.
+ [ 13:25:28 |  87% ] frequency 28 / 31, remaining: 0 s.
+ Finished inversion of dielectric matrix at 13:25:28.
+ Elapsed time: 0 s.
+ 
+ q-pt      1: Head of Epsilon Inverse =    1.429722582113286E-001   5.738648217647885E-019
+ q-pt      1: Epsilon Inverse(2,2)    =    6.462868043490190E-001   9.486769009248164E-019
+
+ Writing dielectric matrix to file
+ Subspace: Full Epsilon will be retained for omega=0
+
+ Writing Full Inv Epsilon for omega=0 (H5)
+MPIIO WARNING: DVS stripe width of 24 was requested but DVS set it to 1
+See MPICH_MPIIO_DVS_MAXNODES in the intro_mpi man page.
+ Done:        0.02 s
+ Writing Eigenvectors of Epsilon omega=0 (H5)
+MPIIO WARNING: DVS stripe width of 24 was requested but DVS set it to 1
+See MPICH_MPIIO_DVS_MAXNODES in the intro_mpi man page.
+ Done:        0.01 s
+ Writing Subspace Inv Epsilon for all other frequencies (H5)
+ Number of frequencies:   31
+ Note: using old code to directly write the matrix to file.
+MPIIO WARNING: DVS stripe width of 24 was requested but DVS set it to 1
+See MPICH_MPIIO_DVS_MAXNODES in the intro_mpi man page.
+ Done:        0.28 s
+ Ok
+
+================================================================================
+ 13:25:29   Dealing with q =  0.000000  0.000000  0.333333                 2 / 5
+================================================================================
+
+ This is a regular non-zero q-point.
+ Rank of the polarizability matrix (nmtx): 205
+ 
+ BLACS processor grid:   2 x   2; BLOCKSIZE =   32
+ 
+ Number of k-points in the irreducible BZ(q) (nrk): 28
+ 
+ ========================================================
+ == Start Building Polarizability Using:     1 Blocks. ==
+ ========================================================
+ 
+ Valence Block Number:     1 of     1 || Pass     1 of     1
+ -----------------------------------------------------------
+ 
+ Using GPU support via OpenACC/OMP-Target implementation
+ Using batch implementation, batch size:    20
+ 
+ Started calculation of matrix elements with 112 transition(s) at 13:25:29.
+ [ 13:25:29 |   0% ] transition   1 / 112.
+ [ 13:25:29 |   2% ] transition   3 / 112, remaining: 0 s.
+ [ 13:25:29 |  10% ] transition  12 / 112, remaining: 0 s.
+ [ 13:25:29 |  20% ] transition  23 / 112, remaining: 0 s.
+ [ 13:25:29 |  29% ] transition  34 / 112, remaining: 0 s.
+ [ 13:25:29 |  39% ] transition  45 / 112, remaining: 0 s.
+ [ 13:25:29 |  49% ] transition  56 / 112, remaining: 0 s.
+ [ 13:25:29 |  60% ] transition  68 / 112, remaining: 0 s.
+ [ 13:25:29 |  70% ] transition  79 / 112, remaining: 0 s.
+ [ 13:25:29 |  79% ] transition  90 / 112, remaining: 0 s.
+ [ 13:25:29 |  89% ] transition 101 / 112, remaining: 0 s.
+ [ 13:25:29 |  99% ] transition 112 / 112, remaining: 0 s.
+ Finished calculation of matrix elements at 13:25:29.
+ Elapsed time: 0 s.
+ 
+ 
+ Started building polarizability matrix omega=0 with 4 processor(s) at 13:25:29.
+ [ 13:25:29 |   0% ] processor 1 / 4.
+ [ 13:25:29 |  25% ] processor 2 / 4.
+ [ 13:25:29 |  50% ] processor 3 / 4, remaining: 0 s.
+ [ 13:25:29 |  75% ] processor 4 / 4, remaining: 0 s.
+ Finished building polarizability matrix omega=0 at 13:25:29.
+ Elapsed time: 0 s.
+ 
+ Diagonalization with Scalapack
+ EPS Truncation = 0.10E-01
+ Scaling =            1.00
+ Scaled basis =        200
+ N eigen with relative MAX ABS value >= chi_eigenvalue_cutoff           55
+ 
+ Basis Transformation info:
+ Memory available: 125303.2 MB per PE
+ Memory offset: 6.9 MB
+ Memory for a sigle block: 4.1 kB
+ Max Block Size: 205
+ 
+ Started transforming basis with 1 block(s) at 13:25:29.
+ [ 13:25:29 |   0% ] block 1 / 1.
+ Finished transforming basis at 13:25:29.
+ Elapsed time: 0 s.
+ 
+ 
+ Started building polarizability matrix within the subspace of omega=0 with 4 processor(s) at 13:25:29.
+ [ 13:25:29 |   0% ] processor 1 / 4.
+ [ 13:25:29 |  25% ] processor 2 / 4.
+ [ 13:25:29 |  50% ] processor 3 / 4, remaining: 0 s.
+ [ 13:25:29 |  75% ] processor 4 / 4, remaining: 0 s.
+ Finished building polarizability matrix within the subspace of omega=0 at 13:25:29.
+ Elapsed time: 0 s.
+ 
+ Done With Block Number:     1
+ -----------------------------
+ 
+ q-pt      2: Head of Epsilon         =    3.943927728350193E+000   2.233515256113683E-017
+ q-pt      2: Epsilon(2,2)            =    2.225925014756128E+000  -3.760846783473400E-018
+ 
+ Started inversion of dielectric matrix with 31 frequency(s) at 13:25:29.
+ [ 13:25:29 |   0% ] frequency  1 / 31.
+ [ 13:25:29 |   6% ] frequency  3 / 31, remaining: 0 s.
+ [ 13:25:29 |  10% ] frequency  4 / 31, remaining: 0 s.
+ [ 13:25:29 |  19% ] frequency  7 / 31, remaining: 0 s.
+ [ 13:25:29 |  29% ] frequency 10 / 31, remaining: 0 s.
+ [ 13:25:29 |  39% ] frequency 13 / 31, remaining: 0 s.
+ [ 13:25:29 |  48% ] frequency 16 / 31, remaining: 0 s.
+ [ 13:25:30 |  58% ] frequency 19 / 31, remaining: 0 s.
+ [ 13:25:30 |  68% ] frequency 22 / 31, remaining: 0 s.
+ [ 13:25:30 |  77% ] frequency 25 / 31, remaining: 0 s.
+ [ 13:25:30 |  87% ] frequency 28 / 31, remaining: 0 s.
+ Finished inversion of dielectric matrix at 13:25:30.
+ Elapsed time: 0 s.
+ 
+ q-pt      2: Head of Epsilon Inverse =    2.846615014534078E-001  -1.843143693225358E-018
+ q-pt      2: Epsilon Inverse(2,2)    =    4.962767166929555E-001   1.650020181251377E-018
+
+ Writing dielectric matrix to file
+ Subspace: Full Epsilon will be retained for omega=0
+
+ Writing Full Inv Epsilon for omega=0 (H5)
+MPIIO WARNING: DVS stripe width of 24 was requested but DVS set it to 1
+See MPICH_MPIIO_DVS_MAXNODES in the intro_mpi man page.
+ Done:        0.01 s
+ Writing Eigenvectors of Epsilon omega=0 (H5)
+MPIIO WARNING: DVS stripe width of 24 was requested but DVS set it to 1
+See MPICH_MPIIO_DVS_MAXNODES in the intro_mpi man page.
+ Done:        0.01 s
+ Writing Subspace Inv Epsilon for all other frequencies (H5)
+ Number of frequencies:   31
+ Note: using old code to directly write the matrix to file.
+MPIIO WARNING: DVS stripe width of 24 was requested but DVS set it to 1
+See MPICH_MPIIO_DVS_MAXNODES in the intro_mpi man page.
+ Done:        0.36 s
+ Ok
+
+================================================================================
+ 13:25:30   Dealing with q =  0.000000  0.000000  0.666667                 3 / 5
+================================================================================
+
+ This is a regular non-zero q-point.
+ Rank of the polarizability matrix (nmtx): 205
+ 
+ BLACS processor grid:   2 x   2; BLOCKSIZE =   32
+ 
+ Number of k-points in the irreducible BZ(q) (nrk): 28
+ 
+ ========================================================
+ == Start Building Polarizability Using:     1 Blocks. ==
+ ========================================================
+ 
+ Valence Block Number:     1 of     1 || Pass     1 of     1
+ -----------------------------------------------------------
+ 
+ Using GPU support via OpenACC/OMP-Target implementation
+ Using batch implementation, batch size:    20
+ 
+ Started calculation of matrix elements with 112 transition(s) at 13:25:30.
+ [ 13:25:30 |   0% ] transition   1 / 112.
+ [ 13:25:30 |   2% ] transition   3 / 112, remaining: 0 s.
+ [ 13:25:30 |  10% ] transition  12 / 112, remaining: 0 s.
+ [ 13:25:30 |  20% ] transition  23 / 112, remaining: 0 s.
+ [ 13:25:30 |  29% ] transition  34 / 112, remaining: 0 s.
+ [ 13:25:30 |  39% ] transition  45 / 112, remaining: 0 s.
+ [ 13:25:30 |  49% ] transition  56 / 112, remaining: 0 s.
+ [ 13:25:30 |  60% ] transition  68 / 112, remaining: 0 s.
+ [ 13:25:30 |  70% ] transition  79 / 112, remaining: 0 s.
+ [ 13:25:30 |  79% ] transition  90 / 112, remaining: 0 s.
+ [ 13:25:30 |  89% ] transition 101 / 112, remaining: 0 s.
+ [ 13:25:30 |  99% ] transition 112 / 112, remaining: 0 s.
+ Finished calculation of matrix elements at 13:25:30.
+ Elapsed time: 0 s.
+ 
+ 
+ Started building polarizability matrix omega=0 with 4 processor(s) at 13:25:30.
+ [ 13:25:30 |   0% ] processor 1 / 4.
+ [ 13:25:30 |  25% ] processor 2 / 4.
+ [ 13:25:30 |  50% ] processor 3 / 4, remaining: 0 s.
+ [ 13:25:30 |  75% ] processor 4 / 4, remaining: 0 s.
+ Finished building polarizability matrix omega=0 at 13:25:30.
+ Elapsed time: 0 s.
+ 
+ Diagonalization with Scalapack
+ EPS Truncation = 0.10E-01
+ Scaling =            1.00
+ Scaled basis =        200
+ N eigen with relative MAX ABS value >= chi_eigenvalue_cutoff           55
+ 
+ Basis Transformation info:
+ Memory available: 125299.8 MB per PE
+ Memory offset: 6.9 MB
+ Memory for a sigle block: 4.1 kB
+ Max Block Size: 205
+ 
+ Started transforming basis with 1 block(s) at 13:25:30.
+ [ 13:25:30 |   0% ] block 1 / 1.
+ Finished transforming basis at 13:25:31.
+ Elapsed time: 0 s.
+ 
+ 
+ Started building polarizability matrix within the subspace of omega=0 with 4 processor(s) at 13:25:31.
+ [ 13:25:31 |   0% ] processor 1 / 4.
+ [ 13:25:31 |  25% ] processor 2 / 4.
+ [ 13:25:31 |  50% ] processor 3 / 4, remaining: 0 s.
+ [ 13:25:31 |  75% ] processor 4 / 4, remaining: 0 s.
+ Finished building polarizability matrix within the subspace of omega=0 at 13:25:31.
+ Elapsed time: 0 s.
+ 
+ Done With Block Number:     1
+ -----------------------------
+ 
+ q-pt      3: Head of Epsilon         =    3.943927728350106E+000   2.121869466812922E-018
+ q-pt      3: Epsilon(2,2)            =    2.225925014755851E+000   6.498448449095824E-021
+ 
+ Started inversion of dielectric matrix with 31 frequency(s) at 13:25:31.
+ [ 13:25:31 |   0% ] frequency  1 / 31.
+ [ 13:25:31 |   6% ] frequency  3 / 31, remaining: 0 s.
+ [ 13:25:31 |  10% ] frequency  4 / 31, remaining: 0 s.
+ [ 13:25:31 |  19% ] frequency  7 / 31, remaining: 0 s.
+ [ 13:25:31 |  29% ] frequency 10 / 31, remaining: 0 s.
+ [ 13:25:31 |  39% ] frequency 13 / 31, remaining: 0 s.
+ [ 13:25:31 |  48% ] frequency 16 / 31, remaining: 0 s.
+ [ 13:25:31 |  58% ] frequency 19 / 31, remaining: 0 s.
+ [ 13:25:31 |  68% ] frequency 22 / 31, remaining: 0 s.
+ [ 13:25:31 |  77% ] frequency 25 / 31, remaining: 0 s.
+ [ 13:25:31 |  87% ] frequency 28 / 31, remaining: 0 s.
+ Finished inversion of dielectric matrix at 13:25:31.
+ Elapsed time: 0 s.
+ 
+ q-pt      3: Head of Epsilon Inverse =    2.846615014533885E-001  -2.168404344971009E-019
+ q-pt      3: Epsilon Inverse(2,2)    =    4.962767166929927E-001  -4.912791094074942E-019
+
+ Writing dielectric matrix to file
+ Subspace: Full Epsilon will be retained for omega=0
+
+ Writing Full Inv Epsilon for omega=0 (H5)
+MPIIO WARNING: DVS stripe width of 24 was requested but DVS set it to 1
+See MPICH_MPIIO_DVS_MAXNODES in the intro_mpi man page.
+ Done:        0.01 s
+ Writing Eigenvectors of Epsilon omega=0 (H5)
+MPIIO WARNING: DVS stripe width of 24 was requested but DVS set it to 1
+See MPICH_MPIIO_DVS_MAXNODES in the intro_mpi man page.
+ Done:        0.01 s
+ Writing Subspace Inv Epsilon for all other frequencies (H5)
+ Number of frequencies:   31
+ Note: using old code to directly write the matrix to file.
+MPIIO WARNING: DVS stripe width of 24 was requested but DVS set it to 1
+See MPICH_MPIIO_DVS_MAXNODES in the intro_mpi man page.
+ Done:        0.34 s
+ Ok
+
+================================================================================
+ 13:25:31   Dealing with q =  0.000000  0.333333  0.333333                 4 / 5
+================================================================================
+
+ This is a regular non-zero q-point.
+ Rank of the polarizability matrix (nmtx): 218
+ 
+ BLACS processor grid:   2 x   2; BLOCKSIZE =   32
+ 
+ Number of k-points in the irreducible BZ(q) (nrk): 36
+ 
+ ========================================================
+ == Start Building Polarizability Using:     1 Blocks. ==
+ ========================================================
+ 
+ Valence Block Number:     1 of     1 || Pass     1 of     1
+ -----------------------------------------------------------
+ 
+ Using GPU support via OpenACC/OMP-Target implementation
+ Using batch implementation, batch size:    20
+ 
+ Started calculation of matrix elements with 144 transition(s) at 13:25:31.
+ [ 13:25:31 |   0% ] transition   1 / 144.
+ [ 13:25:31 |   1% ] transition   3 / 144, remaining: 0 s.
+ [ 13:25:31 |  10% ] transition  15 / 144, remaining: 0 s.
+ [ 13:25:31 |  19% ] transition  29 / 144, remaining: 0 s.
+ [ 13:25:31 |  30% ] transition  44 / 144, remaining: 0 s.
+ [ 13:25:31 |  40% ] transition  58 / 144, remaining: 0 s.
+ [ 13:25:31 |  50% ] transition  73 / 144, remaining: 0 s.
+ [ 13:25:32 |  60% ] transition  87 / 144, remaining: 0 s.
+ [ 13:25:32 |  69% ] transition 101 / 144, remaining: 0 s.
+ [ 13:25:32 |  80% ] transition 116 / 144, remaining: 0 s.
+ [ 13:25:32 |  90% ] transition 130 / 144, remaining: 0 s.
+ Finished calculation of matrix elements at 13:25:32.
+ Elapsed time: 0 s.
+ 
+ 
+ Started building polarizability matrix omega=0 with 4 processor(s) at 13:25:32.
+ [ 13:25:32 |   0% ] processor 1 / 4.
+ [ 13:25:32 |  25% ] processor 2 / 4.
+ [ 13:25:32 |  50% ] processor 3 / 4, remaining: 0 s.
+ [ 13:25:32 |  75% ] processor 4 / 4, remaining: 0 s.
+ Finished building polarizability matrix omega=0 at 13:25:32.
+ Elapsed time: 0 s.
+ 
+ Diagonalization with Scalapack
+ EPS Truncation = 0.10E-01
+ Scaling =            1.00
+ Scaled basis =        200
+ N eigen with relative MAX ABS value >= chi_eigenvalue_cutoff           57
+ 
+ Basis Transformation info:
+ Memory available: 125297.4 MB per PE
+ Memory offset: 7.1 MB
+ Memory for a sigle block: 4.2 kB
+ Max Block Size: 218
+ 
+ Started transforming basis with 1 block(s) at 13:25:32.
+ [ 13:25:32 |   0% ] block 1 / 1.
+ Finished transforming basis at 13:25:32.
+ Elapsed time: 0 s.
+ 
+ 
+ Started building polarizability matrix within the subspace of omega=0 with 4 processor(s) at 13:25:32.
+ [ 13:25:32 |   0% ] processor 1 / 4.
+ [ 13:25:32 |  25% ] processor 2 / 4.
+ [ 13:25:32 |  50% ] processor 3 / 4, remaining: 0 s.
+ [ 13:25:32 |  75% ] processor 4 / 4, remaining: 0 s.
+ Finished building polarizability matrix within the subspace of omega=0 at 13:25:32.
+ Elapsed time: 0 s.
+ 
+ Done With Block Number:     1
+ -----------------------------
+ 
+ q-pt      4: Head of Epsilon         =    3.812024100859032E+000  -1.466729155222157E-017
+ q-pt      4: Epsilon(2,2)            =    2.028941819116483E+000   5.513498000654042E-019
+ 
+ Started inversion of dielectric matrix with 31 frequency(s) at 13:25:32.
+ [ 13:25:32 |   0% ] frequency  1 / 31.
+ [ 13:25:32 |   6% ] frequency  3 / 31, remaining: 0 s.
+ [ 13:25:32 |  10% ] frequency  4 / 31, remaining: 0 s.
+ [ 13:25:32 |  19% ] frequency  7 / 31, remaining: 0 s.
+ [ 13:25:32 |  29% ] frequency 10 / 31, remaining: 0 s.
+ [ 13:25:32 |  39% ] frequency 13 / 31, remaining: 0 s.
+ [ 13:25:32 |  48% ] frequency 16 / 31, remaining: 0 s.
+ [ 13:25:32 |  58% ] frequency 19 / 31, remaining: 0 s.
+ [ 13:25:32 |  68% ] frequency 22 / 31, remaining: 0 s.
+ [ 13:25:32 |  77% ] frequency 25 / 31, remaining: 0 s.
+ [ 13:25:32 |  87% ] frequency 28 / 31, remaining: 0 s.
+ Finished inversion of dielectric matrix at 13:25:32.
+ Elapsed time: 0 s.
+ 
+ q-pt      4: Head of Epsilon Inverse =    2.865299694860384E-001   1.871250028657089E-018
+ q-pt      4: Epsilon Inverse(2,2)    =    5.292115245902713E-001  -1.687289630930566E-018
+
+ Writing dielectric matrix to file
+ Subspace: Full Epsilon will be retained for omega=0
+
+ Writing Full Inv Epsilon for omega=0 (H5)
+MPIIO WARNING: DVS stripe width of 24 was requested but DVS set it to 1
+See MPICH_MPIIO_DVS_MAXNODES in the intro_mpi man page.
+ Done:        0.01 s
+ Writing Eigenvectors of Epsilon omega=0 (H5)
+MPIIO WARNING: DVS stripe width of 24 was requested but DVS set it to 1
+See MPICH_MPIIO_DVS_MAXNODES in the intro_mpi man page.
+ Done:        0.01 s
+ Writing Subspace Inv Epsilon for all other frequencies (H5)
+ Number of frequencies:   31
+ Note: using old code to directly write the matrix to file.
+MPIIO WARNING: DVS stripe width of 24 was requested but DVS set it to 1
+See MPICH_MPIIO_DVS_MAXNODES in the intro_mpi man page.
+ Done:        0.36 s
+ Ok
+
+================================================================================
+ 13:25:33   Dealing with q =  0.000000  0.333333  0.666667                 5 / 5
+================================================================================
+
+ This is a regular non-zero q-point.
+ Rank of the polarizability matrix (nmtx): 220
+ 
+ BLACS processor grid:   2 x   2; BLOCKSIZE =   32
+ 
+ Number of k-points in the irreducible BZ(q) (nrk): 63
+ 
+ ========================================================
+ == Start Building Polarizability Using:     1 Blocks. ==
+ ========================================================
+ 
+ Valence Block Number:     1 of     1 || Pass     1 of     1
+ -----------------------------------------------------------
+ 
+ Using GPU support via OpenACC/OMP-Target implementation
+ Using batch implementation, batch size:    20
+ 
+ Started calculation of matrix elements with 252 transition(s) at 13:25:33.
+ [ 13:25:33 |   0% ] transition   1 / 252.
+ [ 13:25:33 |   1% ] transition   3 / 252, remaining: 0 s.
+ [ 13:25:33 |  10% ] transition  26 / 252, remaining: 0 s.
+ [ 13:25:33 |  20% ] transition  51 / 252, remaining: 0 s.
+ [ 13:25:33 |  30% ] transition  76 / 252, remaining: 0 s.
+ [ 13:25:33 |  40% ] transition 101 / 252, remaining: 0 s.
+ [ 13:25:33 |  50% ] transition 126 / 252, remaining: 0 s.
+ [ 13:25:33 |  60% ] transition 152 / 252, remaining: 0 s.
+ [ 13:25:33 |  70% ] transition 177 / 252, remaining: 0 s.
+ [ 13:25:33 |  80% ] transition 202 / 252, remaining: 0 s.
+ [ 13:25:33 |  90% ] transition 227 / 252, remaining: 0 s.
+ [ 13:25:33 | 100% ] transition 252 / 252, remaining: 0 s.
+ Finished calculation of matrix elements at 13:25:33.
+ Elapsed time: 0 s.
+ 
+ 
+ Started building polarizability matrix omega=0 with 4 processor(s) at 13:25:33.
+ [ 13:25:33 |   0% ] processor 1 / 4.
+ [ 13:25:33 |  25% ] processor 2 / 4.
+ [ 13:25:33 |  50% ] processor 3 / 4, remaining: 0 s.
+ [ 13:25:33 |  75% ] processor 4 / 4, remaining: 0 s.
+ Finished building polarizability matrix omega=0 at 13:25:33.
+ Elapsed time: 0 s.
+ 
+ Diagonalization with Scalapack
+ EPS Truncation = 0.10E-01
+ Scaling =            1.00
+ Scaled basis =        200
+ N eigen with relative MAX ABS value >= chi_eigenvalue_cutoff           61
+ 
+ Basis Transformation info:
+ Memory available: 125295.0 MB per PE
+ Memory offset: 7.6 MB
+ Memory for a sigle block: 4.3 kB
+ Max Block Size: 220
+ 
+ Started transforming basis with 1 block(s) at 13:25:33.
+ [ 13:25:33 |   0% ] block 1 / 1.
+ Finished transforming basis at 13:25:33.
+ Elapsed time: 0 s.
+ 
+ 
+ Started building polarizability matrix within the subspace of omega=0 with 4 processor(s) at 13:25:33.
+ [ 13:25:33 |   0% ] processor 1 / 4.
+ [ 13:25:33 |  25% ] processor 2 / 4.
+ [ 13:25:34 |  50% ] processor 3 / 4, remaining: 0 s.
+ [ 13:25:34 |  75% ] processor 4 / 4, remaining: 0 s.
+ Finished building polarizability matrix within the subspace of omega=0 at 13:25:34.
+ Elapsed time: 0 s.
+ 
+ Done With Block Number:     1
+ -----------------------------
+ 
+ q-pt      5: Head of Epsilon         =    2.847618397130034E+000  -2.003507507350223E-018
+ q-pt      5: Epsilon(2,2)            =    2.454786045802765E+000   3.732566282323209E-018
+ 
+ Started inversion of dielectric matrix with 31 frequency(s) at 13:25:34.
+ [ 13:25:34 |   0% ] frequency  1 / 31.
+ [ 13:25:34 |   6% ] frequency  3 / 31, remaining: 0 s.
+ [ 13:25:34 |  10% ] frequency  4 / 31, remaining: 0 s.
+ [ 13:25:34 |  19% ] frequency  7 / 31, remaining: 0 s.
+ [ 13:25:34 |  29% ] frequency 10 / 31, remaining: 0 s.
+ [ 13:25:34 |  39% ] frequency 13 / 31, remaining: 0 s.
+ [ 13:25:34 |  48% ] frequency 16 / 31, remaining: 0 s.
+ [ 13:25:34 |  58% ] frequency 19 / 31, remaining: 0 s.
+ [ 13:25:34 |  68% ] frequency 22 / 31, remaining: 0 s.
+ [ 13:25:34 |  77% ] frequency 25 / 31, remaining: 0 s.
+ [ 13:25:34 |  87% ] frequency 28 / 31, remaining: 0 s.
+ Finished inversion of dielectric matrix at 13:25:34.
+ Elapsed time: 0 s.
+ 
+ q-pt      5: Head of Epsilon Inverse =    3.812768072676282E-001   1.084202172485504E-019
+ q-pt      5: Epsilon Inverse(2,2)    =    4.401366247822848E-001   9.554531645028508E-019
+
+ Writing dielectric matrix to file
+ Subspace: Full Epsilon will be retained for omega=0
+
+ Writing Full Inv Epsilon for omega=0 (H5)
+MPIIO WARNING: DVS stripe width of 24 was requested but DVS set it to 1
+See MPICH_MPIIO_DVS_MAXNODES in the intro_mpi man page.
+ Done:        0.01 s
+ Writing Eigenvectors of Epsilon omega=0 (H5)
+MPIIO WARNING: DVS stripe width of 24 was requested but DVS set it to 1
+See MPICH_MPIIO_DVS_MAXNODES in the intro_mpi man page.
+ Done:        0.01 s
+ Writing Subspace Inv Epsilon for all other frequencies (H5)
+ Number of frequencies:   31
+ Note: using old code to directly write the matrix to file.
+MPIIO WARNING: DVS stripe width of 24 was requested but DVS set it to 1
+See MPICH_MPIIO_DVS_MAXNODES in the intro_mpi man page.
+ Done:        0.37 s
+ Ok
+
+
+********************************************************************************
+*                                                                              *
+* Your calculation employed methods and algorithms published in peer-reviewed  *
+* papers. Please, cite the following references to give proper credit to their *
+*          authors and help support future development of BerkeleyGW.          *
+*                                                                              *
+********************************************************************************
+
+ J. Deslippe, G. Samsonidze, D. A. Strubbe, M. Jain, M. L. Cohen, and S. G.
+ Louie, BerkeleyGW: A Massively Parallel Computer Package for the Calculation
+ of the Quasiparticle and Optical Properties of Materials and Nanostructures,
+ Computer Physics Communications 183, 1269 (2012).
+
+ M. S. Hybertsen and S. G. Louie, Electron Correlation in Semiconductors and
+ Insulators: Band Gaps and Quasiparticle Energies, Phys. Rev. B 34, 5390
+ (1986).
+
+ M. Del Ben, F. H. da Jornada, G. Antonius, T. Rangel, S. G. Louie, J.
+ Deslippe, and A. Canning, Static Subspace Approximation for the Evaluation of
+ G0W0 Quasiparticle Energies within a Sum-over-Bands Approach, Phys. Rev. B 99,
+ 125128 (2019).
+
+********************************************************************************
+
+ 
+ Timing information
+ 
+                                CPU time (s)          WALL time (s)       Number
+ Routine                       min        max        min        max     of calls
+ -------------------------  ---------  ---------  ---------  ---------  --------
+ - Eps (I/O) Comm                0.06       0.09       0.06       0.09        15
+ - Eps (I/O) IO                  1.36       1.68       1.36       1.68        15
+ - Input I/O                     0.00       0.42       0.00       0.42      1002
+ - Input Comm                    0.01       0.43       0.01       0.44      1002
+ - I/O TOTAL                     2.36       3.26       2.36       3.26        12
+ - INPUT                         1.85       1.86       1.85       1.86         1
+ - INPUT_Q                       0.07       0.82       0.07       0.82         1
+ - FULLBZ                        0.00       0.00       0.00       0.00         1
+ - GVEC                          0.00       0.01       0.00       0.01         5
+ - SUBGRP                        0.00       0.00       0.00       0.00         5
+ - IRRBZ                         0.00       0.00       0.00       0.00         5
+ - GENWF                         0.43       0.45       0.43       0.44       732
+ - MTXEL                         0.38       0.43       0.38       0.43       732
+ - RQSTAR                        0.00       0.00       0.00       0.00       183
+ - GMAP                          0.03       0.04       0.02       0.04       183
+ - EPSINV (TOTAL)                2.22       2.22       2.22       2.22         5
+ - CHI SUM (COMM)                0.01       0.01       0.01       0.01        80
+ - CHI SUM (TOTAL)               3.00       3.08       3.00       3.08         5
+ - GENWF (VAL)                   0.22       0.24       0.22       0.24       732
+ - GENWF (COND)                  0.21       0.21       0.20       0.22       183
+ - EPSINV (VCOUL)                0.00       0.00       0.00       0.00         5
+ - JOB SETUP                     0.00       0.01       0.00       0.01         1
+ - Q LOOP SETUP                  0.00       0.01       0.00       0.01         5
+ - INIT CUTOFF                   0.00       0.00       0.00       0.00         5
+ - INIT SCALAPACK                0.08       0.11       0.08       0.11         5
+ - INIT ARRAYS                   0.93       0.94       0.93       0.94        10
+ - MTXEL (DENOM)                 0.00       0.01       0.00       0.01     13908
+ - MTXEL (FFT)                   0.38       0.43       0.38       0.43       732
+ - GENWF (Ekin)                  0.01       0.01       0.00       0.01       366
+ - GENWF (Sort)                  0.35       0.36       0.34       0.37       366
+ - CHI SUM (zGEMM)               1.04       1.04       1.03       1.05       640
+ - CHI SUM (PREP)                0.17       0.17       0.16       0.17        50
+ - CHI SUM SUB (VCOUL)           0.00       0.00       0.00       0.01         5
+ - CHI SUM SUB DIAG              0.26       0.26       0.26       0.26         5
+ - CHI SUM SUB OMEGA=0           0.52       0.61       0.53       0.61        10
+ - CHI SUM SUB EIGVET COMM       0.00       0.00       0.00       0.00         5
+ - CHI SUM SUB TRANSF            1.43       1.44       1.43       1.44         5
+ - CHI SUM SUB OMEGA neq 0       0.99       0.99       0.99       0.99         5
+ - CHI SUM (ARRAY ALLOC)         0.05       0.13       0.05       0.13       150
+ - EPSINV (I/O)                  1.90       1.90       1.90       1.90         5
+ - EPSINV (INVERT)               0.32       0.32       0.32       0.32         5
+ - SUBSPACE (PzGEMM)             0.11       0.11       0.10       0.11       155
+ - EPSINV OMEGA=0                0.04       0.05       0.04       0.05         5
+ - EPSINV OMEGA neq 0            0.15       0.15       0.15       0.16       155
+ - FFT MLTPLY                    0.05       0.06       0.05       0.06     13908
+ - TOTAL                         9.91       9.91       9.91       9.91         1
+ 
+ Job Done
+ 

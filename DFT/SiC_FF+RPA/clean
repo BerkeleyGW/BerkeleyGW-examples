@@ -1,0 +1,8 @@
+#!/bin/bash -l
+rm 0*/*.dat
+rm 0*/*.h5
+rm 0*/*.log
+rm 0*/*.out
+rm 0*/WFN*
+rm 0*/RHO
+rm 0*/Eps*Dyn

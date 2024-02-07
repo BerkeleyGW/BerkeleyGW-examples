@@ -1,0 +1,28 @@
+&input_pw2bgw
+   prefix = 'SiC'
+   real_or_complex = 2
+   wfng_flag = .true. 
+   wfng_file = 'WFN_co'
+   wfng_kgrid = .true.
+   wfng_nk1 = 3 
+   wfng_nk2 = 3
+   wfng_nk3 = 3
+   wfng_dk1 = 0.0
+   wfng_dk2 = 0.0
+   wfng_dk3 = 0.0
+   !
+   rhog_flag = .true.
+   rhog_file = 'RHO_WFN_co'
+   vxcg_flag = .true.
+   vxcg_file = 'VXC_WFN_co'
+   vscg_flag = .true.
+   vscg_file = 'VSC_WFN_co'
+   vkbg_flag = .true.
+   vkbg_file = 'VKB_WFN_co'
+   !
+   vxc_flag = .true.
+   vxc_file = 'vxc.dat'
+   vxc_diag_nmin = 1
+   vxc_diag_nmax = 8000
+/
+

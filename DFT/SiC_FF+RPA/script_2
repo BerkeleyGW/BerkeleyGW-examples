@@ -1,0 +1,43 @@
+#!/bin/bash -l 
+#SBATCH -t 00:30:00
+#SBATCH -p debug
+#SBATCH -N 1
+#SBATCH -n 4
+#SBATCH -c 32
+
+# Edit these lines as needed
+#BGW_BIN="../bin"
+EPSILON="$BGW_BIN/epsilon.cplx.x"
+SIGMA="$BGW_BIN/sigma.cplx.x"
+KERNEL="$BGW_BIN/kernel.cplx.x"
+ABSORPTION="$BGW_BIN/absorption.cplx.x"
+export OMP_NUM_THREADS=16
+# put argument for number of procs here too if needed, e.g. -n 8
+MPIRUN="srun -n 4 -c 32"
+
+
+
+# epsilon
+cd ./07-epsilon
+ln -s ../espresso/02-wfn/WFN WFN
+ln -s ../espresso/03-wfnq/WFNq WFNq
+$MPIRUN $EPSILON &> ./epsilon.out
+cd ..
+
+
+# sigma
+cd ./08-sigma
+ln -s ../espresso/04-wfn_co/vxc.dat vxc.dat
+ln -s ../espresso/04-wfn_co/RHO_WFN_co RHO
+ln -s ../espresso/04-wfn_co/WFN_co WFN_inner
+ln -s ../07-epsilon/eps0mat.h5 
+ln -s ../07-epsilon/epsmat.h5
+$MPIRUN $SIGMA &> ./sigma.out
+cd ..
+
+# epsilon-RPA
+cd ./09-epsilonRPA
+ln -s ../espresso/02-wfn/WFN WFN
+ln -s ../espresso/03-wfnq/WFNq WFNq
+$MPIRUN $EPSILON &> ./epsilon.out
+cd ..

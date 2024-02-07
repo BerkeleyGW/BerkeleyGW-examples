@@ -1,0 +1,25 @@
+Bulk SiC - Full Frequency and RPA Energy (by Daniel Weinberg 2/2024) 
+================
+This example shows how to run a static subspace/full frequency calculation and obtain 
+RPA energies of SiC starting from obstaining the mean-field results from Quantum ESPRESSO
+and then calculating the inverse dielectric matrix from epsilon and to use in sigma to get
+the the GW-corrected quasiparticle energies. We then re-run epsilon to get the RPA energy
+since running the RPA calculation will change the frequency grid giving a different 
+dielectric matrix. 
+
+Running the example:
+-------------------
+1. Mean Field 
+Enter into the espresso directory and read and customize script_1 which was witten
+to work on perlmutter in early 2024. When satisfied, submit or run the script from 
+an interactive session. It should take less than a minute to run.
+When it has completed enter into each directory 01-04 and compare the output files 
+with the references provied in the ref sub-directories. 
+
+2. GW/RPA
+Return to this directory and read and customize script_2 which has been written to
+run on a single perlmutter GPU node. In particular make sure the variable BGW_BIN 
+points to the your version of the BGW bin folder. Again submit or run the script 
+from an interactive session; it should take less than a minute to run. Reference
+values for the outputs can again be found in the sub directories. 
+

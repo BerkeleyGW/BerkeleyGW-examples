@@ -1,0 +1,14 @@
+&input_pw2bgw
+   prefix = 'SiC'
+   real_or_complex = 2
+   wfng_flag = .true. 
+   wfng_file = 'WFNq'
+   wfng_kgrid = .true.
+   wfng_nk1 = 3 
+   wfng_nk2 = 3
+   wfng_nk3 = 3
+   wfng_dk1 = 0.505
+   wfng_dk2 = 0.50
+   wfng_dk3 = 0.50
+/
+

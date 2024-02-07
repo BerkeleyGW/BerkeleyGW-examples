@@ -1,0 +1,44 @@
+epsilon_cutoff  20.0
+
+number_bands     80
+degeneracy_check_override
+
+full_chi_conv_log       -1
+
+#use_wfn_hdf5
+frequency_dependence          2
+frequency_dependence_method   2
+number_imaginary_freqs        10
+broadening                    0.1
+delta_frequency               0.5
+delta_frequency_step          1.0
+frequency_low_cutoff         10.0
+
+eps_trunc_eigen               1.0E-2
+nbasis_subspace               200
+#subspace_use_elpa
+write_subspace_epsinv
+
+#note that do_rpa flag must be before qpoints block
+do_rpa
+
+begin qpoints
+     0.000000    0.000000    0.001000  1.00  1 1.0
+     0.000000    0.000000    0.333333  1.00  0 4.0
+     0.000000    0.000000    0.666667  1.00  0 4.0
+     0.000000    0.333333    0.333333  1.00  0 6.0
+     0.000000    0.333333    0.666667  1.00  0 12.0
+end
+
+
+#valence blocks determined based on (GPU) memory available (40.0 for perlmutter GPU nodes) 
+max_mem_nv_block_algo 40.0
+
+#number of valence blocks can be set explicitly (for testing)
+#nv_block 3
+
+
+#uncomment to turn off GPU_ALGO
+# chi_summation_algo CPU_ALGO
+# mtxel_algo CPU_ALGO
+

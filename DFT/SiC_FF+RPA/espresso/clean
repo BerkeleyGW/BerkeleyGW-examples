@@ -1,0 +1,9 @@
+#!/bin/bash -l
+
+rm -r */SiC.save
+rm */*.out
+rm */CRASH
+rm */*.xml
+rm */*WFN*
+rm */*.dat
+rm */*.wfc*
