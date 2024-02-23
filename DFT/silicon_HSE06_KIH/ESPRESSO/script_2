@@ -1,0 +1,37 @@
+#!/bin/bash
+#SBATCH -J BGW          # Job name
+#SBATCH -p development       # Queue (partition) name
+#SBATCH -N 4            # Total # of nodes
+#SBATCH -n 128            # Total # of mpi tasks
+#SBATCH -t 00:05:00     # Run time (hh:mm:ss)
+#SBATCH -A DMR23008 # Allocation name (required if you have more than 1)
+
+# These variables work on TACC Frontera:
+MPIRUN='ibrun'
+PW='/work2/06969/tg862689/frontera/q-e-qe-6.7.0/bin/pw.x'
+PW2BGW='/work2/06969/tg862689/frontera/q-e-qe-6.7.0/bin/pw2bgw.x'
+PWFLAGS='-nk 4 -nb 8'
+
+# put argument for number of procs here too if needed, e.g. -n 8
+#MPIRUN="ibrun" can be mpirun on other machines
+#PWFLAGS="" #pools for bands and k points
+
+#
+cd ./02-wfn
+$MPIRUN -n 128 $PW $PWFLAGS -in ./in &> ./out
+$MPIRUN -n 16 $PW2BGW -in ./pp_in &> ./pp_out
+rm ./*.wfc*
+cd ..
+#
+cd ./03-wfnq
+$MPIRUN -n 128 $PW $PWFLAGS -in ./in &> ./out
+$MPIRUN -n 16 $PW2BGW -in ./pp_in &> ./pp_out
+rm ./*.wfc*
+cd ..
+#
+cd ./04-wfn_co
+$MPIRUN -n 128 $PW $PWFLAGS -in ./in &> ./out
+$MPIRUN -n 16 $PW2BGW -in ./pp_in &> ./pp_out
+rm ./*.wfc*
+cd ..
+#

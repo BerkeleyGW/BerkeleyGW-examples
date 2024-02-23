@@ -1,0 +1,71 @@
+TACC:  Starting up job 6129746 
+TACC:  Starting parallel tasks... 
+
+     Program PW2BGW v.6.7MaX starts on 22Feb2024 at 17:29:56 
+
+     This program is part of the open-source Quantum ESPRESSO suite
+     for quantum simulation of materials; please cite
+         "P. Giannozzi et al., J. Phys.:Condens. Matter 21 395502 (2009);
+         "P. Giannozzi et al., J. Phys.:Condens. Matter 29 465901 (2017);
+          URL http://www.quantum-espresso.org", 
+     in publications or presentations arising from this work. More details at
+     http://www.quantum-espresso.org/quote
+
+     Parallel version (MPI), running on    16 processors
+
+     MPI processes distributed on     1 nodes
+     R & G space division:  proc/nbgrp/npool/nimage =      16
+
+     Reading xml data from directory:
+
+     ./silicon.save/
+     EXX fraction changed:   0.25
+     EXX Screening parameter changed:    0.1060000
+     Message from routine read_pp_mesh:
+     mesh size missing, using the one in header
+
+     IMPORTANT: XC functional enforced from input :
+     Exchange-correlation= HSE
+                           (   1   4  12   4   0   0   0)
+     EXX-fraction              =        0.25
+     Any further DFT definition will be discarded
+     Please, verify this is what you really want
+
+ 
+     Parallelization info
+     --------------------
+     sticks:   dense  smooth     PW     G-vecs:    dense   smooth      PW
+     Min          22      22      7                  284      284      54
+     Max          23      23      8                  287      287      57
+     Sum         361     361    121                 4573     4573     893
+ 
+     Reading collected, re-writing distributed wavefunctions
+
+     NLCC is present
+
+     call write_wfng
+WARNING: Inversion symmetry about the origin is present. The real version would be faster.
+     done write_wfng
+
+     call write_kih
+     If you use pw2bgw to output matrix elements of the KIH energy, please cite 
+     F. Zhao and S. G. Louie, U. C. Berkeley PhD dissertation (2021).
+     done write_kih
+
+     call write_rhog
+WARNING: Inversion symmetry about the origin is present. The real version would be faster.
+     done write_rhog
+
+ 
+     write_wfng   :      0.01s CPU      0.02s WALL (       1 calls)
+     write_rhog   :      0.00s CPU      0.00s WALL (       1 calls)
+ 
+     PW2BGW       :      0.11s CPU      0.16s WALL
+
+ 
+   This run was terminated on:  17:29:56  22Feb2024            
+
+=------------------------------------------------------------------------------=
+   JOB DONE.
+=------------------------------------------------------------------------------=
+TACC:  Shutdown complete. Exiting. 

@@ -1,0 +1,38 @@
+Bulk silicon
+============
+
+This example shows how to run a calculation on bulk Si using a hybrid functional (HSE06) with
+the usage of KIH energy by Quantum ESPRESSO. The use of KIH is compatible with any general 
+functionals (LDA, GGA, metaGGA and hybrid functionals) so that one can do the GW-BSE
+calculation starting from DFT calculation with those functionals. The interface code 
+pw2bgw.x to use the KIH energy is provided by BGW-3.0. You can find it in the folder 
+'BerkeleyGW-3.0/MeanField/ESPRESSO/version-6.7'. Please compile your Quantum ESPRESSO
+of the corresponding version with the pw2bgw.f90 provided in these folder.
+
+Note that unlike most GW MF calculations, each MF calc with a hybrid starting point is
+done as an scf calculation. This is because GKS hamiltonians depend on the density AND
+orbitals of your eigensystem so changing the kgrid is not easily done. It is possible
+to incease the number of unoccupied bands so long as a converged density and set of occupied 
+is provided to initialize the GKS hamiltonisn, and this can be achived with some amount of 
+modification to the QE code but we do not do so in this example.
+
+In this example, we compute and plot the GW quasiparticle bandstructure of bulk Si.
+
+Note: the reference values were obtained with the Quantum ESPRESSO mean-field
+code. Other mean-field codes will produces energies which should differ by
+at most 10 meV.
+
+Remember to modify each script before launching it!
+
+
+1. Enter the ESPRESSO mean-field directory.
+Read, customize and run/submit all scripts in that folder in the alphabetic order
+they appear. Remember to specify a path of qe version 6.7 with the KIH version of
+pw2bgw.x in 'script_2'
+
+
+2. Go back to the directory containing this file, and modify/submit `script_3`.
+Suggested 1 node (tested with ncpu = 32, walltime = 00:10:00).
+We will:
+- Generate dielectric matrix (directory 7)
+- Calculate self-energy corrections (directory 8)

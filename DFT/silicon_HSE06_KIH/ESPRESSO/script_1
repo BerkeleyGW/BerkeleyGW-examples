@@ -1,0 +1,22 @@
+#!/bin/bash -l
+
+#
+ln -s ../../pseudo/oncvpsp/Si_SR.UPF Si.UPF
+
+#
+cd ..
+cd 07-epsilon
+ln -s ../ESPRESSO/02-wfn/wfn.cplx WFN
+ln -s ../ESPRESSO/03-wfnq/wfn.cplx WFNq
+cd ..
+#
+cd 08-sigma
+ln -s ../ESPRESSO/04-wfn_co/kih.dat kih.dat
+ln -s ../ESPRESSO/04-wfn_co/rho.cplx RHO
+ln -s ../ESPRESSO/04-wfn_co/wfn.cplx WFN_inner
+ln -s ../07-epsilon/eps0mat .
+ln -s ../07-epsilon/epsmat .
+ln -s ../07-epsilon/eps0mat.h5 .
+ln -s ../07-epsilon/epsmat.h5 .
+cd ..
+#

@@ -1,0 +1,25 @@
+#!/bin/bash
+#SBATCH -J BGW          # Job name
+#SBATCH -p development       # Queue (partition) name
+#SBATCH -N 1            # Total # of nodes
+#SBATCH -n 32            # Total # of mpi tasks
+#SBATCH -t 00:05:00     # Run time (hh:mm:ss)
+#SBATCH -A DMR23008 # Allocation name (required if you have more than 1)
+
+# Edit these lines as needed
+# Please specify the BGW-3.0 path below
+BGW_BIN="$HOME/BerkeleyGW/bin"
+EPSILON="$BGW_BIN/epsilon.cplx.x"
+SIGMA="$BGW_BIN/sigma.cplx.x"
+# put argument for number of procs here too if needed, e.g. -n 8
+MPIRUN="srun -n 32"
+
+#
+cd ./07-epsilon
+$MPIRUN $EPSILON &> ./epsilon.out
+cd ..
+#
+cd ./08-sigma
+$MPIRUN $SIGMA &> ./sigma.out
+cd ..
+#
